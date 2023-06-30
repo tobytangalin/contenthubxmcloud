@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"></meta><meta name="format-detection" content="telephone=no"></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><meta name="search" content="default"></meta><meta name="use.ic" content="no"></meta><meta name="Audience - do not use" content=""></meta><meta name="clubot" content=""></meta><meta name="data model" content=""></meta><meta name="DxP type - Do Not Use" content=""></meta><meta name="media_icon" content=""></meta><meta name="product" content="XM Cloud"></meta><meta name="Publishing target" content="Production"></meta><meta name="Ready for publishing - do not use" content=""></meta><meta name="role" content="developers"></meta><meta name="topic_tripane" content=""></meta><meta name="version" content=""></meta><meta name="tocstandalone" content="yes"></meta><meta name="theme" content="1"></meta><meta name="search.placeholder" content="Search"></meta><meta name="search.results" content="Search results"></meta><meta name="no.search.results" content="No results found"></meta><script type="text/javascript">
+var theme = '1';
+
+			
+			window.versionsfile = '';
+
+
+			window.indexDict = new Array();
+			window.store = {};
+			window.portalLanguage = 'en';
+			window.enterKey = 'select';
+			
+			
+				var fuse_threshold = 0.3;
+			
+					var local_csh = false;
+				
+					var anchoroption = true;
+				var instantsearch_minlength = 1;
+						
+			var useanchorlinks = false;
+			
+					function addSearch(){
+					//not used with custom or elastic search
+					}
+				</script><title>Create a custom grid</title><link rel="stylesheet" type="text/css" href="../css/docbook.css"></link><link rel="stylesheet" type="text/css" href="../css/font-awesome.css"></link><link rel="stylesheet" type="text/css" href="../css/roboto.font.css"></link><link rel="stylesheet" type="text/css" href="../css/theme1.css?version=20230630"></link><link rel="stylesheet" type="text/css" href="../css/theme1-colors.css?version=20230630"></link><link rel="stylesheet" type="text/css" href="../css/content-theme1.css?version=20230630"></link><link rel="stylesheet" type="text/css" href="../css/sm-core-css.css"></link><link rel="stylesheet" type="text/css" href="../css/sm-simple.css"></link><link rel="stylesheet" type="text/css" href="../css/style-print.css"></link><link rel="stylesheet" type="text/css" href="../css/style-common.css"></link><link rel="stylesheet" type="text/css" href="../css/style-modern-tables.css"></link><link rel="stylesheet" type="text/css" href="../css/graphical-lists.css"></link><link rel="stylesheet" type="text/css" href="/css/sitecore-custom-default-xmc.css?version=20230630"></link><script src="../js/jquery-3/jquery-3.4.1.min.js" type="text/javascript"></script><script src="../js/jquery-migrate-3.0.1.min.js" type="text/javascript"></script><script src="../js/materialize.min.js" type="text/javascript"></script><script src="../js/bootstrap.min.js" type="text/javascript"></script><script src="../js/purl.js" type="text/javascript"></script><script src="../js/jquery.smartmenus.js" type="text/javascript"></script><script src="js/toc.js?version=20230630" type="text/javascript"></script><script src="../js/create-toc.js" type="text/javascript"></script><script src="../js/html5-2-mp-common.js?version=20230630" type="text/javascript"></script><script src="../js/html5-2.js?version=20230630" type="text/javascript"></script><script src="../js/checklist.js" type="text/javascript"></script><script src="../js/clipboard.min.js" type="text/javascript"></script><script src="../js/csh.js" type="text/javascript"></script><script src="/js/layout-custom-script.js" type="text/javascript"></script><meta xmlns:xhtml="http://www.w3.org/1999/xhtml" name="generator" content="Paligo"></meta><meta name="description" content="Learn how to create grid theme, definition item, and setup item."></meta><meta name="keywords" content="Configuration, SXA"></meta><link rel="prev" href="grid.html" title="Grid"></link><link rel="next" href="create-a-custom-grid.html#UUID-650fd742-d360-41ea-c020-25be0c9504fe_id__Create_a_grid" title="Create a grid theme"></link><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML" async="async"></script><link rel="icon" href="/favicon.ico" type="image/x-icon"></link><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent/3.1.1/cookieconsent.min.css"></link><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent/3.1.1/cookieconsent.min.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/3.0.1/js.cookie.min.js"></script><script type="text/javascript">var privacypolicy = 'https://www.sitecore.com/trust/privacy-policy';
+var consenttype = 'opt-out';
+</script><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-72664331-1"></script><script type="text/javascript">const measurementId = 'UA-72664331-1';
+
+						$(document).on('cookies.consented', () => {
+							window.dataLayer = window.dataLayer || [];
+							function gtag(){dataLayer.push(arguments)};
+
+							gtag('js', new Date());
+							gtag('config', measurementId);
+						});
+					</script><script type="text/javascript" src="../js/cookie-consent.js"></script><script type="text/javascript">
+				$(document).ready(function () {
+				$(".mediaobject img").addClass('materialboxed');
+				//Exclude images with links
+				$(".mediaobject a img").removeClass('materialboxed');
+				if (!document.documentMode) {
+				$('.materialboxed').materialbox();
+				}});
+			</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/googlecode.min.css"></link><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script><script type="text/javascript">
+			$(document).ready(function() {
+
+				$('pre:not(.embedcode)').each(function() {
+					/**
+					 * @type {string}
+					 */
+					var language = $(this).data('language');
+
+					if (language === 'plaintext' || language === 'text') {
+						$(this).addClass(language).addClass('hljs');
+						return true;
+					}
+					else {
+						var clone = this.cloneNode(true);
+						hljs.highlightBlock(clone);
+						$(this).empty().append($(clone).contents());
+						$(this).attr("class", $(clone).attr("class"));
+					}
+				});
+			});
+			</script><link href="//customer.cludo.com/assets/2063/10039/cludo-search.min.css" type="text/css" rel="stylesheet"></link></head><body class="theme1 colored-top page-toc current-toc-section-focus" data-spy="scroll" data-target=".section-nav-container" data-offset="100" data-link-prefix=""><style type="text/css">
+            div.skipnav {
+            }
+            div.skipnav a {
+                position: fixed;
+                left: -10000px;
+                top: 1.5em;
+                width: 1px;
+                height: 1px;
+                overflow: hidden;
+            }
+            div.skipnav a:focus, div.skipnav a:active, div.skipnav a:hover {
+                background: white;
+                color: black;
+                box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.5);
+                position: fixed;
+                left: 2em;
+                top: 1.5em;
+                width: auto;
+                height: auto;
+                overflow: visible;
+                text-decoration: underline;
+                z-index: 99999; /* has to be higher than the side panel */
+    }
+          </style><div class="skipnav"><a href="#content-wrapper">Skip to main content</a></div><header class="site-header"><nav class="site-header-navbar navbar navbar-fixed-top"><div class="navbar-container"><div class="navbar-header"><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".site-sidebar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><div id="logotype-container" class="pull-left"><a class="navbar-brand" href="https://doc.sitecore.com/xmc/" target="_blank" rel="noopener"><img id="logotype-pageheader" src="../css/image/corporate-logo.png" alt="Corporate logotype" data-role="logotype" class="logo"></img></a></div></div><div class="navbar-collapse collapse" id="navbar"></div></div></nav></header><div class="site-body"><div class="site-body-container"><div class="site-body-row"><aside xmlns:xinfo="http://ns.expertinfo.se/cms/xmlns/1.0" class="site-sidebar"><div class="site-sidebar-header"><a href="https://doc.sitecore.com/xmc/" target="_blank"><img id="logotype-pageheader" src="../css/image/corporate-logo.png" alt="Corporate logotype" data-role="logotype" class="logo"></img></a></div><form id="search-form" class="site-sidebar-search" autocomplete="off"><input type="text" class="form-control search-field" placeholder="Search" id="aa-search-input"></input></form><div id="toc-standalone-placeholder"></div></aside><div class="site-content"><div class="toolbar"><div class="toolbar-tools"><div id="navbar" class="navbar-collapse collapse"></div><div class="tool-print"><i class="fa fa-print" aria-hidden="true">print</i></div><div class="tool-search"><i class="fa fa-search" aria-hidden="true"></i></div><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".site-sidebar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button></div><div class="breadcrumb-container"><ul class="breadcrumb"><li class="breadcrumb-link"><a href="index-en.html">XM Cloud Documentation for Developers</a></li><li class="breadcrumb-link"><a href="using-sxa-for-xm-cloud-development.html">Using SXA for XM Cloud development</a></li><li class="breadcrumb-link"><a href="extending-sxa.html">Extending SXA</a></li><li class="breadcrumb-link"><a href="grid.html">Grid</a></li><li class="breadcrumb-node">Create a custom grid</li></ul></div></div><main><div id="top-pager"><ul class="pager"><li class="previous"><a accesskey="p" class="prev pull-left prev visible-lg visible-md" id="header-navigation-prev" href="grid.html">Prev</a></li><li class="next"><a accesskey="n" class="pull-right next visible-lg visible-md" id="header-navigation-next" href="create-a-custom-grid.html#UUID-650fd742-d360-41ea-c020-25be0c9504fe_id__Create_a_grid">Next</a></li></ul></div><article class="topic content-container" id="content-wrapper"><div id="topic-content" class="topic-content"><section xml:lang="en" lang="en" dir="ltr" class="section original-topic" data-origin-id="UUID-598b3130-b3e1-66ea-0e08-622dff322b95" data-permalink="create-a-custom-grid.html" data-topic-level="1" data-relative-prefix="" data-time-modified="12/16/2022" data-publication-date="06/30/23" id="UUID-650fd742-d360-41ea-c020-25be0c9504fe"><div class="titlepage"><div><div class="title"><h1 class="title" style="clear: both">Create a custom grid<span id="UUID-650fd742-d360-41ea-c020-25be0c9504fe_UUID-d74394f8-b28c-652b-d857-035d03f6f5c7"></span></h1></div><div><div class="abstract"><div class="abstract-title">Abstract</div><p>Learn how to create grid theme, definition item, and setup item.</p></div></div></div></div><p>By default, SXA comes with Bootstrap 5, but you can add your own custom CSS framework.</p><p>Grid systems are stored as a feature in Sitecore and include:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>The grid theme – includes the CSS file with all grid classes.</p></li><li class="listitem"><p>The grid definition item – includes all grid-system specific items (the devices and their classes).</p></li><li class="listitem"><p>The grid setup item – the scaffolding item to include the grid in the drop-down list of the site creation wizard.</p><div class="mediaobject"><table class="image-viewport" style="border-collapse:collapse;border:0;
+                                width:192px;
+                            "><tr style="height: 262px"><td style="padding:0;"><img src="image/uuid-5b6a1e1e-3674-0c5e-1ad9-929f10b93f07.png" style="max-width: 192px; max-height: 262px; " alt="Grids stored in Sitecore."></img></td></tr></table></div></li></ul></div><section dir="ltr" class="section internal accordion" data-origin-id="" data-publication-date="06/30/23" id="UUID-650fd742-d360-41ea-c020-25be0c9504fe_id__Create_a_grid"><div class="accordion-icon"></div><div class="panel panel-default"><div class="panel-heading"><div class="titlepage"><a data-toggle="collapse" href="#UUID-650fd742-d360-41ea-c020-25be0c9504fe_id__Create_a_grid_body" data-parent="#UUID-650fd742-d360-41ea-c020-25be0c9504fe_id__Create_a_grid"><div><div class="title"><h2 class="title" style="clear: both">Create a grid theme</h2></div></div></a></div></div><div class="panel-body collapse" id="UUID-650fd742-d360-41ea-c020-25be0c9504fe_id__Create_a_grid_body"><p>Your custom grid must have a grid theme assigned. SXA comes with a base grid theme that contains scripts and styles. You can use this base theme for your custom grid theme.</p><p>To create a grid theme:</p><div class="procedure"><ol class="procedure" type="1"><li class="step"><p>Navigate to <span class="emphasis"><em>sitecore/Media Library/Feature</em></span> and create a new folder for your grid. The default grids are saved in the <span class="emphasis"><em>Experience Accelerator</em></span> folder (<span class="emphasis"><em>sitecore/Media Library/Feature/Experience Accelerator</em></span>). Because SXA overwrites the standard SXA sections with SXA updates, we recommend that you create a separate folder for your grids.</p></li><li class="step"><p>Right-click the new folder and click <span class="guilabel">Insert from template</span>.</p></li><li class="step"><p>In the <span class="guilabel">Insert from template</span> dialog box, navigate to <span class="emphasis"><em>sitecore/templates/Foundation/Experience Accelerator/Grid/</em></span> and click <span class="guilabel">Grid Theme</span>.</p></li><li class="step"><p>Right-click the new grid theme and click <span class="guilabel">Insert</span>, <span class="guilabel">Styles</span>. Upload your CSS file here.</p></li></ol></div></div></div></section><section dir="ltr" class="section internal accordion" data-origin-id="" data-publication-date="06/30/23" id="UUID-650fd742-d360-41ea-c020-25be0c9504fe_id__Create_the_Grid"><div class="accordion-icon"></div><div class="panel panel-default"><div class="panel-heading"><div class="titlepage"><a data-toggle="collapse" href="#UUID-650fd742-d360-41ea-c020-25be0c9504fe_id__Create_the_Grid_body" data-parent="#UUID-650fd742-d360-41ea-c020-25be0c9504fe_id__Create_the_Grid"><div><div class="title"><h2 class="title" style="clear: both">Create the grid definition item</h2></div></div></a></div></div><div class="panel-body collapse" id="UUID-650fd742-d360-41ea-c020-25be0c9504fe_id__Create_the_Grid_body"><p>Your custom theme needs a grid definition item that includes all grid-system specific items (the devices and their classes).</p><p>To create the grid definition item:</p><div class="procedure"><ol class="procedure" type="1"><li class="step"><p>Navigate to <span class="emphasis"><em>sitecore/System/settings/Feature/</em></span> and create a new folder for your grid. The default grids are saved in the Experience Accelerator folder (<span class="emphasis"><em>sitecore/Media Library/Feature/Experience Accelerator</em></span>). Because SXA overwrites the standard SXA sections with SXA updates, we recommend that you create a separate folder for your grids.</p></li><li class="step"><p>Right-click the new folder and click <span class="guilabel">Insert from template</span>.</p></li><li class="step"><p>In the <span class="guilabel">Insert from template</span> dialog box, navigate to <span class="emphasis"><em>/sitecore/templates/Foundation/Experience Accelerator/Grid/</em></span> and click <span class="guilabel">Grid Definition</span>.</p></li><li class="step"><p>Fill in the following fields:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="guilabel">Name</span> - The name of the grid system as you want it to display in the site creation wizard.</p></li><li class="listitem"><p><span class="guilabel">Rendering parameters field type</span> - Determines the way the grid parameters are rendered. If you do not want to customize, use the default field renderer: <code class="code">Sitecore.XA.Foundation.Grid.Fields.FieldRenderers.GridRenderingParametersFieldRenderer, Sitecore.XA.Foundation.Grid</code></p></li><li class="listitem"><p><span class="guilabel">Default component layout</span> - Sets the default column size for renderings that you drag on the page.</p></li><li class="listitem"><p><span class="guilabel">Grid theme</span> - Links to the theme used for the grid.</p></li><li class="listitem"><p><span class="guilabel">Grid field parser type</span> - Determines the parser type to parse the grid fields. If you do not need customization, use the default: <code class="code">Sitecore.XA.Foundation.Grid.Parser.GridFieldParser,Sitecore.XA.Foundation.Grid</code></p></li><li class="listitem"><p><span class="guilabel">Grid body view path</span> - Path to your cshtml file that defines the body layout of a page. You must include all necessary placeholders such as header, main, and footer.</p></li></ul></div></li></ol></div></div></div></section><section dir="ltr" class="section internal accordion" data-origin-id="" data-publication-date="06/30/23" id="UUID-650fd742-d360-41ea-c020-25be0c9504fe_id__Create_the_grid_1"><div class="accordion-icon"></div><div class="panel panel-default"><div class="panel-heading"><div class="titlepage"><a data-toggle="collapse" href="#UUID-650fd742-d360-41ea-c020-25be0c9504fe_id__Create_the_grid_1_body" data-parent="#UUID-650fd742-d360-41ea-c020-25be0c9504fe_id__Create_the_grid_1"><div><div class="title"><h2 class="title" style="clear: both">Create the grid scaffolding setup</h2></div></div></a></div></div><div class="panel-body collapse" id="UUID-650fd742-d360-41ea-c020-25be0c9504fe_id__Create_the_grid_1_body"><p>To add the new grid as one of the grid options in the site creation wizard, you must add the grid setup.</p><p>To add the grid setup:</p><div class="procedure"><ol class="procedure" type="1"><li class="step"><p>Right-click the new grid and click <span class="guilabel">Insert from template</span>.</p></li><li class="step"><p>In the <span class="guilabel">Insert from template</span> dialog box, navigate to <span class="emphasis"><em>sitecore/Templates/Foundation/Experience Accelerator/Scaffolding/Roots</em></span> and click <span class="guilabel">Grid Setup</span>.</p></li><li class="step"><p>Fill in the following fields:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="guilabel">Name</span> - The name of the grid system as you want it to display in the site creation wizard.</p></li><li class="listitem"><p><span class="guilabel">Dependencies</span> - Specify the order to install the modules.</p></li><li class="listitem"><p><span class="guilabel">Grid Definition</span> - Refers to the grid definition item. For example, for the custom grid in this example: <span class="emphasis"><em>Settings/Feature/&lt;My custom grid&gt;/&lt;My custom grid definition&gt;</em></span></p></li></ul></div></li><li class="step"><p>You can now select your custom grid on the in the <span class="guilabel">Grid mapping</span> field of the site settings.</p></li></ol></div></div></div></section></section><div class="footer-content"><div class="glossary-definitions"></div></div><footer></footer></div></article><aside class="section-nav-container"><ul class="section-nav nav"><li><a href="#UUID-650fd742-d360-41ea-c020-25be0c9504fe">Create a custom grid</a></li><li><a href="#UUID-650fd742-d360-41ea-c020-25be0c9504fe_id__Create_a_grid">Create a grid theme</a></li><li><a href="#UUID-650fd742-d360-41ea-c020-25be0c9504fe_id__Create_the_Grid">Create the grid definition item</a></li><li><a href="#UUID-650fd742-d360-41ea-c020-25be0c9504fe_id__Create_the_grid_1">Create the grid scaffolding setup</a></li></ul></aside></main><div id="bottom-pager"><ul class="pager"><li class="previous"><a accesskey="p" class="prev pull-left prev visible-lg visible-md" id="header-navigation-prev" href="grid.html">Prev</a></li><li class="next"><a accesskey="n" class="pull-right next visible-lg visible-md" id="header-navigation-next" href="create-a-custom-grid.html#UUID-650fd742-d360-41ea-c020-25be0c9504fe_id__Create_a_grid">Next</a></li></ul></div><footer class="site-footer"><div class="inner"><div class="copyright"> © 2023 Sitecore </div><div class="date-modified"><span class="date-modified-text">Last modified: </span><span class="formatted-date">12/16/2022</span></div><div class="publication-date"><span class="publication-date-text">Publication date</span><span class="pubdate-delimiter">: </span><span class="formatted-date">06/30/23</span></div></div></footer></div></div></div></div><script type="text/javascript" src="//customer.cludo.com/scripts/bundles/search-script.min.js"></script><script>
+			var CludoSearch;
+			(function () {
+			var cludoSettings = {
+			customerId: 2063,
+			engineId: 12826,
+			language: 'en',
+			searchInputs: ["search-form","cludo-search-content-form","cludo-search-mobile-form"],
+			hideSearchFilters: true,
+			type: 'standardOverlay',
+			facets: ["Category", "ProductVer", "Product", "Version"],
+			useStandardSearchTemplate: false,
+			customerTemplate: "OverlayCopy",
+			searchApiUrl: 'https://api-eu1.cludo.com/api/v3'
+			};
+			CludoSearch= new Cludo(cludoSettings);
+			CludoSearch.init();
+			})();
+		</script><!-- www.Cludo.com Search body init script start --></body></html>

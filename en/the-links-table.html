@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"></meta><meta name="format-detection" content="telephone=no"></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><meta name="search" content="default"></meta><meta name="use.ic" content="no"></meta><meta name="Audience - do not use" content=""></meta><meta name="clubot" content=""></meta><meta name="data model" content=""></meta><meta name="DxP type - Do Not Use" content=""></meta><meta name="media_icon" content=""></meta><meta name="product" content="XM Cloud"></meta><meta name="Publishing target" content="Production"></meta><meta name="Ready for publishing - do not use" content=""></meta><meta name="role" content="developers"></meta><meta name="topic_tripane" content=""></meta><meta name="version" content=""></meta><meta name="tocstandalone" content="yes"></meta><meta name="theme" content="1"></meta><meta name="search.placeholder" content="Search"></meta><meta name="search.results" content="Search results"></meta><meta name="no.search.results" content="No results found"></meta><script type="text/javascript">
+var theme = '1';
+
+			
+			window.versionsfile = '';
+
+
+			window.indexDict = new Array();
+			window.store = {};
+			window.portalLanguage = 'en';
+			window.enterKey = 'select';
+			
+			
+				var fuse_threshold = 0.3;
+			
+					var local_csh = false;
+				
+					var anchoroption = true;
+				var instantsearch_minlength = 1;
+						
+			var useanchorlinks = false;
+			
+					function addSearch(){
+					//not used with custom or elastic search
+					}
+				</script><title>The Links table</title><link rel="stylesheet" type="text/css" href="../css/docbook.css"></link><link rel="stylesheet" type="text/css" href="../css/font-awesome.css"></link><link rel="stylesheet" type="text/css" href="../css/roboto.font.css"></link><link rel="stylesheet" type="text/css" href="../css/theme1.css?version=20230630"></link><link rel="stylesheet" type="text/css" href="../css/theme1-colors.css?version=20230630"></link><link rel="stylesheet" type="text/css" href="../css/content-theme1.css?version=20230630"></link><link rel="stylesheet" type="text/css" href="../css/sm-core-css.css"></link><link rel="stylesheet" type="text/css" href="../css/sm-simple.css"></link><link rel="stylesheet" type="text/css" href="../css/style-print.css"></link><link rel="stylesheet" type="text/css" href="../css/style-common.css"></link><link rel="stylesheet" type="text/css" href="../css/style-modern-tables.css"></link><link rel="stylesheet" type="text/css" href="../css/graphical-lists.css"></link><link rel="stylesheet" type="text/css" href="/css/sitecore-custom-default-xmc.css?version=20230630"></link><script src="../js/jquery-3/jquery-3.4.1.min.js" type="text/javascript"></script><script src="../js/jquery-migrate-3.0.1.min.js" type="text/javascript"></script><script src="../js/materialize.min.js" type="text/javascript"></script><script src="../js/bootstrap.min.js" type="text/javascript"></script><script src="../js/purl.js" type="text/javascript"></script><script src="../js/jquery.smartmenus.js" type="text/javascript"></script><script src="js/toc.js?version=20230630" type="text/javascript"></script><script src="../js/create-toc.js" type="text/javascript"></script><script src="../js/html5-2-mp-common.js?version=20230630" type="text/javascript"></script><script src="../js/html5-2.js?version=20230630" type="text/javascript"></script><script src="../js/checklist.js" type="text/javascript"></script><script src="../js/clipboard.min.js" type="text/javascript"></script><script src="../js/csh.js" type="text/javascript"></script><script src="/js/layout-custom-script.js" type="text/javascript"></script><meta xmlns:xhtml="http://www.w3.org/1999/xhtml" name="generator" content="Paligo"></meta><meta name="description" content="The Links table stores all links between individual items across databases."></meta><link rel="prev" href="configuration-layers.html#UUID-79e65ece-e603-5969-7ab9-c6364fd13210_id__The_load_order" title="The load order of configuration files"></link><link rel="next" href="the-links-table.html#UUID-44e99ee8-b9f3-4d03-e27f-e18b7990a1b2_section-idm4527713832014432611474783095" title="Rebuild the Links table"></link><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML" async="async"></script><link rel="icon" href="/favicon.ico" type="image/x-icon"></link><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent/3.1.1/cookieconsent.min.css"></link><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent/3.1.1/cookieconsent.min.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/3.0.1/js.cookie.min.js"></script><script type="text/javascript">var privacypolicy = 'https://www.sitecore.com/trust/privacy-policy';
+var consenttype = 'opt-out';
+</script><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-72664331-1"></script><script type="text/javascript">const measurementId = 'UA-72664331-1';
+
+						$(document).on('cookies.consented', () => {
+							window.dataLayer = window.dataLayer || [];
+							function gtag(){dataLayer.push(arguments)};
+
+							gtag('js', new Date());
+							gtag('config', measurementId);
+						});
+					</script><script type="text/javascript" src="../js/cookie-consent.js"></script><script type="text/javascript">
+				$(document).ready(function () {
+				$(".mediaobject img").addClass('materialboxed');
+				//Exclude images with links
+				$(".mediaobject a img").removeClass('materialboxed');
+				if (!document.documentMode) {
+				$('.materialboxed').materialbox();
+				}});
+			</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/googlecode.min.css"></link><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script><script type="text/javascript">
+			$(document).ready(function() {
+
+				$('pre:not(.embedcode)').each(function() {
+					/**
+					 * @type {string}
+					 */
+					var language = $(this).data('language');
+
+					if (language === 'plaintext' || language === 'text') {
+						$(this).addClass(language).addClass('hljs');
+						return true;
+					}
+					else {
+						var clone = this.cloneNode(true);
+						hljs.highlightBlock(clone);
+						$(this).empty().append($(clone).contents());
+						$(this).attr("class", $(clone).attr("class"));
+					}
+				});
+			});
+			</script><link href="//customer.cludo.com/assets/2063/10039/cludo-search.min.css" type="text/css" rel="stylesheet"></link></head><body class="theme1 colored-top page-toc current-toc-section-focus" data-spy="scroll" data-target=".section-nav-container" data-offset="100" data-link-prefix=""><style type="text/css">
+            div.skipnav {
+            }
+            div.skipnav a {
+                position: fixed;
+                left: -10000px;
+                top: 1.5em;
+                width: 1px;
+                height: 1px;
+                overflow: hidden;
+            }
+            div.skipnav a:focus, div.skipnav a:active, div.skipnav a:hover {
+                background: white;
+                color: black;
+                box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.5);
+                position: fixed;
+                left: 2em;
+                top: 1.5em;
+                width: auto;
+                height: auto;
+                overflow: visible;
+                text-decoration: underline;
+                z-index: 99999; /* has to be higher than the side panel */
+    }
+          </style><div class="skipnav"><a href="#content-wrapper">Skip to main content</a></div><header class="site-header"><nav class="site-header-navbar navbar navbar-fixed-top"><div class="navbar-container"><div class="navbar-header"><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".site-sidebar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><div id="logotype-container" class="pull-left"><a class="navbar-brand" href="https://doc.sitecore.com/xmc/" target="_blank" rel="noopener"><img id="logotype-pageheader" src="../css/image/corporate-logo.png" alt="Corporate logotype" data-role="logotype" class="logo"></img></a></div></div><div class="navbar-collapse collapse" id="navbar"></div></div></nav></header><div class="site-body"><div class="site-body-container"><div class="site-body-row"><aside xmlns:xinfo="http://ns.expertinfo.se/cms/xmlns/1.0" class="site-sidebar"><div class="site-sidebar-header"><a href="https://doc.sitecore.com/xmc/" target="_blank"><img id="logotype-pageheader" src="../css/image/corporate-logo.png" alt="Corporate logotype" data-role="logotype" class="logo"></img></a></div><form id="search-form" class="site-sidebar-search" autocomplete="off"><input type="text" class="form-control search-field" placeholder="Search" id="aa-search-input"></input></form><div id="toc-standalone-placeholder"></div></aside><div class="site-content"><div class="toolbar"><div class="toolbar-tools"><div id="navbar" class="navbar-collapse collapse"></div><div class="tool-print"><i class="fa fa-print" aria-hidden="true">print</i></div><div class="tool-search"><i class="fa fa-search" aria-hidden="true"></i></div><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".site-sidebar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button></div><div class="breadcrumb-container"><ul class="breadcrumb"><li class="breadcrumb-link"><a href="index-en.html">XM Cloud Documentation for Developers</a></li><li class="breadcrumb-link"><a href="xm-cloud-development.html">XM Cloud development</a></li><li class="breadcrumb-link"><a href="miscellaneous-development-tasks.html">Miscellaneous development tasks</a></li><li class="breadcrumb-node">The Links table</li></ul></div></div><main><div id="top-pager"><ul class="pager"><li class="previous"><a accesskey="p" class="prev pull-left prev visible-lg visible-md" id="header-navigation-prev" href="configuration-layers.html#UUID-79e65ece-e603-5969-7ab9-c6364fd13210_id__The_load_order">Prev</a></li><li class="next"><a accesskey="n" class="pull-right next visible-lg visible-md" id="header-navigation-next" href="the-links-table.html#UUID-44e99ee8-b9f3-4d03-e27f-e18b7990a1b2_section-idm4527713832014432611474783095">Next</a></li></ul></div><article class="topic content-container" id="content-wrapper"><div id="topic-content" class="topic-content"><section xml:lang="en" lang="en" dir="ltr" class="section" data-origin-id="UUID-aad3f1ab-46c2-dee3-c1e6-3ae6d8a2a8a5" data-permalink="the-links-table.html" data-topic-level="1" data-relative-prefix="" data-time-modified="05/10/2023" data-publication-date="06/30/23" id="UUID-44e99ee8-b9f3-4d03-e27f-e18b7990a1b2"><div class="titlepage"><div><div class="title"><h1 class="title" style="clear: both">The Links table<span id="UUID-44e99ee8-b9f3-4d03-e27f-e18b7990a1b2_UUID-18a70842-3807-8350-efbe-faa4a2210941"></span></h1></div><div><div class="abstract"><div class="abstract-title">Abstract</div><p>The Links table stores all links between individual items across databases.</p></div></div></div></div><p>Sitecore maintains a database table called <code class="code">Links</code>.The <code class="code">Links</code> table stores all links between individual items across databases (<span class="emphasis"><em>Core</em></span>, <span class="emphasis"><em>Master</em></span>, <span class="emphasis"><em>Web</em></span>) and language versions.</p><p>Sitecore updates this table based on events that are triggered when actions on items (<code class="code">item:copied</code>, <code class="code">item:deleted</code>, <code class="code">item:saved</code>, <code class="code">item:versionRemoved</code>) are triggered.</p><p>There are two implementations of the database provider for this table:</p><div class="itemizedlist" id="UUID-44e99ee8-b9f3-4d03-e27f-e18b7990a1b2_itemizedlist-idm1763367402228242"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Sitecore.Links.DefaultLinkDatabase, Sitecore Kernel (the default)</p><p>You can specify in which databases the links are stored. By default, each database stores its own links. It is possible to change which databases are used to store links by enabling <code class="code">Sitecore.LinkDatabase.Explicit.config</code> file. There for each sitecore databases, you can configure a link database provider and point it to a connection string:</p><p><code class="code">&lt;linkProvider key="&lt;sitecore database name&gt;" </code></p><p><code class="code">type="Sitecore.Data.$(database).$(database)LinkDataProvider, Sitecore.Kernel"&gt;          &lt;param ref="dataApis/dataApi[@name='$(database)']" param1="&lt;connection string name&gt;" /&gt; </code></p><p><code class="code"> &lt;/linkProvider&gt;</code></p></li><li class="listitem"><p>SqlServerBatchLinkDatabase</p><p>The main advantage of the SqlServerBatchLinkDatabase provider is storing new item links in <code class="code">Links</code> table with help of batching. This improves performance considerably.</p></li></ul></div><p>To use the SqlServerBatchLinkDatabase provider:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Enable the <code class="code">App_Config/Include/Examples/SqlServerBatchLinkDatabase.config.example</code> file by removing the <code class="code">.example</code> from the file name.</p><div dir="ltr" class="note"><h3 class="title">Note</h3><p>When you enable the new provider, Sitecore removes all data from the <code class="code">Links</code> table and the provider repopulates the table.</p></div></li></ul></div><section dir="ltr" class="section" data-origin-id="" data-publication-date="06/30/23" id="UUID-44e99ee8-b9f3-4d03-e27f-e18b7990a1b2_section-idm4527713832014432611474783095"><div class="titlepage"><div><div class="title"><h2 class="title" style="clear: both">Rebuild the Links table</h2></div></div></div><p>You may occasionally need to rebuild the <code class="code">Links</code> table, for example, as part of the upgrade process.</p><p>To rebuild the <code class="code">Links</code> table:</p><p>On the Sitecore Dashboard, open the <span class="guilabel">Control Panel</span> and in the <span class="emphasis"><em>Database </em></span>section, click <span class="guilabel">Rebuild link databases</span>, select the <span class="emphasis"><em>Master </em></span>and <span class="emphasis"><em>Core </em></span>databases, and then click <span class="guilabel">Rebuild</span>.</p></section></section><div class="footer-content"><div class="glossary-definitions"></div></div><footer></footer></div></article><aside class="section-nav-container"><ul class="section-nav nav"><li><a href="#UUID-44e99ee8-b9f3-4d03-e27f-e18b7990a1b2">The Links table</a></li><li><a href="#UUID-44e99ee8-b9f3-4d03-e27f-e18b7990a1b2_section-idm4527713832014432611474783095">Rebuild the Links table</a></li></ul></aside></main><div id="bottom-pager"><ul class="pager"><li class="previous"><a accesskey="p" class="prev pull-left prev visible-lg visible-md" id="header-navigation-prev" href="configuration-layers.html#UUID-79e65ece-e603-5969-7ab9-c6364fd13210_id__The_load_order">Prev</a></li><li class="next"><a accesskey="n" class="pull-right next visible-lg visible-md" id="header-navigation-next" href="the-links-table.html#UUID-44e99ee8-b9f3-4d03-e27f-e18b7990a1b2_section-idm4527713832014432611474783095">Next</a></li></ul></div><footer class="site-footer"><div class="inner"><div class="copyright"> © 2023 Sitecore </div><div class="date-modified"><span class="date-modified-text">Last modified: </span><span class="formatted-date">05/10/2023</span></div><div class="publication-date"><span class="publication-date-text">Publication date</span><span class="pubdate-delimiter">: </span><span class="formatted-date">06/30/23</span></div></div></footer></div></div></div></div><script type="text/javascript" src="//customer.cludo.com/scripts/bundles/search-script.min.js"></script><script>
+			var CludoSearch;
+			(function () {
+			var cludoSettings = {
+			customerId: 2063,
+			engineId: 12826,
+			language: 'en',
+			searchInputs: ["search-form","cludo-search-content-form","cludo-search-mobile-form"],
+			hideSearchFilters: true,
+			type: 'standardOverlay',
+			facets: ["Category", "ProductVer", "Product", "Version"],
+			useStandardSearchTemplate: false,
+			customerTemplate: "OverlayCopy",
+			searchApiUrl: 'https://api-eu1.cludo.com/api/v3'
+			};
+			CludoSearch= new Cludo(cludoSettings);
+			CludoSearch.init();
+			})();
+		</script><!-- www.Cludo.com Search body init script start --></body></html>

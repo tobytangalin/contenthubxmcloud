@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"></meta><meta name="format-detection" content="telephone=no"></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><meta name="search" content="default"></meta><meta name="use.ic" content="no"></meta><meta name="Audience - do not use" content=""></meta><meta name="clubot" content=""></meta><meta name="data model" content=""></meta><meta name="DxP type - Do Not Use" content=""></meta><meta name="media_icon" content=""></meta><meta name="product" content="XM Cloud"></meta><meta name="Publishing target" content="Production"></meta><meta name="Ready for publishing - do not use" content=""></meta><meta name="role" content="developers"></meta><meta name="topic_tripane" content=""></meta><meta name="version" content=""></meta><meta name="tocstandalone" content="yes"></meta><meta name="theme" content="1"></meta><meta name="search.placeholder" content="Search"></meta><meta name="search.results" content="Search results"></meta><meta name="no.search.results" content="No results found"></meta><script type="text/javascript">
+var theme = '1';
+
+			
+			window.versionsfile = '';
+
+
+			window.indexDict = new Array();
+			window.store = {};
+			window.portalLanguage = 'en';
+			window.enterKey = 'select';
+			
+			
+				var fuse_threshold = 0.3;
+			
+					var local_csh = false;
+				
+					var anchoroption = true;
+				var instantsearch_minlength = 1;
+						
+			var useanchorlinks = false;
+			
+					function addSearch(){
+					//not used with custom or elastic search
+					}
+				</script><title>Sitecore-first development workflow</title><link rel="stylesheet" type="text/css" href="../css/docbook.css"></link><link rel="stylesheet" type="text/css" href="../css/font-awesome.css"></link><link rel="stylesheet" type="text/css" href="../css/roboto.font.css"></link><link rel="stylesheet" type="text/css" href="../css/theme1.css?version=20230630"></link><link rel="stylesheet" type="text/css" href="../css/theme1-colors.css?version=20230630"></link><link rel="stylesheet" type="text/css" href="../css/content-theme1.css?version=20230630"></link><link rel="stylesheet" type="text/css" href="../css/sm-core-css.css"></link><link rel="stylesheet" type="text/css" href="../css/sm-simple.css"></link><link rel="stylesheet" type="text/css" href="../css/style-print.css"></link><link rel="stylesheet" type="text/css" href="../css/style-common.css"></link><link rel="stylesheet" type="text/css" href="../css/style-modern-tables.css"></link><link rel="stylesheet" type="text/css" href="../css/graphical-lists.css"></link><link rel="stylesheet" type="text/css" href="/css/sitecore-custom-default-xmc.css?version=20230630"></link><script src="../js/jquery-3/jquery-3.4.1.min.js" type="text/javascript"></script><script src="../js/jquery-migrate-3.0.1.min.js" type="text/javascript"></script><script src="../js/materialize.min.js" type="text/javascript"></script><script src="../js/bootstrap.min.js" type="text/javascript"></script><script src="../js/purl.js" type="text/javascript"></script><script src="../js/jquery.smartmenus.js" type="text/javascript"></script><script src="js/toc.js?version=20230630" type="text/javascript"></script><script src="../js/create-toc.js" type="text/javascript"></script><script src="../js/html5-2-mp-common.js?version=20230630" type="text/javascript"></script><script src="../js/html5-2.js?version=20230630" type="text/javascript"></script><script src="../js/checklist.js" type="text/javascript"></script><script src="../js/clipboard.min.js" type="text/javascript"></script><script src="../js/csh.js" type="text/javascript"></script><script src="/js/layout-custom-script.js" type="text/javascript"></script><meta xmlns:xhtml="http://www.w3.org/1999/xhtml" name="generator" content="Paligo"></meta><meta name="description" content="Overview of JSS Sitecore-first development"></meta><link rel="prev" href="create-a-route-type-with-fields-in-jss-code-first-development.html" title="Create a route type with fields in JSS code-first development"></link><link rel="next" href="sitecore-first-development-workflow.html#UUID-a13c6cd7-ba47-692e-524f-c14f8c423a64_section-idm4588692455352032613169920519" title="Creating renderings"></link><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML" async="async"></script><link rel="icon" href="/favicon.ico" type="image/x-icon"></link><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent/3.1.1/cookieconsent.min.css"></link><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent/3.1.1/cookieconsent.min.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/3.0.1/js.cookie.min.js"></script><script type="text/javascript">var privacypolicy = 'https://www.sitecore.com/trust/privacy-policy';
+var consenttype = 'opt-out';
+</script><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-72664331-1"></script><script type="text/javascript">const measurementId = 'UA-72664331-1';
+
+						$(document).on('cookies.consented', () => {
+							window.dataLayer = window.dataLayer || [];
+							function gtag(){dataLayer.push(arguments)};
+
+							gtag('js', new Date());
+							gtag('config', measurementId);
+						});
+					</script><script type="text/javascript" src="../js/cookie-consent.js"></script><script type="text/javascript">
+				$(document).ready(function () {
+				$(".mediaobject img").addClass('materialboxed');
+				//Exclude images with links
+				$(".mediaobject a img").removeClass('materialboxed');
+				if (!document.documentMode) {
+				$('.materialboxed').materialbox();
+				}});
+			</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/googlecode.min.css"></link><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script><script type="text/javascript">
+			$(document).ready(function() {
+
+				$('pre:not(.embedcode)').each(function() {
+					/**
+					 * @type {string}
+					 */
+					var language = $(this).data('language');
+
+					if (language === 'plaintext' || language === 'text') {
+						$(this).addClass(language).addClass('hljs');
+						return true;
+					}
+					else {
+						var clone = this.cloneNode(true);
+						hljs.highlightBlock(clone);
+						$(this).empty().append($(clone).contents());
+						$(this).attr("class", $(clone).attr("class"));
+					}
+				});
+			});
+			</script><link href="//customer.cludo.com/assets/2063/10039/cludo-search.min.css" type="text/css" rel="stylesheet"></link></head><body class="theme1 colored-top page-toc current-toc-section-focus" data-spy="scroll" data-target=".section-nav-container" data-offset="100" data-link-prefix=""><style type="text/css">
+            div.skipnav {
+            }
+            div.skipnav a {
+                position: fixed;
+                left: -10000px;
+                top: 1.5em;
+                width: 1px;
+                height: 1px;
+                overflow: hidden;
+            }
+            div.skipnav a:focus, div.skipnav a:active, div.skipnav a:hover {
+                background: white;
+                color: black;
+                box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.5);
+                position: fixed;
+                left: 2em;
+                top: 1.5em;
+                width: auto;
+                height: auto;
+                overflow: visible;
+                text-decoration: underline;
+                z-index: 99999; /* has to be higher than the side panel */
+    }
+          </style><div class="skipnav"><a href="#content-wrapper">Skip to main content</a></div><header class="site-header"><nav class="site-header-navbar navbar navbar-fixed-top"><div class="navbar-container"><div class="navbar-header"><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".site-sidebar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><div id="logotype-container" class="pull-left"><a class="navbar-brand" href="https://doc.sitecore.com/xmc/" target="_blank" rel="noopener"><img id="logotype-pageheader" src="../css/image/corporate-logo.png" alt="Corporate logotype" data-role="logotype" class="logo"></img></a></div></div><div class="navbar-collapse collapse" id="navbar"></div></div></nav></header><div class="site-body"><div class="site-body-container"><div class="site-body-row"><aside xmlns:xinfo="http://ns.expertinfo.se/cms/xmlns/1.0" class="site-sidebar"><div class="site-sidebar-header"><a href="https://doc.sitecore.com/xmc/" target="_blank"><img id="logotype-pageheader" src="../css/image/corporate-logo.png" alt="Corporate logotype" data-role="logotype" class="logo"></img></a></div><form id="search-form" class="site-sidebar-search" autocomplete="off"><input type="text" class="form-control search-field" placeholder="Search" id="aa-search-input"></input></form><div id="toc-standalone-placeholder"></div></aside><div class="site-content"><div class="toolbar"><div class="toolbar-tools"><div id="navbar" class="navbar-collapse collapse"></div><div class="tool-print"><i class="fa fa-print" aria-hidden="true">print</i></div><div class="tool-search"><i class="fa fa-search" aria-hidden="true"></i></div><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".site-sidebar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button></div><div class="breadcrumb-container"><ul class="breadcrumb"><li class="breadcrumb-link"><a href="index-en.html">XM Cloud Documentation for Developers</a></li><li class="breadcrumb-link"><a href="sitecore-javascript-rendering-sdks--jss-.html">Sitecore JavaScript Rendering SDKs (JSS)</a></li><li class="breadcrumb-link"><a href="development-workflows.html">Development workflows</a></li><li class="breadcrumb-node">Sitecore-first development workflow</li></ul></div></div><main><div id="top-pager"><ul class="pager"><li class="previous"><a accesskey="p" class="prev pull-left prev visible-lg visible-md" id="header-navigation-prev" href="create-a-route-type-with-fields-in-jss-code-first-development.html">Prev</a></li><li class="next"><a accesskey="n" class="pull-right next visible-lg visible-md" id="header-navigation-next" href="sitecore-first-development-workflow.html#UUID-a13c6cd7-ba47-692e-524f-c14f8c423a64_section-idm4588692455352032613169920519">Next</a></li></ul></div><article class="topic content-container" id="content-wrapper"><div id="topic-content" class="topic-content"><section xml:lang="en" lang="en" dir="ltr" class="section" data-origin-id="UUID-444f0b59-88a9-db18-26f7-b48a4fa5fd46" data-permalink="sitecore-first-development-workflow.html" data-topic-level="1" data-relative-prefix="" data-time-modified="10/14/2022" data-publication-date="06/30/23" id="UUID-a13c6cd7-ba47-692e-524f-c14f8c423a64"><div class="titlepage"><div><div class="title"><h1 class="title" style="clear: both">Sitecore-first development workflow<span id="UUID-a13c6cd7-ba47-692e-524f-c14f8c423a64_UUID-fd8a4032-e930-b51a-5013-5b9713e6973f"></span></h1></div><div><div class="abstract"><div class="abstract-title">Abstract</div><p>Overview of JSS Sitecore-first development</p></div></div></div></div><p>Most Sitecore-first projects begin with at least one <a class="link linktype-component" href="code-first-development-workflow.html" title="Code-first development workflow">code-first</a> app deployment to create the structures for the app in Sitecore, such as app root, rendering root, template root, and so on. After the initial deployment, the app can <a class="link linktype-component" href="transitioning-from-code-first-to-sitecore-first.html" title="Transitioning from code-first to Sitecore-first">migrate to Sitecore-first development</a>.</p><p>When developing a JSS app using the Sitecore-first workflow, the JSS app consumes data from Sitecore but has no responsibility for defining the structure of that data or what components are registered with Sitecore.</p><p>In this workflow, all developers require their own development instance of Sitecore, and the JSS app connects to it to acquire its content and layout data.</p><p>We recommend you choose the Sitecore-first workflow when:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>The project is led by experienced Sitecore developers who prefer to work in Sitecore.</p></li><li class="listitem"><p>The project has complex content or back-end architectural demands.</p></li><li class="listitem"><p>Sitecore developers are also implementing the JavaScript application.</p></li><li class="listitem"><p>JSS apps are to be deployed and versioned using the same deployment process.</p></li></ul></div><p>Working Sitecore-first in a JSS app is much like building any regular Sitecore site, with a few differences.</p><section dir="ltr" class="section" data-origin-id="" data-publication-date="06/30/23" id="UUID-a13c6cd7-ba47-692e-524f-c14f8c423a64_section-idm4588692455352032613169920519"><div class="titlepage"><div><div class="title"><h2 class="title" style="clear: both">Creating renderings</h2></div></div></div><p>When creating rendering items, use the <span class="emphasis"><em>Json Rendering</em></span> template instead of View renderings, XSLT, and so on. This rendering template is automatically rendered to JSON when emitted by the <a class="link linktype-component" href="layout-service.html" title="Layout Service">Layout Service</a>. The <span class="emphasis"><em> Json Rendering</em></span> template includes additional fields that allow you to set Rendering Contents Resolvers, set up Integrated GraphQL queries, and configure placeholders.</p><p>Also unique to the <span class="emphasis"><em>Json Rendering</em></span> template, the Component Name field is a string that needs to match with the name of a component registered in the JSS app. For example, if you created a rendering with <code class="code">Foo</code> as the component name, the JSS app would need a Foo.js component that was registered with its component mapping as <code class="code">"Foo" &gt; Foo.js</code>. If a component name cannot be mapped, JSS apps show a placeholder with the name of the missing component received from Sitecore. This can be used to scaffold out a component hierarchy prior to front-end developers actually implementing the view of the components.</p><p>When adding a placeholder to a rendering, the placeholder must also be added to the <span class="guilabel">Layout Service Placeholders</span> field on the rendering item. Otherwise, Layout Service does not attempt to render the child placeholder, and you do not receive any renderings added to it in the Layout Service data.</p></section><section dir="ltr" class="section" data-origin-id="" data-publication-date="06/30/23" id="UUID-a13c6cd7-ba47-692e-524f-c14f8c423a64_section-idm459367796586883261317031756"><div class="titlepage"><div><div class="title"><h2 class="title" style="clear: both">Editing and creating routes</h2></div></div></div><p>Creating routes Sitecore-first is just like adding pages to a traditional Sitecore site.</p></section><section dir="ltr" class="section" data-origin-id="" data-publication-date="06/30/23" id="UUID-a13c6cd7-ba47-692e-524f-c14f8c423a64_section-idm4664816093760032613170669489"><div class="titlepage"><div><div class="title"><h2 class="title" style="clear: both">Scripted component scaffolding</h2></div></div></div><p>When working in a Sitecore-first application, the task of adding a new component involves a repetitive set of steps (creating a rendering item, datasource template item, datasource location folders, and linking them together. To keep this simple, there are JSS CLI commands to help scaffold the Sitecore infrastructure of JSS components:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><a class="link linktype-component" href="sitecore-javascript-rendering-sdk-cli-tools-api-reference.html#UUID-d1481c73-2964-5c90-33d7-ba05eb856399_UUID-55a165b5-479e-e61a-95ca-27b8a3c26690" title="jss deploy component"><code class="code">jss deploy component</code></a> deploys a new component. It is similar to the function <code class="code">manifest.addComponent()</code> used in code-first development, but it deploys the new component directly to the Sitecore database.</p></li><li class="listitem"><p><a class="link linktype-component" href="sitecore-javascript-rendering-sdk-cli-tools-api-reference.html#UUID-d1481c73-2964-5c90-33d7-ba05eb856399_UUID-c8f56651-aaff-715a-f4ce-7dcd065168e6" title="jss deploy template"><code class="code">jss deploy template</code></a> deploys a new Sitecore template for use as a content template, settings item, and so on.</p></li></ul></div></section></section><div class="footer-content"><div class="glossary-definitions"></div></div><footer></footer></div></article><aside class="section-nav-container"><ul class="section-nav nav"><li><a href="#UUID-a13c6cd7-ba47-692e-524f-c14f8c423a64">Sitecore-first development workflow</a></li><li><a href="#UUID-a13c6cd7-ba47-692e-524f-c14f8c423a64_section-idm4588692455352032613169920519">Creating renderings</a></li><li><a href="#UUID-a13c6cd7-ba47-692e-524f-c14f8c423a64_section-idm459367796586883261317031756">Editing and creating routes</a></li><li><a href="#UUID-a13c6cd7-ba47-692e-524f-c14f8c423a64_section-idm4664816093760032613170669489">Scripted component scaffolding</a></li></ul></aside></main><div id="bottom-pager"><ul class="pager"><li class="previous"><a accesskey="p" class="prev pull-left prev visible-lg visible-md" id="header-navigation-prev" href="create-a-route-type-with-fields-in-jss-code-first-development.html">Prev</a></li><li class="next"><a accesskey="n" class="pull-right next visible-lg visible-md" id="header-navigation-next" href="sitecore-first-development-workflow.html#UUID-a13c6cd7-ba47-692e-524f-c14f8c423a64_section-idm4588692455352032613169920519">Next</a></li></ul></div><footer class="site-footer"><div class="inner"><div class="copyright"> © 2023 Sitecore </div><div class="date-modified"><span class="date-modified-text">Last modified: </span><span class="formatted-date">10/14/2022</span></div><div class="publication-date"><span class="publication-date-text">Publication date</span><span class="pubdate-delimiter">: </span><span class="formatted-date">06/30/23</span></div></div></footer></div></div></div></div><script type="text/javascript" src="//customer.cludo.com/scripts/bundles/search-script.min.js"></script><script>
+			var CludoSearch;
+			(function () {
+			var cludoSettings = {
+			customerId: 2063,
+			engineId: 12826,
+			language: 'en',
+			searchInputs: ["search-form","cludo-search-content-form","cludo-search-mobile-form"],
+			hideSearchFilters: true,
+			type: 'standardOverlay',
+			facets: ["Category", "ProductVer", "Product", "Version"],
+			useStandardSearchTemplate: false,
+			customerTemplate: "OverlayCopy",
+			searchApiUrl: 'https://api-eu1.cludo.com/api/v3'
+			};
+			CludoSearch= new Cludo(cludoSettings);
+			CludoSearch.init();
+			})();
+		</script><!-- www.Cludo.com Search body init script start --></body></html>

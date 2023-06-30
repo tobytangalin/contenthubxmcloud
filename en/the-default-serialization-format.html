@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"></meta><meta name="format-detection" content="telephone=no"></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><meta name="search" content="default"></meta><meta name="use.ic" content="no"></meta><meta name="Audience - do not use" content=""></meta><meta name="clubot" content=""></meta><meta name="data model" content=""></meta><meta name="DxP type - Do Not Use" content=""></meta><meta name="media_icon" content=""></meta><meta name="product" content="XM Cloud"></meta><meta name="Publishing target" content="Production"></meta><meta name="Ready for publishing - do not use" content=""></meta><meta name="role" content="developers"></meta><meta name="topic_tripane" content=""></meta><meta name="version" content=""></meta><meta name="tocstandalone" content="yes"></meta><meta name="theme" content="1"></meta><meta name="search.placeholder" content="Search"></meta><meta name="search.results" content="Search results"></meta><meta name="no.search.results" content="No results found"></meta><script type="text/javascript">
+var theme = '1';
+
+			
+			window.versionsfile = '';
+
+
+			window.indexDict = new Array();
+			window.store = {};
+			window.portalLanguage = 'en';
+			window.enterKey = 'select';
+			
+			
+				var fuse_threshold = 0.3;
+			
+					var local_csh = false;
+				
+					var anchoroption = true;
+				var instantsearch_minlength = 1;
+						
+			var useanchorlinks = false;
+			
+					function addSearch(){
+					//not used with custom or elastic search
+					}
+				</script><title>The default serialization format</title><link rel="stylesheet" type="text/css" href="../css/docbook.css"></link><link rel="stylesheet" type="text/css" href="../css/font-awesome.css"></link><link rel="stylesheet" type="text/css" href="../css/roboto.font.css"></link><link rel="stylesheet" type="text/css" href="../css/theme1.css?version=20230630"></link><link rel="stylesheet" type="text/css" href="../css/theme1-colors.css?version=20230630"></link><link rel="stylesheet" type="text/css" href="../css/content-theme1.css?version=20230630"></link><link rel="stylesheet" type="text/css" href="../css/sm-core-css.css"></link><link rel="stylesheet" type="text/css" href="../css/sm-simple.css"></link><link rel="stylesheet" type="text/css" href="../css/style-print.css"></link><link rel="stylesheet" type="text/css" href="../css/style-common.css"></link><link rel="stylesheet" type="text/css" href="../css/style-modern-tables.css"></link><link rel="stylesheet" type="text/css" href="../css/graphical-lists.css"></link><link rel="stylesheet" type="text/css" href="/css/sitecore-custom-default-xmc.css?version=20230630"></link><script src="../js/jquery-3/jquery-3.4.1.min.js" type="text/javascript"></script><script src="../js/jquery-migrate-3.0.1.min.js" type="text/javascript"></script><script src="../js/materialize.min.js" type="text/javascript"></script><script src="../js/bootstrap.min.js" type="text/javascript"></script><script src="../js/purl.js" type="text/javascript"></script><script src="../js/jquery.smartmenus.js" type="text/javascript"></script><script src="js/toc.js?version=20230630" type="text/javascript"></script><script src="../js/create-toc.js" type="text/javascript"></script><script src="../js/html5-2-mp-common.js?version=20230630" type="text/javascript"></script><script src="../js/html5-2.js?version=20230630" type="text/javascript"></script><script src="../js/checklist.js" type="text/javascript"></script><script src="../js/clipboard.min.js" type="text/javascript"></script><script src="../js/csh.js" type="text/javascript"></script><script src="/js/layout-custom-script.js" type="text/javascript"></script><meta xmlns:xhtml="http://www.w3.org/1999/xhtml" name="generator" content="Paligo"></meta><link rel="prev" href="configure-serialization.html" title="Configure serialization"></link><link rel="next" href="the-default-serialization-format.html#UUID-b8db43f5-15b2-d0bb-d424-db0f73f8ad0d_section-5c8bb3edd2f8e-idm45899287833232" title="Deeply nested items"></link><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML" async="async"></script><link rel="icon" href="/favicon.ico" type="image/x-icon"></link><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent/3.1.1/cookieconsent.min.css"></link><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent/3.1.1/cookieconsent.min.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/3.0.1/js.cookie.min.js"></script><script type="text/javascript">var privacypolicy = 'https://www.sitecore.com/trust/privacy-policy';
+var consenttype = 'opt-out';
+</script><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-72664331-1"></script><script type="text/javascript">const measurementId = 'UA-72664331-1';
+
+						$(document).on('cookies.consented', () => {
+							window.dataLayer = window.dataLayer || [];
+							function gtag(){dataLayer.push(arguments)};
+
+							gtag('js', new Date());
+							gtag('config', measurementId);
+						});
+					</script><script type="text/javascript" src="../js/cookie-consent.js"></script><script type="text/javascript">
+				$(document).ready(function () {
+				$(".mediaobject img").addClass('materialboxed');
+				//Exclude images with links
+				$(".mediaobject a img").removeClass('materialboxed');
+				if (!document.documentMode) {
+				$('.materialboxed').materialbox();
+				}});
+			</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/googlecode.min.css"></link><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script><script type="text/javascript">
+			$(document).ready(function() {
+
+				$('pre:not(.embedcode)').each(function() {
+					/**
+					 * @type {string}
+					 */
+					var language = $(this).data('language');
+
+					if (language === 'plaintext' || language === 'text') {
+						$(this).addClass(language).addClass('hljs');
+						return true;
+					}
+					else {
+						var clone = this.cloneNode(true);
+						hljs.highlightBlock(clone);
+						$(this).empty().append($(clone).contents());
+						$(this).attr("class", $(clone).attr("class"));
+					}
+				});
+			});
+			</script><link href="//customer.cludo.com/assets/2063/10039/cludo-search.min.css" type="text/css" rel="stylesheet"></link></head><body class="theme1 colored-top page-toc current-toc-section-focus" data-spy="scroll" data-target=".section-nav-container" data-offset="100" data-link-prefix=""><style type="text/css">
+            div.skipnav {
+            }
+            div.skipnav a {
+                position: fixed;
+                left: -10000px;
+                top: 1.5em;
+                width: 1px;
+                height: 1px;
+                overflow: hidden;
+            }
+            div.skipnav a:focus, div.skipnav a:active, div.skipnav a:hover {
+                background: white;
+                color: black;
+                box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.5);
+                position: fixed;
+                left: 2em;
+                top: 1.5em;
+                width: auto;
+                height: auto;
+                overflow: visible;
+                text-decoration: underline;
+                z-index: 99999; /* has to be higher than the side panel */
+    }
+          </style><div class="skipnav"><a href="#content-wrapper">Skip to main content</a></div><header class="site-header"><nav class="site-header-navbar navbar navbar-fixed-top"><div class="navbar-container"><div class="navbar-header"><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".site-sidebar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><div id="logotype-container" class="pull-left"><a class="navbar-brand" href="https://doc.sitecore.com/xmc/" target="_blank" rel="noopener"><img id="logotype-pageheader" src="../css/image/corporate-logo.png" alt="Corporate logotype" data-role="logotype" class="logo"></img></a></div></div><div class="navbar-collapse collapse" id="navbar"></div></div></nav></header><div class="site-body"><div class="site-body-container"><div class="site-body-row"><aside xmlns:xinfo="http://ns.expertinfo.se/cms/xmlns/1.0" class="site-sidebar"><div class="site-sidebar-header"><a href="https://doc.sitecore.com/xmc/" target="_blank"><img id="logotype-pageheader" src="../css/image/corporate-logo.png" alt="Corporate logotype" data-role="logotype" class="logo"></img></a></div><form id="search-form" class="site-sidebar-search" autocomplete="off"><input type="text" class="form-control search-field" placeholder="Search" id="aa-search-input"></input></form><div id="toc-standalone-placeholder"></div></aside><div class="site-content"><div class="toolbar"><div class="toolbar-tools"><div id="navbar" class="navbar-collapse collapse"></div><div class="tool-print"><i class="fa fa-print" aria-hidden="true">print</i></div><div class="tool-search"><i class="fa fa-search" aria-hidden="true"></i></div><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".site-sidebar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button></div><div class="breadcrumb-container"><ul class="breadcrumb"><li class="breadcrumb-link"><a href="index-en.html">XM Cloud Documentation for Developers</a></li><li class="breadcrumb-link"><a href="xm-cloud-development.html">XM Cloud development</a></li><li class="breadcrumb-link"><a href="serialization-in-sitecore.html">Serialization in Sitecore</a></li><li class="breadcrumb-node">The default serialization format</li></ul></div></div><main><div id="top-pager"><ul class="pager"><li class="previous"><a accesskey="p" class="prev pull-left prev visible-lg visible-md" id="header-navigation-prev" href="configure-serialization.html">Prev</a></li><li class="next"><a accesskey="n" class="pull-right next visible-lg visible-md" id="header-navigation-next" href="the-default-serialization-format.html#UUID-b8db43f5-15b2-d0bb-d424-db0f73f8ad0d_section-5c8bb3edd2f8e-idm45899287833232">Next</a></li></ul></div><article class="topic content-container" id="content-wrapper"><div id="topic-content" class="topic-content"><section xml:lang="en" lang="en" dir="ltr" class="section" data-origin-id="UUID-6bc8f3de-8cb7-fe32-10e8-63c5ed4beff9" data-permalink="the-default-serialization-format.html" data-topic-level="1" data-relative-prefix="" data-time-modified="06/14/2019" data-publication-date="06/30/23" id="UUID-b8db43f5-15b2-d0bb-d424-db0f73f8ad0d"><div class="titlepage"><div><div class="title"><h1 class="title" style="clear: both">The default serialization format</h1></div></div></div><p>When you serialize items, Sitecore creates a separate text file for each item it processes. The files are stored under the root folder that the serialization setting specifies, for example: <code class="code">C:\inetpub\wwwroot\sc92\App_Data\serialization\master\sitecore\content\Home.item</code>.</p><p>Each text file contains the following information:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Item definition: version, ID, path, and so on</p></li><li class="listitem"><p>Shared fields</p></li><li class="listitem"><p>Item versions:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; "><li class="listitem"><p>Version definition, including language version, numbered version, and revision number</p></li><li class="listitem"><p>Non-shared fields</p></li></ul></div></li></ul></div><p>A serialized item looks like this:</p><pre class="programlisting">    ----item----
+version: 1
+id: {110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}
+database: master
+path: /sitecore/content/Home
+parent: {0DE95AE4-41AB-4D01-9EB0-67441B7C2450}
+name: Home
+master: {00000000-0000-0000-0000-000000000000}
+template: {76036F5E-CBCE-46D1-AF0A-4143F9B557AA}
+templatekey: Sample Item
+created: 20190425T171954Z
+
+----field----
+field: {A0CB3965-8884-4C7A-8815-B6B2E5CED162}
+name: __Editors
+key: __editors
+content-length: 0
+
+
+...
+
+
+----field----
+field: {A4F985D9-98B3-4B52-AAAF-4344F6E747C6}
+name: __Workflow
+key: __workflow
+content-length: 38
+
+{A5BC37E7-ED96-4C1E-8590-A26E64DB55EA}
+----field----
+field: {CA9B9F52-4FB0-4F87-A79F-24DEA62CDA65}
+name: __Default workflow
+key: __default workflow
+content-length: 0
+
+
+----version----
+language: en
+version: 1
+revision: 38ea58d9-bd7f-4a73-b431-27ecce83b8f7
+
+----field----
+field: {75577384-3C97-45DA-A847-81B00500E250}
+name: Title
+key: title
+content-length: 28
+
+Sitecore Experience Platform
+----field----
+field: {A60ACD61-A6DB-4182-8329-C957982CEC74}
+name: Text
+key: text
+content-length: 788
+
+&lt;p style="line-height: 22px;"&gt;From a single connected platform that also integrates with other customer-facing platforms, to a single view of the customer in a big data marketing repository, to completely eliminating much of the complexity that has previously held marketers back, the latest version of Sitecore makes customer experience highly achievable. Learn how the latest version of Sitecore gives marketers the complete data, integrated tools, and automation capabilities to engage customers throughout an iterative lifecycle &amp;ndash; the technology foundation absolutely necessary to win customers for life.&lt;/p&gt;
+&lt;p&gt;For further information, please go to the &lt;a href="https://doc.sitecore.net/" target="_blank" title="Sitecore Documentation site"&gt;Sitecore Documentation site&lt;/a&gt;&lt;/p&gt;
+
+----field----
+field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
+name: __Display name
+key: __display name
+content-length: 0
+
+
+----field----
+field: {577F1689-7DE4-4AD2-A15F-7FDC1759285F}
+name: __Long description
+key: __long description
+content-length: 58
+
+...
+
+sitecore\Admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20080407T105900Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+38ea58d9-bd7f-4a73-b431-27ecce83b8f7
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20151109T083058Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin
+
+    </pre><p>Each <code class="code">----field----</code> section in the text file has a <code class="code">content-length</code> parameter that specifies the length of the corresponding item field value.</p><section dir="ltr" class="section" data-origin-id="" data-publication-date="06/30/23" id="UUID-b8db43f5-15b2-d0bb-d424-db0f73f8ad0d_section-5c8bb3edd2f8e-idm45899287833232"><div class="titlepage"><div><div class="title"><h2 class="title" style="clear: both">Deeply nested items</h2></div></div></div><p>In Windows, the length of a single path to a file cannot be more than 255 characters. For content trees with multiple nested levels, this limitation can cause items in nested folders to be omitted during the serialization process.</p><p>To work around this limitation and serialize all of the requested items, Sitecore sometimes shortens the paths when items are deeply nested. Sitecore stores the serialization output text files for these items in auxiliary file folders with random names under the <code class="code">$dataFolder\serialization</code> folder.</p><div dir="ltr" class="note"><h3 class="title">Note</h3><p>To be able to revert to the full content tree in another Sitecore environment, you must copy both the database folders and the auxiliary folders to the new destination.</p></div></section></section><div class="footer-content"><div class="glossary-definitions"></div></div><footer></footer></div></article><aside class="section-nav-container"><ul class="section-nav nav"><li><a href="#UUID-b8db43f5-15b2-d0bb-d424-db0f73f8ad0d">The default serialization format</a></li><li><a href="#UUID-b8db43f5-15b2-d0bb-d424-db0f73f8ad0d_section-5c8bb3edd2f8e-idm45899287833232">Deeply nested items</a></li></ul></aside></main><div id="bottom-pager"><ul class="pager"><li class="previous"><a accesskey="p" class="prev pull-left prev visible-lg visible-md" id="header-navigation-prev" href="configure-serialization.html">Prev</a></li><li class="next"><a accesskey="n" class="pull-right next visible-lg visible-md" id="header-navigation-next" href="the-default-serialization-format.html#UUID-b8db43f5-15b2-d0bb-d424-db0f73f8ad0d_section-5c8bb3edd2f8e-idm45899287833232">Next</a></li></ul></div><footer class="site-footer"><div class="inner"><div class="copyright"> © 2023 Sitecore </div><div class="date-modified"><span class="date-modified-text">Last modified: </span><span class="formatted-date">06/14/2019</span></div><div class="publication-date"><span class="publication-date-text">Publication date</span><span class="pubdate-delimiter">: </span><span class="formatted-date">06/30/23</span></div></div></footer></div></div></div></div><script type="text/javascript" src="//customer.cludo.com/scripts/bundles/search-script.min.js"></script><script>
+			var CludoSearch;
+			(function () {
+			var cludoSettings = {
+			customerId: 2063,
+			engineId: 12826,
+			language: 'en',
+			searchInputs: ["search-form","cludo-search-content-form","cludo-search-mobile-form"],
+			hideSearchFilters: true,
+			type: 'standardOverlay',
+			facets: ["Category", "ProductVer", "Product", "Version"],
+			useStandardSearchTemplate: false,
+			customerTemplate: "OverlayCopy",
+			searchApiUrl: 'https://api-eu1.cludo.com/api/v3'
+			};
+			CludoSearch= new Cludo(cludoSettings);
+			CludoSearch.init();
+			})();
+		</script><!-- www.Cludo.com Search body init script start --></body></html>

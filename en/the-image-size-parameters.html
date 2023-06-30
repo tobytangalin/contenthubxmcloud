@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"></meta><meta name="format-detection" content="telephone=no"></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><meta name="search" content="default"></meta><meta name="use.ic" content="no"></meta><meta name="Audience - do not use" content=""></meta><meta name="clubot" content=""></meta><meta name="data model" content=""></meta><meta name="DxP type - Do Not Use" content=""></meta><meta name="media_icon" content=""></meta><meta name="product" content="XM Cloud"></meta><meta name="Publishing target" content="Production"></meta><meta name="Ready for publishing - do not use" content=""></meta><meta name="role" content="developers"></meta><meta name="topic_tripane" content=""></meta><meta name="version" content=""></meta><meta name="tocstandalone" content="yes"></meta><meta name="theme" content="1"></meta><meta name="search.placeholder" content="Search"></meta><meta name="search.results" content="Search results"></meta><meta name="no.search.results" content="No results found"></meta><script type="text/javascript">
+var theme = '1';
+
+			
+			window.versionsfile = '';
+
+
+			window.indexDict = new Array();
+			window.store = {};
+			window.portalLanguage = 'en';
+			window.enterKey = 'select';
+			
+			
+				var fuse_threshold = 0.3;
+			
+					var local_csh = false;
+				
+					var anchoroption = true;
+				var instantsearch_minlength = 1;
+						
+			var useanchorlinks = false;
+			
+					function addSearch(){
+					//not used with custom or elastic search
+					}
+				</script><title>The image size parameters</title><link rel="stylesheet" type="text/css" href="../css/docbook.css"></link><link rel="stylesheet" type="text/css" href="../css/font-awesome.css"></link><link rel="stylesheet" type="text/css" href="../css/roboto.font.css"></link><link rel="stylesheet" type="text/css" href="../css/theme1.css?version=20230630"></link><link rel="stylesheet" type="text/css" href="../css/theme1-colors.css?version=20230630"></link><link rel="stylesheet" type="text/css" href="../css/content-theme1.css?version=20230630"></link><link rel="stylesheet" type="text/css" href="../css/sm-core-css.css"></link><link rel="stylesheet" type="text/css" href="../css/sm-simple.css"></link><link rel="stylesheet" type="text/css" href="../css/style-print.css"></link><link rel="stylesheet" type="text/css" href="../css/style-common.css"></link><link rel="stylesheet" type="text/css" href="../css/style-modern-tables.css"></link><link rel="stylesheet" type="text/css" href="../css/graphical-lists.css"></link><link rel="stylesheet" type="text/css" href="/css/sitecore-custom-default-xmc.css?version=20230630"></link><script src="../js/jquery-3/jquery-3.4.1.min.js" type="text/javascript"></script><script src="../js/jquery-migrate-3.0.1.min.js" type="text/javascript"></script><script src="../js/materialize.min.js" type="text/javascript"></script><script src="../js/bootstrap.min.js" type="text/javascript"></script><script src="../js/purl.js" type="text/javascript"></script><script src="../js/jquery.smartmenus.js" type="text/javascript"></script><script src="js/toc.js?version=20230630" type="text/javascript"></script><script src="../js/create-toc.js" type="text/javascript"></script><script src="../js/html5-2-mp-common.js?version=20230630" type="text/javascript"></script><script src="../js/html5-2.js?version=20230630" type="text/javascript"></script><script src="../js/checklist.js" type="text/javascript"></script><script src="../js/clipboard.min.js" type="text/javascript"></script><script src="../js/csh.js" type="text/javascript"></script><script src="/js/layout-custom-script.js" type="text/javascript"></script><meta xmlns:xhtml="http://www.w3.org/1999/xhtml" name="generator" content="Paligo"></meta><meta name="description" content="Reference documentation for image size parameters you can use for responsive images"></meta><link rel="prev" href="use-images-in-jss-applications.html#idm45599296648448" title="Optimize images"></link><link rel="next" href="the-image-size-parameters.html#UUID-1defe660-a37f-3031-31d8-1da0bb906e40_section-idm4653739040128033178715697371" title="Examples"></link><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML" async="async"></script><link rel="icon" href="/favicon.ico" type="image/x-icon"></link><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent/3.1.1/cookieconsent.min.css"></link><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent/3.1.1/cookieconsent.min.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/3.0.1/js.cookie.min.js"></script><script type="text/javascript">var privacypolicy = 'https://www.sitecore.com/trust/privacy-policy';
+var consenttype = 'opt-out';
+</script><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-72664331-1"></script><script type="text/javascript">const measurementId = 'UA-72664331-1';
+
+						$(document).on('cookies.consented', () => {
+							window.dataLayer = window.dataLayer || [];
+							function gtag(){dataLayer.push(arguments)};
+
+							gtag('js', new Date());
+							gtag('config', measurementId);
+						});
+					</script><script type="text/javascript" src="../js/cookie-consent.js"></script><script type="text/javascript">
+				$(document).ready(function () {
+				$(".mediaobject img").addClass('materialboxed');
+				//Exclude images with links
+				$(".mediaobject a img").removeClass('materialboxed');
+				if (!document.documentMode) {
+				$('.materialboxed').materialbox();
+				}});
+			</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/googlecode.min.css"></link><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script><script type="text/javascript">
+			$(document).ready(function() {
+
+				$('pre:not(.embedcode)').each(function() {
+					/**
+					 * @type {string}
+					 */
+					var language = $(this).data('language');
+
+					if (language === 'plaintext' || language === 'text') {
+						$(this).addClass(language).addClass('hljs');
+						return true;
+					}
+					else {
+						var clone = this.cloneNode(true);
+						hljs.highlightBlock(clone);
+						$(this).empty().append($(clone).contents());
+						$(this).attr("class", $(clone).attr("class"));
+					}
+				});
+			});
+			</script><link href="//customer.cludo.com/assets/2063/10039/cludo-search.min.css" type="text/css" rel="stylesheet"></link></head><body class="theme1 colored-top page-toc current-toc-section-focus" data-spy="scroll" data-target=".section-nav-container" data-offset="100" data-link-prefix=""><style type="text/css">
+            div.skipnav {
+            }
+            div.skipnav a {
+                position: fixed;
+                left: -10000px;
+                top: 1.5em;
+                width: 1px;
+                height: 1px;
+                overflow: hidden;
+            }
+            div.skipnav a:focus, div.skipnav a:active, div.skipnav a:hover {
+                background: white;
+                color: black;
+                box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.5);
+                position: fixed;
+                left: 2em;
+                top: 1.5em;
+                width: auto;
+                height: auto;
+                overflow: visible;
+                text-decoration: underline;
+                z-index: 99999; /* has to be higher than the side panel */
+    }
+          </style><div class="skipnav"><a href="#content-wrapper">Skip to main content</a></div><header class="site-header"><nav class="site-header-navbar navbar navbar-fixed-top"><div class="navbar-container"><div class="navbar-header"><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".site-sidebar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><div id="logotype-container" class="pull-left"><a class="navbar-brand" href="https://doc.sitecore.com/xmc/" target="_blank" rel="noopener"><img id="logotype-pageheader" src="../css/image/corporate-logo.png" alt="Corporate logotype" data-role="logotype" class="logo"></img></a></div></div><div class="navbar-collapse collapse" id="navbar"></div></div></nav></header><div class="site-body"><div class="site-body-container"><div class="site-body-row"><aside xmlns:xinfo="http://ns.expertinfo.se/cms/xmlns/1.0" class="site-sidebar"><div class="site-sidebar-header"><a href="https://doc.sitecore.com/xmc/" target="_blank"><img id="logotype-pageheader" src="../css/image/corporate-logo.png" alt="Corporate logotype" data-role="logotype" class="logo"></img></a></div><form id="search-form" class="site-sidebar-search" autocomplete="off"><input type="text" class="form-control search-field" placeholder="Search" id="aa-search-input"></input></form><div id="toc-standalone-placeholder"></div></aside><div class="site-content"><div class="toolbar"><div class="toolbar-tools"><div id="navbar" class="navbar-collapse collapse"></div><div class="tool-print"><i class="fa fa-print" aria-hidden="true">print</i></div><div class="tool-search"><i class="fa fa-search" aria-hidden="true"></i></div><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".site-sidebar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button></div><div class="breadcrumb-container"><ul class="breadcrumb"><li class="breadcrumb-link"><a href="index-en.html">XM Cloud Documentation for Developers</a></li><li class="breadcrumb-link"><a href="sitecore-javascript-rendering-sdks--jss-.html">Sitecore JavaScript Rendering SDKs (JSS)</a></li><li class="breadcrumb-link"><a href="architecture-overview.html">Architecture overview</a></li><li class="breadcrumb-link"><a href="jss-services-and-apis.html">JSS services and APIs</a></li><li class="breadcrumb-link"><a href="jss-media-api.html">JSS Media API</a></li><li class="breadcrumb-node">The image size parameters</li></ul></div></div><main><div id="top-pager"><ul class="pager"><li class="previous"><a accesskey="p" class="prev pull-left prev visible-lg visible-md" id="header-navigation-prev" href="use-images-in-jss-applications.html#idm45599296648448">Prev</a></li><li class="next"><a accesskey="n" class="pull-right next visible-lg visible-md" id="header-navigation-next" href="the-image-size-parameters.html#UUID-1defe660-a37f-3031-31d8-1da0bb906e40_section-idm4653739040128033178715697371">Next</a></li></ul></div><article class="topic content-container" id="content-wrapper"><div id="topic-content" class="topic-content"><section xml:lang="en" lang="en" dir="ltr" class="section" data-origin-id="UUID-d73c01c1-d179-b012-9fc1-95f796cc0e8c" data-permalink="the-image-size-parameters.html" data-topic-level="1" data-relative-prefix="" data-time-modified="07/27/2022" data-publication-date="06/30/23" id="UUID-1defe660-a37f-3031-31d8-1da0bb906e40"><div class="titlepage"><div><div class="title"><h1 class="title" style="clear: both">The image size parameters</h1></div><div><div class="abstract"><div class="abstract-title">Abstract</div><p>Reference documentation for image size parameters you can use for responsive images</p></div></div></div></div><p>When using the JSS <code class="code">NextImage</code> or <code class="code">Image</code>components provided by JSS for React, Angular, Vue.js and React Native applications, you can provide the image resizing parameters to the components.</p><p>Some of the image size parameters affect image aspects, such as sizing. Others apply to any media type, such as language, version, database, and cache functionality.</p><p>They are used to set the <code class="code">srcset</code> attribute on the HTML <code class="code">img</code> element or appended to the image source URL as query string parameters.</p><div dir="ltr" class="important" id="UUID-1defe660-a37f-3031-31d8-1da0bb906e40_important-idm1403317869873916"><h3 class="title">Important</h3><p id="UUID-1defe660-a37f-3031-31d8-1da0bb906e40_para-idm1401658934936960">Because JSS does not support security hashing of media URLs, you must <a class="link linktype-component" href="media-handler.html" title="Media Handler">white-list these parameter sets on the server</a>.</p></div><p>The following table describes the supported parameters:</p><div class="informaltable table-responsive"><table style="width:100%;" class="informaltable frame-void rules-rows"><thead><tr><th class="th"><p>Key</p></th><th class="th"><p>Description</p></th></tr></thead><tbody><tr><td class="td"><p><code class="code">w</code></p></td><td class="td"><p>Width in pixels.</p></td></tr><tr><td class="td"><p><code class="code">h</code></p></td><td class="td"><p>Height in pixels.</p></td></tr><tr><td class="td"><p><code class="code">mw</code></p></td><td class="td"><p>Maximum width in pixels.</p></td></tr><tr><td class="td"><p><code class="code">mh</code></p></td><td class="td"><p>Maximum height in pixels.</p></td></tr><tr><td class="td"><p><code class="code">la</code></p></td><td class="td"><p>Language (defaults to context language).</p></td></tr><tr><td class="td"><p><code class="code">vs</code></p></td><td class="td"><p>Version (defaults to the latest version).</p></td></tr><tr><td class="td"><p><code class="code">db</code></p></td><td class="td"><p>Database name (defaults to context database).</p></td></tr><tr><td class="td"><p><code class="code">bc</code></p></td><td class="td"><p>Background color (defaults to black).</p></td></tr><tr><td class="td"><p><code class="code">as</code></p></td><td class="td"><p>Allow stretch (as=1).</p></td></tr><tr><td class="td"><p><code class="code">sc</code></p></td><td class="td"><p>Scale by floating point number (sc=.25 = 25%).</p></td></tr><tr><td class="td"><p><code class="code">thn</code></p></td><td class="td"><p>Thumbnail (thn=1).</p></td></tr><tr><td class="td"><p><code class="code">dmc</code></p></td><td class="td"><p>Disable media caching, both retrieval and storage (dmc=1).</p></td></tr></tbody></table></div><section dir="ltr" class="section" data-origin-id="" data-publication-date="06/30/23" id="UUID-1defe660-a37f-3031-31d8-1da0bb906e40_section-idm4653739040128033178715697371"><div class="titlepage"><div><div class="title"><h2 class="title" style="clear: both">Examples</h2></div></div></div><p>The following examples show how you can use the <code class="code">imageParams</code> property for various frameworks.</p><h3 id="idm45599296502176" class="bridgehead">React and Next.js</h3><p>In a JSS React/Next.js application, with the <code class="code">Image</code> component.</p><pre class="programlisting" id="UUID-1defe660-a37f-3031-31d8-1da0bb906e40_programlisting-idm4533123909400033178704202989">&lt;Image
+  field={props.fields.sample2}
+  srcSet={[{ mw: 300 }, { mw: 100 }]}
+  sizes="(min-width: 960px) 300px, 100px"
+  className="img-fluid"
+/&gt;</pre><p>In a JSS Next.js application, you can also use the <code class="code">NextImage</code> component. If you want to provide image size parameters, you must also set the <code class="code">unoptimized</code> property to <code class="code">true</code>. For example:</p><pre class="programlisting" id="UUID-1defe660-a37f-3031-31d8-1da0bb906e40_programlisting-idm1403317870961220">&lt;NextImage
+  field={props.fields.image}
+  unoptimized={true}
+  imageParams={{ mw: 100, mh: 50 }}
+  height="50"
+  width="94"/&gt;</pre><h3 id="idm45599296496624" class="bridgehead">Vue.js</h3><p>In a JSS Vue.js application:</p><pre class="programlisting" id="UUID-1defe660-a37f-3031-31d8-1da0bb906e40_programlisting-idm4533123909696033178708060934">&lt;sc-image
+  :media="fields.sample2"
+  :srcSet="[{ mw: 300 }, { mw: 100 }]"
+  sizes="(min-width: 960px) 300px, 100px"
+  class="img-fluid"
+/&gt;</pre><h3 id="idm45599296494528" class="bridgehead">Angular</h3><p>In a JSS Angular application, you can use the parameters to set the <code class="code">srcset</code> attribute on the image:</p><pre class="programlisting" id="UUID-1defe660-a37f-3031-31d8-1da0bb906e40_programlisting-idm4542691771932833178709068887">&lt;img *scImage="rendering.fields.sample2; attrs: srcSetImageAttributes"
+  sizes="(min-width: 960px) 300px, 100px"
+  class="img-fluid"  /&gt;</pre><p>where the structure of the <code class="code">srcSetImageAttributes</code> object is:</p><pre class="programlisting" id="UUID-1defe660-a37f-3031-31d8-1da0bb906e40_programlisting-idm4653739036969633178713955988"> srcSetImageAttributes = {
+    srcSet: [
+      { mw: 300 },
+      { mw: 100 }
+    ]
+  };</pre><p>You can also use the image size parameters as URL parameters that append to the media URL:</p><pre class="programlisting" id="UUID-1defe660-a37f-3031-31d8-1da0bb906e40_programlisting-idm455589466664323317872379714">&lt;img *scImage="rendering.fields.sample2; editable: false; urlParams: scaledImageParams"
+  height="50"
+  width="94" /&gt;</pre><p>where the structure of the <code class="code">scaledImageParams</code> object is:</p><pre class="programlisting" id="UUID-1defe660-a37f-3031-31d8-1da0bb906e40_programlisting-idm4615985606302433178725415199"> scaledImageParams = {
+    mw: 100,
+    mh: 50,
+ };</pre></section></section><div class="footer-content"><div class="glossary-definitions"></div></div><footer></footer></div></article><aside class="section-nav-container"><ul class="section-nav nav"><li><a href="#UUID-1defe660-a37f-3031-31d8-1da0bb906e40">The image size parameters</a></li><li><a href="#UUID-1defe660-a37f-3031-31d8-1da0bb906e40_section-idm4653739040128033178715697371">Examples</a></li></ul></aside></main><div id="bottom-pager"><ul class="pager"><li class="previous"><a accesskey="p" class="prev pull-left prev visible-lg visible-md" id="header-navigation-prev" href="use-images-in-jss-applications.html#idm45599296648448">Prev</a></li><li class="next"><a accesskey="n" class="pull-right next visible-lg visible-md" id="header-navigation-next" href="the-image-size-parameters.html#UUID-1defe660-a37f-3031-31d8-1da0bb906e40_section-idm4653739040128033178715697371">Next</a></li></ul></div><footer class="site-footer"><div class="inner"><div class="copyright"> © 2023 Sitecore </div><div class="date-modified"><span class="date-modified-text">Last modified: </span><span class="formatted-date">07/27/2022</span></div><div class="publication-date"><span class="publication-date-text">Publication date</span><span class="pubdate-delimiter">: </span><span class="formatted-date">06/30/23</span></div></div></footer></div></div></div></div><script type="text/javascript" src="//customer.cludo.com/scripts/bundles/search-script.min.js"></script><script>
+			var CludoSearch;
+			(function () {
+			var cludoSettings = {
+			customerId: 2063,
+			engineId: 12826,
+			language: 'en',
+			searchInputs: ["search-form","cludo-search-content-form","cludo-search-mobile-form"],
+			hideSearchFilters: true,
+			type: 'standardOverlay',
+			facets: ["Category", "ProductVer", "Product", "Version"],
+			useStandardSearchTemplate: false,
+			customerTemplate: "OverlayCopy",
+			searchApiUrl: 'https://api-eu1.cludo.com/api/v3'
+			};
+			CludoSearch= new Cludo(cludoSettings);
+			CludoSearch.init();
+			})();
+		</script><!-- www.Cludo.com Search body init script start --></body></html>

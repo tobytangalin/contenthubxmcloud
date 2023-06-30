@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"></meta><meta name="format-detection" content="telephone=no"></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><meta name="search" content="default"></meta><meta name="use.ic" content="no"></meta><meta name="Audience - do not use" content=""></meta><meta name="clubot" content=""></meta><meta name="data model" content=""></meta><meta name="DxP type - Do Not Use" content=""></meta><meta name="media_icon" content=""></meta><meta name="product" content="XM Cloud"></meta><meta name="Publishing target" content="Production"></meta><meta name="Ready for publishing - do not use" content=""></meta><meta name="role" content="developers"></meta><meta name="topic_tripane" content=""></meta><meta name="version" content=""></meta><meta name="tocstandalone" content="yes"></meta><meta name="theme" content="1"></meta><meta name="search.placeholder" content="Search"></meta><meta name="search.results" content="Search results"></meta><meta name="no.search.results" content="No results found"></meta><script type="text/javascript">
+var theme = '1';
+
+			
+			window.versionsfile = '';
+
+
+			window.indexDict = new Array();
+			window.store = {};
+			window.portalLanguage = 'en';
+			window.enterKey = 'select';
+			
+			
+				var fuse_threshold = 0.3;
+			
+					var local_csh = false;
+				
+					var anchoroption = true;
+				var instantsearch_minlength = 1;
+						
+			var useanchorlinks = false;
+			
+					function addSearch(){
+					//not used with custom or elastic search
+					}
+				</script><title>Automatic item synchronization at build time</title><link rel="stylesheet" type="text/css" href="../css/docbook.css"></link><link rel="stylesheet" type="text/css" href="../css/font-awesome.css"></link><link rel="stylesheet" type="text/css" href="../css/roboto.font.css"></link><link rel="stylesheet" type="text/css" href="../css/theme1.css?version=20230630"></link><link rel="stylesheet" type="text/css" href="../css/theme1-colors.css?version=20230630"></link><link rel="stylesheet" type="text/css" href="../css/content-theme1.css?version=20230630"></link><link rel="stylesheet" type="text/css" href="../css/sm-core-css.css"></link><link rel="stylesheet" type="text/css" href="../css/sm-simple.css"></link><link rel="stylesheet" type="text/css" href="../css/style-print.css"></link><link rel="stylesheet" type="text/css" href="../css/style-common.css"></link><link rel="stylesheet" type="text/css" href="../css/style-modern-tables.css"></link><link rel="stylesheet" type="text/css" href="../css/graphical-lists.css"></link><link rel="stylesheet" type="text/css" href="/css/sitecore-custom-default-xmc.css?version=20230630"></link><script src="../js/jquery-3/jquery-3.4.1.min.js" type="text/javascript"></script><script src="../js/jquery-migrate-3.0.1.min.js" type="text/javascript"></script><script src="../js/materialize.min.js" type="text/javascript"></script><script src="../js/bootstrap.min.js" type="text/javascript"></script><script src="../js/purl.js" type="text/javascript"></script><script src="../js/jquery.smartmenus.js" type="text/javascript"></script><script src="js/toc.js?version=20230630" type="text/javascript"></script><script src="../js/create-toc.js" type="text/javascript"></script><script src="../js/html5-2-mp-common.js?version=20230630" type="text/javascript"></script><script src="../js/html5-2.js?version=20230630" type="text/javascript"></script><script src="../js/checklist.js" type="text/javascript"></script><script src="../js/clipboard.min.js" type="text/javascript"></script><script src="../js/csh.js" type="text/javascript"></script><script src="/js/layout-custom-script.js" type="text/javascript"></script><meta xmlns:xhtml="http://www.w3.org/1999/xhtml" name="generator" content="Paligo"></meta><meta name="description" content="How to use Sitecore for Visual Studio to automate item synchronization at build time."></meta><link rel="prev" href="synchronize-items-on-demand.html" title="Synchronize items on demand"></link><link rel="next" href="automatic-item-synchronization-at-build-time.html#UUID-95071b97-1728-d739-488b-90230ba40c3c_section-idm231970150868378" title="Set up the developer collection NuGet feed"></link><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML" async="async"></script><link rel="icon" href="/favicon.ico" type="image/x-icon"></link><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent/3.1.1/cookieconsent.min.css"></link><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent/3.1.1/cookieconsent.min.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/3.0.1/js.cookie.min.js"></script><script type="text/javascript">var privacypolicy = 'https://www.sitecore.com/trust/privacy-policy';
+var consenttype = 'opt-out';
+</script><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-72664331-1"></script><script type="text/javascript">const measurementId = 'UA-72664331-1';
+
+						$(document).on('cookies.consented', () => {
+							window.dataLayer = window.dataLayer || [];
+							function gtag(){dataLayer.push(arguments)};
+
+							gtag('js', new Date());
+							gtag('config', measurementId);
+						});
+					</script><script type="text/javascript" src="../js/cookie-consent.js"></script><script type="text/javascript">
+				$(document).ready(function () {
+				$(".mediaobject img").addClass('materialboxed');
+				//Exclude images with links
+				$(".mediaobject a img").removeClass('materialboxed');
+				if (!document.documentMode) {
+				$('.materialboxed').materialbox();
+				}});
+			</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/googlecode.min.css"></link><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script><script type="text/javascript">
+			$(document).ready(function() {
+
+				$('pre:not(.embedcode)').each(function() {
+					/**
+					 * @type {string}
+					 */
+					var language = $(this).data('language');
+
+					if (language === 'plaintext' || language === 'text') {
+						$(this).addClass(language).addClass('hljs');
+						return true;
+					}
+					else {
+						var clone = this.cloneNode(true);
+						hljs.highlightBlock(clone);
+						$(this).empty().append($(clone).contents());
+						$(this).attr("class", $(clone).attr("class"));
+					}
+				});
+			});
+			</script><link href="//customer.cludo.com/assets/2063/10039/cludo-search.min.css" type="text/css" rel="stylesheet"></link></head><body class="theme1 colored-top page-toc current-toc-section-focus" data-spy="scroll" data-target=".section-nav-container" data-offset="100" data-link-prefix=""><style type="text/css">
+            div.skipnav {
+            }
+            div.skipnav a {
+                position: fixed;
+                left: -10000px;
+                top: 1.5em;
+                width: 1px;
+                height: 1px;
+                overflow: hidden;
+            }
+            div.skipnav a:focus, div.skipnav a:active, div.skipnav a:hover {
+                background: white;
+                color: black;
+                box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.5);
+                position: fixed;
+                left: 2em;
+                top: 1.5em;
+                width: auto;
+                height: auto;
+                overflow: visible;
+                text-decoration: underline;
+                z-index: 99999; /* has to be higher than the side panel */
+    }
+          </style><div class="skipnav"><a href="#content-wrapper">Skip to main content</a></div><header class="site-header"><nav class="site-header-navbar navbar navbar-fixed-top"><div class="navbar-container"><div class="navbar-header"><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".site-sidebar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><div id="logotype-container" class="pull-left"><a class="navbar-brand" href="https://doc.sitecore.com/xmc/" target="_blank" rel="noopener"><img id="logotype-pageheader" src="../css/image/corporate-logo.png" alt="Corporate logotype" data-role="logotype" class="logo"></img></a></div></div><div class="navbar-collapse collapse" id="navbar"></div></div></nav></header><div class="site-body"><div class="site-body-container"><div class="site-body-row"><aside xmlns:xinfo="http://ns.expertinfo.se/cms/xmlns/1.0" class="site-sidebar"><div class="site-sidebar-header"><a href="https://doc.sitecore.com/xmc/" target="_blank"><img id="logotype-pageheader" src="../css/image/corporate-logo.png" alt="Corporate logotype" data-role="logotype" class="logo"></img></a></div><form id="search-form" class="site-sidebar-search" autocomplete="off"><input type="text" class="form-control search-field" placeholder="Search" id="aa-search-input"></input></form><div id="toc-standalone-placeholder"></div></aside><div class="site-content"><div class="toolbar"><div class="toolbar-tools"><div id="navbar" class="navbar-collapse collapse"></div><div class="tool-print"><i class="fa fa-print" aria-hidden="true">print</i></div><div class="tool-search"><i class="fa fa-search" aria-hidden="true"></i></div><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".site-sidebar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button></div><div class="breadcrumb-container"><ul class="breadcrumb"><li class="breadcrumb-link"><a href="index-en.html">XM Cloud Documentation for Developers</a></li><li class="breadcrumb-link"><a href="developer-tools.html">Developer Tools</a></li><li class="breadcrumb-link"><a href="sitecore-for-visual-studio.html">Sitecore for Visual Studio</a></li><li class="breadcrumb-node">Automatic item synchronization at build time</li></ul></div></div><main><div id="top-pager"><ul class="pager"><li class="previous"><a accesskey="p" class="prev pull-left prev visible-lg visible-md" id="header-navigation-prev" href="synchronize-items-on-demand.html">Prev</a></li><li class="next"><a accesskey="n" class="pull-right next visible-lg visible-md" id="header-navigation-next" href="automatic-item-synchronization-at-build-time.html#UUID-95071b97-1728-d739-488b-90230ba40c3c_section-idm231970150868378">Next</a></li></ul></div><article class="topic content-container" id="content-wrapper"><div id="topic-content" class="topic-content"><section xml:lang="en" lang="en" dir="ltr" class="section" data-origin-id="UUID-c927de18-ef05-d994-e790-f1a229951367" data-permalink="automatic-item-synchronization-at-build-time.html" data-topic-level="1" data-relative-prefix="" data-time-modified="09/03/2020" data-publication-date="06/30/23" id="UUID-95071b97-1728-d739-488b-90230ba40c3c"><div class="titlepage"><div><div class="title"><h1 class="title" style="clear: both">Automatic item synchronization at build time</h1></div><div><div class="abstract"><div class="abstract-title">Abstract</div><p>How to use Sitecore for Visual Studio to automate item synchronization at build time.</p></div></div></div></div><p>You can create a build project in your solution to automate item serialization and item pushing at build time. Refer to <a class="link" href="https://docs.microsoft.com/en-us/visualstudio/ide/understanding-build-configurations?view=vs-2019" target="_blank" rel="noopener">Microsoft documentation on build configurations</a> for more details.</p><div dir="ltr" class="note"><h3 class="title">Note</h3><p>You can edit build project properties individually for the Debug and the Release build configurations.</p></div><section dir="ltr" class="section" data-origin-id="" data-publication-date="06/30/23" id="UUID-95071b97-1728-d739-488b-90230ba40c3c_section-idm231970150868378"><div class="titlepage"><div><div class="title"><h2 class="title" style="clear: both">Set up the developer collection NuGet feed</h2></div></div></div><p>Sitecore for Visual Studio build projects depends on components from the developer collection NuGet package. To automatically download the package at build time, you must add the developer collection feed to your package sources.</p><p>The developer collection feed URL is <code class="code">https://sitecore.myget.org/F/sc-developer-collection/api/v3/index.json</code></p><p>You can add the developer collection feed to your <code class="code">NuGet.config</code> file or to the package sources in Visual Studio.</p><p>The following is an example <code class="code">NuGet.config</code> file with the developer collection feed:</p><pre class="programlisting">&lt;configuration&gt;
+  &lt;!--
+  Used to specify the default Sources for list, install and update.
+  --&gt;
+  &lt;packageSources&gt;
+    &lt;clear /&gt;
+    &lt;add key="Nuget" value="https://api.nuget.org/v3/index.json" /&gt;
+    &lt;add key="SitecorePreview" value="http://sitecore-nuget-preview:8010/index.json" /&gt;
+    <span class="bold"><strong>&lt;add key="SVSComponents" value="https://sitecore.myget.org/F/sc-developer-collection/api/v3/index.json"/&gt;</strong></span>
+  &lt;/packageSources&gt;
+
+  &lt;activePackageSource&gt;
+    &lt;!-- this tells that all of them are active --&gt;
+    &lt;add key="All" value="(Aggregate source)" /&gt;
+  &lt;/activePackageSource&gt;
+&lt;/configuration&gt;</pre><p>To add the developer collection feed to Visual Studio:</p><div class="procedure" id="UUID-95071b97-1728-d739-488b-90230ba40c3c_procedure-idm231970152003586"><ol class="procedure" type="1"><li class="step"><p>In Visual Studio with administrative privileges, click <span class="guilabel">Tools</span>, <span class="guilabel">NuGet Package Manager</span>, <span class="guilabel">Package Manager Settings</span>.</p></li><li class="step"><p>In the <span class="guilabel">Options</span> window, click <code class="code">NuGet Package Manager/Package Sources</code>.</p></li><li class="step"><p>Click <span class="guilabel">Add package source</span><span class="inlinemediaobject"><img src="image/uuid-1e610d58-9424-8ed6-9dc6-4b8a3b6ea864.png" alt="The Add package source icon"></img></span> to add a new package source.</p><div class="mediaobject"><img src="image/uuid-35bf4372-58bb-71f4-8aeb-94c27677106a.png" style="" alt="Illustration showing the Options window and how to add a package source."></img></div></li><li class="step"><p>In the <span class="guilabel">Name</span> field, enter <code class="code">SVSComponents</code>.</p></li><li class="step"><p>In the <span class="guilabel">Source</span> field, enter <code class="code">https://sitecore.myget.org/F/sc-developer-collection/api/v3/index.json</code>.</p></li><li class="step"><p>Click <span class="guilabel">Update</span> then <span class="guilabel">OK</span>.</p></li></ol></div></section><section dir="ltr" class="section" data-origin-id="" data-publication-date="06/30/23" id="idm45599344973712"><div class="titlepage"><div><div class="title"><h2 class="title" style="clear: both">Create a build project</h2></div></div></div><p>To create a build project:</p><div class="procedure" id="UUID-95071b97-1728-d739-488b-90230ba40c3c_procedure-idm231837065829498"><ol class="procedure" type="1"><li class="step"><p>In Solution Explorer, right-click your solution and click <span class="guilabel">Add</span>, <span class="guilabel">New Project</span>.</p></li><li class="step"><p>In the <span class="guilabel">Add a new project</span> window, search for and select <code class="code">Sitecore for Visual Studio Project</code> and then click <span class="guilabel">Next</span>.</p><div class="mediaobject"><img src="image/uuid-9e96d03a-0041-19b4-9eec-66e78af4021a.png" style="" alt="Illustration showing how to add a build project to a solution."></img></div></li><li class="step"><p>In the <span class="guilabel">Configure your new project</span> window, enter a name and a location for your build project and click <span class="guilabel">Create</span>.</p><p>Your have now created a build project in your solution:</p><div class="mediaobject"><img src="image/uuid-d3bf7b4b-848d-6199-e316-87e282c831e9.png" style="" alt="Illustration showing your build project in your solution."></img></div><div dir="ltr" class="note"><h3 class="title">Note</h3><p>It might take a few seconds for the NuGet package to be restored and for the build project to appear in Solution Explorer.</p></div><p>In most cases, you only need a single build project, but for more advanced scenarios, you can create more build projects and configure them to perform different operations at build time.</p></li></ol></div></section><section dir="ltr" class="section" data-origin-id="" data-publication-date="06/30/23" id="idm45599344955712"><div class="titlepage"><div><div class="title"><h2 class="title" style="clear: both">Edit a build project</h2></div></div></div><p>To edit a build project:</p><div class="procedure" id="UUID-95071b97-1728-d739-488b-90230ba40c3c_procedure-idm231837082421912"><ol class="procedure" type="1"><li class="step"><p>In Solution Explorer, right-click the build project and click <span class="guilabel">Properties</span>. There are three tabs in the build project window:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="guilabel">General</span> - Information about the property tabs.</p></li><li class="listitem"><p><span class="guilabel">Serialized Item Packages</span> - Serialization of Sitecore instance items into a local package.</p></li><li class="listitem"><p><span class="guilabel">Serialized Items Push</span> - Pushing of serialized items from your file system to your Sitecore instance.</p></li></ul></div></li><li class="step"><p>Edit the relevant fields.</p></li><li class="step"><p>Save the build project.</p></li></ol></div></section><section dir="ltr" class="section" data-origin-id="" data-publication-date="06/30/23" id="idm45599344944544"><div class="titlepage"><div><div class="title"><h2 class="title" style="clear: both">Serialize items into a local package</h2></div></div></div><p>To serialize items into a local package:</p><div class="procedure" id="UUID-95071b97-1728-d739-488b-90230ba40c3c_procedure-idm231837100783782"><ol class="procedure" type="1"><li class="step"><p>In Solution Explorer, right-click the build project and click <span class="guilabel">Properties</span>.</p></li><li class="step"><p>On the <span class="guilabel">Serialized Items Package</span> tab, select the <span class="guilabel">Build Serialized Items Package</span> check box.</p></li><li class="step"><p>In the <span class="guilabel">Package Name</span> field, enter a package name.</p></li><li class="step"><p>In the <span class="guilabel">Package Modules</span> section, select the modules you want to include and exclude.</p><div class="mediaobject"><img src="image/uuid-80311eba-14a0-9397-6b4b-28a85a34fb26.png" style="" alt="Illustration showing how to configure what items to serialize and package at build time."></img></div></li><li class="step"><p>Save the build project.</p></li></ol></div><div dir="ltr" class="note"><h3 class="title">Note</h3><p>Enabling item serialization is the same as running the <code class="code">sitecore package create</code> command at build time.</p></div></section><section dir="ltr" class="section" data-origin-id="" data-publication-date="06/30/23" id="idm45599344939408"><div class="titlepage"><div><div class="title"><h2 class="title" style="clear: both">Push items to your Sitecore instance</h2></div></div></div><p>To push items to your Sitecore instance:</p><div class="procedure" id="UUID-95071b97-1728-d739-488b-90230ba40c3c_procedure-idm231837128677389"><ol class="procedure" type="1"><li class="step"><p>In Solution Explorer, right-click the build project and click <span class="guilabel">Properties</span>.</p></li><li class="step"><p>On the <span class="guilabel">Serialized Items Push</span> tab, select the <span class="guilabel">Push Serialized items to environment during build</span> check box.</p></li><li class="step"><p>To only simulate the push operation, select the <span class="guilabel">Do What-if Push</span> check box. This means that no serialized items are pushed to your Sitecore instance.</p></li><li class="step"><p>To skip validating the integrity of the serialized items in your file system before you push items, select the <span class="guilabel">Skip file system validation</span> check box.</p></li><li class="step"><p>In the <span class="guilabel">Push Modules</span> section, select the modules you want to include and exclude.</p><div class="mediaobject"><img src="image/uuid-0f16118a-aead-b928-dc1d-92b669a6e8ef.png" style="" alt="Illustration showing how to configure what items to push to your Sitecore instance at build time."></img></div></li><li class="step"><p>Save the build project.</p></li></ol></div><div dir="ltr" class="note"><h3 class="title">Note</h3><p>Enabling the push operation is the same as running the <code class="code">sitecore ser push</code> command at build time.</p></div></section></section><div class="footer-content"><div class="glossary-definitions"></div></div><footer></footer></div></article><aside class="section-nav-container"><ul class="section-nav nav"><li><a href="#UUID-95071b97-1728-d739-488b-90230ba40c3c">Automatic item synchronization at build time</a></li><li><a href="#UUID-95071b97-1728-d739-488b-90230ba40c3c_section-idm231970150868378">Set up the developer collection NuGet feed</a></li><li><a href="#idm45599344973712">Create a build project</a></li><li><a href="#idm45599344955712">Edit a build project</a></li><li><a href="#idm45599344944544">Serialize items into a local package</a></li><li><a href="#idm45599344939408">Push items to your Sitecore instance</a></li></ul></aside></main><div id="bottom-pager"><ul class="pager"><li class="previous"><a accesskey="p" class="prev pull-left prev visible-lg visible-md" id="header-navigation-prev" href="synchronize-items-on-demand.html">Prev</a></li><li class="next"><a accesskey="n" class="pull-right next visible-lg visible-md" id="header-navigation-next" href="automatic-item-synchronization-at-build-time.html#UUID-95071b97-1728-d739-488b-90230ba40c3c_section-idm231970150868378">Next</a></li></ul></div><footer class="site-footer"><div class="inner"><div class="copyright"> © 2023 Sitecore </div><div class="date-modified"><span class="date-modified-text">Last modified: </span><span class="formatted-date">09/03/2020</span></div><div class="publication-date"><span class="publication-date-text">Publication date</span><span class="pubdate-delimiter">: </span><span class="formatted-date">06/30/23</span></div></div></footer></div></div></div></div><script type="text/javascript" src="//customer.cludo.com/scripts/bundles/search-script.min.js"></script><script>
+			var CludoSearch;
+			(function () {
+			var cludoSettings = {
+			customerId: 2063,
+			engineId: 12826,
+			language: 'en',
+			searchInputs: ["search-form","cludo-search-content-form","cludo-search-mobile-form"],
+			hideSearchFilters: true,
+			type: 'standardOverlay',
+			facets: ["Category", "ProductVer", "Product", "Version"],
+			useStandardSearchTemplate: false,
+			customerTemplate: "OverlayCopy",
+			searchApiUrl: 'https://api-eu1.cludo.com/api/v3'
+			};
+			CludoSearch= new Cludo(cludoSettings);
+			CludoSearch.init();
+			})();
+		</script><!-- www.Cludo.com Search body init script start --></body></html>

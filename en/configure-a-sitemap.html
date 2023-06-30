@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"></meta><meta name="format-detection" content="telephone=no"></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><meta name="search" content="default"></meta><meta name="use.ic" content="no"></meta><meta name="Audience - do not use" content=""></meta><meta name="clubot" content=""></meta><meta name="data model" content=""></meta><meta name="DxP type - Do Not Use" content=""></meta><meta name="media_icon" content=""></meta><meta name="product" content="XM Cloud"></meta><meta name="Publishing target" content="Production"></meta><meta name="Ready for publishing - do not use" content=""></meta><meta name="role" content="developers"></meta><meta name="topic_tripane" content=""></meta><meta name="version" content=""></meta><meta name="tocstandalone" content="yes"></meta><meta name="theme" content="1"></meta><meta name="search.placeholder" content="Search"></meta><meta name="search.results" content="Search results"></meta><meta name="no.search.results" content="No results found"></meta><script type="text/javascript">
+var theme = '1';
+
+			
+			window.versionsfile = '';
+
+
+			window.indexDict = new Array();
+			window.store = {};
+			window.portalLanguage = 'en';
+			window.enterKey = 'select';
+			
+			
+				var fuse_threshold = 0.3;
+			
+					var local_csh = false;
+				
+					var anchoroption = true;
+				var instantsearch_minlength = 1;
+						
+			var useanchorlinks = false;
+			
+					function addSearch(){
+					//not used with custom or elastic search
+					}
+				</script><title>Configure a sitemap</title><link rel="stylesheet" type="text/css" href="../css/docbook.css"></link><link rel="stylesheet" type="text/css" href="../css/font-awesome.css"></link><link rel="stylesheet" type="text/css" href="../css/roboto.font.css"></link><link rel="stylesheet" type="text/css" href="../css/theme1.css?version=20230630"></link><link rel="stylesheet" type="text/css" href="../css/theme1-colors.css?version=20230630"></link><link rel="stylesheet" type="text/css" href="../css/content-theme1.css?version=20230630"></link><link rel="stylesheet" type="text/css" href="../css/sm-core-css.css"></link><link rel="stylesheet" type="text/css" href="../css/sm-simple.css"></link><link rel="stylesheet" type="text/css" href="../css/style-print.css"></link><link rel="stylesheet" type="text/css" href="../css/style-common.css"></link><link rel="stylesheet" type="text/css" href="../css/style-modern-tables.css"></link><link rel="stylesheet" type="text/css" href="../css/graphical-lists.css"></link><link rel="stylesheet" type="text/css" href="/css/sitecore-custom-default-xmc.css?version=20230630"></link><script src="../js/jquery-3/jquery-3.4.1.min.js" type="text/javascript"></script><script src="../js/jquery-migrate-3.0.1.min.js" type="text/javascript"></script><script src="../js/materialize.min.js" type="text/javascript"></script><script src="../js/bootstrap.min.js" type="text/javascript"></script><script src="../js/purl.js" type="text/javascript"></script><script src="../js/jquery.smartmenus.js" type="text/javascript"></script><script src="js/toc.js?version=20230630" type="text/javascript"></script><script src="../js/create-toc.js" type="text/javascript"></script><script src="../js/html5-2-mp-common.js?version=20230630" type="text/javascript"></script><script src="../js/html5-2.js?version=20230630" type="text/javascript"></script><script src="../js/checklist.js" type="text/javascript"></script><script src="../js/clipboard.min.js" type="text/javascript"></script><script src="../js/csh.js" type="text/javascript"></script><script src="/js/layout-custom-script.js" type="text/javascript"></script><meta xmlns:xhtml="http://www.w3.org/1999/xhtml" name="generator" content="Paligo"></meta><meta name="description" content="Set up the sitemap for a site."></meta><meta name="keywords" content="Configuration"></meta><link rel="prev" href="manage-multiple-sites-with-the-sxa-site-manager.html" title="Manage multiple sites with the SXA Site Manager"></link><link rel="next" href="configure-the-robots-txt-file.html" title="Configure the robots.txt file"></link><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML" async="async"></script><link rel="icon" href="/favicon.ico" type="image/x-icon"></link><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent/3.1.1/cookieconsent.min.css"></link><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent/3.1.1/cookieconsent.min.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/3.0.1/js.cookie.min.js"></script><script type="text/javascript">var privacypolicy = 'https://www.sitecore.com/trust/privacy-policy';
+var consenttype = 'opt-out';
+</script><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-72664331-1"></script><script type="text/javascript">const measurementId = 'UA-72664331-1';
+
+						$(document).on('cookies.consented', () => {
+							window.dataLayer = window.dataLayer || [];
+							function gtag(){dataLayer.push(arguments)};
+
+							gtag('js', new Date());
+							gtag('config', measurementId);
+						});
+					</script><script type="text/javascript" src="../js/cookie-consent.js"></script><script type="text/javascript">
+				$(document).ready(function () {
+				$(".mediaobject img").addClass('materialboxed');
+				//Exclude images with links
+				$(".mediaobject a img").removeClass('materialboxed');
+				if (!document.documentMode) {
+				$('.materialboxed').materialbox();
+				}});
+			</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/googlecode.min.css"></link><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script><script type="text/javascript">
+			$(document).ready(function() {
+
+				$('pre:not(.embedcode)').each(function() {
+					/**
+					 * @type {string}
+					 */
+					var language = $(this).data('language');
+
+					if (language === 'plaintext' || language === 'text') {
+						$(this).addClass(language).addClass('hljs');
+						return true;
+					}
+					else {
+						var clone = this.cloneNode(true);
+						hljs.highlightBlock(clone);
+						$(this).empty().append($(clone).contents());
+						$(this).attr("class", $(clone).attr("class"));
+					}
+				});
+			});
+			</script><link href="//customer.cludo.com/assets/2063/10039/cludo-search.min.css" type="text/css" rel="stylesheet"></link></head><body class="theme1 colored-top page-toc current-toc-section-focus" data-spy="scroll" data-target=".section-nav-container" data-offset="100" data-link-prefix=""><style type="text/css">
+            div.skipnav {
+            }
+            div.skipnav a {
+                position: fixed;
+                left: -10000px;
+                top: 1.5em;
+                width: 1px;
+                height: 1px;
+                overflow: hidden;
+            }
+            div.skipnav a:focus, div.skipnav a:active, div.skipnav a:hover {
+                background: white;
+                color: black;
+                box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.5);
+                position: fixed;
+                left: 2em;
+                top: 1.5em;
+                width: auto;
+                height: auto;
+                overflow: visible;
+                text-decoration: underline;
+                z-index: 99999; /* has to be higher than the side panel */
+    }
+          </style><div class="skipnav"><a href="#content-wrapper">Skip to main content</a></div><header class="site-header"><nav class="site-header-navbar navbar navbar-fixed-top"><div class="navbar-container"><div class="navbar-header"><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".site-sidebar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><div id="logotype-container" class="pull-left"><a class="navbar-brand" href="https://doc.sitecore.com/xmc/" target="_blank" rel="noopener"><img id="logotype-pageheader" src="../css/image/corporate-logo.png" alt="Corporate logotype" data-role="logotype" class="logo"></img></a></div></div><div class="navbar-collapse collapse" id="navbar"></div></div></nav></header><div class="site-body"><div class="site-body-container"><div class="site-body-row"><aside xmlns:xinfo="http://ns.expertinfo.se/cms/xmlns/1.0" class="site-sidebar"><div class="site-sidebar-header"><a href="https://doc.sitecore.com/xmc/" target="_blank"><img id="logotype-pageheader" src="../css/image/corporate-logo.png" alt="Corporate logotype" data-role="logotype" class="logo"></img></a></div><form id="search-form" class="site-sidebar-search" autocomplete="off"><input type="text" class="form-control search-field" placeholder="Search" id="aa-search-input"></input></form><div id="toc-standalone-placeholder"></div></aside><div class="site-content"><div class="toolbar"><div class="toolbar-tools"><div id="navbar" class="navbar-collapse collapse"></div><div class="tool-print"><i class="fa fa-print" aria-hidden="true">print</i></div><div class="tool-search"><i class="fa fa-search" aria-hidden="true"></i></div><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".site-sidebar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button></div><div class="breadcrumb-container"><ul class="breadcrumb"><li class="breadcrumb-link"><a href="index-en.html">XM Cloud Documentation for Developers</a></li><li class="breadcrumb-link"><a href="using-sxa-for-xm-cloud-development.html">Using SXA for XM Cloud development</a></li><li class="breadcrumb-link"><a href="setting-up-and-configuring.html">Setting up and configuring</a></li><li class="breadcrumb-link"><a href="sites.html">Sites</a></li><li class="breadcrumb-node">Configure a sitemap</li></ul></div></div><main><div id="top-pager"><ul class="pager"><li class="previous"><a accesskey="p" class="prev pull-left prev visible-lg visible-md" id="header-navigation-prev" href="manage-multiple-sites-with-the-sxa-site-manager.html">Prev</a></li><li class="next"><a accesskey="n" class="pull-right next visible-lg visible-md" id="header-navigation-next" href="configure-the-robots-txt-file.html">Next</a></li></ul></div><article class="topic content-container" id="content-wrapper"><div id="topic-content" class="topic-content"><section xml:lang="en" lang="en" dir="ltr" class="section original-topic" data-origin-id="UUID-e9b41ea5-d64f-3a64-0faf-ac48beaf262c" data-permalink="configure-a-sitemap.html" data-topic-level="1" data-relative-prefix="" data-time-modified="03/15/2023" data-publication-date="06/30/23" id="UUID-d944d88d-0b5f-2027-06ce-9fc70bb39714"><div class="titlepage"><div><div class="title"><h1 class="title" style="clear: both">Configure a sitemap<span id="UUID-d944d88d-0b5f-2027-06ce-9fc70bb39714_UUID-8c661476-3625-7728-c818-ba0030736542"></span></h1></div><div><div class="abstract"><div class="abstract-title">Abstract</div><p>Set up the sitemap for a site.</p></div></div></div></div><p>Sitemaps help search engine crawlers navigate your site and improve search engine optimization (SEO). By default, the sitemap is generated for the whole site and stored in cache. An XML sitemap is created specifically for search engines to show details of the available pages in a website, their relative importance, and the frequency of content updates.</p><p>In the sitemap, each page is represented by a <code class="code">URL</code> element.</p><div dir="ltr" class="note"><h3 class="title">Note</h3><p>By default, the sitemap uses the Host Name defined in the <span class="guilabel">Basic</span> section in the site definition item of your site (<code class="code">&lt;site collection&gt;/&lt;site&gt;/Settings/Site Grouping/Site)</code>. If both the <span class="guilabel">Host Name</span> and the <span class="guilabel">TargetHostName</span> fields are empty, the sitemap returns a 404 error.</p><p>To ensure that the sitemap link is generated properly, we recommend that you configure the target hostname and scheme on the site definition item.</p></div><p>To configure the sitemap for your site:</p><div class="procedure"><ol class="procedure" type="1"><li class="step"><p>In the Content Editor, navigate to <span class="italic">&lt;site&gt;/Settings/Sitemap</span>.</p></li><li class="step"><p>Fill in the following fields:</p></li></ol></div><div class="informaltable table-responsive"><table style="width:100%;" class="informaltable frame-void rules-rows"><thead><tr><th class="th"><p>Tab</p></th><th class="th"><p>Field</p></th><th class="th"><p>Description</p></th></tr></thead><tbody><tr><td rowspan="3" class="td"><p>Alternate links</p><p></p><p></p></td><td class="td"><p>Generate alternate links</p></td><td class="td"><p>Select to add <code class="code">xhtml:link</code> elements to the <code class="code">URL</code> elements in the sitemap. <code class="code">xhtml:link</code> is used for alternate links, for example to link to other language versions of the same page.</p><p>Example:</p><pre class="programlisting" id="UUID-d944d88d-0b5f-2027-06ce-9fc70bb39714_programlisting-idm4632103895044833235347764939">&lt;url&gt;
+    &lt;loc&gt;https://sxa&lt;/loc&gt;
+    &lt;lastmod&gt;2021-10-28&lt;/lastmod&gt;
+    &lt;changefreq&gt;daily&lt;/changefreq&gt;
+    &lt;priority&gt;0.5&lt;/priority&gt;
+    &lt;xhtml:link rel="alternate" hreflang="x-default" href="https://sxa" /&gt;
+    &lt;xhtml:link rel="alternate" hreflang="en" href="https://sxa/en" /&gt;
+    &lt;xhtml:link rel="alternate" hreflang="da" href="https://sxa/da" /&gt;
+&lt;/url&gt;</pre></td></tr><tr><td class="td"><p>Include x-default</p></td><td class="td"><p>Select to add the <code class="code">xhtml:link</code> element with <code class="code">hreflang</code> set to <code class="code">x-default</code> to the <code class="code">URL</code> element. The x-default value signals to the search algorithm that the page does not target any specific language or region.</p><p>Example:</p><pre class="programlisting" id="UUID-d944d88d-0b5f-2027-06ce-9fc70bb39714_programlisting-idm4585641394393633235350543552">&lt;xhtml:link rel="alternate" hreflang="x-default" href="https://sxa" /&gt;</pre></td></tr><tr><td class="td"><p>hreflang</p></td><td class="td"><p>Specify language and region options for the <code class="code">hreflang</code> attribute:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="guilabel">with language and region</span> - URLs are rendered both for region dependent and independent codes. Example:</p><pre class="programlisting" id="UUID-d944d88d-0b5f-2027-06ce-9fc70bb39714_programlisting-idm4569984065193633235343426501">&lt;xhtml:link rel="alternate" hreflang="en" href="https://sxa/en" /&gt;
+&lt;xhtml:link rel="alternate" hreflang="en-US" href="https://sxa/en-US" /&gt;
+&lt;xhtml:link rel="alternate" hreflang="en-CA" href="https://sxa/en-CA" /&gt;</pre></li><li class="listitem"><p><span class="guilabel">with region only</span> - URLs are rendered only for region dependent codes. Example:</p><pre class="programlisting" id="UUID-d944d88d-0b5f-2027-06ce-9fc70bb39714_programlisting-idm4585641722400033235344368833">&lt;xhtml:link rel="alternate" hreflang="en-US" href="https://sxa/en-US" /&gt;
+&lt;xhtml:link rel="alternate" hreflang="en-CA" href="https://sxa/en-CA" /&gt;</pre></li><li class="listitem"><p><span class="guilabel">with language only</span> - URLs are rendered only region independent codes. Example:</p><pre class="programlisting" id="UUID-d944d88d-0b5f-2027-06ce-9fc70bb39714_programlisting-idm4579980584393633235344509638">&lt;xhtml:link rel="alternate" hreflang="en" href="https://sxa/en" /&gt;
+&lt;xhtml:link rel="alternate" hreflang="da" href="https://sxa/da" /&gt;</pre></li></ul></div></td></tr><tr><td rowspan="3" class="td"><p>Urlset attributes</p><p></p><p></p></td><td class="td"><p>lastmod</p></td><td class="td"><p>Select to render the <code class="code">lastmod</code> attribute that belongs to the <code class="code">URL</code> element. Specifies the date when the page was last modified.</p></td></tr><tr><td class="td"><p>changefreq</p></td><td class="td"><p>Select to render the <code class="code">changefreq</code> attribute that belongs to the <code class="code">URL</code> element. Specifies how often the page changes its content.</p></td></tr><tr><td class="td"><p>priority</p></td><td class="td"><p>Select to render the <code class="code">priority</code> attribute that belongs to the <code class="code">URL</code> element. Specifies a number between 0 and 1 that represents the importance of a specific page.</p></td></tr><tr><td class="td"><p>URL options</p></td><td class="td"><p>Link provider name</p></td><td class="td"><p>Specify a custom link provider. It is added to the <code class="code">providers</code> node under the <code class="code">linkManager</code> node in the <code class="code">Sitecore.config file</code>. If you leave it blank, the default link provider of the site is used.</p></td></tr><tr><td class="td"><p>Content crawling</p></td><td class="td"><p>Crawler</p></td><td class="td"><p>Specify the name of the item crawler that fetches items from your site. The default value is <span class="guilabel">itemCrawler</span>. You can define multiple item crawlers in the <code class="code">sitemapItemCrawler</code> element.</p><p>Example:</p><pre class="programlisting" id="UUID-d944d88d-0b5f-2027-06ce-9fc70bb39714_programlisting-idm4585641446843233235390367139">&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;configuration xmlns:patch="http://www.sitecore.net/xmlconfig/"&gt;
+    &lt;sitecore&gt;
+        &lt;experienceAccelerator&gt;
+            &lt;siteMetadata&gt;
+                &lt;sitemapItemCrawler&gt;
+                    &lt;add name="itemCrawler" type="Sitecore.XA.Foundation.SiteMetadata.Sitemap.ItemCrawler, Sitecore.XA.Foundation.SiteMetadata" /&gt;
+                &lt;/sitemapItemCrawler&gt;
+            &lt;/siteMetadata&gt;
+        &lt;/experienceAccelerator&gt;
+    &lt;/sitecore&gt;
+&lt;/configuration&gt;</pre></td></tr><tr><td rowspan="2" class="td"><p>Cache</p><p></p></td><td class="td"><p>Refresh threshold</p></td><td class="td"><p>Specify in minutes the minimum time slot between rebuild operations. The sitemap is rebuilt on publish. For example, if the refresh threshold is greater than 0, then the next rebuild operation does not occur earlier than the time of the most recent rebuild operation plus the time you have specified.</p><p>The purpose of this field is to prevent excessive sitemap rebuild jobs when there are many publishing operations.</p></td></tr><tr><td class="td"><p>Cache Type</p></td><td class="td"><p>Specify how the sitemap is stored:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="guilabel">Inactive</span> - turns the sitemap off.</p></li><li class="listitem"><p><span class="guilabel">Stored in cache</span> - stores the sitemap for the whole site in the cache. Select this option if your site is hosted on an environment such as Azure and you cannot easily store files on a drive, or if your site is very dynamic and you have to re-generate the sitemap almost every time it is requested. This option is turned on by default.</p></li><li class="listitem"><p><span class="guilabel">Stored in file</span> - stores the sitemap for the whole site in a file. Select this option if you have a large site that does not change frequently.</p></li></ul></div></td></tr><tr><td class="td"><p>Sitemap index</p></td><td class="td"><p>Maximum number of pages per sitemap</p></td><td class="td"><p>Specify the number of pages to be included in a sitemap. If the number of pages on the site exceeds the limit, then the <code class="code">URL</code> entries are divided into multiple sitemaps, and a sitemap index is generated that links to these sitemaps.</p><div dir="ltr" class="note"><h3 class="title">Note</h3><p>If you leave the field undefined, all <code class="code">URL</code> entries are rendered into a single sitemap.</p></div></td></tr><tr><td class="td"><p>Media items</p></td><td class="td"><p>Generate sitemap media items</p></td><td class="td"><p>Select to generate media items where the sitemaps are stored when the site is published. Storing sitemaps in media items is required to deliver the sitemap files to the rendering host through the Experience Edge service. Enabled by default.</p><div dir="ltr" class="note"><h3 class="title">Note</h3><p>This field is only applicable with headless sites.</p></div></td></tr></tbody></table></div></section><div class="footer-content"><div class="glossary-definitions"></div></div><footer></footer></div></article></main><div id="bottom-pager"><ul class="pager"><li class="previous"><a accesskey="p" class="prev pull-left prev visible-lg visible-md" id="header-navigation-prev" href="manage-multiple-sites-with-the-sxa-site-manager.html">Prev</a></li><li class="next"><a accesskey="n" class="pull-right next visible-lg visible-md" id="header-navigation-next" href="configure-the-robots-txt-file.html">Next</a></li></ul></div><footer class="site-footer"><div class="inner"><div class="copyright"> © 2023 Sitecore </div><div class="date-modified"><span class="date-modified-text">Last modified: </span><span class="formatted-date">03/15/2023</span></div><div class="publication-date"><span class="publication-date-text">Publication date</span><span class="pubdate-delimiter">: </span><span class="formatted-date">06/30/23</span></div></div></footer></div></div></div></div><script type="text/javascript" src="//customer.cludo.com/scripts/bundles/search-script.min.js"></script><script>
+			var CludoSearch;
+			(function () {
+			var cludoSettings = {
+			customerId: 2063,
+			engineId: 12826,
+			language: 'en',
+			searchInputs: ["search-form","cludo-search-content-form","cludo-search-mobile-form"],
+			hideSearchFilters: true,
+			type: 'standardOverlay',
+			facets: ["Category", "ProductVer", "Product", "Version"],
+			useStandardSearchTemplate: false,
+			customerTemplate: "OverlayCopy",
+			searchApiUrl: 'https://api-eu1.cludo.com/api/v3'
+			};
+			CludoSearch= new Cludo(cludoSettings);
+			CludoSearch.init();
+			})();
+		</script><!-- www.Cludo.com Search body init script start --></body></html>

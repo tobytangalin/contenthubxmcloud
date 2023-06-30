@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"></meta><meta name="format-detection" content="telephone=no"></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><meta name="search" content="default"></meta><meta name="use.ic" content="no"></meta><meta name="Audience - do not use" content=""></meta><meta name="clubot" content=""></meta><meta name="data model" content=""></meta><meta name="DxP type - Do Not Use" content=""></meta><meta name="media_icon" content=""></meta><meta name="product" content="XM Cloud"></meta><meta name="Publishing target" content="Production"></meta><meta name="Ready for publishing - do not use" content=""></meta><meta name="role" content="developers"></meta><meta name="topic_tripane" content=""></meta><meta name="version" content=""></meta><meta name="tocstandalone" content="yes"></meta><meta name="theme" content="1"></meta><meta name="search.placeholder" content="Search"></meta><meta name="search.results" content="Search results"></meta><meta name="no.search.results" content="No results found"></meta><script type="text/javascript">
+var theme = '1';
+
+			
+			window.versionsfile = '';
+
+
+			window.indexDict = new Array();
+			window.store = {};
+			window.portalLanguage = 'en';
+			window.enterKey = 'select';
+			
+			
+				var fuse_threshold = 0.3;
+			
+					var local_csh = false;
+				
+					var anchoroption = true;
+				var instantsearch_minlength = 1;
+						
+			var useanchorlinks = false;
+			
+					function addSearch(){
+					//not used with custom or elastic search
+					}
+				</script><title>Assembly resolver scanner</title><link rel="stylesheet" type="text/css" href="../css/docbook.css"></link><link rel="stylesheet" type="text/css" href="../css/font-awesome.css"></link><link rel="stylesheet" type="text/css" href="../css/roboto.font.css"></link><link rel="stylesheet" type="text/css" href="../css/theme1.css?version=20230630"></link><link rel="stylesheet" type="text/css" href="../css/theme1-colors.css?version=20230630"></link><link rel="stylesheet" type="text/css" href="../css/content-theme1.css?version=20230630"></link><link rel="stylesheet" type="text/css" href="../css/sm-core-css.css"></link><link rel="stylesheet" type="text/css" href="../css/sm-simple.css"></link><link rel="stylesheet" type="text/css" href="../css/style-print.css"></link><link rel="stylesheet" type="text/css" href="../css/style-common.css"></link><link rel="stylesheet" type="text/css" href="../css/style-modern-tables.css"></link><link rel="stylesheet" type="text/css" href="../css/graphical-lists.css"></link><link rel="stylesheet" type="text/css" href="/css/sitecore-custom-default-xmc.css?version=20230630"></link><script src="../js/jquery-3/jquery-3.4.1.min.js" type="text/javascript"></script><script src="../js/jquery-migrate-3.0.1.min.js" type="text/javascript"></script><script src="../js/materialize.min.js" type="text/javascript"></script><script src="../js/bootstrap.min.js" type="text/javascript"></script><script src="../js/purl.js" type="text/javascript"></script><script src="../js/jquery.smartmenus.js" type="text/javascript"></script><script src="js/toc.js?version=20230630" type="text/javascript"></script><script src="../js/create-toc.js" type="text/javascript"></script><script src="../js/html5-2-mp-common.js?version=20230630" type="text/javascript"></script><script src="../js/html5-2.js?version=20230630" type="text/javascript"></script><script src="../js/checklist.js" type="text/javascript"></script><script src="../js/clipboard.min.js" type="text/javascript"></script><script src="../js/csh.js" type="text/javascript"></script><script src="/js/layout-custom-script.js" type="text/javascript"></script><meta xmlns:xhtml="http://www.w3.org/1999/xhtml" name="generator" content="Paligo"></meta><meta name="description" content="You can configure the number of assemblies Sitecore scans at start-up to make the start-up process faster."></meta><meta name="keywords" content="Development"></meta><link rel="prev" href="the-links-table.html#UUID-44e99ee8-b9f3-4d03-e27f-e18b7990a1b2_section-idm4527713832014432611474783095" title="Rebuild the Links table"></link><link rel="next" href="assembly-resolver-scanner.html#idm45599237693728" title="Configure the inclusion and exclusion of assemblies"></link><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML" async="async"></script><link rel="icon" href="/favicon.ico" type="image/x-icon"></link><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent/3.1.1/cookieconsent.min.css"></link><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent/3.1.1/cookieconsent.min.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/3.0.1/js.cookie.min.js"></script><script type="text/javascript">var privacypolicy = 'https://www.sitecore.com/trust/privacy-policy';
+var consenttype = 'opt-out';
+</script><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-72664331-1"></script><script type="text/javascript">const measurementId = 'UA-72664331-1';
+
+						$(document).on('cookies.consented', () => {
+							window.dataLayer = window.dataLayer || [];
+							function gtag(){dataLayer.push(arguments)};
+
+							gtag('js', new Date());
+							gtag('config', measurementId);
+						});
+					</script><script type="text/javascript" src="../js/cookie-consent.js"></script><script type="text/javascript">
+				$(document).ready(function () {
+				$(".mediaobject img").addClass('materialboxed');
+				//Exclude images with links
+				$(".mediaobject a img").removeClass('materialboxed');
+				if (!document.documentMode) {
+				$('.materialboxed').materialbox();
+				}});
+			</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/googlecode.min.css"></link><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script><script type="text/javascript">
+			$(document).ready(function() {
+
+				$('pre:not(.embedcode)').each(function() {
+					/**
+					 * @type {string}
+					 */
+					var language = $(this).data('language');
+
+					if (language === 'plaintext' || language === 'text') {
+						$(this).addClass(language).addClass('hljs');
+						return true;
+					}
+					else {
+						var clone = this.cloneNode(true);
+						hljs.highlightBlock(clone);
+						$(this).empty().append($(clone).contents());
+						$(this).attr("class", $(clone).attr("class"));
+					}
+				});
+			});
+			</script><link href="//customer.cludo.com/assets/2063/10039/cludo-search.min.css" type="text/css" rel="stylesheet"></link></head><body class="theme1 colored-top page-toc current-toc-section-focus" data-spy="scroll" data-target=".section-nav-container" data-offset="100" data-link-prefix=""><style type="text/css">
+            div.skipnav {
+            }
+            div.skipnav a {
+                position: fixed;
+                left: -10000px;
+                top: 1.5em;
+                width: 1px;
+                height: 1px;
+                overflow: hidden;
+            }
+            div.skipnav a:focus, div.skipnav a:active, div.skipnav a:hover {
+                background: white;
+                color: black;
+                box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.5);
+                position: fixed;
+                left: 2em;
+                top: 1.5em;
+                width: auto;
+                height: auto;
+                overflow: visible;
+                text-decoration: underline;
+                z-index: 99999; /* has to be higher than the side panel */
+    }
+          </style><div class="skipnav"><a href="#content-wrapper">Skip to main content</a></div><header class="site-header"><nav class="site-header-navbar navbar navbar-fixed-top"><div class="navbar-container"><div class="navbar-header"><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".site-sidebar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><div id="logotype-container" class="pull-left"><a class="navbar-brand" href="https://doc.sitecore.com/xmc/" target="_blank" rel="noopener"><img id="logotype-pageheader" src="../css/image/corporate-logo.png" alt="Corporate logotype" data-role="logotype" class="logo"></img></a></div></div><div class="navbar-collapse collapse" id="navbar"></div></div></nav></header><div class="site-body"><div class="site-body-container"><div class="site-body-row"><aside xmlns:xinfo="http://ns.expertinfo.se/cms/xmlns/1.0" class="site-sidebar"><div class="site-sidebar-header"><a href="https://doc.sitecore.com/xmc/" target="_blank"><img id="logotype-pageheader" src="../css/image/corporate-logo.png" alt="Corporate logotype" data-role="logotype" class="logo"></img></a></div><form id="search-form" class="site-sidebar-search" autocomplete="off"><input type="text" class="form-control search-field" placeholder="Search" id="aa-search-input"></input></form><div id="toc-standalone-placeholder"></div></aside><div class="site-content"><div class="toolbar"><div class="toolbar-tools"><div id="navbar" class="navbar-collapse collapse"></div><div class="tool-print"><i class="fa fa-print" aria-hidden="true">print</i></div><div class="tool-search"><i class="fa fa-search" aria-hidden="true"></i></div><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".site-sidebar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button></div><div class="breadcrumb-container"><ul class="breadcrumb"><li class="breadcrumb-link"><a href="index-en.html">XM Cloud Documentation for Developers</a></li><li class="breadcrumb-link"><a href="xm-cloud-development.html">XM Cloud development</a></li><li class="breadcrumb-link"><a href="miscellaneous-development-tasks.html">Miscellaneous development tasks</a></li><li class="breadcrumb-node">Assembly resolver scanner</li></ul></div></div><main><div id="top-pager"><ul class="pager"><li class="previous"><a accesskey="p" class="prev pull-left prev visible-lg visible-md" id="header-navigation-prev" href="the-links-table.html#UUID-44e99ee8-b9f3-4d03-e27f-e18b7990a1b2_section-idm4527713832014432611474783095">Prev</a></li><li class="next"><a accesskey="n" class="pull-right next visible-lg visible-md" id="header-navigation-next" href="assembly-resolver-scanner.html#idm45599237693728">Next</a></li></ul></div><article class="topic content-container" id="content-wrapper"><div id="topic-content" class="topic-content"><section xml:lang="en" lang="en" dir="ltr" class="section original-topic" data-origin-id="UUID-46b17018-14b3-b01f-6f92-32fcce59d4a2" data-permalink="assembly-resolver-scanner.html" data-topic-level="1" data-relative-prefix="" data-time-modified="04/01/2022" data-publication-date="06/30/23" id="UUID-098c0f83-609b-de80-cfb9-20af86cebfbc"><div class="titlepage"><div><div class="title"><h1 class="title" style="clear: both">Assembly resolver scanner</h1></div><div><div class="abstract"><div class="abstract-title">Abstract</div><p>You can configure the number of assemblies Sitecore scans at start-up to make the start-up process faster.</p></div></div></div></div><p>Sitecore uses assembly resolvers to scan the assemblies for types at runtime. Type scanning large collections of assemblies can be a resource-intensive task. You can configure which assemblies to include and exclude from this scan. Excluding assemblies can decrease startup time.</p><p>You can use three different strategies scanning assemblies:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Blacklist – loads all libraries except the ones listed in the <code class="code">excludedAssemblies</code> node. Namespace: <code class="code">Sitecore.Web.AssembliesScanner.ExcludedAssembliesConfiguration</code>.</p></li><li class="listitem"><p>Whitelist – loads only the libraries listed in the <code class="code">includedAssemblies</code> node. Namespace: <code class="code">Sitecore.Web.AssembliesScanner.IncludedAssembliesConfiguration</code>.</p></li><li class="listitem"><p>Mixed strategy – loads any whitelisted assembly that you have not blacklisted. Namespace: <code class="code">Sitecore.Web.AssembliesScanner.MixedAssembliesConfiguration</code>.</p></li></ul></div><p>You can also <a class="link" href="assembly-resolver-scanner.html#UUID-098c0f83-609b-de80-cfb9-20af86cebfbc_id__How_to_create" title="Create a custom strategy">create a custom strategy</a>.</p><section dir="ltr" class="section internal accordion" data-origin-id="" data-publication-date="06/30/23" id="idm45599237693728"><div class="accordion-icon"></div><div class="panel panel-default"><div class="panel-heading"><div class="titlepage"><a data-toggle="collapse" href="#idm45599237693728_body" data-parent="#idm45599237693728"><div><div class="title"><h2 class="title" style="clear: both">Configure the inclusion and exclusion of assemblies</h2></div></div></a></div></div><div class="panel-body collapse" id="idm45599237693728_body"><p>All assembly configuration is under the <code class="code">configurationAssemblies</code> node. You specify the strategy that Sitecore uses by setting the type of this node, for example: <code class="code">Sitecore.Web.AssembliesScanner.ExcludedAssembliesConfiguration, Sitecore.Web</code>.</p><section dir="ltr" class="section internal" data-origin-id="" data-publication-date="06/30/23" id="idm45599237683024"><div class="titlepage"><div><div class="title"><h3 class="title">Exclude (blacklist) assemblies</h3></div></div></div><p>Specify the assemblies in the <code class="code">configurationAssemblies/excludedAssemblies</code> node that you want to exclude as a list of assembly names. Assembly names that start with a name contained in the <code class="code">excludedAssemblies</code> list are not scanned.</p><p>You can add your solution assemblies to the list if you know they do not contain types that are scanned.</p><p>Example:</p><pre class="programlisting">&lt;excludedAssemblies hint="list"&gt;
+    &lt;excludedAssembly id="Antlr3.Runtime"&gt;Antlr3.Runtime&lt;/excludedAssembly&gt;
+    &lt;excludedAssembly id="ComponentArt"&gt;ComponentArt&lt;/excludedAssembly&gt;
+    &lt;excludedAssembly id="CsQuery"&gt;CsQuery&lt;/excludedAssembly&gt;
+    &lt;excludedAssembly id="CustomFields"&gt;CustomFields&lt;/excludedAssembly&gt;
+&lt;/excludedAssemblies&gt;
+</pre></section><section dir="ltr" class="section internal" data-origin-id="" data-publication-date="06/30/23" id="UUID-098c0f83-609b-de80-cfb9-20af86cebfbc_id_whitelist"><div class="titlepage"><div><div class="title"><h3 class="title">Include (whitelist) assemblies</h3></div></div></div><p>Specify the assemblies in the <code class="code">configurationAssemblies/includedAssemblies</code> node that you want to include as a list of assembly names. Assembly names that start with a name in the <code class="code">includedAssemblies</code> list are scanned.</p><p>Example:</p><pre class="programlisting">&lt;includedAssemblies hint="list"&gt;    &lt;includedAssembly id="Sitecore.Mvc"&gt;Sitecore.Mvc&lt;/includedAssembly&gt;    &lt;includedAssembly id="System.Web.Mvc"&gt;System.Web.Mvc&lt;/includedAssembly&gt;&lt;/includedAssemblies&gt;
+</pre></section><section dir="ltr" class="section internal" data-origin-id="" data-publication-date="06/30/23" id="UUID-098c0f83-609b-de80-cfb9-20af86cebfbc_id_mixed-blacklist-whitelist"><div class="titlepage"><div><div class="title"><h3 class="title">Mixed strategy</h3></div></div></div><p>You can use the mixed strategy to list <code class="code">excludedAssemblies</code> and <code class="code">includedAssemblies</code> at the same time.</p><p>The following examples shows what happens when you use a mixed strategy.</p><p>Example 1:</p><pre class="programlisting">&lt;excludedAssemblies hint="list"&gt;
+    &lt;excludedAssembly id="Sitecore.Mvc"&gt;Sitecore.Mvc&lt;/excludedAssembly&gt;
+&lt;/excludedAssemblies&gt;
+&lt;includedAssemblies hint="list"&gt;
+    &lt;includedAssembly id="Sitecore."&gt;Sitecore.&lt;/includedAssembly&gt;
+&lt;/includedAssemblies&gt;
+</pre><p>Result: Scans all of the <code class="code">*Sitecore*.*</code> assemblies except <code class="code">Sitecore.Mvc</code>.</p><p>Example 2:</p><pre class="programlisting">&lt;excludedAssemblies hint="list"&gt;
+    &lt;excludedAssembly id="Sitecore.Mvc"&gt;Sitecore.Mvc&lt;/excludedAssembly&gt;
+&lt;/excludedAssemblies&gt;
+&lt;includedAssemblies hint="list"&gt;
+    &lt;includedAssembly id="Sitecore.Mvc"&gt;Sitecore.Mvc&lt;/includedAssembly&gt;
+&lt;/includedAssemblies&gt;
+</pre><p>Result: Scans no assemblies.</p><p>Example 3:</p><pre class="programlisting">&lt;excludedAssemblies hint="list"&gt;
+    &lt;excludedAssembly id="Sitecore."&gt;Sitecore.&lt;/excludedAssembly&gt;
+&lt;/excludedAssemblies&gt;
+&lt;includedAssemblies hint="list"&gt;
+    &lt;includedAssembly id="Sitecore.Mvc"&gt;Sitecore.Mvc&lt;/includedAssembly&gt;
+&lt;/includedAssemblies&gt;
+</pre><p>Result: Scans no assemblies.</p></section></div></div></section><section dir="ltr" class="section internal accordion" data-origin-id="" data-publication-date="06/30/23" id="idm45599237690240"><div class="accordion-icon"></div><div class="panel panel-default"><div class="panel-heading"><div class="titlepage"><a data-toggle="collapse" href="#idm45599237690240_body" data-parent="#idm45599237690240"><div><div class="title"><h2 class="title" style="clear: both">Patch the configuration</h2></div></div></a></div></div><div class="panel-body collapse" id="idm45599237690240_body"><p>If you add a configuration similar to this example in an include file, for example <code class="code">ExcludedAssembliesScanner.config</code>, Sitecore patches the original file with what you specify:</p><pre class="programlisting">&lt;configuration xmlns:patch="http://www.sitecore.net/xmlconfig/"&gt;
+    &lt;sitecore&gt;
+        &lt;mvc&gt;
+            &lt;configurationAssemblies type="Sitecore.Web.AssembliesScanner.ExcludedAssembliesConfiguration, Sitecore.Web"&gt;
+                &lt;excludedAssemblies hint="list"&gt;
+                   &lt;excludedAssembly id="MyTestWildCard1"&gt;MyTestWildCard1&lt;/excludedAssembly&gt;
+                   &lt;excludedAssembly id="MyTestWildCard2"&gt;MyTestWildCard2&lt;/excludedAssembly&gt;
+                &lt;/excludedassemblies&gt;
+            &lt;/configurationAssemblies&gt;
+        &lt;/mvc&gt;
+    &lt;sitecore&gt;
+&lt;/configuration&gt;
+</pre><p>All <code class="code">excludedAssembly</code> nodes must have a unique ID.</p><div dir="ltr" class="note note"><h3 class="title">Note</h3><p>You can specify a server role for a node with a list of assemblies. If you do, Sitecore will only use the list for this server role. You specify the server role like this:</p><p><code class="code">&lt;excludedAssemblies hint="list" role:require="ContentDelivery"&gt;</code></p></div></div></div></section><section dir="ltr" class="section internal accordion" data-origin-id="" data-publication-date="06/30/23" id="UUID-098c0f83-609b-de80-cfb9-20af86cebfbc_id__How_to_create"><div class="accordion-icon"></div><div class="panel panel-default"><div class="panel-heading"><div class="titlepage"><a data-toggle="collapse" href="#UUID-098c0f83-609b-de80-cfb9-20af86cebfbc_id__How_to_create_body" data-parent="#UUID-098c0f83-609b-de80-cfb9-20af86cebfbc_id__How_to_create"><div><div class="title"><h2 class="title" style="clear: both">Create a custom strategy</h2></div></div></a></div></div><div class="panel-body collapse" id="UUID-098c0f83-609b-de80-cfb9-20af86cebfbc_id__How_to_create_body"><p>Follow these steps to create a custom strategy:</p><div class="procedure"><ol class="procedure" type="1"><li class="step"><p>Create a configuration class that inherits from the <code class="code">AssembliesConfiguration</code> abstract class.</p></li><li class="step"><p>Override the <code class="code">AssemblyFilter</code> property in this class. The property must return an instance of the filter class.</p></li><li class="step"><p>Create a filter class that implements <code class="code">IAssemblyFilter</code>, and put all of the filter logic in the <code class="code">IsAllowed</code> method.</p></li></ol></div></div></div></section></section><div class="footer-content"><div class="glossary-definitions"></div></div><footer></footer></div></article><aside class="section-nav-container"><ul class="section-nav nav"><li><a href="#UUID-098c0f83-609b-de80-cfb9-20af86cebfbc">Assembly resolver scanner</a></li><li><a href="#idm45599237693728">Configure the inclusion and exclusion of assemblies</a></li><li><a href="#idm45599237690240">Patch the configuration</a></li><li><a href="#UUID-098c0f83-609b-de80-cfb9-20af86cebfbc_id__How_to_create">Create a custom strategy</a></li></ul></aside></main><div id="bottom-pager"><ul class="pager"><li class="previous"><a accesskey="p" class="prev pull-left prev visible-lg visible-md" id="header-navigation-prev" href="the-links-table.html#UUID-44e99ee8-b9f3-4d03-e27f-e18b7990a1b2_section-idm4527713832014432611474783095">Prev</a></li><li class="next"><a accesskey="n" class="pull-right next visible-lg visible-md" id="header-navigation-next" href="assembly-resolver-scanner.html#idm45599237693728">Next</a></li></ul></div><footer class="site-footer"><div class="inner"><div class="copyright"> © 2023 Sitecore </div><div class="date-modified"><span class="date-modified-text">Last modified: </span><span class="formatted-date">04/01/2022</span></div><div class="publication-date"><span class="publication-date-text">Publication date</span><span class="pubdate-delimiter">: </span><span class="formatted-date">06/30/23</span></div></div></footer></div></div></div></div><script type="text/javascript" src="//customer.cludo.com/scripts/bundles/search-script.min.js"></script><script>
+			var CludoSearch;
+			(function () {
+			var cludoSettings = {
+			customerId: 2063,
+			engineId: 12826,
+			language: 'en',
+			searchInputs: ["search-form","cludo-search-content-form","cludo-search-mobile-form"],
+			hideSearchFilters: true,
+			type: 'standardOverlay',
+			facets: ["Category", "ProductVer", "Product", "Version"],
+			useStandardSearchTemplate: false,
+			customerTemplate: "OverlayCopy",
+			searchApiUrl: 'https://api-eu1.cludo.com/api/v3'
+			};
+			CludoSearch= new Cludo(cludoSettings);
+			CludoSearch.init();
+			})();
+		</script><!-- www.Cludo.com Search body init script start --></body></html>

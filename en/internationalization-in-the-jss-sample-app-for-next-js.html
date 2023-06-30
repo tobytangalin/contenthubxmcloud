@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"></meta><meta name="format-detection" content="telephone=no"></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><meta name="search" content="default"></meta><meta name="use.ic" content="no"></meta><meta name="Audience - do not use" content=""></meta><meta name="clubot" content=""></meta><meta name="data model" content=""></meta><meta name="DxP type - Do Not Use" content=""></meta><meta name="media_icon" content=""></meta><meta name="product" content="XM Cloud"></meta><meta name="Publishing target" content="Production"></meta><meta name="Ready for publishing - do not use" content=""></meta><meta name="role" content="developers"></meta><meta name="topic_tripane" content=""></meta><meta name="version" content=""></meta><meta name="tocstandalone" content="yes"></meta><meta name="theme" content="1"></meta><meta name="search.placeholder" content="Search"></meta><meta name="search.results" content="Search results"></meta><meta name="no.search.results" content="No results found"></meta><script type="text/javascript">
+var theme = '1';
+
+			
+			window.versionsfile = '';
+
+
+			window.indexDict = new Array();
+			window.store = {};
+			window.portalLanguage = 'en';
+			window.enterKey = 'select';
+			
+			
+				var fuse_threshold = 0.3;
+			
+					var local_csh = false;
+				
+					var anchoroption = true;
+				var instantsearch_minlength = 1;
+						
+			var useanchorlinks = false;
+			
+					function addSearch(){
+					//not used with custom or elastic search
+					}
+				</script><title>Internationalization in the JSS sample app for Next.js</title><link rel="stylesheet" type="text/css" href="../css/docbook.css"></link><link rel="stylesheet" type="text/css" href="../css/font-awesome.css"></link><link rel="stylesheet" type="text/css" href="../css/roboto.font.css"></link><link rel="stylesheet" type="text/css" href="../css/theme1.css?version=20230630"></link><link rel="stylesheet" type="text/css" href="../css/theme1-colors.css?version=20230630"></link><link rel="stylesheet" type="text/css" href="../css/content-theme1.css?version=20230630"></link><link rel="stylesheet" type="text/css" href="../css/sm-core-css.css"></link><link rel="stylesheet" type="text/css" href="../css/sm-simple.css"></link><link rel="stylesheet" type="text/css" href="../css/style-print.css"></link><link rel="stylesheet" type="text/css" href="../css/style-common.css"></link><link rel="stylesheet" type="text/css" href="../css/style-modern-tables.css"></link><link rel="stylesheet" type="text/css" href="../css/graphical-lists.css"></link><link rel="stylesheet" type="text/css" href="/css/sitecore-custom-default-xmc.css?version=20230630"></link><script src="../js/jquery-3/jquery-3.4.1.min.js" type="text/javascript"></script><script src="../js/jquery-migrate-3.0.1.min.js" type="text/javascript"></script><script src="../js/materialize.min.js" type="text/javascript"></script><script src="../js/bootstrap.min.js" type="text/javascript"></script><script src="../js/purl.js" type="text/javascript"></script><script src="../js/jquery.smartmenus.js" type="text/javascript"></script><script src="js/toc.js?version=20230630" type="text/javascript"></script><script src="../js/create-toc.js" type="text/javascript"></script><script src="../js/html5-2-mp-common.js?version=20230630" type="text/javascript"></script><script src="../js/html5-2.js?version=20230630" type="text/javascript"></script><script src="../js/checklist.js" type="text/javascript"></script><script src="../js/clipboard.min.js" type="text/javascript"></script><script src="../js/csh.js" type="text/javascript"></script><script src="/js/layout-custom-script.js" type="text/javascript"></script><meta xmlns:xhtml="http://www.w3.org/1999/xhtml" name="generator" content="Paligo"></meta><meta name="description" content="How the Next.js JSS app enables internationalization"></meta><link rel="prev" href="walkthrough--creating-a-new-component-in-a-jss-next-js-app-using-the-sitecore-first-development-workflow.html#UUID-bc5be6cd-744a-e4a8-c41f-b0469716edf1_section-idm4515240474604832426702534586" title="Fill out values in the Experience Editor"></link><link rel="next" href="internationalization-in-the-jss-sample-app-for-next-js.html#UUID-ed9bc62f-6357-837f-d599-1feae9976b2f_section-idm4605888570520032693147213374" title="Translating content"></link><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML" async="async"></script><link rel="icon" href="/favicon.ico" type="image/x-icon"></link><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent/3.1.1/cookieconsent.min.css"></link><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent/3.1.1/cookieconsent.min.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/3.0.1/js.cookie.min.js"></script><script type="text/javascript">var privacypolicy = 'https://www.sitecore.com/trust/privacy-policy';
+var consenttype = 'opt-out';
+</script><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-72664331-1"></script><script type="text/javascript">const measurementId = 'UA-72664331-1';
+
+						$(document).on('cookies.consented', () => {
+							window.dataLayer = window.dataLayer || [];
+							function gtag(){dataLayer.push(arguments)};
+
+							gtag('js', new Date());
+							gtag('config', measurementId);
+						});
+					</script><script type="text/javascript" src="../js/cookie-consent.js"></script><script type="text/javascript">
+				$(document).ready(function () {
+				$(".mediaobject img").addClass('materialboxed');
+				//Exclude images with links
+				$(".mediaobject a img").removeClass('materialboxed');
+				if (!document.documentMode) {
+				$('.materialboxed').materialbox();
+				}});
+			</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/googlecode.min.css"></link><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script><script type="text/javascript">
+			$(document).ready(function() {
+
+				$('pre:not(.embedcode)').each(function() {
+					/**
+					 * @type {string}
+					 */
+					var language = $(this).data('language');
+
+					if (language === 'plaintext' || language === 'text') {
+						$(this).addClass(language).addClass('hljs');
+						return true;
+					}
+					else {
+						var clone = this.cloneNode(true);
+						hljs.highlightBlock(clone);
+						$(this).empty().append($(clone).contents());
+						$(this).attr("class", $(clone).attr("class"));
+					}
+				});
+			});
+			</script><link href="//customer.cludo.com/assets/2063/10039/cludo-search.min.css" type="text/css" rel="stylesheet"></link></head><body class="theme1 colored-top page-toc current-toc-section-focus" data-spy="scroll" data-target=".section-nav-container" data-offset="100" data-link-prefix=""><style type="text/css">
+            div.skipnav {
+            }
+            div.skipnav a {
+                position: fixed;
+                left: -10000px;
+                top: 1.5em;
+                width: 1px;
+                height: 1px;
+                overflow: hidden;
+            }
+            div.skipnav a:focus, div.skipnav a:active, div.skipnav a:hover {
+                background: white;
+                color: black;
+                box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.5);
+                position: fixed;
+                left: 2em;
+                top: 1.5em;
+                width: auto;
+                height: auto;
+                overflow: visible;
+                text-decoration: underline;
+                z-index: 99999; /* has to be higher than the side panel */
+    }
+          </style><div class="skipnav"><a href="#content-wrapper">Skip to main content</a></div><header class="site-header"><nav class="site-header-navbar navbar navbar-fixed-top"><div class="navbar-container"><div class="navbar-header"><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".site-sidebar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><div id="logotype-container" class="pull-left"><a class="navbar-brand" href="https://doc.sitecore.com/xmc/" target="_blank" rel="noopener"><img id="logotype-pageheader" src="../css/image/corporate-logo.png" alt="Corporate logotype" data-role="logotype" class="logo"></img></a></div></div><div class="navbar-collapse collapse" id="navbar"></div></div></nav></header><div class="site-body"><div class="site-body-container"><div class="site-body-row"><aside xmlns:xinfo="http://ns.expertinfo.se/cms/xmlns/1.0" class="site-sidebar"><div class="site-sidebar-header"><a href="https://doc.sitecore.com/xmc/" target="_blank"><img id="logotype-pageheader" src="../css/image/corporate-logo.png" alt="Corporate logotype" data-role="logotype" class="logo"></img></a></div><form id="search-form" class="site-sidebar-search" autocomplete="off"><input type="text" class="form-control search-field" placeholder="Search" id="aa-search-input"></input></form><div id="toc-standalone-placeholder"></div></aside><div class="site-content"><div class="toolbar"><div class="toolbar-tools"><div id="navbar" class="navbar-collapse collapse"></div><div class="tool-print"><i class="fa fa-print" aria-hidden="true">print</i></div><div class="tool-search"><i class="fa fa-search" aria-hidden="true"></i></div><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".site-sidebar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button></div><div class="breadcrumb-container"><ul class="breadcrumb"><li class="breadcrumb-link"><a href="index-en.html">XM Cloud Documentation for Developers</a></li><li class="breadcrumb-link"><a href="sitecore-javascript-rendering-sdks--jss-.html">Sitecore JavaScript Rendering SDKs (JSS)</a></li><li class="breadcrumb-link"><a href="sitecore-javascript-rendering-sdk--jss--for-next-js.html">Sitecore JavaScript Rendering SDK (JSS) for Next.js</a></li><li class="breadcrumb-node">Internationalization in the JSS sample app for Next.js</li></ul></div></div><main><div id="top-pager"><ul class="pager"><li class="previous"><a accesskey="p" class="prev pull-left prev visible-lg visible-md" id="header-navigation-prev" href="walkthrough--creating-a-new-component-in-a-jss-next-js-app-using-the-sitecore-first-development-workflow.html#UUID-bc5be6cd-744a-e4a8-c41f-b0469716edf1_section-idm4515240474604832426702534586">Prev</a></li><li class="next"><a accesskey="n" class="pull-right next visible-lg visible-md" id="header-navigation-next" href="internationalization-in-the-jss-sample-app-for-next-js.html#UUID-ed9bc62f-6357-837f-d599-1feae9976b2f_section-idm4605888570520032693147213374">Next</a></li></ul></div><article class="topic content-container" id="content-wrapper"><div id="topic-content" class="topic-content"><section xml:lang="en" lang="en" dir="ltr" class="section" data-origin-id="UUID-e4f4cc0f-17f9-b8ca-a43f-7a7b61ec0bd1" data-permalink="internationalization-in-the-jss-sample-app-for-next-js.html" data-topic-level="1" data-relative-prefix="" data-time-modified="05/17/2022" data-publication-date="06/30/23" id="UUID-ed9bc62f-6357-837f-d599-1feae9976b2f"><div class="titlepage"><div><div class="title"><h1 class="title" style="clear: both">Internationalization in the JSS sample app for Next.js</h1></div><div><div class="abstract"><div class="abstract-title">Abstract</div><p>How the Next.js JSS app enables internationalization</p></div></div></div></div><p>A JSS Next.js application created based on the Next.js sample app comes preconfigured with the necessary settings to enable internationalization (i18n).</p><p>JSS Next.js applications support <a class="link linktype-component" href="routing-and-page-composition-in-jss-next-js-apps.html#UUID-66872155-7eb3-4e31-91e9-5c000275631f_UUID-a0d91ffb-83c0-223f-b0c8-b4773d2e1bc7" title="Internationalized routing in JSS Next.js apps">internationalized routing</a> with sub-path routing. Domain routing requires custom implementation.</p><p>In the source directory of the Next.js JSS application, the file <code class="code">next.config.js</code> contains definitions for the <code class="code">locales</code> supported by the application and the <code class="code">defaultLocale</code>:</p><pre class="programlisting">i18n: {
+    locales: ['en', 'da-DK'],
+    defaultLocale: packageConfig.language,
+}</pre><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><code class="code">locales</code> are all the languages you want to support in your application and must match (or at least be a subset of) the languages defined in Sitecore. This configuration option for Next.js has some <a class="link" href="https://nextjs.org/docs/advanced-features/i18n-routing#limits-for-the-i18n-config" target="_blank" rel="noopener">limitations</a>.</p></li><li class="listitem"><p><code class="code">defaultLocale</code> is the locale used when visiting a path that is not prefixed by a locale. The value is set to the value you configured in the file <code class="code">package.json</code> for the <code class="code">config.language</code> option.</p></li></ul></div><p>Next.js does not provide additional i18n functionality and it is not opinionated about which content translation library you must use. To enable content localization, JSS Next.js apps use the <a class="link" href="https://github.com/StarpTech/next-localization" target="_blank" rel="noopener">next-localization library</a>. In the App component, defined in the <code class="code">src/pages/_app.tsx</code> file, the JSS Next.js application imports the i18n provider from the <code class="code">next-localization</code> module and initializes it using the properties <code class="code">pageProps.locale</code>, with a value provided by Next.js, and <code class="code">dictionary</code>, with data from the Sitecore Dictionary Services. The properties are populated by the Page Props Factory:</p><pre class="programlisting">function App({ Component, pageProps }: AppProps): JSX.Element {
+  const { dictionary, ...rest } = pageProps;
+
+  return (
+    &lt;I18nProvider lngDict={dictionary} locale={pageProps.locale}&gt;
+      &lt;Component {...rest} /&gt;
+    &lt;/I18nProvider&gt;
+  );
+}</pre><p>For dynamic routes, JSS Next.js apps, using an instance of the <code class="code">SitecoreSitemapFetcher</code> class, handle the retrieval of the <code class="code">locale</code> field when preparing the static paths for the route with the function <code class="code">getStaticPaths</code>.</p><section dir="ltr" class="section" data-origin-id="" data-publication-date="06/30/23" id="UUID-ed9bc62f-6357-837f-d599-1feae9976b2f_section-idm4605888570520032693147213374"><div class="titlepage"><div><div class="title"><h2 class="title" style="clear: both">Translating content</h2></div></div></div><p>To translate the content of pages, you can use the <code class="code">useI18n</code> hook. The hook provides a translation function <code class="code">t</code> and the current language <code class="code">locale</code>.</p><p>For example:</p><pre class="programlisting">import { useI18n } from 'next-localization';
+
+const MultilingualComponent = (): JSX.Element =&gt; {
+  const { t, locale } = useI18n();
+
+  return (
+    &lt;div&gt;
+      &lt;p&gt;Translated text: {t('custom-key')}&lt;/p&gt;
+      &lt;p&gt;The current language is: {locale()}&lt;/p&gt;
+    &lt;/div&gt;
+  );
+};
+
+export default MultilingualComponent;</pre></section></section><div class="footer-content"><div class="glossary-definitions"></div></div><footer></footer></div></article><aside class="section-nav-container"><ul class="section-nav nav"><li><a href="#UUID-ed9bc62f-6357-837f-d599-1feae9976b2f">Internationalization in the JSS sample app for Next.js</a></li><li><a href="#UUID-ed9bc62f-6357-837f-d599-1feae9976b2f_section-idm4605888570520032693147213374">Translating content</a></li></ul></aside></main><div id="bottom-pager"><ul class="pager"><li class="previous"><a accesskey="p" class="prev pull-left prev visible-lg visible-md" id="header-navigation-prev" href="walkthrough--creating-a-new-component-in-a-jss-next-js-app-using-the-sitecore-first-development-workflow.html#UUID-bc5be6cd-744a-e4a8-c41f-b0469716edf1_section-idm4515240474604832426702534586">Prev</a></li><li class="next"><a accesskey="n" class="pull-right next visible-lg visible-md" id="header-navigation-next" href="internationalization-in-the-jss-sample-app-for-next-js.html#UUID-ed9bc62f-6357-837f-d599-1feae9976b2f_section-idm4605888570520032693147213374">Next</a></li></ul></div><footer class="site-footer"><div class="inner"><div class="copyright"> © 2023 Sitecore </div><div class="date-modified"><span class="date-modified-text">Last modified: </span><span class="formatted-date">05/17/2022</span></div><div class="publication-date"><span class="publication-date-text">Publication date</span><span class="pubdate-delimiter">: </span><span class="formatted-date">06/30/23</span></div></div></footer></div></div></div></div><script type="text/javascript" src="//customer.cludo.com/scripts/bundles/search-script.min.js"></script><script>
+			var CludoSearch;
+			(function () {
+			var cludoSettings = {
+			customerId: 2063,
+			engineId: 12826,
+			language: 'en',
+			searchInputs: ["search-form","cludo-search-content-form","cludo-search-mobile-form"],
+			hideSearchFilters: true,
+			type: 'standardOverlay',
+			facets: ["Category", "ProductVer", "Product", "Version"],
+			useStandardSearchTemplate: false,
+			customerTemplate: "OverlayCopy",
+			searchApiUrl: 'https://api-eu1.cludo.com/api/v3'
+			};
+			CludoSearch= new Cludo(cludoSettings);
+			CludoSearch.init();
+			})();
+		</script><!-- www.Cludo.com Search body init script start --></body></html>

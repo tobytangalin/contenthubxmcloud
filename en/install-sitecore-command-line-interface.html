@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"></meta><meta name="format-detection" content="telephone=no"></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><meta name="search" content="default"></meta><meta name="use.ic" content="no"></meta><meta name="Audience - do not use" content=""></meta><meta name="clubot" content=""></meta><meta name="data model" content=""></meta><meta name="DxP type - Do Not Use" content=""></meta><meta name="media_icon" content=""></meta><meta name="product" content="XM Cloud"></meta><meta name="Publishing target" content="Production"></meta><meta name="Ready for publishing - do not use" content=""></meta><meta name="role" content="developers"></meta><meta name="topic_tripane" content=""></meta><meta name="version" content=""></meta><meta name="tocstandalone" content="yes"></meta><meta name="theme" content="1"></meta><meta name="search.placeholder" content="Search"></meta><meta name="search.results" content="Search results"></meta><meta name="no.search.results" content="No results found"></meta><script type="text/javascript">
+var theme = '1';
+
+			
+			window.versionsfile = '';
+
+
+			window.indexDict = new Array();
+			window.store = {};
+			window.portalLanguage = 'en';
+			window.enterKey = 'select';
+			
+			
+				var fuse_threshold = 0.3;
+			
+					var local_csh = false;
+				
+					var anchoroption = true;
+				var instantsearch_minlength = 1;
+						
+			var useanchorlinks = false;
+			
+					function addSearch(){
+					//not used with custom or elastic search
+					}
+				</script><title>Install Sitecore Command Line Interface</title><link rel="stylesheet" type="text/css" href="../css/docbook.css"></link><link rel="stylesheet" type="text/css" href="../css/font-awesome.css"></link><link rel="stylesheet" type="text/css" href="../css/roboto.font.css"></link><link rel="stylesheet" type="text/css" href="../css/theme1.css?version=20230630"></link><link rel="stylesheet" type="text/css" href="../css/theme1-colors.css?version=20230630"></link><link rel="stylesheet" type="text/css" href="../css/content-theme1.css?version=20230630"></link><link rel="stylesheet" type="text/css" href="../css/sm-core-css.css"></link><link rel="stylesheet" type="text/css" href="../css/sm-simple.css"></link><link rel="stylesheet" type="text/css" href="../css/style-print.css"></link><link rel="stylesheet" type="text/css" href="../css/style-common.css"></link><link rel="stylesheet" type="text/css" href="../css/style-modern-tables.css"></link><link rel="stylesheet" type="text/css" href="../css/graphical-lists.css"></link><link rel="stylesheet" type="text/css" href="/css/sitecore-custom-default-xmc.css?version=20230630"></link><script src="../js/jquery-3/jquery-3.4.1.min.js" type="text/javascript"></script><script src="../js/jquery-migrate-3.0.1.min.js" type="text/javascript"></script><script src="../js/materialize.min.js" type="text/javascript"></script><script src="../js/bootstrap.min.js" type="text/javascript"></script><script src="../js/purl.js" type="text/javascript"></script><script src="../js/jquery.smartmenus.js" type="text/javascript"></script><script src="js/toc.js?version=20230630" type="text/javascript"></script><script src="../js/create-toc.js" type="text/javascript"></script><script src="../js/html5-2-mp-common.js?version=20230630" type="text/javascript"></script><script src="../js/html5-2.js?version=20230630" type="text/javascript"></script><script src="../js/checklist.js" type="text/javascript"></script><script src="../js/clipboard.min.js" type="text/javascript"></script><script src="../js/csh.js" type="text/javascript"></script><script src="/js/layout-custom-script.js" type="text/javascript"></script><meta xmlns:xhtml="http://www.w3.org/1999/xhtml" name="generator" content="Paligo"></meta><meta name="description" content="How to install Sitecore Command Line Interface (CLI) in a terminal."></meta><link rel="prev" href="version-compatibility.html" title="Version compatibility"></link><link rel="next" href="upgrade-the-sitecore-command-line-interface-to-version-5.html" title="Upgrade the Sitecore Command Line Interface to version 5"></link><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML" async="async"></script><link rel="icon" href="/favicon.ico" type="image/x-icon"></link><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent/3.1.1/cookieconsent.min.css"></link><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent/3.1.1/cookieconsent.min.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/3.0.1/js.cookie.min.js"></script><script type="text/javascript">var privacypolicy = 'https://www.sitecore.com/trust/privacy-policy';
+var consenttype = 'opt-out';
+</script><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-72664331-1"></script><script type="text/javascript">const measurementId = 'UA-72664331-1';
+
+						$(document).on('cookies.consented', () => {
+							window.dataLayer = window.dataLayer || [];
+							function gtag(){dataLayer.push(arguments)};
+
+							gtag('js', new Date());
+							gtag('config', measurementId);
+						});
+					</script><script type="text/javascript" src="../js/cookie-consent.js"></script><script type="text/javascript">
+				$(document).ready(function () {
+				$(".mediaobject img").addClass('materialboxed');
+				//Exclude images with links
+				$(".mediaobject a img").removeClass('materialboxed');
+				if (!document.documentMode) {
+				$('.materialboxed').materialbox();
+				}});
+			</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/googlecode.min.css"></link><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script><script type="text/javascript">
+			$(document).ready(function() {
+
+				$('pre:not(.embedcode)').each(function() {
+					/**
+					 * @type {string}
+					 */
+					var language = $(this).data('language');
+
+					if (language === 'plaintext' || language === 'text') {
+						$(this).addClass(language).addClass('hljs');
+						return true;
+					}
+					else {
+						var clone = this.cloneNode(true);
+						hljs.highlightBlock(clone);
+						$(this).empty().append($(clone).contents());
+						$(this).attr("class", $(clone).attr("class"));
+					}
+				});
+			});
+			</script><link href="//customer.cludo.com/assets/2063/10039/cludo-search.min.css" type="text/css" rel="stylesheet"></link></head><body class="theme1 colored-top page-toc current-toc-section-focus" data-spy="scroll" data-target=".section-nav-container" data-offset="100" data-link-prefix=""><style type="text/css">
+            div.skipnav {
+            }
+            div.skipnav a {
+                position: fixed;
+                left: -10000px;
+                top: 1.5em;
+                width: 1px;
+                height: 1px;
+                overflow: hidden;
+            }
+            div.skipnav a:focus, div.skipnav a:active, div.skipnav a:hover {
+                background: white;
+                color: black;
+                box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.5);
+                position: fixed;
+                left: 2em;
+                top: 1.5em;
+                width: auto;
+                height: auto;
+                overflow: visible;
+                text-decoration: underline;
+                z-index: 99999; /* has to be higher than the side panel */
+    }
+          </style><div class="skipnav"><a href="#content-wrapper">Skip to main content</a></div><header class="site-header"><nav class="site-header-navbar navbar navbar-fixed-top"><div class="navbar-container"><div class="navbar-header"><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".site-sidebar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><div id="logotype-container" class="pull-left"><a class="navbar-brand" href="https://doc.sitecore.com/xmc/" target="_blank" rel="noopener"><img id="logotype-pageheader" src="../css/image/corporate-logo.png" alt="Corporate logotype" data-role="logotype" class="logo"></img></a></div></div><div class="navbar-collapse collapse" id="navbar"></div></div></nav></header><div class="site-body"><div class="site-body-container"><div class="site-body-row"><aside xmlns:xinfo="http://ns.expertinfo.se/cms/xmlns/1.0" class="site-sidebar"><div class="site-sidebar-header"><a href="https://doc.sitecore.com/xmc/" target="_blank"><img id="logotype-pageheader" src="../css/image/corporate-logo.png" alt="Corporate logotype" data-role="logotype" class="logo"></img></a></div><form id="search-form" class="site-sidebar-search" autocomplete="off"><input type="text" class="form-control search-field" placeholder="Search" id="aa-search-input"></input></form><div id="toc-standalone-placeholder"></div></aside><div class="site-content"><div class="toolbar"><div class="toolbar-tools"><div id="navbar" class="navbar-collapse collapse"></div><div class="tool-print"><i class="fa fa-print" aria-hidden="true">print</i></div><div class="tool-search"><i class="fa fa-search" aria-hidden="true"></i></div><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".site-sidebar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button></div><div class="breadcrumb-container"><ul class="breadcrumb"><li class="breadcrumb-link"><a href="index-en.html">XM Cloud Documentation for Developers</a></li><li class="breadcrumb-link"><a href="developer-tools.html">Developer Tools</a></li><li class="breadcrumb-link"><a href="sitecore-command-line-interface.html">Sitecore Command Line Interface</a></li><li class="breadcrumb-node">Install Sitecore Command Line Interface</li></ul></div></div><main><div id="top-pager"><ul class="pager"><li class="previous"><a accesskey="p" class="prev pull-left prev visible-lg visible-md" id="header-navigation-prev" href="version-compatibility.html">Prev</a></li><li class="next"><a accesskey="n" class="pull-right next visible-lg visible-md" id="header-navigation-next" href="upgrade-the-sitecore-command-line-interface-to-version-5.html">Next</a></li></ul></div><article class="topic content-container" id="content-wrapper"><div id="topic-content" class="topic-content"><section xml:lang="en" lang="en" dir="ltr" class="section" data-origin-id="UUID-2a6b18e7-90cd-c0bd-f09c-e36a914fa2c0" data-permalink="install-sitecore-command-line-interface.html" data-topic-level="1" data-relative-prefix="" data-time-modified="10/13/2022" data-publication-date="06/30/23" id="UUID-d504f62c-d3f9-89b7-a5d1-5433915f7cb3"><div class="titlepage"><div><div class="title"><h1 class="title" style="clear: both">Install Sitecore Command Line Interface<span id="UUID-d504f62c-d3f9-89b7-a5d1-5433915f7cb3_UUID-c109c6cb-c528-e9a6-cfa6-89a7af9552e3"></span></h1></div><div><div class="abstract"><div class="abstract-title">Abstract</div><p>How to install Sitecore Command Line Interface (CLI) in a terminal.</p></div></div></div></div><p><a class="link linktype-component" href="sitecore-command-line-interface.html" title="Sitecore Command Line Interface">Sitecore Command Line Interface (CLI)</a> is a tool that you install in a terminal.</p><div dir="ltr" class="note"><h3 class="title">Note</h3><p>To upgrade an existing CLI installation, see <a class="link linktype-component" href="upgrade-the-sitecore-command-line-interface-to-version-5.html" title="Upgrade the Sitecore Command Line Interface to version 5">Upgrade Sitecore Command Line Interface</a>.</p></div><p>You can install Sitecore CLI either as a local tool for individual projects or as a global tool for all projects.</p><div dir="ltr" class="important"><h3 class="title">Important</h3><p>We do not recommend installing Sitecore CLI as a global tool. Different Sitecore instances might need different versions of the Sitecore CLI.</p></div><p>You must have <a class="link" href="https://dotnet.microsoft.com/en-us/download/dotnet/6.0" target="_blank" rel="noopener">.NET 6</a> installed on your workstation before installing the Sitecore CLI. If you do not have the required version of .NET Core installed, you get the following message:</p><pre class="programlisting">Package sitecore.cli {version} is not compatible with netcoreapp3.1 (.NETCoreApp,Version=v3.1) / any. 
+Package sitecore.cli {version} supports: net6.0 (.NETCoreApp,Version=v6.0) / any</pre><p>To install Sitecore CLI as a local project tool:</p><div class="procedure" id="UUID-d504f62c-d3f9-89b7-a5d1-5433915f7cb3_procedure-idm4479625709892831650463249972"><ol class="procedure" type="1"><li class="step"><p>If you have not already done so, <a class="link linktype-component" href="sitecore-management-services.html" title="Sitecore Management Services">install Sitecore Management Services</a>.</p><div dir="ltr" class="important" id="UUID-d504f62c-d3f9-89b7-a5d1-5433915f7cb3_important-idm1403331329139568"><h3 class="title">Important</h3><p>Starting with version 5.1.25 the CLI has a <a class="link linktype-component" href="version-compatibility.html" title="Version compatibility">version compatibility feature</a> that prevents you from running CLI commands with an outdated version of Sitecore Management Services.</p></div></li><li class="step"><p>Open a terminal with administrator privileges.</p></li><li class="step"><p>Run the following commands to install Sitecore CLI:</p><pre class="programlisting">cd &lt;project folder&gt;
+dotnet new tool-manifest
+dotnet nuget add source -n Sitecore https://sitecore.myget.org/F/sc-packages/api/v3/index.json
+dotnet tool install Sitecore.CLI </pre><div dir="ltr" class="note"><h3 class="title">Note</h3><p>Other developers working on the same project only have to run <code class="code">dotnet tool restore</code> to install Sitecore CLI.</p><p>To install the CLI globally, use the <code class="code">-g</code> option when running the <code class="code">install</code> command (not recommended).</p></div><p>When the installation is complete, you get the following message:</p><pre class="programlisting">You can invoke the tool from this directory using the following commands: 'dotnet tool run sitecore' or 'dotnet sitecore'.
+Tool 'sitecore.cli' {version} was successfully installed. Entry is added to the manifest file {project-path}.config\dotnet-tools.json.</pre><div dir="ltr" class="note"><h3 class="title">Note</h3><p>The examples in the following steps use an example version for simplicity, but when you install the CLI, the version displayed in the terminal is the <span class="emphasis"><em>latest official release available</em></span>.</p></div></li><li class="step"><p>To initialize your new project, run the following command in your project folder:</p><pre class="programlisting">dotnet sitecore init</pre><div dir="ltr" class="note"><h3 class="title">Note</h3><p>The command <code class="code">dotnet sitecore init</code> adds default plugins with the same version as the CLI to the <code class="code">sitecore.json</code> file. The plugins are <code class="code">Sitecore.DevEx.Extensibility.Serialization</code>, <code class="code">Sitecore.DevEx.Extensibility.Publishing</code>, <code class="code">Sitecore.DevEx.Extensibility.Indexing</code>, <code class="code">Sitecore.DevEx.Extensibility.ResourcePackage</code>, and <code class="code">Sitecore.DevEx.Extensibility.Database</code>. On the next Sitecore CLI command, the CLI attempts to resolve and install the plugins for you.</p></div></li><li class="step" id="UUID-d504f62c-d3f9-89b7-a5d1-5433915f7cb3_step-idm1403312130419344"><p>If you want to install the <a class="link linktype-component" href="xm-cloud-plugin.html" title="XM Cloud plugin">XM Cloud plugin</a>, run the following command:</p><pre class="programlisting" id="UUID-d504f62c-d3f9-89b7-a5d1-5433915f7cb3_programlisting-idm1401656065209674">dotnet sitecore plugin add -n Sitecore.DevEx.Extensibility.XMCloud</pre><div xml:lang="en" lang="en" dir="ltr" class="sidebar" id="UUID-d504f62c-d3f9-89b7-a5d1-5433915f7cb3_UUID-37f17fee-4c03-fd34-0c0e-eb845e376819"><div dir="ltr" class="note"><h3 class="title">Note</h3><p>The XM Cloud plugin and the commands provided by it require an instance of <a class="link linktype-component" href="sitecore-experience-manager-cloud.html" title="Sitecore Experience Manager Cloud">XM Cloud</a>.</p></div></div></li><li class="step"><p>Verify the initialization on your project with the following command:</p><pre class="programlisting">dotnet sitecore plugin list</pre><p>If this is the first command after <code class="code">dotnet sitecore init</code>, the CLI attempts to resolve and install the plugins listed in the <code class="code">sitecore.json</code> file. The command prints a message informing you which plugins are being installed. For example:</p><pre class="programlisting" id="UUID-d504f62c-d3f9-89b7-a5d1-5433915f7cb3_programlisting-idm4516530967478433121265945285">&gt;&gt; Begin installing NuGet packages: Sitecore.DevEx.Extensibility.Serialization@{version}, Sitecore.DevEx.Extensibility.Publishing@{version}, Sitecore.DevEx.Extensibility.Indexing@{version}, Sitecore.DevEx.Extensibility.ResourcePackage@{version}, Sitecore.DevEx.Extensibility.Database@{version}</pre><p>If the installation is successful, the command lists the installed plugins and their version information:</p><pre class="programlisting">List of plugins:
+[Installed] Sitecore.DevEx.Extensibility.Serialization v.{version}
+[Installed] Sitecore.DevEx.Extensibility.Publishing v.{version}
+[Installed] Sitecore.DevEx.Extensibility.Indexing v.{version}
+[Installed] Sitecore.DevEx.Extensibility.ResourcePackage v.{version}
+[Installed] Sitecore.DevEx.Extensibility.Database v.{version}</pre><p>If the installation of any plugin fails, the output shows a <code class="code">[Failed]</code> status for that plugin.</p></li><li class="step"><p>To verify that the Sitecore CLI works, go to your project folder in a terminal and type <code class="code">dotnet sitecore -h</code>.</p><p>If the Sitecore CLI is ready, you get a message describing the usage, options, and <a class="link linktype-component" href="sitecore-command-line-interface-reference.html" title="Sitecore Command Line Interface reference">available top-level commands</a>. For example:</p><pre class="programlisting">sitecore.cli
+  Sitecore command line tool
+
+Usage:
+  sitecore.cli [options] [command]
+
+Options:
+  --version       Show version information
+  -?, -h, --help  Show help and usage information
+
+Commands:
+  login               Authenticates the CLI to a Sitecore instance
+  plugin              Manage plugins commands
+  init                Creates Sitecore configurations in current directory
+  connect             Connect to the existing environment
+  ser, serialization  Item serialization commands
+  publish             Performs a publish operation on all content
+  index               working with indexes data
+  itemres             Resource Items Package commands
+  dbcleanup           Performs cleanup operations for Sitecore databases</pre></li></ol></div></section><div class="footer-content"><div class="glossary-definitions"></div></div><footer></footer></div></article></main><div id="bottom-pager"><ul class="pager"><li class="previous"><a accesskey="p" class="prev pull-left prev visible-lg visible-md" id="header-navigation-prev" href="version-compatibility.html">Prev</a></li><li class="next"><a accesskey="n" class="pull-right next visible-lg visible-md" id="header-navigation-next" href="upgrade-the-sitecore-command-line-interface-to-version-5.html">Next</a></li></ul></div><footer class="site-footer"><div class="inner"><div class="copyright"> © 2023 Sitecore </div><div class="date-modified"><span class="date-modified-text">Last modified: </span><span class="formatted-date">10/13/2022</span></div><div class="publication-date"><span class="publication-date-text">Publication date</span><span class="pubdate-delimiter">: </span><span class="formatted-date">06/30/23</span></div></div></footer></div></div></div></div><script type="text/javascript" src="//customer.cludo.com/scripts/bundles/search-script.min.js"></script><script>
+			var CludoSearch;
+			(function () {
+			var cludoSettings = {
+			customerId: 2063,
+			engineId: 12826,
+			language: 'en',
+			searchInputs: ["search-form","cludo-search-content-form","cludo-search-mobile-form"],
+			hideSearchFilters: true,
+			type: 'standardOverlay',
+			facets: ["Category", "ProductVer", "Product", "Version"],
+			useStandardSearchTemplate: false,
+			customerTemplate: "OverlayCopy",
+			searchApiUrl: 'https://api-eu1.cludo.com/api/v3'
+			};
+			CludoSearch= new Cludo(cludoSettings);
+			CludoSearch.init();
+			})();
+		</script><!-- www.Cludo.com Search body init script start --></body></html>

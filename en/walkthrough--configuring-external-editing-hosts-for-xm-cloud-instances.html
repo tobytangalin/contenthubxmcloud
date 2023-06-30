@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"></meta><meta name="format-detection" content="telephone=no"></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><meta name="search" content="default"></meta><meta name="use.ic" content="no"></meta><meta name="Audience - do not use" content=""></meta><meta name="clubot" content=""></meta><meta name="data model" content=""></meta><meta name="DxP type - Do Not Use" content=""></meta><meta name="media_icon" content=""></meta><meta name="product" content="XM Cloud"></meta><meta name="Publishing target" content="Production"></meta><meta name="Ready for publishing - do not use" content=""></meta><meta name="role" content="developers"></meta><meta name="topic_tripane" content=""></meta><meta name="version" content=""></meta><meta name="tocstandalone" content="yes"></meta><meta name="theme" content="1"></meta><meta name="search.placeholder" content="Search"></meta><meta name="search.results" content="Search results"></meta><meta name="no.search.results" content="No results found"></meta><script type="text/javascript">
+var theme = '1';
+
+			
+			window.versionsfile = '';
+
+
+			window.indexDict = new Array();
+			window.store = {};
+			window.portalLanguage = 'en';
+			window.enterKey = 'select';
+			
+			
+				var fuse_threshold = 0.3;
+			
+					var local_csh = false;
+				
+					var anchoroption = true;
+				var instantsearch_minlength = 1;
+						
+			var useanchorlinks = false;
+			
+					function addSearch(){
+					//not used with custom or elastic search
+					}
+				</script><title>Walkthrough: Configuring external editing hosts for XM Cloud instances</title><link rel="stylesheet" type="text/css" href="../css/docbook.css"></link><link rel="stylesheet" type="text/css" href="../css/font-awesome.css"></link><link rel="stylesheet" type="text/css" href="../css/roboto.font.css"></link><link rel="stylesheet" type="text/css" href="../css/theme1.css?version=20230630"></link><link rel="stylesheet" type="text/css" href="../css/theme1-colors.css?version=20230630"></link><link rel="stylesheet" type="text/css" href="../css/content-theme1.css?version=20230630"></link><link rel="stylesheet" type="text/css" href="../css/sm-core-css.css"></link><link rel="stylesheet" type="text/css" href="../css/sm-simple.css"></link><link rel="stylesheet" type="text/css" href="../css/style-print.css"></link><link rel="stylesheet" type="text/css" href="../css/style-common.css"></link><link rel="stylesheet" type="text/css" href="../css/style-modern-tables.css"></link><link rel="stylesheet" type="text/css" href="../css/graphical-lists.css"></link><link rel="stylesheet" type="text/css" href="/css/sitecore-custom-default-xmc.css?version=20230630"></link><script src="../js/jquery-3/jquery-3.4.1.min.js" type="text/javascript"></script><script src="../js/jquery-migrate-3.0.1.min.js" type="text/javascript"></script><script src="../js/materialize.min.js" type="text/javascript"></script><script src="../js/bootstrap.min.js" type="text/javascript"></script><script src="../js/purl.js" type="text/javascript"></script><script src="../js/jquery.smartmenus.js" type="text/javascript"></script><script src="js/toc.js?version=20230630" type="text/javascript"></script><script src="../js/create-toc.js" type="text/javascript"></script><script src="../js/html5-2-mp-common.js?version=20230630" type="text/javascript"></script><script src="../js/html5-2.js?version=20230630" type="text/javascript"></script><script src="../js/checklist.js" type="text/javascript"></script><script src="../js/clipboard.min.js" type="text/javascript"></script><script src="../js/csh.js" type="text/javascript"></script><script src="/js/layout-custom-script.js" type="text/javascript"></script><meta xmlns:xhtml="http://www.w3.org/1999/xhtml" name="generator" content="Paligo"></meta><meta name="description" content="Describes how to configure editing hosts so you can edit pages with Sitecore content and layout editors in an XM Cloud environment"></meta><link rel="prev" href="editing-hosts-and-rendering-hosts.html#UUID-7ab67c84-56a1-6109-5e85-bd18c6732b1d_section-idm4614209982216033288958861601" title="The editing host"></link><link rel="next" href="walkthrough--configuring-external-editing-hosts-for-xm-cloud-instances.html#UUID-69bb5d3e-93eb-9fcf-8ed3-9b08937505eb_section-idm4506638629470433145375396399" title="Update the build configuration for the XM Cloud environment"></link><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML" async="async"></script><link rel="icon" href="/favicon.ico" type="image/x-icon"></link><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent/3.1.1/cookieconsent.min.css"></link><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent/3.1.1/cookieconsent.min.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/3.0.1/js.cookie.min.js"></script><script type="text/javascript">var privacypolicy = 'https://www.sitecore.com/trust/privacy-policy';
+var consenttype = 'opt-out';
+</script><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-72664331-1"></script><script type="text/javascript">const measurementId = 'UA-72664331-1';
+
+						$(document).on('cookies.consented', () => {
+							window.dataLayer = window.dataLayer || [];
+							function gtag(){dataLayer.push(arguments)};
+
+							gtag('js', new Date());
+							gtag('config', measurementId);
+						});
+					</script><script type="text/javascript" src="../js/cookie-consent.js"></script><script type="text/javascript">
+				$(document).ready(function () {
+				$(".mediaobject img").addClass('materialboxed');
+				//Exclude images with links
+				$(".mediaobject a img").removeClass('materialboxed');
+				if (!document.documentMode) {
+				$('.materialboxed').materialbox();
+				}});
+			</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/googlecode.min.css"></link><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script><script type="text/javascript">
+			$(document).ready(function() {
+
+				$('pre:not(.embedcode)').each(function() {
+					/**
+					 * @type {string}
+					 */
+					var language = $(this).data('language');
+
+					if (language === 'plaintext' || language === 'text') {
+						$(this).addClass(language).addClass('hljs');
+						return true;
+					}
+					else {
+						var clone = this.cloneNode(true);
+						hljs.highlightBlock(clone);
+						$(this).empty().append($(clone).contents());
+						$(this).attr("class", $(clone).attr("class"));
+					}
+				});
+			});
+			</script><link href="//customer.cludo.com/assets/2063/10039/cludo-search.min.css" type="text/css" rel="stylesheet"></link></head><body class="theme1 colored-top page-toc current-toc-section-focus" data-spy="scroll" data-target=".section-nav-container" data-offset="100" data-link-prefix=""><style type="text/css">
+            div.skipnav {
+            }
+            div.skipnav a {
+                position: fixed;
+                left: -10000px;
+                top: 1.5em;
+                width: 1px;
+                height: 1px;
+                overflow: hidden;
+            }
+            div.skipnav a:focus, div.skipnav a:active, div.skipnav a:hover {
+                background: white;
+                color: black;
+                box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.5);
+                position: fixed;
+                left: 2em;
+                top: 1.5em;
+                width: auto;
+                height: auto;
+                overflow: visible;
+                text-decoration: underline;
+                z-index: 99999; /* has to be higher than the side panel */
+    }
+          </style><div class="skipnav"><a href="#content-wrapper">Skip to main content</a></div><header class="site-header"><nav class="site-header-navbar navbar navbar-fixed-top"><div class="navbar-container"><div class="navbar-header"><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".site-sidebar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><div id="logotype-container" class="pull-left"><a class="navbar-brand" href="https://doc.sitecore.com/xmc/" target="_blank" rel="noopener"><img id="logotype-pageheader" src="../css/image/corporate-logo.png" alt="Corporate logotype" data-role="logotype" class="logo"></img></a></div></div><div class="navbar-collapse collapse" id="navbar"></div></div></nav></header><div class="site-body"><div class="site-body-container"><div class="site-body-row"><aside xmlns:xinfo="http://ns.expertinfo.se/cms/xmlns/1.0" class="site-sidebar"><div class="site-sidebar-header"><a href="https://doc.sitecore.com/xmc/" target="_blank"><img id="logotype-pageheader" src="../css/image/corporate-logo.png" alt="Corporate logotype" data-role="logotype" class="logo"></img></a></div><form id="search-form" class="site-sidebar-search" autocomplete="off"><input type="text" class="form-control search-field" placeholder="Search" id="aa-search-input"></input></form><div id="toc-standalone-placeholder"></div></aside><div class="site-content"><div class="toolbar"><div class="toolbar-tools"><div id="navbar" class="navbar-collapse collapse"></div><div class="tool-print"><i class="fa fa-print" aria-hidden="true">print</i></div><div class="tool-search"><i class="fa fa-search" aria-hidden="true"></i></div><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".site-sidebar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button></div><div class="breadcrumb-container"><ul class="breadcrumb"><li class="breadcrumb-link"><a href="index-en.html">XM Cloud Documentation for Developers</a></li><li class="breadcrumb-link"><a href="editing-hosts-and-rendering-hosts.html">Editing hosts and rendering hosts</a></li><li class="breadcrumb-node">Walkthrough: Configuring external editing hosts for XM Cloud instances</li></ul></div></div><main><div id="top-pager"><ul class="pager"><li class="previous"><a accesskey="p" class="prev pull-left prev visible-lg visible-md" id="header-navigation-prev" href="editing-hosts-and-rendering-hosts.html#UUID-7ab67c84-56a1-6109-5e85-bd18c6732b1d_section-idm4614209982216033288958861601">Prev</a></li><li class="next"><a accesskey="n" class="pull-right next visible-lg visible-md" id="header-navigation-next" href="walkthrough--configuring-external-editing-hosts-for-xm-cloud-instances.html#UUID-69bb5d3e-93eb-9fcf-8ed3-9b08937505eb_section-idm4506638629470433145375396399">Next</a></li></ul></div><article class="topic content-container" id="content-wrapper"><div id="topic-content" class="topic-content"><section xml:lang="en" lang="en" dir="ltr" class="section" data-origin-id="UUID-3e0f35aa-c466-f6de-3ffb-001be513d086" data-permalink="walkthrough--configuring-external-editing-hosts-for-xm-cloud-instances.html" data-topic-level="1" data-relative-prefix="" data-time-modified="06/09/2023" data-publication-date="06/30/23" id="UUID-69bb5d3e-93eb-9fcf-8ed3-9b08937505eb"><div class="titlepage"><div><div class="title"><h1 class="title" style="clear: both">Walkthrough: Configuring external editing hosts for XM Cloud instances</h1></div><div><div class="abstract"><div class="abstract-title">Abstract</div><p>Describes how to configure editing hosts so you can edit pages with Sitecore content and layout editors in an XM Cloud environment</p></div></div></div></div><p>The external editing host is an application that you configure to support editing experiences in <span class="phrase">Pages</span> or the Experience Editor when using a non-standard solution for creating your XM Cloud environment.</p><div dir="ltr" class="important"><h3 class="title">Important</h3><p>Before starting to configure editing hosts, it is important you understand <a class="link linktype-component" href="editing-hosts-and-rendering-hosts.html" title="Editing hosts and rendering hosts">what rendering and editing hosts are and how they differ</a>.</p></div><p>When you create an environment using the XM Cloud Deploy app, the environment is set up with a default <span class="emphasis"><em>internal</em></span> editing host. This editing host works out of the box on your <span class="emphasis"><em>remote</em></span> XM Cloud instance. The environment variables for the internal editing host can not be changed.</p><div dir="ltr" class="tip"><h3 class="title">Tip</h3><p>If you see an error when trying to access the Experience Editor or Pages in local development and your application is based on the SXA-enabled starter template, follow the steps for <a class="link linktype-component" href="walkthrough--setting-up-your-full-stack-xm-cloud-local-development-environment.html#UUID-462b259c-2cf5-71ad-482b-bb88e922df8f_section-idm4586720101020833288770109979" title="Configure the editing host for your local environment">configuring rendering hosts</a> in the walkthrough for setting up your local development environment.</p></div><p>Setting up an external editing host is necessary if you create your XM Cloud project without using an officially supported starter kit, because the default editing host configuration is not created for you. Therefore, you see errors if trying to access a page in the Experience Editor or <span class="phrase">Pages</span>.</p><p>This walkthrough describes how to:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Update the <a class="link linktype-component" href="the-xm-cloud-build-configuration.html" title="The XM Cloud build configuration">build configuration for the XM Cloud environment</a>.</p></li><li class="listitem"><p>Configure the Content Management (CM) instance.</p></li><li class="listitem"><p>Configure the front-end application.</p></li></ul></div><section dir="ltr" class="section accordion" data-origin-id="" data-publication-date="06/30/23" id="UUID-69bb5d3e-93eb-9fcf-8ed3-9b08937505eb_section-idm4506638629470433145375396399"><div class="accordion-icon"></div><div class="panel panel-default"><div class="panel-heading"><div class="titlepage"><a data-toggle="collapse" href="#UUID-69bb5d3e-93eb-9fcf-8ed3-9b08937505eb_section-idm4506638629470433145375396399_body" data-parent="#UUID-69bb5d3e-93eb-9fcf-8ed3-9b08937505eb_section-idm4506638629470433145375396399"><div><div class="title"><h2 class="title" style="clear: both">Update the build configuration for the XM Cloud environment</h2></div></div></a></div></div><div class="panel-body collapse" id="UUID-69bb5d3e-93eb-9fcf-8ed3-9b08937505eb_section-idm4506638629470433145375396399_body"><p>You define the build configuration for an XM Cloud environment in the <code class="code">xmcloud.build.json</code> file.</p><p>To configure the editing host for the XM Cloud environment:</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p>In the root directory of your environment, open the <code class="code">xmcloud.build.json</code> file. If it does not exist, create it with an empty JSON object.</p></li><li class="listitem"><p>In the <code class="code">xmcloud.build.json</code> file, for the existing JSON object, add a <code class="code">renderingHosts</code> property. The property value is a key-value pair or site names and their configuration. For example:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>For a JSS site:</p><pre class="programlisting" id="UUID-69bb5d3e-93eb-9fcf-8ed3-9b08937505eb_programlisting-idm4559160772048033259479721458">{
+  "renderingHosts": {
+    "&lt;jss-site-name&gt;": {
+      "path": "./src/rendering",
+      "nodeVersion": "16.3.19",
+      "jssDeploymentSecret": "&lt;secret&gt;"
+      "enabled": true,
+      "type": "jss"
+    }
+  }
+}</pre></li><li class="listitem"><p>For an SXA site:</p><pre class="programlisting" id="UUID-69bb5d3e-93eb-9fcf-8ed3-9b08937505eb_programlisting-idm459303171912323325948056217">{
+  "renderingHosts": {
+    "&lt;sxa-site-name&gt;": {
+      "path": "./src/sxa-rendering",
+      "nodeVersion": "16.3.19",
+      "jssDeploymentSecret": "&lt;secret&gt;"
+      "enabled": true,
+      "type": "sxa"
+    }
+  }
+}</pre></li></ul></div><p>Modify the example as follows:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Replace <code class="code">&lt;jss-site-name&gt;</code> or <code class="code">&lt;sxa-site-name&gt;</code> with the unique name of your site, as defined in the application's <code class="code">package.json</code> file.</p></li><li class="listitem"><p>Replace the <code class="code">path</code> value with the path to the source code of the SXA/JSS application in your solution relative to the root folder of the solution.</p></li><li class="listitem"><p>Replace the <code class="code">nodeVersion</code> with the specific Node.js version for the application.</p></li><li class="listitem"><p>Replace the <code class="code">jssDeploymentSecret</code><code class="code">&lt;secret&gt;</code> value with a randomly generated string of 32 or more characters. The deployment secret is a shared secret that authorizes the application to deploy items to the Sitecore instance. It populates the value for <code class="code">deploySecret</code> in the <code class="code">scjssconfig.json</code> file.</p></li><li class="listitem"><p>Set the <code class="code">enabled</code> value to <code class="code">true</code> to enable the site. The default value is <code class="code">false</code>.</p></li><li class="listitem"><p>Set the <code class="code">type</code> value to <code class="code">sxa</code> or <code class="code">jss</code>. The default value is <code class="code">jss</code>.</p></li></ul></div></li></ol></div></div></div></section><section dir="ltr" class="section accordion" data-origin-id="" data-publication-date="06/30/23" id="UUID-69bb5d3e-93eb-9fcf-8ed3-9b08937505eb_section-idm1403314537554126"><div class="accordion-icon"></div><div class="panel panel-default"><div class="panel-heading"><div class="titlepage"><a data-toggle="collapse" href="#UUID-69bb5d3e-93eb-9fcf-8ed3-9b08937505eb_section-idm1403314537554126_body" data-parent="#UUID-69bb5d3e-93eb-9fcf-8ed3-9b08937505eb_section-idm1403314537554126"><div><div class="title"><h2 class="title" style="clear: both">Configure the Content Management (CM) instance</h2></div></div></a></div></div><div class="panel-body collapse" id="UUID-69bb5d3e-93eb-9fcf-8ed3-9b08937505eb_section-idm1403314537554126_body"><p>To enable the editing host, you must modify the instance configuration using a configuration patch.</p><p>To modify the configuration:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Create a configuration patch file where you configure <code class="code">sites</code> and <code class="code">apps</code>. For example:</p><pre class="programlisting" id="UUID-69bb5d3e-93eb-9fcf-8ed3-9b08937505eb_programlisting-idm4536643517174433145420160989">&lt;?xml version="1.0"?&gt;
+
+&lt;configuration xmlns:patch="http://www.sitecore.net/xmlconfig/"
+               xmlns:set="http://www.sitecore.net/xmlconfig/set/"&gt;
+  &lt;sitecore&gt;
+    &lt;sites&gt;
+      &lt;!--
+        JSS Site Registration
+        This configures the site with Sitecore - i.e. host headers, item paths.
+        If your JSS app lives within an existing Sitecore site, this may not be necessary.
+      --&gt;
+      &lt;site name="xmcloud"
+            inherits="website"
+            hostName="$(env:host)"
+            rootPath="/sitecore/content/xmcloud"
+            patch:before="site[@name='website']" /&gt;
+    &lt;/sites&gt;
+    &lt;javaScriptServices&gt;
+      &lt;apps&gt;
+        &lt;!--
+          JSS App Registration
+          The JSS app needs to be registered in order to support layout service and import services.
+
+          There are many available attributes, and they inherit the defaults if not explicitly specified here.
+          Defaults are defined in `/App_Config/Sitecore/JavaScriptServices/Sitecore.JavaScriptServices.Apps.config`
+
+          NOTE: graphQLEndpoint enables _Integrated GraphQL_. If not using integrated GraphQL, it can be removed.
+
+          NOTE: This app configuration assumes a Sitecore-first approach and thus disables the JSS Workflow for
+          initial app import, and does not protect imported items.
+        --&gt;
+        &lt;app name="xmcloud"
+             sitecorePath="/sitecore/content/xmcloud"
+             graphQLEndpoint="/sitecore/api/graph/edge"
+             serverSideRenderingEngine="http"
+             serverSideRenderingEngineEndpointUrl="$(env:RENDERING_HOST_INTERNAL_URI_&lt;rendering-host-name&gt;)/api/editing/render"
+             serverSideRenderingEngineApplicationUrl="http://$(env:SITECORE_EDITING_HOST_PUBLIC_HOST_&lt;rendering-host-name&gt;)"
+             useLanguageSpecificLayout="true"
+             defaultWorkflow=""
+             protectDeveloperItems="false"
+             deploymentSecret="$(env:JSS_DEPLOYMENT_SECRET_&lt;rendering-host-name&gt;)"
+             debugSecurity="false"
+             inherits="defaults" /&gt;
+      &lt;/apps&gt;    
+    &lt;/javaScriptServices&gt;
+  &lt;/sitecore&gt;
+&lt;/configuration&gt;
+</pre></li></ul></div><div dir="ltr" class="tip"><h3 class="title">Tip</h3><p>For additional attributes that you can use to configure <code class="code">apps</code> in the Sitecore configuration patch, see the documentation for <a class="xref linktype-component" href="app-configuration-api.html" title="App Configuration API"><span class="xreftitle">App Configuration API</span></a>.</p></div><p>When configuring sites and apps in the configuration patch file, you can use the following environment variables:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><code class="code">host</code> - internal hostname.</p></li><li class="listitem"><p><code class="code">RENDERING_HOST_INTERNAL_URI_&lt;rendering-host-name&gt;</code> - internal URI to rendering host. For example, <code class="code">http://internal-rendering-name</code>.</p></li><li class="listitem"><p><code class="code">SITECORE_EDITING_HOST_PUBLIC_HOST_&lt;rendering-host-name&gt;</code> - public rendering host URI. For example, <code class="code">public-rendering-host</code>.</p></li><li class="listitem"><p><code class="code">JSS_DEPLOYMENT_SECRET_&lt;rendering-host-name&gt;</code> - the same value as <code class="code">jssDeploymentSecret</code> in the <code class="code">xmcloud.build.json</code>. Replace <code class="code">&lt;rendering-host-name&gt;</code> with the site name value you provided in the <code class="code">xmcloud.build.json</code> file.</p></li><li class="listitem"><p><code class="code">SITECORE_JSS_EDITING_SECRET</code> - random generated secret. It must have the same value as <code class="code">JSS_EDITING_SECRET</code> for the rendering host.</p></li><li class="listitem"><p><code class="code">SITECORE_API_KEY_&lt;rendering-host-name&gt;</code> - random generated Sitecore API key for the rendering host.</p></li></ul></div></div></div></section><section dir="ltr" class="section accordion" data-origin-id="" data-publication-date="06/30/23" id="UUID-69bb5d3e-93eb-9fcf-8ed3-9b08937505eb_section-idm1403314537560964"><div class="accordion-icon"></div><div class="panel panel-default"><div class="panel-heading"><div class="titlepage"><a data-toggle="collapse" href="#UUID-69bb5d3e-93eb-9fcf-8ed3-9b08937505eb_section-idm1403314537560964_body" data-parent="#UUID-69bb5d3e-93eb-9fcf-8ed3-9b08937505eb_section-idm1403314537560964"><div><div class="title"><h2 class="title" style="clear: both">Configure the front-end application</h2></div></div></a></div></div><div class="panel-body collapse" id="UUID-69bb5d3e-93eb-9fcf-8ed3-9b08937505eb_section-idm1403314537560964_body"><p>To configure the editing host runtime:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Use the following variables:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; "><li class="listitem"><p><code class="code">PUBLIC_URL</code> - public URL. For example, <code class="code">https://public-rendering-host</code>.</p></li><li class="listitem"><p><code class="code">SITECORE_API_KEY</code> - a randomly generated Sitecore API key for a particular rendering host.</p></li><li class="listitem"><p><code class="code">JSS_EDITING_SECRET</code> - random generated secret value. The same value as <code class="code">SITECORE_JSS_EDITING_SECRET</code> in the CM configuration patch.</p></li><li class="listitem"><p><code class="code">SITECORE_API_HOST</code> - internal URL <code class="code">http://internal-cm-name</code>.</p></li><li class="listitem"><p><code class="code">NEXTJS_DIST_DIR</code> - <code class="code">.next-container</code>.</p></li></ul></div></li></ul></div><p>During deployment, XM Cloud creates the <code class="code">scjssconfig.json</code> file. The file is generated automatically during the first deployment of your XM Cloud solution based on the integration configuration.</p></div></div></section></section><div class="footer-content"><div class="glossary-definitions"></div></div><footer></footer></div></article><aside class="section-nav-container"><ul class="section-nav nav"><li><a href="#UUID-69bb5d3e-93eb-9fcf-8ed3-9b08937505eb">Walkthrough: Configuring external editing hosts for XM Cloud instances</a></li><li><a href="#UUID-69bb5d3e-93eb-9fcf-8ed3-9b08937505eb_section-idm4506638629470433145375396399">Update the build configuration for the XM Cloud environment</a></li><li><a href="#UUID-69bb5d3e-93eb-9fcf-8ed3-9b08937505eb_section-idm1403314537554126">Configure the Content Management (CM) instance</a></li><li><a href="#UUID-69bb5d3e-93eb-9fcf-8ed3-9b08937505eb_section-idm1403314537560964">Configure the front-end application</a></li></ul></aside></main><div id="bottom-pager"><ul class="pager"><li class="previous"><a accesskey="p" class="prev pull-left prev visible-lg visible-md" id="header-navigation-prev" href="editing-hosts-and-rendering-hosts.html#UUID-7ab67c84-56a1-6109-5e85-bd18c6732b1d_section-idm4614209982216033288958861601">Prev</a></li><li class="next"><a accesskey="n" class="pull-right next visible-lg visible-md" id="header-navigation-next" href="walkthrough--configuring-external-editing-hosts-for-xm-cloud-instances.html#UUID-69bb5d3e-93eb-9fcf-8ed3-9b08937505eb_section-idm4506638629470433145375396399">Next</a></li></ul></div><footer class="site-footer"><div class="inner"><div class="copyright"> © 2023 Sitecore </div><div class="date-modified"><span class="date-modified-text">Last modified: </span><span class="formatted-date">06/09/2023</span></div><div class="publication-date"><span class="publication-date-text">Publication date</span><span class="pubdate-delimiter">: </span><span class="formatted-date">06/30/23</span></div></div></footer></div></div></div></div><script type="text/javascript" src="//customer.cludo.com/scripts/bundles/search-script.min.js"></script><script>
+			var CludoSearch;
+			(function () {
+			var cludoSettings = {
+			customerId: 2063,
+			engineId: 12826,
+			language: 'en',
+			searchInputs: ["search-form","cludo-search-content-form","cludo-search-mobile-form"],
+			hideSearchFilters: true,
+			type: 'standardOverlay',
+			facets: ["Category", "ProductVer", "Product", "Version"],
+			useStandardSearchTemplate: false,
+			customerTemplate: "OverlayCopy",
+			searchApiUrl: 'https://api-eu1.cludo.com/api/v3'
+			};
+			CludoSearch= new Cludo(cludoSettings);
+			CludoSearch.init();
+			})();
+		</script><!-- www.Cludo.com Search body init script start --></body></html>

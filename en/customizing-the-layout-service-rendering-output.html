@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"></meta><meta name="format-detection" content="telephone=no"></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><meta name="search" content="default"></meta><meta name="use.ic" content="no"></meta><meta name="Audience - do not use" content=""></meta><meta name="clubot" content=""></meta><meta name="data model" content=""></meta><meta name="DxP type - Do Not Use" content=""></meta><meta name="media_icon" content=""></meta><meta name="product" content="XM Cloud"></meta><meta name="Publishing target" content="Production"></meta><meta name="Ready for publishing - do not use" content=""></meta><meta name="role" content="developers"></meta><meta name="topic_tripane" content=""></meta><meta name="version" content=""></meta><meta name="tocstandalone" content="yes"></meta><meta name="theme" content="1"></meta><meta name="search.placeholder" content="Search"></meta><meta name="search.results" content="Search results"></meta><meta name="no.search.results" content="No results found"></meta><script type="text/javascript">
+var theme = '1';
+
+			
+			window.versionsfile = '';
+
+
+			window.indexDict = new Array();
+			window.store = {};
+			window.portalLanguage = 'en';
+			window.enterKey = 'select';
+			
+			
+				var fuse_threshold = 0.3;
+			
+					var local_csh = false;
+				
+					var anchoroption = true;
+				var instantsearch_minlength = 1;
+						
+			var useanchorlinks = false;
+			
+					function addSearch(){
+					//not used with custom or elastic search
+					}
+				</script><title>Customizing the Layout Service rendering output</title><link rel="stylesheet" type="text/css" href="../css/docbook.css"></link><link rel="stylesheet" type="text/css" href="../css/font-awesome.css"></link><link rel="stylesheet" type="text/css" href="../css/roboto.font.css"></link><link rel="stylesheet" type="text/css" href="../css/theme1.css?version=20230630"></link><link rel="stylesheet" type="text/css" href="../css/theme1-colors.css?version=20230630"></link><link rel="stylesheet" type="text/css" href="../css/content-theme1.css?version=20230630"></link><link rel="stylesheet" type="text/css" href="../css/sm-core-css.css"></link><link rel="stylesheet" type="text/css" href="../css/sm-simple.css"></link><link rel="stylesheet" type="text/css" href="../css/style-print.css"></link><link rel="stylesheet" type="text/css" href="../css/style-common.css"></link><link rel="stylesheet" type="text/css" href="../css/style-modern-tables.css"></link><link rel="stylesheet" type="text/css" href="../css/graphical-lists.css"></link><link rel="stylesheet" type="text/css" href="/css/sitecore-custom-default-xmc.css?version=20230630"></link><script src="../js/jquery-3/jquery-3.4.1.min.js" type="text/javascript"></script><script src="../js/jquery-migrate-3.0.1.min.js" type="text/javascript"></script><script src="../js/materialize.min.js" type="text/javascript"></script><script src="../js/bootstrap.min.js" type="text/javascript"></script><script src="../js/purl.js" type="text/javascript"></script><script src="../js/jquery.smartmenus.js" type="text/javascript"></script><script src="js/toc.js?version=20230630" type="text/javascript"></script><script src="../js/create-toc.js" type="text/javascript"></script><script src="../js/html5-2-mp-common.js?version=20230630" type="text/javascript"></script><script src="../js/html5-2.js?version=20230630" type="text/javascript"></script><script src="../js/checklist.js" type="text/javascript"></script><script src="../js/clipboard.min.js" type="text/javascript"></script><script src="../js/csh.js" type="text/javascript"></script><script src="/js/layout-custom-script.js" type="text/javascript"></script><meta xmlns:xhtml="http://www.w3.org/1999/xhtml" name="generator" content="Paligo"></meta><meta name="description" content="Using GraphQL queries or Rendering Contents Resolver to tweak the Layout Service output"></meta><link rel="prev" href="extend-the-getlayoutservicecontext-pipeline.html" title="Extend the getLayoutServiceContext pipeline"></link><link rel="next" href="customizing-the-layout-service-rendering-output.html#UUID-46122587-a520-e91e-bb83-661b5ca406e3_section-idm1403267378843612" title="Using GraphQL"></link><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML" async="async"></script><link rel="icon" href="/favicon.ico" type="image/x-icon"></link><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent/3.1.1/cookieconsent.min.css"></link><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent/3.1.1/cookieconsent.min.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/3.0.1/js.cookie.min.js"></script><script type="text/javascript">var privacypolicy = 'https://www.sitecore.com/trust/privacy-policy';
+var consenttype = 'opt-out';
+</script><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-72664331-1"></script><script type="text/javascript">const measurementId = 'UA-72664331-1';
+
+						$(document).on('cookies.consented', () => {
+							window.dataLayer = window.dataLayer || [];
+							function gtag(){dataLayer.push(arguments)};
+
+							gtag('js', new Date());
+							gtag('config', measurementId);
+						});
+					</script><script type="text/javascript" src="../js/cookie-consent.js"></script><script type="text/javascript">
+				$(document).ready(function () {
+				$(".mediaobject img").addClass('materialboxed');
+				//Exclude images with links
+				$(".mediaobject a img").removeClass('materialboxed');
+				if (!document.documentMode) {
+				$('.materialboxed').materialbox();
+				}});
+			</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/googlecode.min.css"></link><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script><script type="text/javascript">
+			$(document).ready(function() {
+
+				$('pre:not(.embedcode)').each(function() {
+					/**
+					 * @type {string}
+					 */
+					var language = $(this).data('language');
+
+					if (language === 'plaintext' || language === 'text') {
+						$(this).addClass(language).addClass('hljs');
+						return true;
+					}
+					else {
+						var clone = this.cloneNode(true);
+						hljs.highlightBlock(clone);
+						$(this).empty().append($(clone).contents());
+						$(this).attr("class", $(clone).attr("class"));
+					}
+				});
+			});
+			</script><link href="//customer.cludo.com/assets/2063/10039/cludo-search.min.css" type="text/css" rel="stylesheet"></link></head><body class="theme1 colored-top page-toc current-toc-section-focus" data-spy="scroll" data-target=".section-nav-container" data-offset="100" data-link-prefix=""><style type="text/css">
+            div.skipnav {
+            }
+            div.skipnav a {
+                position: fixed;
+                left: -10000px;
+                top: 1.5em;
+                width: 1px;
+                height: 1px;
+                overflow: hidden;
+            }
+            div.skipnav a:focus, div.skipnav a:active, div.skipnav a:hover {
+                background: white;
+                color: black;
+                box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.5);
+                position: fixed;
+                left: 2em;
+                top: 1.5em;
+                width: auto;
+                height: auto;
+                overflow: visible;
+                text-decoration: underline;
+                z-index: 99999; /* has to be higher than the side panel */
+    }
+          </style><div class="skipnav"><a href="#content-wrapper">Skip to main content</a></div><header class="site-header"><nav class="site-header-navbar navbar navbar-fixed-top"><div class="navbar-container"><div class="navbar-header"><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".site-sidebar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><div id="logotype-container" class="pull-left"><a class="navbar-brand" href="https://doc.sitecore.com/xmc/" target="_blank" rel="noopener"><img id="logotype-pageheader" src="../css/image/corporate-logo.png" alt="Corporate logotype" data-role="logotype" class="logo"></img></a></div></div><div class="navbar-collapse collapse" id="navbar"></div></div></nav></header><div class="site-body"><div class="site-body-container"><div class="site-body-row"><aside xmlns:xinfo="http://ns.expertinfo.se/cms/xmlns/1.0" class="site-sidebar"><div class="site-sidebar-header"><a href="https://doc.sitecore.com/xmc/" target="_blank"><img id="logotype-pageheader" src="../css/image/corporate-logo.png" alt="Corporate logotype" data-role="logotype" class="logo"></img></a></div><form id="search-form" class="site-sidebar-search" autocomplete="off"><input type="text" class="form-control search-field" placeholder="Search" id="aa-search-input"></input></form><div id="toc-standalone-placeholder"></div></aside><div class="site-content"><div class="toolbar"><div class="toolbar-tools"><div id="navbar" class="navbar-collapse collapse"></div><div class="tool-print"><i class="fa fa-print" aria-hidden="true">print</i></div><div class="tool-search"><i class="fa fa-search" aria-hidden="true"></i></div><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".site-sidebar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button></div><div class="breadcrumb-container"><ul class="breadcrumb"><li class="breadcrumb-link"><a href="index-en.html">XM Cloud Documentation for Developers</a></li><li class="breadcrumb-link"><a href="sitecore-headless-services.html">Sitecore Headless Services</a></li><li class="breadcrumb-link"><a href="services-and-apis.html">Services and APIs</a></li><li class="breadcrumb-link"><a href="layout-service.html">Layout Service</a></li><li class="breadcrumb-link"><a href="extending-the-layout-service.html">Extending the Layout Service</a></li><li class="breadcrumb-node">Customizing the Layout Service rendering output</li></ul></div></div><main><div id="top-pager"><ul class="pager"><li class="previous"><a accesskey="p" class="prev pull-left prev visible-lg visible-md" id="header-navigation-prev" href="extend-the-getlayoutservicecontext-pipeline.html">Prev</a></li><li class="next"><a accesskey="n" class="pull-right next visible-lg visible-md" id="header-navigation-next" href="customizing-the-layout-service-rendering-output.html#UUID-46122587-a520-e91e-bb83-661b5ca406e3_section-idm1403267378843612">Next</a></li></ul></div><article class="topic content-container" id="content-wrapper"><div id="topic-content" class="topic-content"><section xml:lang="en" lang="en" dir="ltr" class="section" data-origin-id="UUID-50762858-e86b-4300-a15d-eb4bc174f117" data-permalink="customizing-the-layout-service-rendering-output.html" data-topic-level="1" data-relative-prefix="" data-time-modified="05/17/2022" data-publication-date="06/30/23" id="UUID-46122587-a520-e91e-bb83-661b5ca406e3"><div class="titlepage"><div><div class="title"><h1 class="title" style="clear: both">Customizing the Layout Service rendering output<span id="UUID-46122587-a520-e91e-bb83-661b5ca406e3_UUID-fa34f137-876f-a655-a90e-409c6e1a6de9"></span></h1></div><div><div class="abstract"><div class="abstract-title">Abstract</div><p>Using GraphQL queries or Rendering Contents Resolver to tweak the Layout Service output</p></div></div></div></div><p>When serializing a rendering to JSON, the Layout Service populates the rendering contents with the fields of the rendering's datasource item.</p><p>Occasionally, you might want the output to include some other types of data, such as:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Data from the context item.</p></li><li class="listitem"><p>Data from datasource or context item children.</p></li><li class="listitem"><p>Data from other items altogether.</p></li><li class="listitem"><p>A more limited view of any of the previously mentioned types of data to avoid over-fetching unneeded data.</p></li><li class="listitem"><p>A computed or otherwise more complex value.</p></li><li class="listitem"><p>Non-item data, such as information from xDB.</p></li><li class="listitem"><p>Non-Sitecore data from external systems.</p></li></ul></div><p>The following sections describe some of the options for customizing the rendering output returned by the Layout Service.</p><section dir="ltr" class="section" data-origin-id="" data-publication-date="06/30/23" id="UUID-46122587-a520-e91e-bb83-661b5ca406e3_section-idm1403267378843612"><div class="titlepage"><div><div class="title"><h2 class="title" style="clear: both">Using GraphQL</h2></div></div></div><p>You can customize the Layout Service output for a Sitecore rendering can be customized by configuring a GraphQL query on the rendering. In JSS, this technique is referred to as <a class="link linktype-component" href="integrated-graphql-in-jss-apps.html" title="Integrated GraphQL in JSS apps" target="_blank">integrated GraphQL</a>. The query runs server-side during the Layout Service request, or at publish time if using Experience Edge.</p><p>When the Sitecore Layout Service renders a page, it returns a JSON representation of the layout of the page and the data for each rendering/component. Normally the rendering/component data is a set of fields from the Sitecore datasource item. Integrated GraphQL lets you re-shape this into a GraphQL query result.</p><p>Integrated GraphQL operates by storing the GraphQL query in the <span class="guilabel">Component GraphQL Query</span> field on the component's rendering item. For example, the GraphQL sample app sets a query on <code class="code">/sitecore/layout/Renderings/JssBasicAppGraphQL/IntegratedPage</code>.</p><div class="mediaobject"><img src="image/uuid-31ed9631-81d3-6c7d-8c7c-753e15672de8.png" style="" alt="The Component GraphQL Query field on a rendering"></img></div><p>When Sitecore receives a layout request, if a component defines a GraphQL query that is not empty, the query is run against the GraphQL endpoint configured for the app, in-process. The result replaces the normal rendering field values that are returned.</p></section><section dir="ltr" class="section" data-origin-id="" data-publication-date="06/30/23" id="idm45599324855792"><div class="titlepage"><div><div class="title"><h2 class="title" style="clear: both">Choosing or configuring a built-in Rendering Contents Resolver</h2></div></div></div><p>Headless Services lets you configure a <span class="emphasis"><em>Rendering Contents Resolver</em></span> on each rendering, to determine how a rendering and its associated data are serialized. Rendering Contents Resolvers are configured in <span class="emphasis"><em>/sitecore/system/Modules/Layout Service/Rendering Contents Resolvers</em></span>. By default, Headless Services provides the following resolvers:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="emphasis"><em>Datasource Resolver</em></span> - the default behavior. It serializes the rendering's datasource item.</p></li><li class="listitem"><p><span class="emphasis"><em>Datasource Item Children Resolver</em></span> - serializes the children of the datasource item.</p></li><li class="listitem"><p><span class="emphasis"><em>Context Item Resolver</em></span> - serializes the context item instead of the datasource item.</p></li><li class="listitem"><p><span class="emphasis"><em>Context Item Children Resolver</em></span> - serializes the children of the context item.</p></li><li class="listitem"><p><span class="emphasis"><em>Folder Filter Resolver</em></span> - serializes the descendants of the datasource item, excluding folders.</p></li></ul></div><p>You can create your own configuration in the Rendering Contents Resolvers folder using the following available parameters:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="emphasis"><em>Type</em></span> - this is <code class="code">Sitecore.LayoutService.ItemRendering.ContentsResolvers.RenderingContentsResolver, Sitecore.LayoutService</code>, unless you are creating your own implementation.</p></li><li class="listitem"><p><span class="emphasis"><em>Include Server URL in Media URLs</em></span> - always check this field unless you run a front-end app built with JSS in <span class="emphasis"><em>Integrated</em></span> mode.</p></li><li class="listitem"><p><span class="emphasis"><em>Use Context Item</em></span> - use the context item instead of the datasource item.</p></li><li class="listitem"><p><span class="emphasis"><em>Item Selector Query</em></span> - provide a Sitecore query to customize the serialized items. This must be relative to the datasource and/or context item, depending on the selection above.</p><div dir="ltr" class="important"><h3 class="title">Important</h3><p>When using this parameter, be aware that it is easy to create Sitecore queries with a severe negative performance impact.</p></div></li><li class="listitem"><p><span class="emphasis"><em>Parameters</em></span> - provide arbitrary parameters. These are not used by default but are potentially useful when creating your own implementation.</p></li></ul></div></section><section dir="ltr" class="section" data-origin-id="" data-publication-date="06/30/23" id="idm45599324849360"><div class="titlepage"><div><div class="title"><h2 class="title" style="clear: both">Creating an IRenderingContentsResolver interface</h2></div></div></div><p>The Layout Service lets you fully customize the contents of a serialized rendering with the help of the <code class="code">IRenderingContentsResolver</code> interface.</p><div dir="ltr" class="important"><h3 class="title">Important</h3><p>Whenever possible, for future compatibility, we recommend you use one of the previous no-code options.</p></div><p>You can override the default <code class="code">IRenderingContentsResolver</code> interface on a rendering by creating your own implementation and creating a <span class="emphasis"><em>Rendering Contents Resolver</em></span> item, specifying your custom <span class="emphasis"><em>Type</em></span>. For example:</p><pre class="programlisting">public class ExampleRenderingContentsResolver : Sitecore.LayoutService.ItemRendering.ContentsResolvers.IRenderingContentsResolver
+{
+    public bool IncludeServerUrlInMediaUrls { get; set; }
+    public bool UseContextItem { get; set; }
+    public string ItemSelectorQuery { get; set; }
+    public NameValueCollection Parameters { get; set; }
+
+    public object ResolveContents(Rendering rendering, IRenderingConfiguration renderingConfig)
+    {
+        //if you want to access the datasource item
+        var datasource = !string.IsNullOrEmpty(rendering.DataSource)
+            ? rendering.RenderingItem?.Database.GetItem(rendering.DataSource)
+            : null;
+
+        return new
+        {
+            name = datasource.Name,
+            date = DateTime.Now,
+            hello = "world"
+        };
+    }
+}</pre><p>The fields of the object returned by your implementation can then be bound to your front-end components as if they were item content (for example, <code class="code">props</code> in React).</p><div dir="ltr" class="tip"><h3 class="title">Tip</h3><p>You can extend the <code class="code">Sitecore.LayoutService.ItemRendering.ContentsResolvers.RenderingContentsResolver</code> class and use the <code class="code">ProcessItem</code> method from the class to <a class="link" href="https://github.com/Sitecore/Helix.Examples/blob/master/examples/helix-basic-aspnetcore/src/Feature/Products/platform/LayoutService/ProductListContentsResolver.cs" target="_blank" rel="noopener">enable rendering item fields for advanced Sitecore editors</a>.</p></div></section><section dir="ltr" class="section" data-origin-id="" data-publication-date="06/30/23" id="idm45599324838464"><div class="titlepage"><div><div class="title"><h2 class="title" style="clear: both">Why not a separate REST endpoint?</h2></div></div></div><p>For some of the scenarios above, you could create a separate REST endpoint to access the needed data. However, the techniques above offer several advantages:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Avoid additional HTTP roundtrip(s).</p></li><li class="listitem"><p>Automatically bind the data to the component.</p></li><li class="listitem"><p>Make the data available for server/universal rendering.</p></li><li class="listitem"><p>Make it easier to query additional data related to the current application, context item (route), or datasource item.</p></li></ul></div></section><section dir="ltr" class="section" data-origin-id="" data-publication-date="06/30/23" id="idm45599324983072"><div class="titlepage"><div><div class="title"><h2 class="title" style="clear: both">Why not extend the Layout Service context data?</h2></div></div></div><p>There is some overlap between potential uses, but <a class="link linktype-component" href="extending-context-data-returned-by-the-layout-service.html" title="Extending context data returned by the Layout Service">extending the context data returned by the Layout Service</a> is generally intended for information that might be used in multiple components, or for providing data for statically placed components not managed within a <code class="code">Placeholder</code>. These approaches also ensure the data is made available when, and only when a content author utilizes that rendering within a route.</p></section></section><div class="footer-content"><div class="glossary-definitions"></div></div><footer></footer></div></article><aside class="section-nav-container"><ul class="section-nav nav"><li><a href="#UUID-46122587-a520-e91e-bb83-661b5ca406e3">Customizing the Layout Service rendering output</a></li><li><a href="#UUID-46122587-a520-e91e-bb83-661b5ca406e3_section-idm1403267378843612">Using GraphQL</a></li><li><a href="#idm45599324855792">Choosing or configuring a built-in Rendering Contents Resolver</a></li><li><a href="#idm45599324849360">Creating an IRenderingContentsResolver interface</a></li><li><a href="#idm45599324838464">Why not a separate REST endpoint?</a></li><li><a href="#idm45599324983072">Why not extend the Layout Service context data?</a></li></ul></aside></main><div id="bottom-pager"><ul class="pager"><li class="previous"><a accesskey="p" class="prev pull-left prev visible-lg visible-md" id="header-navigation-prev" href="extend-the-getlayoutservicecontext-pipeline.html">Prev</a></li><li class="next"><a accesskey="n" class="pull-right next visible-lg visible-md" id="header-navigation-next" href="customizing-the-layout-service-rendering-output.html#UUID-46122587-a520-e91e-bb83-661b5ca406e3_section-idm1403267378843612">Next</a></li></ul></div><footer class="site-footer"><div class="inner"><div class="copyright"> © 2023 Sitecore </div><div class="date-modified"><span class="date-modified-text">Last modified: </span><span class="formatted-date">05/17/2022</span></div><div class="publication-date"><span class="publication-date-text">Publication date</span><span class="pubdate-delimiter">: </span><span class="formatted-date">06/30/23</span></div></div></footer></div></div></div></div><script type="text/javascript" src="//customer.cludo.com/scripts/bundles/search-script.min.js"></script><script>
+			var CludoSearch;
+			(function () {
+			var cludoSettings = {
+			customerId: 2063,
+			engineId: 12826,
+			language: 'en',
+			searchInputs: ["search-form","cludo-search-content-form","cludo-search-mobile-form"],
+			hideSearchFilters: true,
+			type: 'standardOverlay',
+			facets: ["Category", "ProductVer", "Product", "Version"],
+			useStandardSearchTemplate: false,
+			customerTemplate: "OverlayCopy",
+			searchApiUrl: 'https://api-eu1.cludo.com/api/v3'
+			};
+			CludoSearch= new Cludo(cludoSettings);
+			CludoSearch.init();
+			})();
+		</script><!-- www.Cludo.com Search body init script start --></body></html>

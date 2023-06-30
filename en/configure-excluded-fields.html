@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"></meta><meta name="format-detection" content="telephone=no"></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><meta name="search" content="default"></meta><meta name="use.ic" content="no"></meta><meta name="Audience - do not use" content=""></meta><meta name="clubot" content=""></meta><meta name="data model" content=""></meta><meta name="DxP type - Do Not Use" content=""></meta><meta name="media_icon" content=""></meta><meta name="product" content="XM Cloud"></meta><meta name="Publishing target" content="Production"></meta><meta name="Ready for publishing - do not use" content=""></meta><meta name="role" content="developers"></meta><meta name="topic_tripane" content=""></meta><meta name="version" content=""></meta><meta name="tocstandalone" content="yes"></meta><meta name="theme" content="1"></meta><meta name="search.placeholder" content="Search"></meta><meta name="search.results" content="Search results"></meta><meta name="no.search.results" content="No results found"></meta><script type="text/javascript">
+var theme = '1';
+
+			
+			window.versionsfile = '';
+
+
+			window.indexDict = new Array();
+			window.store = {};
+			window.portalLanguage = 'en';
+			window.enterKey = 'select';
+			
+			
+				var fuse_threshold = 0.3;
+			
+					var local_csh = false;
+				
+					var anchoroption = true;
+				var instantsearch_minlength = 1;
+						
+			var useanchorlinks = false;
+			
+					function addSearch(){
+					//not used with custom or elastic search
+					}
+				</script><title>Configure excluded fields</title><link rel="stylesheet" type="text/css" href="../css/docbook.css"></link><link rel="stylesheet" type="text/css" href="../css/font-awesome.css"></link><link rel="stylesheet" type="text/css" href="../css/roboto.font.css"></link><link rel="stylesheet" type="text/css" href="../css/theme1.css?version=20230630"></link><link rel="stylesheet" type="text/css" href="../css/theme1-colors.css?version=20230630"></link><link rel="stylesheet" type="text/css" href="../css/content-theme1.css?version=20230630"></link><link rel="stylesheet" type="text/css" href="../css/sm-core-css.css"></link><link rel="stylesheet" type="text/css" href="../css/sm-simple.css"></link><link rel="stylesheet" type="text/css" href="../css/style-print.css"></link><link rel="stylesheet" type="text/css" href="../css/style-common.css"></link><link rel="stylesheet" type="text/css" href="../css/style-modern-tables.css"></link><link rel="stylesheet" type="text/css" href="../css/graphical-lists.css"></link><link rel="stylesheet" type="text/css" href="/css/sitecore-custom-default-xmc.css?version=20230630"></link><script src="../js/jquery-3/jquery-3.4.1.min.js" type="text/javascript"></script><script src="../js/jquery-migrate-3.0.1.min.js" type="text/javascript"></script><script src="../js/materialize.min.js" type="text/javascript"></script><script src="../js/bootstrap.min.js" type="text/javascript"></script><script src="../js/purl.js" type="text/javascript"></script><script src="../js/jquery.smartmenus.js" type="text/javascript"></script><script src="js/toc.js?version=20230630" type="text/javascript"></script><script src="../js/create-toc.js" type="text/javascript"></script><script src="../js/html5-2-mp-common.js?version=20230630" type="text/javascript"></script><script src="../js/html5-2.js?version=20230630" type="text/javascript"></script><script src="../js/checklist.js" type="text/javascript"></script><script src="../js/clipboard.min.js" type="text/javascript"></script><script src="../js/csh.js" type="text/javascript"></script><script src="/js/layout-custom-script.js" type="text/javascript"></script><meta xmlns:xhtml="http://www.w3.org/1999/xhtml" name="generator" content="Paligo"></meta><meta name="description" content="Exclude fields from serialization in the Sitecore Content Serialization package."></meta><link rel="prev" href="user-serialization.html#UUID-e4591bb0-d256-7060-7a47-235007f506a0_section-idm1401212406823879" title="CLI-side user synchronization configuration in sitecore.json"></link><link rel="next" href="configure-excluded-fields.html#idm45599350173152" title="Set up excluded fields in the sitecore.json file"></link><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML" async="async"></script><link rel="icon" href="/favicon.ico" type="image/x-icon"></link><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent/3.1.1/cookieconsent.min.css"></link><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent/3.1.1/cookieconsent.min.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/3.0.1/js.cookie.min.js"></script><script type="text/javascript">var privacypolicy = 'https://www.sitecore.com/trust/privacy-policy';
+var consenttype = 'opt-out';
+</script><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-72664331-1"></script><script type="text/javascript">const measurementId = 'UA-72664331-1';
+
+						$(document).on('cookies.consented', () => {
+							window.dataLayer = window.dataLayer || [];
+							function gtag(){dataLayer.push(arguments)};
+
+							gtag('js', new Date());
+							gtag('config', measurementId);
+						});
+					</script><script type="text/javascript" src="../js/cookie-consent.js"></script><script type="text/javascript">
+				$(document).ready(function () {
+				$(".mediaobject img").addClass('materialboxed');
+				//Exclude images with links
+				$(".mediaobject a img").removeClass('materialboxed');
+				if (!document.documentMode) {
+				$('.materialboxed').materialbox();
+				}});
+			</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/googlecode.min.css"></link><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script><script type="text/javascript">
+			$(document).ready(function() {
+
+				$('pre:not(.embedcode)').each(function() {
+					/**
+					 * @type {string}
+					 */
+					var language = $(this).data('language');
+
+					if (language === 'plaintext' || language === 'text') {
+						$(this).addClass(language).addClass('hljs');
+						return true;
+					}
+					else {
+						var clone = this.cloneNode(true);
+						hljs.highlightBlock(clone);
+						$(this).empty().append($(clone).contents());
+						$(this).attr("class", $(clone).attr("class"));
+					}
+				});
+			});
+			</script><link href="//customer.cludo.com/assets/2063/10039/cludo-search.min.css" type="text/css" rel="stylesheet"></link></head><body class="theme1 colored-top page-toc current-toc-section-focus" data-spy="scroll" data-target=".section-nav-container" data-offset="100" data-link-prefix=""><style type="text/css">
+            div.skipnav {
+            }
+            div.skipnav a {
+                position: fixed;
+                left: -10000px;
+                top: 1.5em;
+                width: 1px;
+                height: 1px;
+                overflow: hidden;
+            }
+            div.skipnav a:focus, div.skipnav a:active, div.skipnav a:hover {
+                background: white;
+                color: black;
+                box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.5);
+                position: fixed;
+                left: 2em;
+                top: 1.5em;
+                width: auto;
+                height: auto;
+                overflow: visible;
+                text-decoration: underline;
+                z-index: 99999; /* has to be higher than the side panel */
+    }
+          </style><div class="skipnav"><a href="#content-wrapper">Skip to main content</a></div><header class="site-header"><nav class="site-header-navbar navbar navbar-fixed-top"><div class="navbar-container"><div class="navbar-header"><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".site-sidebar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><div id="logotype-container" class="pull-left"><a class="navbar-brand" href="https://doc.sitecore.com/xmc/" target="_blank" rel="noopener"><img id="logotype-pageheader" src="../css/image/corporate-logo.png" alt="Corporate logotype" data-role="logotype" class="logo"></img></a></div></div><div class="navbar-collapse collapse" id="navbar"></div></div></nav></header><div class="site-body"><div class="site-body-container"><div class="site-body-row"><aside xmlns:xinfo="http://ns.expertinfo.se/cms/xmlns/1.0" class="site-sidebar"><div class="site-sidebar-header"><a href="https://doc.sitecore.com/xmc/" target="_blank"><img id="logotype-pageheader" src="../css/image/corporate-logo.png" alt="Corporate logotype" data-role="logotype" class="logo"></img></a></div><form id="search-form" class="site-sidebar-search" autocomplete="off"><input type="text" class="form-control search-field" placeholder="Search" id="aa-search-input"></input></form><div id="toc-standalone-placeholder"></div></aside><div class="site-content"><div class="toolbar"><div class="toolbar-tools"><div id="navbar" class="navbar-collapse collapse"></div><div class="tool-print"><i class="fa fa-print" aria-hidden="true">print</i></div><div class="tool-search"><i class="fa fa-search" aria-hidden="true"></i></div><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".site-sidebar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button></div><div class="breadcrumb-container"><ul class="breadcrumb"><li class="breadcrumb-link"><a href="index-en.html">XM Cloud Documentation for Developers</a></li><li class="breadcrumb-link"><a href="developer-tools.html">Developer Tools</a></li><li class="breadcrumb-link"><a href="sitecore-content-serialization.html">Sitecore Content Serialization</a></li><li class="breadcrumb-node">Configure excluded fields</li></ul></div></div><main><div id="top-pager"><ul class="pager"><li class="previous"><a accesskey="p" class="prev pull-left prev visible-lg visible-md" id="header-navigation-prev" href="user-serialization.html#UUID-e4591bb0-d256-7060-7a47-235007f506a0_section-idm1401212406823879">Prev</a></li><li class="next"><a accesskey="n" class="pull-right next visible-lg visible-md" id="header-navigation-next" href="configure-excluded-fields.html#idm45599350173152">Next</a></li></ul></div><article class="topic content-container" id="content-wrapper"><div id="topic-content" class="topic-content"><section xml:lang="en" lang="en" dir="ltr" class="section" data-origin-id="UUID-4c17df06-e803-6781-2c74-b1fe48c783cf" data-permalink="configure-excluded-fields.html" data-topic-level="1" data-relative-prefix="" data-time-modified="01/25/2022" data-publication-date="06/30/23" id="UUID-508a0cc0-3c6e-9113-f5d4-12ed10df565c"><div class="titlepage"><div><div class="title"><h1 class="title" style="clear: both">Configure excluded fields</h1></div><div><div class="abstract"><div class="abstract-title">Abstract</div><p>Exclude fields from serialization in the Sitecore Content Serialization package. </p></div></div></div></div><p>You can specify fields to exclude from serialization by configuring excluded fields in the <code class="code">sitecore.json</code>  and <code class="code">*modules.json</code> files. </p><div dir="ltr" class="note"><h3 class="title">Note</h3><p>The excluded fields feature is available from CLI 4.0 or later. </p><p>Configuring excluded fields is also possible for the CLI commands <code class="code">package</code>, <code class="code">watch</code>, and <code class="code">diff</code>.</p></div><p>The <code class="code">excludedFields</code> property contains an array of the excluded fields with two properties: <code class="code">fieldId</code> and <code class="code">description</code>.</p><div dir="ltr" class="important"><h3 class="title">Important</h3><p>Sync operations always <span class="emphasis"><em>ignore excluded fields</em></span>. If you change those fields in Sitecore, the CLI does not detect any changes, and pushing data does not override them. If you have excluded fields in YAML files, they are removed only after changes in the included fields or if you manually delete that exclusion and perform a <code class="code">pull</code> operation.</p><p>If you exclude all the fields and your <code class="code">.yml</code> file has empty versions without any fields data, when you then include those items in the <code class="code">.dat</code> package and attach them to your instance items, the result is missing versions in the Content Editor.</p><p>Excluding <span class="emphasis"><em>Revision</em></span> fields from serialization can result in issues when publishing with the serialization command.</p></div><section dir="ltr" class="section" data-origin-id="" data-publication-date="06/30/23" id="idm45599350173152"><div class="titlepage"><div><div class="title accordion"><h2 class="title accordion" style="clear: both">Set up excluded fields in the sitecore.json file</h2></div></div></div><p>You can specify fields to exclude from serialization in the <code class="code">sitecore.json</code> file.</p><p>To set up excluded fields in the <code class="code">sitecore.json</code> file:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Modify the <code class="code">serialization</code> section of the <code class="code">sitecore.json</code> file, for example:</p><pre class="programlisting">...
+  "serialization": {
+    "defaultMaxRelativeItemPathLength": 120,
+    "defaultModuleRelativeSerializationPath": "serialization",
+    "excludedFields": [
+      {
+        "fieldId": "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a",
+        "description": "__Updated by"
+      },
+      {
+        "fieldId": "d9cf14b1-fa16-4ba6-9288-e8a174d4d522",
+        "description": "__Updated"
+      },
+      {
+        "fieldId": "5dd74568-4d4b-44c1-b513-0af5f4cda34f",
+        "description": "__Created by"
+      },
+      {
+        "fieldId": "25bed78c-4957-4165-998a-ca1b52f67497",
+        "description": "__Created"
+      },
+      {
+        "fieldId": "{52807595-0F8F-4B20-8D2A-CB71D28C6103}",
+        "description": "__Owner"
+      },
+      {
+        "fieldId": "{001DD393-96C5-490B-924A-B0F25CD9EFD8}",
+        "description": "__Lock"
+      }
+    ]
+  }</pre><div dir="ltr" class="note"><h3 class="title">Note</h3><p>Specify base fields, for example, fields from the standard template that you do not want to sync. They are taken into account during serialization independently of particular module configurations.</p></div></li></ul></div></section><section dir="ltr" class="section" data-origin-id="" data-publication-date="06/30/23" id="idm45599350172960"><div class="titlepage"><div><div class="title accordion"><h2 class="title accordion" style="clear: both">Set up excluded fields in the modules.json file</h2></div></div></div><p id="UUID-508a0cc0-3c6e-9113-f5d4-12ed10df565c_para-idm1403286038718234">You can specify fields to exclude from serialization in the <code class="code">modules.json</code> file.</p><p>To set up excluded fields in the <code class="code">*modules.json</code> file:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Modify the <code class="code">items</code> section of the <code class="code">*module.json</code> file, for example:</p><pre class="programlisting">...
+items": {
+        "includes": [
+            {
+                "name": "Apikey",
+                "path": "/sitecore/system/Settings/Services/API Keys"
+            },
+            {
+                "name": "Media",
+                "path": "/sitecore/media library/my-first-jss-app"
+            },
+            {
+                "name": "Templates",
+                "path": "/sitecore/Templates/Project/my-first-jss-app"
+            },
+            {
+                "name": "Content",
+                "path": "/sitecore/content/my-first-jss-app"
+            },
+            {
+                "name": "Layout",
+                "path": "/sitecore/Layout/Layouts/Project/my-first-jss-app"
+            },
+            {
+                "name": "Renderings",
+                "path": "/sitecore/Layout/Renderings/Project/my-first-jss-app"
+            },
+            {
+                "name": "Placeholders",
+                "path": "/sitecore/Layout/Placeholder Settings/Project/my-first-jss-app"
+            }
+        ],
+        "excludedFields":[
+            {
+				"fieldID": "{EB504D1B-B612-4FFF-B239-CA3BD7273D1B}",
+				"description": "FieldsForExclude1"
+			},
+			{
+				"fieldID": "{3C2C061E-F61F-4DF6-89EA-0B7A56348737}",
+				"description": "FieldsForExclude2"
+			},
+
+			{
+				"fieldID": "{4F7446A4-79C8-4853-A357-723665FE68DA}",
+				"description": "ExcludeUnversionFIeld"
+			}
+        ]
+    }</pre><div dir="ltr" class="note"><h3 class="title">Note</h3><p>Specify only fields from this particular module config file.</p></div></li></ul></div></section><section dir="ltr" class="section" data-origin-id="" data-publication-date="06/30/23" id="idm45599350167984"><div class="titlepage"><div><div class="title accordion"><h2 class="title accordion" style="clear: both">Check excluded fields</h2></div></div></div><p>After excluding fields from serialization using one of the methods described previously,  you can use the <code class="code">serialization info</code> command to either see a summary or full details about the fields you excluded.</p><p>To check the summary of configured excluded fields:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Run the <code class="code">serialization info</code> command. Output:</p><pre class="programlisting">Project
+  Subtrees:
+    Apikey: /sitecore/system/Settings/Services/API Keys
+    Media: /sitecore/media library/my-first-jss-app
+    Templates: /sitecore/Templates/Project/my-first-jss-app
+    Content: /sitecore/content/my-first-jss-app
+    Layout: /sitecore/Layout/Layouts/Project/my-first-jss-app
+    Renderings: /sitecore/Layout/Renderings/Project/my-first-jss-app
+    Placeholders: /sitecore/Layout/Placeholder Settings/Project/my-first-jss-app
+      FieldsFilter Excludes: 3
+
+Excluded Fields From Default Serialization Config:
+      FieldsFilter Excludes: 7</pre></li></ul></div><p>To check the full details of the configured excluded fields:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Run the <code class="code">serialization info -t</code> command. Output:</p><pre class="programlisting">Maximum subtree-relative item path allowed: 120
+
+Project
+  File: C:\Repos\Sitecore.DevEx\samples\Prototype\items/Project.module.json
+  Subtrees:
+...
+      Excluded Fields:
+        Field Id :{EB504D1B-B612-4FFF-B239-CA3BD7273D1B}: Description :FieldsForExclude1.
+        Field Id :{3C2C061E-F61F-4DF6-89EA-0B7A56348737}: Description :FieldsForExclude2.
+        Field Id :{4F7446A4-79C8-4853-A357-723665FE68DA}: Description :ExcludeUnversionFIeld.
+
+Excluded Fields From Default Serialization Config:
+      Excluded Fields:
+        Field Id :8cdc337e-a112-42fb-bbb4-4143751e123f: Description :__Revision.
+        Field Id :badd9cf9-53e0-4d0c-bcc0-2d784c282f6a: Description :__Updated by.
+        Field Id :d9cf14b1-fa16-4ba6-9288-e8a174d4d522: Description :__Updated.
+        Field Id :5dd74568-4d4b-44c1-b513-0af5f4cda34f: Description :__Created by.
+        Field Id :25bed78c-4957-4165-998a-ca1b52f67497: Description :__Created.
+        Field Id :{52807595-0F8F-4B20-8D2A-CB71D28C6103}: Description :__Owner.
+        Field Id :{001DD393-96C5-490B-924A-B0F25CD9EFD8}: Description :__Lock.</pre></li></ul></div></section></section><div class="footer-content"><div class="glossary-definitions"></div></div><footer></footer></div></article><aside class="section-nav-container"><ul class="section-nav nav"><li><a href="#UUID-508a0cc0-3c6e-9113-f5d4-12ed10df565c">Configure excluded fields</a></li><li><a href="#idm45599350173152">Set up excluded fields in the sitecore.json file</a></li><li><a href="#idm45599350172960">Set up excluded fields in the modules.json file</a></li><li><a href="#idm45599350167984">Check excluded fields</a></li></ul></aside></main><div id="bottom-pager"><ul class="pager"><li class="previous"><a accesskey="p" class="prev pull-left prev visible-lg visible-md" id="header-navigation-prev" href="user-serialization.html#UUID-e4591bb0-d256-7060-7a47-235007f506a0_section-idm1401212406823879">Prev</a></li><li class="next"><a accesskey="n" class="pull-right next visible-lg visible-md" id="header-navigation-next" href="configure-excluded-fields.html#idm45599350173152">Next</a></li></ul></div><footer class="site-footer"><div class="inner"><div class="copyright"> © 2023 Sitecore </div><div class="date-modified"><span class="date-modified-text">Last modified: </span><span class="formatted-date">01/25/2022</span></div><div class="publication-date"><span class="publication-date-text">Publication date</span><span class="pubdate-delimiter">: </span><span class="formatted-date">06/30/23</span></div></div></footer></div></div></div></div><script type="text/javascript" src="//customer.cludo.com/scripts/bundles/search-script.min.js"></script><script>
+			var CludoSearch;
+			(function () {
+			var cludoSettings = {
+			customerId: 2063,
+			engineId: 12826,
+			language: 'en',
+			searchInputs: ["search-form","cludo-search-content-form","cludo-search-mobile-form"],
+			hideSearchFilters: true,
+			type: 'standardOverlay',
+			facets: ["Category", "ProductVer", "Product", "Version"],
+			useStandardSearchTemplate: false,
+			customerTemplate: "OverlayCopy",
+			searchApiUrl: 'https://api-eu1.cludo.com/api/v3'
+			};
+			CludoSearch= new Cludo(cludoSettings);
+			CludoSearch.init();
+			})();
+		</script><!-- www.Cludo.com Search body init script start --></body></html>

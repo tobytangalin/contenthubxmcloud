@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"></meta><meta name="format-detection" content="telephone=no"></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><meta name="search" content="default"></meta><meta name="use.ic" content="no"></meta><meta name="Audience - do not use" content=""></meta><meta name="clubot" content=""></meta><meta name="data model" content=""></meta><meta name="DxP type - Do Not Use" content=""></meta><meta name="media_icon" content=""></meta><meta name="product" content="XM Cloud"></meta><meta name="Publishing target" content="Production"></meta><meta name="Ready for publishing - do not use" content=""></meta><meta name="role" content="developers"></meta><meta name="topic_tripane" content=""></meta><meta name="version" content=""></meta><meta name="tocstandalone" content="yes"></meta><meta name="theme" content="1"></meta><meta name="search.placeholder" content="Search"></meta><meta name="search.results" content="Search results"></meta><meta name="no.search.results" content="No results found"></meta><script type="text/javascript">
+var theme = '1';
+
+			
+			window.versionsfile = '';
+
+
+			window.indexDict = new Array();
+			window.store = {};
+			window.portalLanguage = 'en';
+			window.enterKey = 'select';
+			
+			
+				var fuse_threshold = 0.3;
+			
+					var local_csh = false;
+				
+					var anchoroption = true;
+				var instantsearch_minlength = 1;
+						
+			var useanchorlinks = false;
+			
+					function addSearch(){
+					//not used with custom or elastic search
+					}
+				</script><title>Webhook objects</title><link rel="stylesheet" type="text/css" href="../css/docbook.css"></link><link rel="stylesheet" type="text/css" href="../css/font-awesome.css"></link><link rel="stylesheet" type="text/css" href="../css/roboto.font.css"></link><link rel="stylesheet" type="text/css" href="../css/theme1.css?version=20230630"></link><link rel="stylesheet" type="text/css" href="../css/theme1-colors.css?version=20230630"></link><link rel="stylesheet" type="text/css" href="../css/content-theme1.css?version=20230630"></link><link rel="stylesheet" type="text/css" href="../css/sm-core-css.css"></link><link rel="stylesheet" type="text/css" href="../css/sm-simple.css"></link><link rel="stylesheet" type="text/css" href="../css/style-print.css"></link><link rel="stylesheet" type="text/css" href="../css/style-common.css"></link><link rel="stylesheet" type="text/css" href="../css/style-modern-tables.css"></link><link rel="stylesheet" type="text/css" href="../css/graphical-lists.css"></link><link rel="stylesheet" type="text/css" href="/css/sitecore-custom-default-xmc.css?version=20230630"></link><script src="../js/jquery-3/jquery-3.4.1.min.js" type="text/javascript"></script><script src="../js/jquery-migrate-3.0.1.min.js" type="text/javascript"></script><script src="../js/materialize.min.js" type="text/javascript"></script><script src="../js/bootstrap.min.js" type="text/javascript"></script><script src="../js/purl.js" type="text/javascript"></script><script src="../js/jquery.smartmenus.js" type="text/javascript"></script><script src="js/toc.js?version=20230630" type="text/javascript"></script><script src="../js/create-toc.js" type="text/javascript"></script><script src="../js/html5-2-mp-common.js?version=20230630" type="text/javascript"></script><script src="../js/html5-2.js?version=20230630" type="text/javascript"></script><script src="../js/checklist.js" type="text/javascript"></script><script src="../js/clipboard.min.js" type="text/javascript"></script><script src="../js/csh.js" type="text/javascript"></script><script src="/js/layout-custom-script.js" type="text/javascript"></script><meta xmlns:xhtml="http://www.w3.org/1999/xhtml" name="generator" content="Paligo"></meta><meta name="description" content="Describes the various JSON objects used with the webhooks endpoint of the Edge Admin API."></meta><meta name="keywords" content="webhook, WebhookEdit, EntityUpdate"></meta><link rel="prev" href="admin-api.html#UUID-b4951b9b-aba7-aeb1-4da1-0c141e3c647a_N1623051166175" title="GetWebhookById"></link><link rel="next" href="webhook-objects.html#UUID-61bd956a-4e80-158b-4f0b-7cf11288671a_section-idm4593021671888032730561008779" title="WebhookEdit"></link><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML" async="async"></script><link rel="icon" href="/favicon.ico" type="image/x-icon"></link><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent/3.1.1/cookieconsent.min.css"></link><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent/3.1.1/cookieconsent.min.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/3.0.1/js.cookie.min.js"></script><script type="text/javascript">var privacypolicy = 'https://www.sitecore.com/trust/privacy-policy';
+var consenttype = 'opt-out';
+</script><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-72664331-1"></script><script type="text/javascript">const measurementId = 'UA-72664331-1';
+
+						$(document).on('cookies.consented', () => {
+							window.dataLayer = window.dataLayer || [];
+							function gtag(){dataLayer.push(arguments)};
+
+							gtag('js', new Date());
+							gtag('config', measurementId);
+						});
+					</script><script type="text/javascript" src="../js/cookie-consent.js"></script><script type="text/javascript">
+				$(document).ready(function () {
+				$(".mediaobject img").addClass('materialboxed');
+				//Exclude images with links
+				$(".mediaobject a img").removeClass('materialboxed');
+				if (!document.documentMode) {
+				$('.materialboxed').materialbox();
+				}});
+			</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/googlecode.min.css"></link><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script><script type="text/javascript">
+			$(document).ready(function() {
+
+				$('pre:not(.embedcode)').each(function() {
+					/**
+					 * @type {string}
+					 */
+					var language = $(this).data('language');
+
+					if (language === 'plaintext' || language === 'text') {
+						$(this).addClass(language).addClass('hljs');
+						return true;
+					}
+					else {
+						var clone = this.cloneNode(true);
+						hljs.highlightBlock(clone);
+						$(this).empty().append($(clone).contents());
+						$(this).attr("class", $(clone).attr("class"));
+					}
+				});
+			});
+			</script><link href="//customer.cludo.com/assets/2063/10039/cludo-search.min.css" type="text/css" rel="stylesheet"></link></head><body class="theme1 colored-top page-toc current-toc-section-focus" data-spy="scroll" data-target=".section-nav-container" data-offset="100" data-link-prefix=""><style type="text/css">
+            div.skipnav {
+            }
+            div.skipnav a {
+                position: fixed;
+                left: -10000px;
+                top: 1.5em;
+                width: 1px;
+                height: 1px;
+                overflow: hidden;
+            }
+            div.skipnav a:focus, div.skipnav a:active, div.skipnav a:hover {
+                background: white;
+                color: black;
+                box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.5);
+                position: fixed;
+                left: 2em;
+                top: 1.5em;
+                width: auto;
+                height: auto;
+                overflow: visible;
+                text-decoration: underline;
+                z-index: 99999; /* has to be higher than the side panel */
+    }
+          </style><div class="skipnav"><a href="#content-wrapper">Skip to main content</a></div><header class="site-header"><nav class="site-header-navbar navbar navbar-fixed-top"><div class="navbar-container"><div class="navbar-header"><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".site-sidebar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><div id="logotype-container" class="pull-left"><a class="navbar-brand" href="https://doc.sitecore.com/xmc/" target="_blank" rel="noopener"><img id="logotype-pageheader" src="../css/image/corporate-logo.png" alt="Corporate logotype" data-role="logotype" class="logo"></img></a></div></div><div class="navbar-collapse collapse" id="navbar"></div></div></nav></header><div class="site-body"><div class="site-body-container"><div class="site-body-row"><aside xmlns:xinfo="http://ns.expertinfo.se/cms/xmlns/1.0" class="site-sidebar"><div class="site-sidebar-header"><a href="https://doc.sitecore.com/xmc/" target="_blank"><img id="logotype-pageheader" src="../css/image/corporate-logo.png" alt="Corporate logotype" data-role="logotype" class="logo"></img></a></div><form id="search-form" class="site-sidebar-search" autocomplete="off"><input type="text" class="form-control search-field" placeholder="Search" id="aa-search-input"></input></form><div id="toc-standalone-placeholder"></div></aside><div class="site-content"><div class="toolbar"><div class="toolbar-tools"><div id="navbar" class="navbar-collapse collapse"></div><div class="tool-print"><i class="fa fa-print" aria-hidden="true">print</i></div><div class="tool-search"><i class="fa fa-search" aria-hidden="true"></i></div><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".site-sidebar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button></div><div class="breadcrumb-container"><ul class="breadcrumb"><li class="breadcrumb-link"><a href="index-en.html">XM Cloud Documentation for Developers</a></li><li class="breadcrumb-link"><a href="sitecore-experience-edge-for-xm.html">Sitecore Experience Edge for XM</a></li><li class="breadcrumb-node">Webhook objects</li></ul></div></div><main><div id="top-pager"><ul class="pager"><li class="previous"><a accesskey="p" class="prev pull-left prev visible-lg visible-md" id="header-navigation-prev" href="admin-api.html#UUID-b4951b9b-aba7-aeb1-4da1-0c141e3c647a_N1623051166175">Prev</a></li><li class="next"><a accesskey="n" class="pull-right next visible-lg visible-md" id="header-navigation-next" href="webhook-objects.html#UUID-61bd956a-4e80-158b-4f0b-7cf11288671a_section-idm4593021671888032730561008779">Next</a></li></ul></div><article class="topic content-container" id="content-wrapper"><div id="topic-content" class="topic-content"><section xml:lang="en" lang="en" dir="ltr" class="section" data-origin-id="UUID-11bc4c8d-7ada-1709-3bec-969beb880312" data-permalink="webhook-objects.html" data-topic-level="1" data-relative-prefix="" data-time-modified="11/22/2021" data-publication-date="06/30/23" id="UUID-61bd956a-4e80-158b-4f0b-7cf11288671a"><div class="titlepage"><div><div class="title"><h1 class="title" style="clear: both">Webhook objects</h1></div><div><div class="abstract"><div class="abstract-title">Abstract</div><p>Describes the various JSON objects used with the webhooks endpoint of the Edge Admin API.</p></div></div></div></div><p>A webhook is a way for a service to provide other applications with real-time information. Webhooks trigger external builds of consuming applications when a publishing operation is complete. </p><p>The following tables list the various JSON objects used within the webhooks endpoint of the Edge Admin API.</p><section dir="ltr" class="section accordion" data-origin-id="" data-publication-date="06/30/23" id="UUID-61bd956a-4e80-158b-4f0b-7cf11288671a_section-idm4593021671888032730561008779"><div class="accordion-icon"></div><div class="panel panel-default"><div class="panel-heading"><div class="titlepage"><a data-toggle="collapse" href="#UUID-61bd956a-4e80-158b-4f0b-7cf11288671a_section-idm4593021671888032730561008779_body" data-parent="#UUID-61bd956a-4e80-158b-4f0b-7cf11288671a_section-idm4593021671888032730561008779"><div><div class="title"><h2 class="title" style="clear: both">WebhookEdit</h2></div></div></a></div></div><div class="panel-body collapse" id="UUID-61bd956a-4e80-158b-4f0b-7cf11288671a_section-idm4593021671888032730561008779_body"><p>Edits a webhook. Data used to create or update a webhook.</p><div class="informaltable table-responsive"><table class="informaltable frame-void rules-rows"><thead><tr><th class="th"><p>Name</p></th><th class="th"><p>Type</p></th><th class="th"><p>Description</p></th></tr></thead><tbody><tr><td class="td"><p>Label</p></td><td class="td"><p>string</p></td><td class="td"><p>Describes the purpose of the webhook.</p></td></tr><tr><td class="td"><p>Uri</p></td><td class="td"><p>Uri</p></td><td class="td"><p>The URI to make the web request to.</p></td></tr><tr><td class="td"><p>Method</p></td><td class="td"><p>string</p></td><td class="td"><p>The HTTP method to use when making the web request. Must be GET or POST.</p></td></tr><tr><td class="td"><p>Headers</p></td><td class="td"><p>object</p></td><td class="td"><p>Custom headers to send when making the web request. Commonly used for authentication.</p></td></tr><tr><td class="td"><p>Body</p></td><td class="td"><p>string</p></td><td class="td"><p>The body to post when making the web request. Only populated if <code class="code">ExecutionMode</code> is <code class="code">OnEnd</code>.</p></td></tr><tr><td class="td"><p>BodyInclude</p></td><td class="td"><p>string</p></td><td class="td"><p>Additional JSON object to include in the body of the webhook request. Only populated if <code class="code">ExecutionMode</code> is <code class="code">OnUpdate</code>. This field must be a valid JSON object.</p></td></tr><tr><td class="td"><p>CreatedBy</p></td><td class="td"><p>string</p></td><td class="td"><p>The name of the user who created the webhook.</p></td></tr><tr><td class="td"><p>ExecutionMode</p></td><td class="td"><p>string</p></td><td class="td"><p>Determines how the webhook is executed. Must be one of the following options: <code class="code">OnEnd</code>, <code class="code">OnUpdate</code>.</p></td></tr></tbody></table></div><p>Example:</p><pre class="programlisting">{
+  "label": "My new webhook",
+  "uri": "https://www.mysite.com/hooks/edge-hook",
+  "method": "POST",
+  "headers": {
+    "x-header": "bar"
+  },
+  "body": "{\"rebuild\":\"true\"}",
+  "createdBy": "anco",
+  "executionMode": "OnEnd"
+}</pre></div></div></section><section dir="ltr" class="section accordion" data-origin-id="" data-publication-date="06/30/23" id="UUID-61bd956a-4e80-158b-4f0b-7cf11288671a_section-idm4593021975121632730579915283"><div class="accordion-icon"></div><div class="panel panel-default"><div class="panel-heading"><div class="titlepage"><a data-toggle="collapse" href="#UUID-61bd956a-4e80-158b-4f0b-7cf11288671a_section-idm4593021975121632730579915283_body" data-parent="#UUID-61bd956a-4e80-158b-4f0b-7cf11288671a_section-idm4593021975121632730579915283"><div><div class="title"><h2 class="title" style="clear: both">Webhook</h2></div></div></a></div></div><div class="panel-body collapse" id="UUID-61bd956a-4e80-158b-4f0b-7cf11288671a_section-idm4593021975121632730579915283_body"><p>Describes the webhook.</p><div class="informaltable table-responsive"><table class="informaltable frame-void rules-rows"><thead><tr><th class="th"><p>Name</p></th><th class="th"><p>Type</p></th><th class="th"><p>Description</p></th></tr></thead><tbody><tr><td class="td"><p>Id</p></td><td class="td"><p>string </p></td><td class="td"><p>The identifier used to identify this webhook.</p></td></tr><tr><td class="td"><p>TenantId </p></td><td class="td"><p>string </p></td><td class="td"><p>The ID of the tenant this webhook belongs to.</p></td></tr><tr><td class="td"><p>Label</p></td><td class="td"><p> string </p></td><td class="td"><p>Describes the purpose of the webhook.</p></td></tr><tr><td class="td"><p>Uri </p></td><td class="td"><p>Uri </p></td><td class="td"><p>The URI to make the web request to.</p></td></tr><tr><td class="td"><p>Method</p></td><td class="td"><p>string </p></td><td class="td"><p>The HTTP method to use when making the web request. Must be GET or POST.</p></td></tr><tr><td class="td"><p>Headers</p></td><td class="td"><p>object</p></td><td class="td"><p>Custom headers to send when making the web request. Commonly used for authentication.</p></td></tr><tr><td class="td"><p>Body </p></td><td class="td"><p>string </p></td><td class="td"><p>The body to post when making the web request. Only populated if <code class="code">ExecutionMode</code> is <code class="code">OnEnd</code>.</p></td></tr><tr><td class="td"><p>BodyInclude </p></td><td class="td"><p>string</p></td><td class="td"><p>An additional JSON object to include in the body of the webhook request. Can only be populated if ExecutionMode is OnUpdate. This field must be a valid JSON object.</p></td></tr><tr><td class="td"><p>CreatedBy</p></td><td class="td"><p>string </p></td><td class="td"><p>The name of the user who created the webhook.</p></td></tr><tr><td class="td"><p>Created </p></td><td class="td"><p>DateTimeOffset </p></td><td class="td"><p>The timestamp when the webhook was created.</p></td></tr><tr><td class="td"><p>ExecutionMode </p></td><td class="td"><p>string </p></td><td class="td"><p>Determines how the webhook is executed. Must be one of the following options: <code class="code">OnEnd</code>, <code class="code">OnUpdate</code>.</p></td></tr></tbody></table></div><p>Example:</p><pre class="programlisting">{
+  "id": "5678",
+  "tenantId": "target-corp",
+  "label": "webhook 29",
+  "uri": "https://www.target-domain-of-the-webhook.com/hooks/edge-hook",
+  "method": "POST",
+  "headers": {
+    "x-header": "bar"
+  },
+  "body": "{\"rebuild\":\"true\"}",
+  "createdBy": "anco",
+  "created": "2021-03-26T10:44:04.6107312+00:00",
+  "executionMode": "OnEnd"
+}</pre></div></div></section><section dir="ltr" class="section accordion" data-origin-id="" data-publication-date="06/30/23" id="UUID-61bd956a-4e80-158b-4f0b-7cf11288671a_section-idm4593021588376032730599903632"><div class="accordion-icon"></div><div class="panel panel-default"><div class="panel-heading"><div class="titlepage"><a data-toggle="collapse" href="#UUID-61bd956a-4e80-158b-4f0b-7cf11288671a_section-idm4593021588376032730599903632_body" data-parent="#UUID-61bd956a-4e80-158b-4f0b-7cf11288671a_section-idm4593021588376032730599903632"><div><div class="title"><h2 class="title" style="clear: both">EntityUpdate</h2></div></div></a></div></div><div class="panel-body collapse" id="UUID-61bd956a-4e80-158b-4f0b-7cf11288671a_section-idm4593021588376032730599903632_body"><p>Describes an entity that was updated and caused the webhook execution.</p><div class="informaltable table-responsive"><table class="informaltable frame-void rules-rows"><thead><tr><th class="th"><p>Name</p></th><th class="th"><p>Type</p></th><th class="th"><p>Description</p></th></tr></thead><tbody><tr><td class="td"><p>identifier </p></td><td class="td"><p>string</p></td><td class="td"><p>The identifier of the entity.</p></td></tr><tr><td class="td"><p>entity_definition </p></td><td class="td"><p>string </p></td><td class="td"><p>The entity definition that the entity uses. Only populated for an update operation.</p></td></tr><tr><td class="td"><p>operation </p></td><td class="td"><p>string</p></td><td class="td"><p>The type of operation executed: <code class="code">update</code> or <code class="code">delete</code>.</p></td></tr></tbody></table></div><p>Example:</p><pre class="programlisting">{
+  "identifier": "M.Setting.CleanerInterval",
+  "entity_definition": "M.Setting",
+  "operation": "update"
+}</pre></div></div></section><section dir="ltr" class="section accordion" data-origin-id="" data-publication-date="06/30/23" id="UUID-61bd956a-4e80-158b-4f0b-7cf11288671a_section-idm459302166898723273060541652"><div class="accordion-icon"></div><div class="panel panel-default"><div class="panel-heading"><div class="titlepage"><a data-toggle="collapse" href="#UUID-61bd956a-4e80-158b-4f0b-7cf11288671a_section-idm459302166898723273060541652_body" data-parent="#UUID-61bd956a-4e80-158b-4f0b-7cf11288671a_section-idm459302166898723273060541652"><div><div class="title"><h2 class="title" style="clear: both">WebHookRequest</h2></div></div></a></div></div><div class="panel-body collapse" id="UUID-61bd956a-4e80-158b-4f0b-7cf11288671a_section-idm459302166898723273060541652_body"><p>The body of a request made to a webhook endpoint that uses the <code class="code">OnUpdate</code> execution mode.</p><div class="informaltable table-responsive"><table class="informaltable frame-void rules-rows"><thead><tr><th class="th"><p>Name</p></th><th class="th"><p>Type</p></th><th class="th"><p>Description</p></th></tr></thead><tbody><tr><td class="td"><p>invocation_id </p></td><td class="td"><p>GUID </p></td><td class="td"><p>Identifies the invocation of the webhook. Used to correlate across large counts of updates spanning across multiple webhook requests.</p></td></tr><tr><td class="td"><p>updates </p></td><td class="td"><p>array of EntityUpdate</p></td><td class="td"><p>The entities that were updated and caused the webhook execution.</p></td></tr><tr><td class="td"><p>continues </p></td><td class="td"><p>bool </p></td><td class="td"><p>Indicates whether there will be an additional request to continue sending more updates. This occurs when there are a large number of updates and they are split between multiple requests.</p><p>If the field is populated, this JSON object is merged into the body of the request with properties of the object being injected into the request body object.</p></td></tr></tbody></table></div><p>Example:</p><pre class="programlisting">{
+  "invocation_id": "7734f16b-1e46-4321-a40e-522255d6c17a",
+  "updates": [
+    {
+      "identifier": "M.Setting.CleanerInterval",
+      "entity_definition": "M.Setting",
+      "operation": "update"
+    },
+    {
+      "identifier": "Content.PowerFromWithin",
+      "operation": "delete"
+    }
+  ],
+  "continues": false
+}</pre></div></div></section></section><div class="footer-content"><div class="glossary-definitions"></div></div><footer></footer></div></article><aside class="section-nav-container"><ul class="section-nav nav"><li><a href="#UUID-61bd956a-4e80-158b-4f0b-7cf11288671a">Webhook objects</a></li><li><a href="#UUID-61bd956a-4e80-158b-4f0b-7cf11288671a_section-idm4593021671888032730561008779">WebhookEdit</a></li><li><a href="#UUID-61bd956a-4e80-158b-4f0b-7cf11288671a_section-idm4593021975121632730579915283">Webhook</a></li><li><a href="#UUID-61bd956a-4e80-158b-4f0b-7cf11288671a_section-idm4593021588376032730599903632">EntityUpdate</a></li><li><a href="#UUID-61bd956a-4e80-158b-4f0b-7cf11288671a_section-idm459302166898723273060541652">WebHookRequest</a></li></ul></aside></main><div id="bottom-pager"><ul class="pager"><li class="previous"><a accesskey="p" class="prev pull-left prev visible-lg visible-md" id="header-navigation-prev" href="admin-api.html#UUID-b4951b9b-aba7-aeb1-4da1-0c141e3c647a_N1623051166175">Prev</a></li><li class="next"><a accesskey="n" class="pull-right next visible-lg visible-md" id="header-navigation-next" href="webhook-objects.html#UUID-61bd956a-4e80-158b-4f0b-7cf11288671a_section-idm4593021671888032730561008779">Next</a></li></ul></div><footer class="site-footer"><div class="inner"><div class="copyright"> © 2023 Sitecore </div><div class="date-modified"><span class="date-modified-text">Last modified: </span><span class="formatted-date">11/22/2021</span></div><div class="publication-date"><span class="publication-date-text">Publication date</span><span class="pubdate-delimiter">: </span><span class="formatted-date">06/30/23</span></div></div></footer></div></div></div></div><script type="text/javascript" src="//customer.cludo.com/scripts/bundles/search-script.min.js"></script><script>
+			var CludoSearch;
+			(function () {
+			var cludoSettings = {
+			customerId: 2063,
+			engineId: 12826,
+			language: 'en',
+			searchInputs: ["search-form","cludo-search-content-form","cludo-search-mobile-form"],
+			hideSearchFilters: true,
+			type: 'standardOverlay',
+			facets: ["Category", "ProductVer", "Product", "Version"],
+			useStandardSearchTemplate: false,
+			customerTemplate: "OverlayCopy",
+			searchApiUrl: 'https://api-eu1.cludo.com/api/v3'
+			};
+			CludoSearch= new Cludo(cludoSettings);
+			CludoSearch.init();
+			})();
+		</script><!-- www.Cludo.com Search body init script start --></body></html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"></meta><meta name="format-detection" content="telephone=no"></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><meta name="search" content="default"></meta><meta name="use.ic" content="no"></meta><meta name="Audience - do not use" content=""></meta><meta name="clubot" content=""></meta><meta name="data model" content=""></meta><meta name="DxP type - Do Not Use" content=""></meta><meta name="media_icon" content=""></meta><meta name="product" content="XM Cloud"></meta><meta name="Publishing target" content="Production"></meta><meta name="Ready for publishing - do not use" content=""></meta><meta name="role" content="developers"></meta><meta name="topic_tripane" content=""></meta><meta name="version" content=""></meta><meta name="tocstandalone" content="yes"></meta><meta name="theme" content="1"></meta><meta name="search.placeholder" content="Search"></meta><meta name="search.results" content="Search results"></meta><meta name="no.search.results" content="No results found"></meta><script type="text/javascript">
+var theme = '1';
+
+			
+			window.versionsfile = '';
+
+
+			window.indexDict = new Array();
+			window.store = {};
+			window.portalLanguage = 'en';
+			window.enterKey = 'select';
+			
+			
+				var fuse_threshold = 0.3;
+			
+					var local_csh = false;
+				
+					var anchoroption = true;
+				var instantsearch_minlength = 1;
+						
+			var useanchorlinks = false;
+			
+					function addSearch(){
+					//not used with custom or elastic search
+					}
+				</script><title>Walkthrough: Deploying your front-end application to Vercel</title><link rel="stylesheet" type="text/css" href="../css/docbook.css"></link><link rel="stylesheet" type="text/css" href="../css/font-awesome.css"></link><link rel="stylesheet" type="text/css" href="../css/roboto.font.css"></link><link rel="stylesheet" type="text/css" href="../css/theme1.css?version=20230630"></link><link rel="stylesheet" type="text/css" href="../css/theme1-colors.css?version=20230630"></link><link rel="stylesheet" type="text/css" href="../css/content-theme1.css?version=20230630"></link><link rel="stylesheet" type="text/css" href="../css/sm-core-css.css"></link><link rel="stylesheet" type="text/css" href="../css/sm-simple.css"></link><link rel="stylesheet" type="text/css" href="../css/style-print.css"></link><link rel="stylesheet" type="text/css" href="../css/style-common.css"></link><link rel="stylesheet" type="text/css" href="../css/style-modern-tables.css"></link><link rel="stylesheet" type="text/css" href="../css/graphical-lists.css"></link><link rel="stylesheet" type="text/css" href="/css/sitecore-custom-default-xmc.css?version=20230630"></link><script src="../js/jquery-3/jquery-3.4.1.min.js" type="text/javascript"></script><script src="../js/jquery-migrate-3.0.1.min.js" type="text/javascript"></script><script src="../js/materialize.min.js" type="text/javascript"></script><script src="../js/bootstrap.min.js" type="text/javascript"></script><script src="../js/purl.js" type="text/javascript"></script><script src="../js/jquery.smartmenus.js" type="text/javascript"></script><script src="js/toc.js?version=20230630" type="text/javascript"></script><script src="../js/create-toc.js" type="text/javascript"></script><script src="../js/html5-2-mp-common.js?version=20230630" type="text/javascript"></script><script src="../js/html5-2.js?version=20230630" type="text/javascript"></script><script src="../js/checklist.js" type="text/javascript"></script><script src="../js/clipboard.min.js" type="text/javascript"></script><script src="../js/csh.js" type="text/javascript"></script><script src="/js/layout-custom-script.js" type="text/javascript"></script><meta xmlns:xhtml="http://www.w3.org/1999/xhtml" name="generator" content="Paligo"></meta><meta name="description" content="Deploy a JSS Next.js app to Vercel and configure webhooks for automatic redeployments."></meta><link rel="prev" href="walkthrough--synchronizing-items-between-remote-and-local-xm-cloud-instances-with-the-sitecore-cli.html#UUID-ea774113-cd61-7b24-60fe-f6a35fada016_section-idm4592227875654433066241395909" title="Run serialization operations"></link><link rel="next" href="walkthrough--deploying-your-front-end-application-to-vercel.html#UUID-2b7117df-08e2-be30-5e23-013085b79145_section-idm4544500166364833311209148255" title="Deploy the Next.js JSS app to Vercel"></link><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML" async="async"></script><link rel="icon" href="/favicon.ico" type="image/x-icon"></link><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent/3.1.1/cookieconsent.min.css"></link><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent/3.1.1/cookieconsent.min.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/3.0.1/js.cookie.min.js"></script><script type="text/javascript">var privacypolicy = 'https://www.sitecore.com/trust/privacy-policy';
+var consenttype = 'opt-out';
+</script><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-72664331-1"></script><script type="text/javascript">const measurementId = 'UA-72664331-1';
+
+						$(document).on('cookies.consented', () => {
+							window.dataLayer = window.dataLayer || [];
+							function gtag(){dataLayer.push(arguments)};
+
+							gtag('js', new Date());
+							gtag('config', measurementId);
+						});
+					</script><script type="text/javascript" src="../js/cookie-consent.js"></script><script type="text/javascript">
+				$(document).ready(function () {
+				$(".mediaobject img").addClass('materialboxed');
+				//Exclude images with links
+				$(".mediaobject a img").removeClass('materialboxed');
+				if (!document.documentMode) {
+				$('.materialboxed').materialbox();
+				}});
+			</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/googlecode.min.css"></link><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script><script type="text/javascript">
+			$(document).ready(function() {
+
+				$('pre:not(.embedcode)').each(function() {
+					/**
+					 * @type {string}
+					 */
+					var language = $(this).data('language');
+
+					if (language === 'plaintext' || language === 'text') {
+						$(this).addClass(language).addClass('hljs');
+						return true;
+					}
+					else {
+						var clone = this.cloneNode(true);
+						hljs.highlightBlock(clone);
+						$(this).empty().append($(clone).contents());
+						$(this).attr("class", $(clone).attr("class"));
+					}
+				});
+			});
+			</script><link href="//customer.cludo.com/assets/2063/10039/cludo-search.min.css" type="text/css" rel="stylesheet"></link></head><body class="theme1 colored-top page-toc current-toc-section-focus" data-spy="scroll" data-target=".section-nav-container" data-offset="100" data-link-prefix=""><style type="text/css">
+            div.skipnav {
+            }
+            div.skipnav a {
+                position: fixed;
+                left: -10000px;
+                top: 1.5em;
+                width: 1px;
+                height: 1px;
+                overflow: hidden;
+            }
+            div.skipnav a:focus, div.skipnav a:active, div.skipnav a:hover {
+                background: white;
+                color: black;
+                box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.5);
+                position: fixed;
+                left: 2em;
+                top: 1.5em;
+                width: auto;
+                height: auto;
+                overflow: visible;
+                text-decoration: underline;
+                z-index: 99999; /* has to be higher than the side panel */
+    }
+          </style><div class="skipnav"><a href="#content-wrapper">Skip to main content</a></div><header class="site-header"><nav class="site-header-navbar navbar navbar-fixed-top"><div class="navbar-container"><div class="navbar-header"><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".site-sidebar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><div id="logotype-container" class="pull-left"><a class="navbar-brand" href="https://doc.sitecore.com/xmc/" target="_blank" rel="noopener"><img id="logotype-pageheader" src="../css/image/corporate-logo.png" alt="Corporate logotype" data-role="logotype" class="logo"></img></a></div></div><div class="navbar-collapse collapse" id="navbar"></div></div></nav></header><div class="site-body"><div class="site-body-container"><div class="site-body-row"><aside xmlns:xinfo="http://ns.expertinfo.se/cms/xmlns/1.0" class="site-sidebar"><div class="site-sidebar-header"><a href="https://doc.sitecore.com/xmc/" target="_blank"><img id="logotype-pageheader" src="../css/image/corporate-logo.png" alt="Corporate logotype" data-role="logotype" class="logo"></img></a></div><form id="search-form" class="site-sidebar-search" autocomplete="off"><input type="text" class="form-control search-field" placeholder="Search" id="aa-search-input"></input></form><div id="toc-standalone-placeholder"></div></aside><div class="site-content"><div class="toolbar"><div class="toolbar-tools"><div id="navbar" class="navbar-collapse collapse"></div><div class="tool-print"><i class="fa fa-print" aria-hidden="true">print</i></div><div class="tool-search"><i class="fa fa-search" aria-hidden="true"></i></div><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".site-sidebar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button></div><div class="breadcrumb-container"><ul class="breadcrumb"><li class="breadcrumb-link"><a href="index-en.html">XM Cloud Documentation for Developers</a></li><li class="breadcrumb-link"><a href="key-tasks.html">Key tasks</a></li><li class="breadcrumb-node">Walkthrough: Deploying your front-end application to Vercel</li></ul></div></div><main><div id="top-pager"><ul class="pager"><li class="previous"><a accesskey="p" class="prev pull-left prev visible-lg visible-md" id="header-navigation-prev" href="walkthrough--synchronizing-items-between-remote-and-local-xm-cloud-instances-with-the-sitecore-cli.html#UUID-ea774113-cd61-7b24-60fe-f6a35fada016_section-idm4592227875654433066241395909">Prev</a></li><li class="next"><a accesskey="n" class="pull-right next visible-lg visible-md" id="header-navigation-next" href="walkthrough--deploying-your-front-end-application-to-vercel.html#UUID-2b7117df-08e2-be30-5e23-013085b79145_section-idm4544500166364833311209148255">Next</a></li></ul></div><article class="topic content-container" id="content-wrapper"><div id="topic-content" class="topic-content"><section xml:lang="en" lang="en" dir="ltr" class="section" data-origin-id="UUID-c2c2e88f-d743-b193-d944-baeca9537b6b" data-permalink="walkthrough--deploying-your-front-end-application-to-vercel.html" data-topic-level="1" data-relative-prefix="" data-time-modified="03/21/2023" data-publication-date="06/30/23" id="UUID-2b7117df-08e2-be30-5e23-013085b79145"><div class="titlepage"><div><div class="title"><h1 class="title" style="clear: both">Walkthrough: Deploying your front-end application to Vercel</h1></div><div><div class="abstract"><div class="abstract-title">Abstract</div><p>Deploy a JSS Next.js app to Vercel and configure webhooks for automatic redeployments.</p></div></div></div></div><p>Vercel is an all-in-one platform with Global CDNs supporting the deployment and delivery of static and <a class="link" href="https://jamstack.org/" target="_blank" rel="noopener">Jamstack</a> apps. Vercel has first-class support for Next.js.</p><p>This walkthrough describes how to:</p><div class="itemizedlist" id="UUID-2b7117df-08e2-be30-5e23-013085b79145_itemizedlist-idm1403331121195840"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Deploy the Next.js JSS app to Vercel.</p></li><li class="listitem"><p>Configure webhooks to redeploy the app with updated content.</p></li></ul></div><section dir="ltr" class="section" data-origin-id="" data-publication-date="06/30/23" id="UUID-2b7117df-08e2-be30-5e23-013085b79145_section-idm4544500166364833311209148255"><div class="titlepage"><div><div class="title"><h2 class="title" style="clear: both">Deploy the Next.js JSS app to Vercel</h2></div></div></div><p>Before deploying the Next.js JSS app, watch the following video guide for the deployment process. In the video, the publishing is done from the XM Cloud Content Management instance.</p><div class="mediaobject"><div class="video-container"><div class="videoobject"><iframe style="border:0;" allow="fullscreen *" src="https://www.youtube.com/embed/0UpihW2QxaQ"></iframe></div></div></div><p>To deploy the application to Vercel:</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p><a class="link linktype-component" href="generate-an-edge-api-key.html" title="Generate an Edge API key">Generate an Edge API token</a>. You use this token to verify that your content is published to Edge and as a value for the <code class="code">SITECORE_API_KEY</code> environment variable.</p></li><li class="listitem"><p><a class="link linktype-component" href="walkthrough--publishing-and-validating-content-on-an-xm-cloud-content-management-instance.html" title="Walkthrough: Publishing and validating content on an XM Cloud Content Management instance">Publish and verify that your content is on Edge</a> (CLI version).</p></li><li class="listitem"><p>Commit and push your changes to your GitHub repository.</p></li><li class="listitem"><p>In the browser, go to <a class="link" href="https://vercel.com/" target="_blank" rel="noopener">vercel.com</a>. Log in or sign up for an account.</p></li><li class="listitem"><p>In the Vercel dashboard, create a new project by importing your solution repository.</p></li><li class="listitem"><p>Enter the <span class="guilabel">Project name</span>.</p></li><li class="listitem"><p>In the <span class="guilabel">Root directory</span> field, enter the path to the root folder of the Next.js application. When using the Next.js XM Cloud Starter Kit, the path is <code class="code">src/sxastarter</code>.</p></li><li class="listitem"><p>Expand the <span class="guilabel">Environment variables</span> panel and enter the following variables:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><code class="code">SITECORE_API_KEY</code> - the Edge API key. Enter the previously generated token.</p></li><li class="listitem"><p><code class="code">GRAPH_QL_ENDPOINT</code> - <code class="code">https://edge.sitecorecloud.io/api/graphql/v1</code> . The <code class="code">GRAPH_QL_ENDPOINT</code> is required for Sitecore Experience Edge. By default, the endpoint is calculated using the resolved Sitecore API hostname and the <code class="code">config.graphQLEndpointPath</code> option defined in your <code class="code">package.json</code> file.</p></li><li class="listitem"><p><code class="code">JSS_APP_NAME</code> - the name of your site. For example, <span class="emphasis"><em>XM Cloud Demo</em></span>. It overrides the value set in the package.json file. Provide this variable if using the deployment to render a single site.</p></li><li class="listitem"><p>If your application includes the Next.js Personalize add-on, add the <a class="link linktype-component" href="the-next-js-personalize-add-on.html#UUID-c7590e6c-5fd6-6e80-eeae-f5d65fd4aa8e_section-idm4634652232780833297680134555" title="Environment variables">personalization-specific environment</a> variables.</p></li></ul></div></li><li class="listitem"><p>Click <span class="guilabel">Deploy</span>. You can see a deployment preview of the website.</p></li><li class="listitem"><p>When the Vercel deployment process finishes, verify that the deployed application hosted by Vercel renders as expected.</p></li></ol></div><div dir="ltr" class="tip"><h3 class="title">Tip</h3><p>This procedure uses Vercel as an example, but you can use other platforms to host your Next.js applications. You can host them using a <a class="link" href="https://nextjs.org/docs/deployment#self-hosting" target="_blank" rel="noopener">self-hosted Node.js server or Docker Images</a> or <a class="link" href="https://nextjs.org/docs/deployment#other-services" target="_blank" rel="noopener">services that support Next.js deployments</a>.</p></div></section><section dir="ltr" class="section" data-origin-id="" data-publication-date="06/30/23" id="UUID-2b7117df-08e2-be30-5e23-013085b79145_section-idm1403330981589882"><div class="titlepage"><div><div class="title"><h2 class="title" style="clear: both">Configure webhooks to redeploy the app with updated content</h2></div></div></div><p>You can use webhooks to trigger automatic redeployments of your Next.js app when new data reaches the Edge Delivery Platform.</p><p>You register, update, remove, or list webhooks using the <a class="link linktype-component" href="admin-api.html" title="Admin API">Experience Edge Admin API</a>.</p><div dir="ltr" class="note"><h3 class="title">Note</h3><p>Before using the Admin API for any operations, you must <a class="link linktype-component" href="request-a-jwt-for-experience-edge-xm-using-oauth.html" title="Request a JWT for Experience Edge XM using OAuth">obtain an authentication token</a>.</p></div><p>To trigger a new deployment on Vercel when your data reaches the Edge Delivery Platform:</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p><a class="link" href="https://vercel.com/docs/more/deploy-hooks#creating-a-deploy-hook" target="_blank" rel="noopener">Create a deploy hook</a> in Vercel and copy the URL of the webhook.</p></li><li class="listitem"><p>Send a <code class="code">POST</code> request to the Admin API webhook endpoint <code class="code">https://edge.sitecorecloud.io/api/admin/v1/webhook</code> with the following body:</p><pre class="programlisting">{
+  "label": "My new webhook",
+  "uri": "&lt;your-vercel-webhook-url&gt;",
+  "method": "POST",
+  "headers": {
+    "Authorization": "Bearer: &lt;edge-authentication-token&gt;"
+  }
+}
+</pre></li><li class="listitem"><p>To verify the request was completed successfully, check that you received a <code class="code">201 Created</code> response status code.</p></li><li class="listitem"><p>Make some changes in Sitecore and publish them.</p></li></ol></div><p>The publishing process is complete when the Experience Edge finishes processing the new data, and Vercel starts a new deployment.</p></section></section><div class="footer-content"><div class="glossary-definitions"></div></div><footer></footer></div></article><aside class="section-nav-container"><ul class="section-nav nav"><li><a href="#UUID-2b7117df-08e2-be30-5e23-013085b79145">Walkthrough: Deploying your front-end application to Vercel</a></li><li><a href="#UUID-2b7117df-08e2-be30-5e23-013085b79145_section-idm4544500166364833311209148255">Deploy the Next.js JSS app to Vercel</a></li><li><a href="#UUID-2b7117df-08e2-be30-5e23-013085b79145_section-idm1403330981589882">Configure webhooks to redeploy the app with updated content</a></li></ul></aside></main><div id="bottom-pager"><ul class="pager"><li class="previous"><a accesskey="p" class="prev pull-left prev visible-lg visible-md" id="header-navigation-prev" href="walkthrough--synchronizing-items-between-remote-and-local-xm-cloud-instances-with-the-sitecore-cli.html#UUID-ea774113-cd61-7b24-60fe-f6a35fada016_section-idm4592227875654433066241395909">Prev</a></li><li class="next"><a accesskey="n" class="pull-right next visible-lg visible-md" id="header-navigation-next" href="walkthrough--deploying-your-front-end-application-to-vercel.html#UUID-2b7117df-08e2-be30-5e23-013085b79145_section-idm4544500166364833311209148255">Next</a></li></ul></div><footer class="site-footer"><div class="inner"><div class="copyright"> © 2023 Sitecore </div><div class="date-modified"><span class="date-modified-text">Last modified: </span><span class="formatted-date">03/21/2023</span></div><div class="publication-date"><span class="publication-date-text">Publication date</span><span class="pubdate-delimiter">: </span><span class="formatted-date">06/30/23</span></div></div></footer></div></div></div></div><script type="text/javascript" src="//customer.cludo.com/scripts/bundles/search-script.min.js"></script><script>
+			var CludoSearch;
+			(function () {
+			var cludoSettings = {
+			customerId: 2063,
+			engineId: 12826,
+			language: 'en',
+			searchInputs: ["search-form","cludo-search-content-form","cludo-search-mobile-form"],
+			hideSearchFilters: true,
+			type: 'standardOverlay',
+			facets: ["Category", "ProductVer", "Product", "Version"],
+			useStandardSearchTemplate: false,
+			customerTemplate: "OverlayCopy",
+			searchApiUrl: 'https://api-eu1.cludo.com/api/v3'
+			};
+			CludoSearch= new Cludo(cludoSettings);
+			CludoSearch.init();
+			})();
+		</script><!-- www.Cludo.com Search body init script start --></body></html>

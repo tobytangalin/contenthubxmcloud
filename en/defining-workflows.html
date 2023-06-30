@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"></meta><meta name="format-detection" content="telephone=no"></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><meta name="search" content="default"></meta><meta name="use.ic" content="no"></meta><meta name="Audience - do not use" content=""></meta><meta name="clubot" content=""></meta><meta name="data model" content=""></meta><meta name="DxP type - Do Not Use" content=""></meta><meta name="media_icon" content=""></meta><meta name="product" content="XM Cloud"></meta><meta name="Publishing target" content="Production"></meta><meta name="Ready for publishing - do not use" content=""></meta><meta name="role" content="developers"></meta><meta name="topic_tripane" content=""></meta><meta name="version" content=""></meta><meta name="tocstandalone" content="yes"></meta><meta name="theme" content="1"></meta><meta name="search.placeholder" content="Search"></meta><meta name="search.results" content="Search results"></meta><meta name="no.search.results" content="No results found"></meta><script type="text/javascript">
+var theme = '1';
+
+			
+			window.versionsfile = '';
+
+
+			window.indexDict = new Array();
+			window.store = {};
+			window.portalLanguage = 'en';
+			window.enterKey = 'select';
+			
+			
+				var fuse_threshold = 0.3;
+			
+					var local_csh = false;
+				
+					var anchoroption = true;
+				var instantsearch_minlength = 1;
+						
+			var useanchorlinks = false;
+			
+					function addSearch(){
+					//not used with custom or elastic search
+					}
+				</script><title>Defining workflows</title><link rel="stylesheet" type="text/css" href="../css/docbook.css"></link><link rel="stylesheet" type="text/css" href="../css/font-awesome.css"></link><link rel="stylesheet" type="text/css" href="../css/roboto.font.css"></link><link rel="stylesheet" type="text/css" href="../css/theme1.css?version=20230630"></link><link rel="stylesheet" type="text/css" href="../css/theme1-colors.css?version=20230630"></link><link rel="stylesheet" type="text/css" href="../css/content-theme1.css?version=20230630"></link><link rel="stylesheet" type="text/css" href="../css/sm-core-css.css"></link><link rel="stylesheet" type="text/css" href="../css/sm-simple.css"></link><link rel="stylesheet" type="text/css" href="../css/style-print.css"></link><link rel="stylesheet" type="text/css" href="../css/style-common.css"></link><link rel="stylesheet" type="text/css" href="../css/style-modern-tables.css"></link><link rel="stylesheet" type="text/css" href="../css/graphical-lists.css"></link><link rel="stylesheet" type="text/css" href="/css/sitecore-custom-default-xmc.css?version=20230630"></link><script src="../js/jquery-3/jquery-3.4.1.min.js" type="text/javascript"></script><script src="../js/jquery-migrate-3.0.1.min.js" type="text/javascript"></script><script src="../js/materialize.min.js" type="text/javascript"></script><script src="../js/bootstrap.min.js" type="text/javascript"></script><script src="../js/purl.js" type="text/javascript"></script><script src="../js/jquery.smartmenus.js" type="text/javascript"></script><script src="js/toc.js?version=20230630" type="text/javascript"></script><script src="../js/create-toc.js" type="text/javascript"></script><script src="../js/html5-2-mp-common.js?version=20230630" type="text/javascript"></script><script src="../js/html5-2.js?version=20230630" type="text/javascript"></script><script src="../js/checklist.js" type="text/javascript"></script><script src="../js/clipboard.min.js" type="text/javascript"></script><script src="../js/csh.js" type="text/javascript"></script><script src="/js/layout-custom-script.js" type="text/javascript"></script><meta xmlns:xhtml="http://www.w3.org/1999/xhtml" name="generator" content="Paligo"></meta><meta name="description" content="Overview of how a workflow progresses through its states using actions and commands. Also covers the Initial State field, the Final checkbox and the __OnSave command."></meta><link rel="prev" href="workflow-reference.html" title="Workflow reference"></link><link rel="next" href="standard-and-custom-actions.html" title="Standard and custom actions"></link><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML" async="async"></script><link rel="icon" href="/favicon.ico" type="image/x-icon"></link><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent/3.1.1/cookieconsent.min.css"></link><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent/3.1.1/cookieconsent.min.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/3.0.1/js.cookie.min.js"></script><script type="text/javascript">var privacypolicy = 'https://www.sitecore.com/trust/privacy-policy';
+var consenttype = 'opt-out';
+</script><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-72664331-1"></script><script type="text/javascript">const measurementId = 'UA-72664331-1';
+
+						$(document).on('cookies.consented', () => {
+							window.dataLayer = window.dataLayer || [];
+							function gtag(){dataLayer.push(arguments)};
+
+							gtag('js', new Date());
+							gtag('config', measurementId);
+						});
+					</script><script type="text/javascript" src="../js/cookie-consent.js"></script><script type="text/javascript">
+				$(document).ready(function () {
+				$(".mediaobject img").addClass('materialboxed');
+				//Exclude images with links
+				$(".mediaobject a img").removeClass('materialboxed');
+				if (!document.documentMode) {
+				$('.materialboxed').materialbox();
+				}});
+			</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/googlecode.min.css"></link><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script><script type="text/javascript">
+			$(document).ready(function() {
+
+				$('pre:not(.embedcode)').each(function() {
+					/**
+					 * @type {string}
+					 */
+					var language = $(this).data('language');
+
+					if (language === 'plaintext' || language === 'text') {
+						$(this).addClass(language).addClass('hljs');
+						return true;
+					}
+					else {
+						var clone = this.cloneNode(true);
+						hljs.highlightBlock(clone);
+						$(this).empty().append($(clone).contents());
+						$(this).attr("class", $(clone).attr("class"));
+					}
+				});
+			});
+			</script><link href="//customer.cludo.com/assets/2063/10039/cludo-search.min.css" type="text/css" rel="stylesheet"></link></head><body class="theme1 colored-top page-toc current-toc-section-focus" data-spy="scroll" data-target=".section-nav-container" data-offset="100" data-link-prefix=""><style type="text/css">
+            div.skipnav {
+            }
+            div.skipnav a {
+                position: fixed;
+                left: -10000px;
+                top: 1.5em;
+                width: 1px;
+                height: 1px;
+                overflow: hidden;
+            }
+            div.skipnav a:focus, div.skipnav a:active, div.skipnav a:hover {
+                background: white;
+                color: black;
+                box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.5);
+                position: fixed;
+                left: 2em;
+                top: 1.5em;
+                width: auto;
+                height: auto;
+                overflow: visible;
+                text-decoration: underline;
+                z-index: 99999; /* has to be higher than the side panel */
+    }
+          </style><div class="skipnav"><a href="#content-wrapper">Skip to main content</a></div><header class="site-header"><nav class="site-header-navbar navbar navbar-fixed-top"><div class="navbar-container"><div class="navbar-header"><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".site-sidebar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><div id="logotype-container" class="pull-left"><a class="navbar-brand" href="https://doc.sitecore.com/xmc/" target="_blank" rel="noopener"><img id="logotype-pageheader" src="../css/image/corporate-logo.png" alt="Corporate logotype" data-role="logotype" class="logo"></img></a></div></div><div class="navbar-collapse collapse" id="navbar"></div></div></nav></header><div class="site-body"><div class="site-body-container"><div class="site-body-row"><aside xmlns:xinfo="http://ns.expertinfo.se/cms/xmlns/1.0" class="site-sidebar"><div class="site-sidebar-header"><a href="https://doc.sitecore.com/xmc/" target="_blank"><img id="logotype-pageheader" src="../css/image/corporate-logo.png" alt="Corporate logotype" data-role="logotype" class="logo"></img></a></div><form id="search-form" class="site-sidebar-search" autocomplete="off"><input type="text" class="form-control search-field" placeholder="Search" id="aa-search-input"></input></form><div id="toc-standalone-placeholder"></div></aside><div class="site-content"><div class="toolbar"><div class="toolbar-tools"><div id="navbar" class="navbar-collapse collapse"></div><div class="tool-print"><i class="fa fa-print" aria-hidden="true">print</i></div><div class="tool-search"><i class="fa fa-search" aria-hidden="true"></i></div><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".site-sidebar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button></div><div class="breadcrumb-container"><ul class="breadcrumb"><li class="breadcrumb-link"><a href="index-en.html">XM Cloud Documentation for Developers</a></li><li class="breadcrumb-link"><a href="xm-cloud-development.html">XM Cloud development</a></li><li class="breadcrumb-link"><a href="workflow.html">Workflow</a></li><li class="breadcrumb-link"><a href="workflow-reference.html">Workflow reference</a></li><li class="breadcrumb-node">Defining workflows</li></ul></div></div><main><div id="top-pager"><ul class="pager"><li class="previous"><a accesskey="p" class="prev pull-left prev visible-lg visible-md" id="header-navigation-prev" href="workflow-reference.html">Prev</a></li><li class="next"><a accesskey="n" class="pull-right next visible-lg visible-md" id="header-navigation-next" href="standard-and-custom-actions.html">Next</a></li></ul></div><article class="topic content-container" id="content-wrapper"><div id="topic-content" class="topic-content"><section xml:lang="en" lang="en" dir="ltr" class="section" data-origin-id="UUID-c37f73eb-88ff-4b22-b0f9-8a7e23cfff4b" data-permalink="defining-workflows.html" data-topic-level="1" data-relative-prefix="" data-time-modified="05/05/2021" data-publication-date="06/30/23" id="UUID-fbcc41ad-1931-46e8-43a9-2b18261bb0b2"><div class="titlepage"><div><div class="title"><h1 class="title" style="clear: both">Defining workflows<span id="UUID-fbcc41ad-1931-46e8-43a9-2b18261bb0b2_UUID-015d1a5b-48f3-548b-80b4-643771318dbb"></span></h1></div><div><div class="abstract"><div class="abstract-title">Abstract</div><p>Overview of how a workflow progresses through its states using actions and commands. Also covers the Initial State field, the Final checkbox and the __OnSave command.</p></div></div></div></div><p>Workflows, states, actions, and commands are all definition items stored in the content tree under <code class="code">/sitecore/System/Workflows</code>. Workflows contain states, and states contain actions and commands. Commands can also contain actions. Together the definition items define the steps a content item must pass through before it becomes publishable.</p><div class="mediaobject"><table class="image-viewport" style="border-collapse:collapse;border:0;
+                                width:200px;
+                            "><tr><td style="padding:0;"><img src="image/uuid-7379e16d-9304-1b18-2fc8-d85c5e140f4c.png" style="max-width: 200px; " alt="Workflow tree with states, actions and commands."></img></td></tr></table></div><h2 id="idm45599416824848" class="bridgehead">Workflows</h2><p>Workflows contain the <span class="guilabel">Initial State</span> field that defines the state a new content item is assigned when it becomes part of the workflow.</p><p>Workflows are based on the <span class="emphasis"><em>/sitecore/Templates/System/Workflow/Workflow</em></span> template.</p><h2 id="idm45599416823104" class="bridgehead">States</h2><p>States are the main building blocks of workflows and contain the <span class="guilabel">Final</span> checkbox. If the <span class="guilabel">Final</span> checkbox is selected, any content items in this state are publishable. When a user clicks <span class="guilabel">Edit</span> to lock a content item that is in the final state, Sitecore automatically creates a new version of the content item, checks out this version, and places it in the initial workflow state.</p><p>Content items do not necessarily need to flow through all the workflow's states. Actions and commands can send content items directly to any state.</p><p>States are based on the <span class="emphasis"><em>/sitecore/Templates/System/Workflow/State</em></span> template.</p><h2 id="idm45599416819808" class="bridgehead">Actions</h2><p>Actions can be associated with either states or commands and represent a method that Sitecore executes when the action is raised. An action acting as a subitem to a state is performed when the content item enters the state. An action acting as a subitem to a command is performed when the user executes the command.</p><p>Actions are based on the <span class="emphasis"><em>/sitecore/Templates/System/Workflow/Action</em></span> template.</p><h2 id="idm45599416818528" class="bridgehead">Commands</h2><p>Commands let users move a content item from one state to another. The Content Editor shows commands in the Content Editor on the <span class="guilabel">Review</span> tab, in the <span class="guilabel">Workflow</span> group, when the content item is in the corresponding state and the user has access to the commands. The same commands are also shown in the Workbox.</p><div class="mediaobject"><table class="image-viewport" style="border-collapse:collapse;border:0;
+                                width:500px;
+                            "><tr><td style="padding:0;"><img src="image/uuid-f7a1c664-36d9-89df-a349-42241697dc64.png" style="max-width: 500px; " alt="Commands shown as buttons in the Content Editor window, Review tab, Workflow group."></img></td></tr></table></div><p>Commands are based on the <span class="emphasis"><em>/sitecore/templates/System/Workflow/Command</em></span> template containing the following fields:</p><div class="informaltable table-responsive" id="UUID-fbcc41ad-1931-46e8-43a9-2b18261bb0b2_table-5d1c8c7f341e9-idm45839549956016"><table style="width:100%;" class="informaltable frame-void rules-rows"><thead><tr><th class="th"><p>Field</p></th><th class="th"><p>Value</p></th></tr></thead><tbody><tr><td class="td"><p><span class="guilabel">Next state</span></p></td><td class="td"><p>The state that the content item moves to when the action is executed.</p></td></tr><tr><td class="td"><p><span class="guilabel">Suppress Comment</span></p></td><td class="td"><p>Defines whether the system prompts the user to enter a comment when it executes a command. If the checkbox is cleared, users are prompted. If the checkbox is selected, users are not prompted.</p></td></tr></tbody></table></div><h2 id="idm45599416809440" class="bridgehead">The __OnSave command</h2><p>The <span class="emphasis"><em>__OnSave</em></span> command is a placeholder for actions that take place when a user saves changes to a content item in this state. The <span class="emphasis"><em>__OnSave</em></span> command's functionality is defined in the <code class="code">saveUI</code> pipeline in the <code class="code">web.config</code> file.</p><p>In the <span class="emphasis"><em>Sample Workflow</em></span>, the <span class="emphasis"><em>__OnSave</em></span> command triggers the Auto Submit Action. When users who are members of the Sitecore Minimal Page Editor role save an item, the Auto Submit Action moves the content item to another state. This is done automatically because members of the Sitecore Minimal Page Editor role do not have access to the workflow related commands in the Page Editor.</p><div class="mediaobject"><table class="image-viewport" style="border-collapse:collapse;border:0;
+                                width:200px;
+                            "><tr><td style="padding:0;"><img src="image/uuid-8488580f-33ee-aae1-b4c3-4d3b55000ed8.png" style="max-width: 200px; " alt="The __OnSave command with the Auto Submit Action as a subitem."></img></td></tr></table></div></section><div class="footer-content"><div class="glossary-definitions"></div></div><footer></footer></div></article></main><div id="bottom-pager"><ul class="pager"><li class="previous"><a accesskey="p" class="prev pull-left prev visible-lg visible-md" id="header-navigation-prev" href="workflow-reference.html">Prev</a></li><li class="next"><a accesskey="n" class="pull-right next visible-lg visible-md" id="header-navigation-next" href="standard-and-custom-actions.html">Next</a></li></ul></div><footer class="site-footer"><div class="inner"><div class="copyright"> © 2023 Sitecore </div><div class="date-modified"><span class="date-modified-text">Last modified: </span><span class="formatted-date">05/05/2021</span></div><div class="publication-date"><span class="publication-date-text">Publication date</span><span class="pubdate-delimiter">: </span><span class="formatted-date">06/30/23</span></div></div></footer></div></div></div></div><script type="text/javascript" src="//customer.cludo.com/scripts/bundles/search-script.min.js"></script><script>
+			var CludoSearch;
+			(function () {
+			var cludoSettings = {
+			customerId: 2063,
+			engineId: 12826,
+			language: 'en',
+			searchInputs: ["search-form","cludo-search-content-form","cludo-search-mobile-form"],
+			hideSearchFilters: true,
+			type: 'standardOverlay',
+			facets: ["Category", "ProductVer", "Product", "Version"],
+			useStandardSearchTemplate: false,
+			customerTemplate: "OverlayCopy",
+			searchApiUrl: 'https://api-eu1.cludo.com/api/v3'
+			};
+			CludoSearch= new Cludo(cludoSettings);
+			CludoSearch.init();
+			})();
+		</script><!-- www.Cludo.com Search body init script start --></body></html>

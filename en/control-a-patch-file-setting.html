@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"></meta><meta name="format-detection" content="telephone=no"></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><meta name="search" content="default"></meta><meta name="use.ic" content="no"></meta><meta name="Audience - do not use" content=""></meta><meta name="clubot" content=""></meta><meta name="data model" content=""></meta><meta name="DxP type - Do Not Use" content=""></meta><meta name="media_icon" content=""></meta><meta name="product" content="XM Cloud"></meta><meta name="Publishing target" content="Production"></meta><meta name="Ready for publishing - do not use" content=""></meta><meta name="role" content="developers"></meta><meta name="topic_tripane" content=""></meta><meta name="version" content=""></meta><meta name="tocstandalone" content="yes"></meta><meta name="theme" content="1"></meta><meta name="search.placeholder" content="Search"></meta><meta name="search.results" content="Search results"></meta><meta name="no.search.results" content="No results found"></meta><script type="text/javascript">
+var theme = '1';
+
+			
+			window.versionsfile = '';
+
+
+			window.indexDict = new Array();
+			window.store = {};
+			window.portalLanguage = 'en';
+			window.enterKey = 'select';
+			
+			
+				var fuse_threshold = 0.3;
+			
+					var local_csh = false;
+				
+					var anchoroption = true;
+				var instantsearch_minlength = 1;
+						
+			var useanchorlinks = false;
+			
+					function addSearch(){
+					//not used with custom or elastic search
+					}
+				</script><title>Control a patch file setting</title><link rel="stylesheet" type="text/css" href="../css/docbook.css"></link><link rel="stylesheet" type="text/css" href="../css/font-awesome.css"></link><link rel="stylesheet" type="text/css" href="../css/roboto.font.css"></link><link rel="stylesheet" type="text/css" href="../css/theme1.css?version=20230630"></link><link rel="stylesheet" type="text/css" href="../css/theme1-colors.css?version=20230630"></link><link rel="stylesheet" type="text/css" href="../css/content-theme1.css?version=20230630"></link><link rel="stylesheet" type="text/css" href="../css/sm-core-css.css"></link><link rel="stylesheet" type="text/css" href="../css/sm-simple.css"></link><link rel="stylesheet" type="text/css" href="../css/style-print.css"></link><link rel="stylesheet" type="text/css" href="../css/style-common.css"></link><link rel="stylesheet" type="text/css" href="../css/style-modern-tables.css"></link><link rel="stylesheet" type="text/css" href="../css/graphical-lists.css"></link><link rel="stylesheet" type="text/css" href="/css/sitecore-custom-default-xmc.css?version=20230630"></link><script src="../js/jquery-3/jquery-3.4.1.min.js" type="text/javascript"></script><script src="../js/jquery-migrate-3.0.1.min.js" type="text/javascript"></script><script src="../js/materialize.min.js" type="text/javascript"></script><script src="../js/bootstrap.min.js" type="text/javascript"></script><script src="../js/purl.js" type="text/javascript"></script><script src="../js/jquery.smartmenus.js" type="text/javascript"></script><script src="js/toc.js?version=20230630" type="text/javascript"></script><script src="../js/create-toc.js" type="text/javascript"></script><script src="../js/html5-2-mp-common.js?version=20230630" type="text/javascript"></script><script src="../js/html5-2.js?version=20230630" type="text/javascript"></script><script src="../js/checklist.js" type="text/javascript"></script><script src="../js/clipboard.min.js" type="text/javascript"></script><script src="../js/csh.js" type="text/javascript"></script><script src="/js/layout-custom-script.js" type="text/javascript"></script><meta xmlns:xhtml="http://www.w3.org/1999/xhtml" name="generator" content="Paligo"></meta><meta name="description" content="How to control whether a patched setting is merged with an existing setting or added as a new setting."></meta><meta name="keywords" content="Configuration"></meta><meta name="keywords" content="Configuration"></meta><link rel="prev" href="disable-a-patch-file.html#UUID-0654cc5b-b9aa-1a83-bb42-53010796488c_id__Disable_all_patch" title="Disable all patch files in a layer"></link><link rel="next" href="control-a-patch-file-setting.html#UUID-9569188d-f3d1-a56b-5fae-395aa8c59ce5_N1527495128937" title="Specify a node"></link><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML" async="async"></script><link rel="icon" href="/favicon.ico" type="image/x-icon"></link><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent/3.1.1/cookieconsent.min.css"></link><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent/3.1.1/cookieconsent.min.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/3.0.1/js.cookie.min.js"></script><script type="text/javascript">var privacypolicy = 'https://www.sitecore.com/trust/privacy-policy';
+var consenttype = 'opt-out';
+</script><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-72664331-1"></script><script type="text/javascript">const measurementId = 'UA-72664331-1';
+
+						$(document).on('cookies.consented', () => {
+							window.dataLayer = window.dataLayer || [];
+							function gtag(){dataLayer.push(arguments)};
+
+							gtag('js', new Date());
+							gtag('config', measurementId);
+						});
+					</script><script type="text/javascript" src="../js/cookie-consent.js"></script><script type="text/javascript">
+				$(document).ready(function () {
+				$(".mediaobject img").addClass('materialboxed');
+				//Exclude images with links
+				$(".mediaobject a img").removeClass('materialboxed');
+				if (!document.documentMode) {
+				$('.materialboxed').materialbox();
+				}});
+			</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/googlecode.min.css"></link><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script><script type="text/javascript">
+			$(document).ready(function() {
+
+				$('pre:not(.embedcode)').each(function() {
+					/**
+					 * @type {string}
+					 */
+					var language = $(this).data('language');
+
+					if (language === 'plaintext' || language === 'text') {
+						$(this).addClass(language).addClass('hljs');
+						return true;
+					}
+					else {
+						var clone = this.cloneNode(true);
+						hljs.highlightBlock(clone);
+						$(this).empty().append($(clone).contents());
+						$(this).attr("class", $(clone).attr("class"));
+					}
+				});
+			});
+			</script><link href="//customer.cludo.com/assets/2063/10039/cludo-search.min.css" type="text/css" rel="stylesheet"></link></head><body class="theme1 colored-top page-toc current-toc-section-focus" data-spy="scroll" data-target=".section-nav-container" data-offset="100" data-link-prefix=""><style type="text/css">
+            div.skipnav {
+            }
+            div.skipnav a {
+                position: fixed;
+                left: -10000px;
+                top: 1.5em;
+                width: 1px;
+                height: 1px;
+                overflow: hidden;
+            }
+            div.skipnav a:focus, div.skipnav a:active, div.skipnav a:hover {
+                background: white;
+                color: black;
+                box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.5);
+                position: fixed;
+                left: 2em;
+                top: 1.5em;
+                width: auto;
+                height: auto;
+                overflow: visible;
+                text-decoration: underline;
+                z-index: 99999; /* has to be higher than the side panel */
+    }
+          </style><div class="skipnav"><a href="#content-wrapper">Skip to main content</a></div><header class="site-header"><nav class="site-header-navbar navbar navbar-fixed-top"><div class="navbar-container"><div class="navbar-header"><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".site-sidebar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><div id="logotype-container" class="pull-left"><a class="navbar-brand" href="https://doc.sitecore.com/xmc/" target="_blank" rel="noopener"><img id="logotype-pageheader" src="../css/image/corporate-logo.png" alt="Corporate logotype" data-role="logotype" class="logo"></img></a></div></div><div class="navbar-collapse collapse" id="navbar"></div></div></nav></header><div class="site-body"><div class="site-body-container"><div class="site-body-row"><aside xmlns:xinfo="http://ns.expertinfo.se/cms/xmlns/1.0" class="site-sidebar"><div class="site-sidebar-header"><a href="https://doc.sitecore.com/xmc/" target="_blank"><img id="logotype-pageheader" src="../css/image/corporate-logo.png" alt="Corporate logotype" data-role="logotype" class="logo"></img></a></div><form id="search-form" class="site-sidebar-search" autocomplete="off"><input type="text" class="form-control search-field" placeholder="Search" id="aa-search-input"></input></form><div id="toc-standalone-placeholder"></div></aside><div class="site-content"><div class="toolbar"><div class="toolbar-tools"><div id="navbar" class="navbar-collapse collapse"></div><div class="tool-print"><i class="fa fa-print" aria-hidden="true">print</i></div><div class="tool-search"><i class="fa fa-search" aria-hidden="true"></i></div><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".site-sidebar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button></div><div class="breadcrumb-container"><ul class="breadcrumb"><li class="breadcrumb-link"><a href="index-en.html">XM Cloud Documentation for Developers</a></li><li class="breadcrumb-link"><a href="xm-cloud-development.html">XM Cloud development</a></li><li class="breadcrumb-link"><a href="miscellaneous-development-tasks.html">Miscellaneous development tasks</a></li><li class="breadcrumb-link"><a href="use-a-patch-file-to-customize-the-sitecore-configuration.html">Use a patch file to customize the Sitecore configuration</a></li><li class="breadcrumb-node">Control a patch file setting</li></ul></div></div><main><div id="top-pager"><ul class="pager"><li class="previous"><a accesskey="p" class="prev pull-left prev visible-lg visible-md" id="header-navigation-prev" href="disable-a-patch-file.html#UUID-0654cc5b-b9aa-1a83-bb42-53010796488c_id__Disable_all_patch">Prev</a></li><li class="next"><a accesskey="n" class="pull-right next visible-lg visible-md" id="header-navigation-next" href="control-a-patch-file-setting.html#UUID-9569188d-f3d1-a56b-5fae-395aa8c59ce5_N1527495128937">Next</a></li></ul></div><article class="topic content-container" id="content-wrapper"><div id="topic-content" class="topic-content"><section xml:lang="en" lang="en" dir="ltr" class="section taxonomy-audience---do-not-use-developer" data-origin-id="UUID-4c92aca6-7c4f-e868-0b95-c56315e13735" data-permalink="control-a-patch-file-setting.html" data-topic-level="1" data-relative-prefix="" data-time-modified="09/23/2022" data-publication-date="06/30/23" id="UUID-9569188d-f3d1-a56b-5fae-395aa8c59ce5"><div class="titlepage"><div><div class="title"><h1 class="title" style="clear: both">Control a patch file setting</h1></div><div><div class="abstract"><div class="abstract-title">Abstract</div><p>How to control whether a patched setting is merged with an existing setting or added as a new setting.</p></div></div></div></div><p>When you use patch files to change the <span class="phrase">XM Cloud</span> configuration, you must identify the node you want to add or update. By default, <span class="phrase">XM Cloud</span> updates existing nodes with the patched attributes, but you can use significant attributes to force <span class="phrase">XM Cloud</span> to add new nodes instead.</p><p>This topic explains how to:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><a xml:lang="en" lang="en" dir="ltr" class="link" href="control-a-patch-file-setting.html#UUID-9569188d-f3d1-a56b-5fae-395aa8c59ce5_N1527495128937" title="Specify a node">Specify a node</a></p></li><li class="listitem"><p><a xml:lang="en" lang="en" dir="ltr" class="link" href="control-a-patch-file-setting.html#UUID-9569188d-f3d1-a56b-5fae-395aa8c59ce5_N1527496376330" title="Use a significant attribute">Use a significant attribute</a></p></li><li class="listitem"><p><a xml:lang="en" lang="en" dir="ltr" class="link" href="control-a-patch-file-setting.html#UUID-9569188d-f3d1-a56b-5fae-395aa8c59ce5_N1527496364526" title="Add a significant attribute definition">Add a significant attribute definition</a></p></li></ul></div><section dir="ltr" class="section" data-origin-id="" data-publication-date="06/30/23" id="UUID-9569188d-f3d1-a56b-5fae-395aa8c59ce5_N1527495128937"><div class="titlepage"><div><div class="title"><h2 class="title" style="clear: both">Specify a node</h2></div></div></div><p>You must specify which node you want to update.</p><p>To specify the node:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Specify the element name and its place in the XML structure in the <code class="code">Sitecore.config</code> file.</p></li></ul></div><p>For example, the <code class="code">AliasActive</code> setting is part of the <code class="code">&lt;settings&gt;</code> element node, which is part of the <code class="code">&lt;sitecore&gt;</code> element node. To change the value of the <code class="code">AliasActive</code> setting to false you must include these element nodes in the patch file:</p><pre class="programlisting">&lt;sitecore&gt;
+ &lt;settings&gt;
+   &lt;setting name="AliasActive"&gt;
+     &lt;patch:attribute name="value"&gt;False&lt;/patch:attribute&gt;
+   &lt;/setting&gt;
+ &lt;/settings&gt;
+&lt;/sitecore&gt;</pre></section><section dir="ltr" class="section" data-origin-id="" data-publication-date="06/30/23" id="UUID-9569188d-f3d1-a56b-5fae-395aa8c59ce5_N1527496376330"><div class="titlepage"><div><div class="title"><h2 class="title" style="clear: both">Use a significant attribute</h2></div></div></div><p>When <span class="phrase">XM Cloud</span> processes attributes from patch files, it looks for existing nodes in the <code class="code">Sitecore.config</code> file that fit the attributes in the patch file node. If it finds one, by default, it merges the attributes in the patch file with the existing node.</p><p>For example, you can have two patch files that both add a script file to the <code class="code">&lt;clientscripts&gt;</code> node in the <code class="code">Sitecore.config</code> file:</p><pre class="programlisting">&lt;configuration xmlns:patch="http://www.sitecore.net/xmlconfig/"&gt;
+  &lt;sitecore&gt;
+ &lt;clientscripts&gt;
+ &lt;script src="script-1.js" language="javascript" /&gt;
+ &lt;/clientscripts&gt;
+  &lt;/sitecore&gt;
+&lt;/configuration&gt;</pre><pre class="programlisting">&lt;configuration xmlns:patch="http://www.sitecore.net/xmlconfig/"&gt;
+  &lt;sitecore&gt;
+ &lt;clientscripts&gt;
+ &lt;script src="script-2.js" language="javascript" att1="test" /&gt;
+ &lt;/clientscripts&gt;
+  &lt;/sitecore&gt;
+&lt;/configuration&gt;</pre><p>When <span class="phrase">XM Cloud</span> processes the first patch file, it adds the <code class="code">&lt;script src="script-1.js"&gt;</code> element. When it processes the second patch file, it merges the new information with the first <code class="code">&lt;script&gt;</code> element, updating the <code class="code">src</code> attribute and adding the <code class="code">att1</code> attribute. The final result is:</p><pre class="programlisting">&lt;sitecore&gt;
+ &lt;clientscripts&gt;
+   &lt;script src="script-2.js" language="javascript" att1="test" patch:source="Add-script-2.config"
+/&gt;
+ &lt;/clientscripts&gt;
+&lt;/sitecore&gt;</pre><p>If you want to add the node from the second patch file as a new node, you can add a significant attribute to the node definition. <span class="phrase">XM Cloud</span> never merges significant attributes, so if the second <code class="code">script</code> element includes a significant attribute with a unique value, <span class="phrase">XM Cloud</span> adds it as a new element. For example, you can add a <code class="code">desc</code> attribute to the <code class="code">script</code> element in the second patch file:</p><pre class="programlisting">&lt;configuration xmlns:patch="http://www.sitecore.net/xmlconfig/"&gt;
+  &lt;sitecore&gt;
+ &lt;clientscripts&gt;
+ &lt;script src="script-2.js" language="javascript" att1="test" desc="new script" /&gt;
+ &lt;/clientscripts&gt;
+  &lt;/sitecore&gt;
+&lt;/configuration&gt;</pre><p>The result after processing both patch files is now:</p><pre class="programlisting">&lt;sitecore&gt;
+    &lt;clientscripts&gt;
+        &lt;script src="script-1.js" language="javascript" patch:source="Add-script-1.config" /&gt;
+        &lt;script desc="new script" src="script-2.js" 
+            language="javascript" att1="test" patch:source="Add-script-2.config" /&gt;
+    &lt;/clientscripts&gt;
+&lt;/sitecore&gt;</pre><p>You can use the following significant attributes in this way:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>ancestor</p></li><li class="listitem"><p>assembly</p></li><li class="listitem"><p>builderType</p></li><li class="listitem"><p>category</p></li><li class="listitem"><p>channelId</p></li><li class="listitem"><p>comment</p></li><li class="listitem"><p>contains</p></li><li class="listitem"><p>creationType</p></li><li class="listitem"><p>desc</p></li><li class="listitem"><p>description</p></li><li class="listitem"><p>displayName</p></li><li class="listitem"><p>extensions</p></li><li class="listitem"><p>facetKey</p></li><li class="listitem"><p>fieldId</p></li><li class="listitem"><p>fieldName</p></li><li class="listitem"><p>fieldType</p></li><li class="listitem"><p>fieldTypeName</p></li><li class="listitem"><p>file</p></li><li class="listitem"><p>find</p></li><li class="listitem"><p>folder</p></li><li class="listitem"><p>groupName</p></li><li class="listitem"><p>hint</p></li><li class="listitem"><p>hostname</p></li><li class="listitem"><p>id</p></li><li class="listitem"><p>implementationType</p></li><li class="listitem"><p>innerText</p></li><li class="listitem"><p>interface</p></li><li class="listitem"><p>key</p></li><li class="listitem"><p>messageDataType</p></li><li class="listitem"><p>messageItemBaseType</p></li><li class="listitem"><p>method</p></li><li class="listitem"><p>name</p></li><li class="listitem"><p>namespace</p></li><li class="listitem"><p>networkName</p></li><li class="listitem"><p>originalKey</p></li><li class="listitem"><p>path</p></li><li class="listitem"><p>postingConfiguration</p></li><li class="listitem"><p>prefix</p></li><li class="listitem"><p>providerName</p></li><li class="listitem"><p>querystring</p></li><li class="listitem"><p>ref</p></li><li class="listitem"><p>region</p></li><li class="listitem"><p>serviceType</p></li><li class="listitem"><p>sitecoreKey</p></li><li class="listitem"><p>statusCode</p></li><li class="listitem"><p>tagName</p></li><li class="listitem"><p>templateId</p></li><li class="listitem"><p>trafficType</p></li><li class="listitem"><p>trigger</p></li><li class="listitem"><p>type</p></li><li class="listitem"><p>typeConverter</p></li><li class="listitem"><p>typeName</p></li><li class="listitem"><p>uid</p></li><li class="listitem"><p>urlReferrerHost</p></li><li class="listitem"><p>value</p></li><li class="listitem"><p>verb</p></li><li class="listitem"><p>viewName</p></li><li class="listitem"><p>with</p></li><li class="listitem"><p>xmlControl</p></li><li class="listitem"><p>xmlns</p></li></ul></div><p>To change the value of a significant attribute in an existing node:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Use the patch:attribute syntax:</p><pre class="programlisting">&lt;sitecore&gt;
+ &lt;clientscript &gt;
+   &lt;script src="script-1.js" att1="test"&gt;
+     &lt;patch:attribute name="desc"&gt;new description&lt;/patch:attribute&gt;
+   &lt;/script&gt;
+ &lt;/clientscript&gt;
+&lt;/sitecore&gt;</pre></li></ul></div></section><section dir="ltr" class="section" data-origin-id="" data-publication-date="06/30/23" id="UUID-9569188d-f3d1-a56b-5fae-395aa8c59ce5_N1527496364526"><div class="titlepage"><div><div class="title"><h2 class="title" style="clear: both">Add a significant attribute definition</h2></div></div></div><p>If you cannot use any of the default significant attributes, you can define your own.</p><p>To define your own significant attribute:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Add the significant attribute to the <code class="code">Sitecore.config</code> file, within the <code class="code">&lt;sitecore&gt;</code> element node.</p></li></ul></div><p>For example, the following adds a significant attribute called <code class="code">my-own-attribute</code>:</p><pre class="programlisting">&lt;patch&gt;
+  &lt;significantAttributes&gt;
+  &lt;add name="my-own-attribute"/&gt; 
+  &lt;/significantAttributes&gt;
+&lt;/patch&gt;</pre><div dir="ltr" class="important"><h3 class="title">Important</h3><p><span class="phrase">XM Cloud</span> processes its list of significant attributes before it processes the patch files. You must therefore add new significant attributes directly to the <code class="code">Sitecore.config</code> file and you cannot add them through a patch file. Only use this method if you absolutely cannot use any of the predefined attributes.</p></div></section></section><div class="footer-content"><div class="glossary-definitions"></div></div><footer></footer></div></article><aside class="section-nav-container"><ul class="section-nav nav"><li><a href="#UUID-9569188d-f3d1-a56b-5fae-395aa8c59ce5">Control a patch file setting</a></li><li><a href="#UUID-9569188d-f3d1-a56b-5fae-395aa8c59ce5_N1527495128937">Specify a node</a></li><li><a href="#UUID-9569188d-f3d1-a56b-5fae-395aa8c59ce5_N1527496376330">Use a significant attribute</a></li><li><a href="#UUID-9569188d-f3d1-a56b-5fae-395aa8c59ce5_N1527496364526">Add a significant attribute definition</a></li></ul></aside></main><div id="bottom-pager"><ul class="pager"><li class="previous"><a accesskey="p" class="prev pull-left prev visible-lg visible-md" id="header-navigation-prev" href="disable-a-patch-file.html#UUID-0654cc5b-b9aa-1a83-bb42-53010796488c_id__Disable_all_patch">Prev</a></li><li class="next"><a accesskey="n" class="pull-right next visible-lg visible-md" id="header-navigation-next" href="control-a-patch-file-setting.html#UUID-9569188d-f3d1-a56b-5fae-395aa8c59ce5_N1527495128937">Next</a></li></ul></div><footer class="site-footer"><div class="inner"><div class="copyright"> © 2023 Sitecore </div><div class="date-modified"><span class="date-modified-text">Last modified: </span><span class="formatted-date">09/23/2022</span></div><div class="publication-date"><span class="publication-date-text">Publication date</span><span class="pubdate-delimiter">: </span><span class="formatted-date">06/30/23</span></div></div></footer></div></div></div></div><script type="text/javascript" src="//customer.cludo.com/scripts/bundles/search-script.min.js"></script><script>
+			var CludoSearch;
+			(function () {
+			var cludoSettings = {
+			customerId: 2063,
+			engineId: 12826,
+			language: 'en',
+			searchInputs: ["search-form","cludo-search-content-form","cludo-search-mobile-form"],
+			hideSearchFilters: true,
+			type: 'standardOverlay',
+			facets: ["Category", "ProductVer", "Product", "Version"],
+			useStandardSearchTemplate: false,
+			customerTemplate: "OverlayCopy",
+			searchApiUrl: 'https://api-eu1.cludo.com/api/v3'
+			};
+			CludoSearch= new Cludo(cludoSettings);
+			CludoSearch.init();
+			})();
+		</script><!-- www.Cludo.com Search body init script start --></body></html>

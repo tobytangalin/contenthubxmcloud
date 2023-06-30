@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"></meta><meta name="format-detection" content="telephone=no"></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><meta name="search" content="default"></meta><meta name="use.ic" content="no"></meta><meta name="Audience - do not use" content=""></meta><meta name="clubot" content=""></meta><meta name="data model" content=""></meta><meta name="DxP type - Do Not Use" content=""></meta><meta name="media_icon" content=""></meta><meta name="product" content="XM Cloud"></meta><meta name="Publishing target" content="Production"></meta><meta name="Ready for publishing - do not use" content=""></meta><meta name="role" content="developers"></meta><meta name="topic_tripane" content=""></meta><meta name="version" content=""></meta><meta name="tocstandalone" content="yes"></meta><meta name="theme" content="1"></meta><meta name="search.placeholder" content="Search"></meta><meta name="search.results" content="Search results"></meta><meta name="no.search.results" content="No results found"></meta><script type="text/javascript">
+var theme = '1';
+
+			
+			window.versionsfile = '';
+
+
+			window.indexDict = new Array();
+			window.store = {};
+			window.portalLanguage = 'en';
+			window.enterKey = 'select';
+			
+			
+				var fuse_threshold = 0.3;
+			
+					var local_csh = false;
+				
+					var anchoroption = true;
+				var instantsearch_minlength = 1;
+						
+			var useanchorlinks = false;
+			
+					function addSearch(){
+					//not used with custom or elastic search
+					}
+				</script><title>Adding Manifest definitions in code-first JSS apps</title><link rel="stylesheet" type="text/css" href="../css/docbook.css"></link><link rel="stylesheet" type="text/css" href="../css/font-awesome.css"></link><link rel="stylesheet" type="text/css" href="../css/roboto.font.css"></link><link rel="stylesheet" type="text/css" href="../css/theme1.css?version=20230630"></link><link rel="stylesheet" type="text/css" href="../css/theme1-colors.css?version=20230630"></link><link rel="stylesheet" type="text/css" href="../css/content-theme1.css?version=20230630"></link><link rel="stylesheet" type="text/css" href="../css/sm-core-css.css"></link><link rel="stylesheet" type="text/css" href="../css/sm-simple.css"></link><link rel="stylesheet" type="text/css" href="../css/style-print.css"></link><link rel="stylesheet" type="text/css" href="../css/style-common.css"></link><link rel="stylesheet" type="text/css" href="../css/style-modern-tables.css"></link><link rel="stylesheet" type="text/css" href="../css/graphical-lists.css"></link><link rel="stylesheet" type="text/css" href="/css/sitecore-custom-default-xmc.css?version=20230630"></link><script src="../js/jquery-3/jquery-3.4.1.min.js" type="text/javascript"></script><script src="../js/jquery-migrate-3.0.1.min.js" type="text/javascript"></script><script src="../js/materialize.min.js" type="text/javascript"></script><script src="../js/bootstrap.min.js" type="text/javascript"></script><script src="../js/purl.js" type="text/javascript"></script><script src="../js/jquery.smartmenus.js" type="text/javascript"></script><script src="js/toc.js?version=20230630" type="text/javascript"></script><script src="../js/create-toc.js" type="text/javascript"></script><script src="../js/html5-2-mp-common.js?version=20230630" type="text/javascript"></script><script src="../js/html5-2.js?version=20230630" type="text/javascript"></script><script src="../js/checklist.js" type="text/javascript"></script><script src="../js/clipboard.min.js" type="text/javascript"></script><script src="../js/csh.js" type="text/javascript"></script><script src="/js/layout-custom-script.js" type="text/javascript"></script><meta xmlns:xhtml="http://www.w3.org/1999/xhtml" name="generator" content="Paligo"></meta><meta name="description" content="Add items to the Manifest with Manifest API instance methods"></meta><link rel="prev" href="types-of-jss-manifest-data.html#UUID-4d691396-4099-27f6-1cf2-2f8f1abaddf2_section-idm4635831635702432672407674895" title="Dictionary data"></link><link rel="next" href="adding-manifest-definitions-in-code-first-jss-apps.html#UUID-169e2405-bc5e-923a-3568-8d999455e19b_section-idm4570943908651232634005322234" title="Manifest API instance methods"></link><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML" async="async"></script><link rel="icon" href="/favicon.ico" type="image/x-icon"></link><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent/3.1.1/cookieconsent.min.css"></link><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent/3.1.1/cookieconsent.min.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/3.0.1/js.cookie.min.js"></script><script type="text/javascript">var privacypolicy = 'https://www.sitecore.com/trust/privacy-policy';
+var consenttype = 'opt-out';
+</script><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-72664331-1"></script><script type="text/javascript">const measurementId = 'UA-72664331-1';
+
+						$(document).on('cookies.consented', () => {
+							window.dataLayer = window.dataLayer || [];
+							function gtag(){dataLayer.push(arguments)};
+
+							gtag('js', new Date());
+							gtag('config', measurementId);
+						});
+					</script><script type="text/javascript" src="../js/cookie-consent.js"></script><script type="text/javascript">
+				$(document).ready(function () {
+				$(".mediaobject img").addClass('materialboxed');
+				//Exclude images with links
+				$(".mediaobject a img").removeClass('materialboxed');
+				if (!document.documentMode) {
+				$('.materialboxed').materialbox();
+				}});
+			</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/googlecode.min.css"></link><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script><script type="text/javascript">
+			$(document).ready(function() {
+
+				$('pre:not(.embedcode)').each(function() {
+					/**
+					 * @type {string}
+					 */
+					var language = $(this).data('language');
+
+					if (language === 'plaintext' || language === 'text') {
+						$(this).addClass(language).addClass('hljs');
+						return true;
+					}
+					else {
+						var clone = this.cloneNode(true);
+						hljs.highlightBlock(clone);
+						$(this).empty().append($(clone).contents());
+						$(this).attr("class", $(clone).attr("class"));
+					}
+				});
+			});
+			</script><link href="//customer.cludo.com/assets/2063/10039/cludo-search.min.css" type="text/css" rel="stylesheet"></link></head><body class="theme1 colored-top page-toc current-toc-section-focus" data-spy="scroll" data-target=".section-nav-container" data-offset="100" data-link-prefix=""><style type="text/css">
+            div.skipnav {
+            }
+            div.skipnav a {
+                position: fixed;
+                left: -10000px;
+                top: 1.5em;
+                width: 1px;
+                height: 1px;
+                overflow: hidden;
+            }
+            div.skipnav a:focus, div.skipnav a:active, div.skipnav a:hover {
+                background: white;
+                color: black;
+                box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.5);
+                position: fixed;
+                left: 2em;
+                top: 1.5em;
+                width: auto;
+                height: auto;
+                overflow: visible;
+                text-decoration: underline;
+                z-index: 99999; /* has to be higher than the side panel */
+    }
+          </style><div class="skipnav"><a href="#content-wrapper">Skip to main content</a></div><header class="site-header"><nav class="site-header-navbar navbar navbar-fixed-top"><div class="navbar-container"><div class="navbar-header"><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".site-sidebar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><div id="logotype-container" class="pull-left"><a class="navbar-brand" href="https://doc.sitecore.com/xmc/" target="_blank" rel="noopener"><img id="logotype-pageheader" src="../css/image/corporate-logo.png" alt="Corporate logotype" data-role="logotype" class="logo"></img></a></div></div><div class="navbar-collapse collapse" id="navbar"></div></div></nav></header><div class="site-body"><div class="site-body-container"><div class="site-body-row"><aside xmlns:xinfo="http://ns.expertinfo.se/cms/xmlns/1.0" class="site-sidebar"><div class="site-sidebar-header"><a href="https://doc.sitecore.com/xmc/" target="_blank"><img id="logotype-pageheader" src="../css/image/corporate-logo.png" alt="Corporate logotype" data-role="logotype" class="logo"></img></a></div><form id="search-form" class="site-sidebar-search" autocomplete="off"><input type="text" class="form-control search-field" placeholder="Search" id="aa-search-input"></input></form><div id="toc-standalone-placeholder"></div></aside><div class="site-content"><div class="toolbar"><div class="toolbar-tools"><div id="navbar" class="navbar-collapse collapse"></div><div class="tool-print"><i class="fa fa-print" aria-hidden="true">print</i></div><div class="tool-search"><i class="fa fa-search" aria-hidden="true"></i></div><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".site-sidebar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button></div><div class="breadcrumb-container"><ul class="breadcrumb"><li class="breadcrumb-link"><a href="index-en.html">XM Cloud Documentation for Developers</a></li><li class="breadcrumb-link"><a href="sitecore-javascript-rendering-sdks--jss-.html">Sitecore JavaScript Rendering SDKs (JSS)</a></li><li class="breadcrumb-link"><a href="architecture-overview.html">Architecture overview</a></li><li class="breadcrumb-link"><a href="jss-services-and-apis.html">JSS services and APIs</a></li><li class="breadcrumb-link"><a href="jss-manifest-api.html">JSS Manifest API</a></li><li class="breadcrumb-node">Adding Manifest definitions in code-first JSS apps</li></ul></div></div><main><div id="top-pager"><ul class="pager"><li class="previous"><a accesskey="p" class="prev pull-left prev visible-lg visible-md" id="header-navigation-prev" href="types-of-jss-manifest-data.html#UUID-4d691396-4099-27f6-1cf2-2f8f1abaddf2_section-idm4635831635702432672407674895">Prev</a></li><li class="next"><a accesskey="n" class="pull-right next visible-lg visible-md" id="header-navigation-next" href="adding-manifest-definitions-in-code-first-jss-apps.html#UUID-169e2405-bc5e-923a-3568-8d999455e19b_section-idm4570943908651232634005322234">Next</a></li></ul></div><article class="topic content-container" id="content-wrapper"><div id="topic-content" class="topic-content"><section xml:lang="en" lang="en" dir="ltr" class="section" data-origin-id="UUID-39ef07e1-d801-14f1-5daa-5eaaa48ae813" data-permalink="adding-manifest-definitions-in-code-first-jss-apps.html" data-topic-level="1" data-relative-prefix="" data-time-modified="06/23/2023" data-publication-date="06/30/23" id="UUID-169e2405-bc5e-923a-3568-8d999455e19b"><div class="titlepage"><div><div class="title"><h1 class="title" style="clear: both">Adding Manifest definitions in code-first JSS apps<span id="UUID-169e2405-bc5e-923a-3568-8d999455e19b_UUID-5403611a-ff95-25c8-8d6f-07aefcc262b1"></span></h1></div><div><div class="abstract"><div class="abstract-title">Abstract</div><p>Add items to the Manifest with Manifest API instance methods</p></div></div></div></div><p>When scaffolding components, if you have not modified the script to remove the functionality, JSS creates Manifest definitions for your new components automatically. However, if you simply create component files, you can add them to the Manifest items using Manifest API instance methods. You can also use Manifest API instance methods to <a class="link linktype-component" href="create-a-route-type-with-fields-in-jss-code-first-development.html" title="Create a route type with fields in JSS code-first development">register new route types</a> or other types of items.</p><p>You use these methods in manifest definition files located in the <code class="code">sitecore/definitions/</code> directory. The file name must follow the convention <code class="code">*.sitecore.[js|ts]</code>, where the asterisk stands for a component name, such as <code class="code">SearchBox.sitecore.js</code> , or an item type, such as <code class="code">placeholders.sitecore.js</code>.</p><section dir="ltr" class="section" data-origin-id="" data-publication-date="06/30/23" id="UUID-169e2405-bc5e-923a-3568-8d999455e19b_section-idm4570943908651232634005322234"><div class="titlepage"><div><div class="title"><h2 class="title" style="clear: both">Manifest API instance methods</h2></div></div></div><p>The Manifest API provides the following instance methods for registering :</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><code class="code">addComponent(...components: component[])</code> - registers a JSS app component definition.</p></li><li class="listitem"><p><code class="code">addContent(...contents: content[])</code>.</p></li><li class="listitem"><p><code class="code">addRoute(...routes: route[])</code> - adds an app route data definition.</p></li><li class="listitem"><p><code class="code">addRouteType(...routeTypes: template[])</code> - adds a Sitecore template type for a route.</p></li><li class="listitem"><p><code class="code">addTemplate(...templates: template[])</code>.</p></li><li class="listitem"><p><code class="code">addPlaceholder(...templates: template[])</code> - adds a placeholder definition to the manifest.</p></li></ul></div><section dir="ltr" class="section" data-origin-id="" data-publication-date="06/30/23" id="idm45599296793568"><div class="titlepage"><div><div class="title"><h3 class="title">Manifest objects</h3></div></div></div><p>When using Manifest API instance methods to add manifest definitions, your definitions must match the following schemas:</p><div dir="ltr" class="tip"><h3 class="title">Tip</h3><p>Using an editor that understands JS typings (such as VS Code) accesses type information within the editor, including helpful annotations.</p></div><section dir="ltr" class="section" data-origin-id="" data-publication-date="06/30/23" id="idm45599296791872"><div class="titlepage"><div><div class="title"><h4 class="title">component</h4></div></div></div><pre class="programlisting plaintext" data-language="plaintext">{
+  id: string:optional,
+  name: string:required,
+  displayName: string:optional,
+  fields: fields:optional,
+  params: params:optional,
+  placeholders: placeholders:optional, // placeholders exposed by rendering
+  allowedPlaceholders: array[string]:optional, // placeholders component is allowed in (normally inferred by route data)
+  displayFieldEditorButton: boolean:optional = true,
+  fieldEditorFields: array[string]:optional = all fields, // field names
+  customExperienceButtons: array[string]:optional, // names or IDs
+  insertOptions: array[string]:optional, // template names or IDs
+  graphQLQuery: string:optional, // see GraphQL integrated documentation
+  // note: while these use the same structure as a route, they do not use placeholders and are not mapped as routes. 
+  // This enables adding child items to the datasource.
+  children: array[route] 
+}
+</pre><div dir="ltr" class="note"><h3 class="title">Note</h3><p>The <code class="code">displayFieldEditorButton</code> and <code class="code">fieldEditorFields</code> properties allow you to control the behavior of the <span class="guilabel">Field Editor</span> button that is automatically added to the component in the Sitecore Experience Editor. This button allows editing all the component data in a pop-up form interface. By default, all components display the button, and all component fields are editable. You do not have to supply these properties if this is the desired behavior.</p></div></section><section dir="ltr" class="section" data-origin-id="" data-publication-date="06/30/23" id="idm45599296791600"><div class="titlepage"><div><div class="title"><h4 class="title">content</h4></div></div></div><p>Content data uses the same schema as <a class="link linktype-component" href="types-of-jss-manifest-data.html" title="Types of JSS Manifest data">route data</a>, except that the <code class="code">placeholders</code> property is generally not used as it would have no effect.</p></section><section dir="ltr" class="section" data-origin-id="" data-publication-date="06/30/23" id="idm45599296787152"><div class="titlepage"><div><div class="title"><h4 class="title">field</h4></div></div></div><p>For the <code class="code">type</code> property, we recommend you use one of the available <a class="link" href="adding-manifest-definitions-in-code-first-jss-apps.html#UUID-169e2405-bc5e-923a-3568-8d999455e19b_N1633611413584" title="CommonFieldTypes">CommonFieldTypes</a> values.</p><pre class="programlisting plaintext" data-language="plaintext">{
+  name: string:required,
+  type: string|CommonFieldTypes:required,
+  displayName: string:optional,
+  required: bool:optional,   // whether the field must have a value entered
+  validationPattern: string:optional, // regular expression (C#) to determine value validity
+  validationMessage: string:optional, // message shown when validationPattern fails
+  standardValue: string:optional, // the default value this field gets when a content editor creates a new item using it
+  section: string:optional, // Sitecore template section name
+  source: string:optional,  // Sitecore template field source (field-type specific)
+  sortOrder: int:optional,  // Template field sort order. Defaults to order defined in JSON.
+  storage: string:optional,  // Sitecore field storage: versioned (default), unversioned, shared (DO NOT CHANGE AFTER IMPORTED)
+  id: string:optional
+}
+</pre></section><section dir="ltr" class="section" data-origin-id="" data-publication-date="06/30/23" id="UUID-169e2405-bc5e-923a-3568-8d999455e19b_N1633611413584"><div class="titlepage"><div><div class="title"><h4 class="title">CommonFieldTypes</h4></div></div></div><pre class="programlisting plaintext" data-language="plaintext">{
+  SingleLineText: 'Single-Line Text',
+  MultiLineText: 'Multi-Line Text',
+  RichText: 'Rich Text',
+  ContentList: 'Treelist',
+  ItemLink: 'Droptree',
+  GeneralLink: 'General Link',
+  Image: 'Image',
+  File: 'File',
+  Number: 'Number',
+  Checkbox: 'Checkbox',
+  Date: 'Date',
+  DateTime: 'Datetime',
+}
+</pre><div dir="ltr" class="note"><h3 class="title">Note</h3><p>For custom Sitecore field types or other types not in the <code class="code">CommonFieldTypes</code> enumeration, the string of their field type name in Sitecore (that is, <code class="code">Single-Line Text</code>) can be passed. Editors that support type annotations, like VS Code, provide auto-completion on this enum.</p></div></section><section dir="ltr" class="section" data-origin-id="" data-publication-date="06/30/23" id="idm45599296780032"><div class="titlepage"><div><div class="title"><h4 class="title">param</h4></div></div></div><pre class="programlisting plaintext" data-language="plaintext">{
+  name: string:required
+}
+</pre></section><section dir="ltr" class="section" data-origin-id="" data-publication-date="06/30/23" id="idm45599296776736"><div class="titlepage"><div><div class="title"><h4 class="title">placeholder</h4></div></div></div><pre class="programlisting plaintext" data-language="plaintext">{
+  name: string:required,
+  displayName: string:optional
+}
+</pre></section><section dir="ltr" class="section" data-origin-id="" data-publication-date="06/30/23" id="idm45599296775152"><div class="titlepage"><div><div class="title"><h4 class="title">placeholders</h4></div></div></div><pre class="programlisting plaintext" data-language="plaintext">{
+  placeholderName: array[component]:optional,
+  // additional placeholder key/values can be added
+}
+</pre></section><section dir="ltr" class="section" data-origin-id="" data-publication-date="06/30/23" id="idm45599296773664"><div class="titlepage"><div><div class="title"><h4 class="title">route</h4></div></div></div><pre class="programlisting plaintext" data-language="plaintext">{
+  id: string:optional,
+  name: string:required,
+  displayName: string:optional,
+  template: string:optional, // note: this is optional in yaml/json as its defaulted before adding to manifest
+  fields: fields:optional,
+  children: array[route]:optional,
+  placeholders: placeholders:optional,
+  insertOptions: array[string]:optional,
+}
+</pre></section><section dir="ltr" class="section" data-origin-id="" data-publication-date="06/30/23" id="idm45599296771984"><div class="titlepage"><div><div class="title"><h4 class="title">template</h4></div></div></div><pre class="programlisting plaintext" data-language="plaintext">{
+  name: string:required,
+  displayName: string:optional,
+  inherits: array[string]:optional, // names of JSS template(s) to inherit from, OR Sitecore item GUIDs for non-JSS templates
+  fields: array[field]:optional,
+  icon: string:optional, // e.g. People/16x16/alarmclock.png
+  defaultWorkflow: string:optional // e.g. /sitecore/system/Workflows/Sample Workflow
+}
+</pre></section><section dir="ltr" class="section" data-origin-id="" data-publication-date="06/30/23" id="idm45599296770144"><div class="titlepage"><div><div class="title"><h4 class="title">fields</h4></div></div></div><pre class="programlisting plaintext" data-language="plaintext">{
+  fieldName: object[fieldName] = field:required
+  // additional field key/values can be added, see the following
+}
+</pre></section><section dir="ltr" class="section" data-origin-id="" data-publication-date="06/30/23" id="idm45599296768272"><div class="titlepage"><div><div class="title"><h4 class="title">params</h4></div></div></div><pre class="programlisting plaintext" data-language="plaintext">{
+  paramName: array[string]:required,
+  // additional param key/values can be added
+  // note: all param values are provided to the component as strings,
+  // even if the defined value is a number/boolean value.
+}
+</pre></section><section dir="ltr" class="section" data-origin-id="" data-publication-date="06/30/23" id="idm45599296766656"><div class="titlepage"><div><div class="title"><h4 class="title">imageFieldValue</h4></div></div></div><p>The image field value is used when a <code class="code">field</code> is an image type. It has additional properties compared to a normal field.</p><pre class="programlisting plaintext" data-language="plaintext">{
+  id: string:optional,
+  src: string:required,         // src of image. Should be under /sitecore/media on the JSS app.
+  alt: string:required,
+  displayName: string:optional, // media item display name
+  title: string:optional,       // media item field
+  keywords: string:optional,    // media item field
+  description: string:optional, // media item field
+  width: int:optional,
+  height: int:optional,
+  class: string:optional        // rendered image CSS class
+
+}
+</pre></section><section dir="ltr" class="section" data-origin-id="" data-publication-date="06/30/23" id="idm45599296764944"><div class="titlepage"><div><div class="title"><h4 class="title">linkFieldValue</h4></div></div></div><p>The link field value is used when a <code class="code">field</code> is a link type. It has additional properties compared to a normal field.</p><pre class="programlisting plaintext" data-language="plaintext">{
+  href: string:required,
+  text: string:optional,        // link body text
+  class: string:optional,       // rendered &lt;a&gt; css class
+  target: string:optional,      // target attribute e.g. _blank
+  title: string:optional        // title attribute of &lt;a&gt;
+}
+</pre></section><section dir="ltr" class="section" data-origin-id="" data-publication-date="06/30/23" id="idm45599296762256"><div class="titlepage"><div><div class="title"><h4 class="title">multilistFieldValue</h4></div></div></div><p>You can define Sitecore multi-list fields by specifying the item definitions that are selected in the multi-list (as an array) or by using ID references to pull in items defined in a shared content area (or explicit GUIDs to refer to non-app items in Sitecore)</p><pre class="programlisting yaml" data-language="yaml">// definition using an array of content items (routes without placeholders)
+[route]:required
+
+// complete example including the top level fields (YAML):
+fields:
+  multilistFieldName:
+  - name: Option1
+    fields:
+      title:
+        value: Hello
+  - name: Option2
+  # ...
+
+// or define it using ID references to shared content items (also YAML):
+fields:
+  multilistFieldName:
+  - id: option-1
+  - id: option-2
+  # ...
+</pre></section><section dir="ltr" class="section" data-origin-id="" data-publication-date="06/30/23" id="idm45599296759776"><div class="titlepage"><div><div class="title"><h4 class="title">Handling date field values</h4></div></div></div><p>Date fields' values in the manifest are formatted using <a class="link" href="https://en.wikipedia.org/wiki/ISO_8601#Combined_date_and_time_representations" target="_blank" rel="noopener">ISO 8601</a> formatted strings, for example, <code class="code">2012-04-23T18:25:43.511Z</code>.</p><div dir="ltr" class="note"><h3 class="title">Note</h3><p>This is a JavaScript date format and is different from how Sitecore stores date field values internally. Sitecore-formatted dates <span class="emphasis"><em>do not work.</em></span></p></div></section></section></section><section dir="ltr" class="section" data-origin-id="" data-publication-date="06/30/23" id="UUID-169e2405-bc5e-923a-3568-8d999455e19b_section-idm4531453387292832673456963808"><div class="titlepage"><div><div class="title"><h2 class="title" style="clear: both">Examples of manifest definitions</h2></div></div></div><p>When you create JSS applications, the apps already have some manifest definitions. The most common manifest definitions are for registering placeholders and components with Sitecore during app import. Still, you can also use manifest definitions for other use cases, such as <a class="link linktype-component" href="create-a-route-type-with-fields-in-jss-code-first-development.html" title="Create a route type with fields in JSS code-first development">adding fields to routes</a>.</p><section dir="ltr" class="section" data-origin-id="" data-publication-date="06/30/23" id="idm45599296751984"><div class="titlepage"><div><div class="title"><h3 class="title">Placeholders</h3></div></div></div><p>Defining placeholders explicitly in the manifest is optional. Any placeholder name referred to by a route is automatically known by the manifest. However, explicitly registering a placeholder lets you set a <a class="link linktype-component" href="introducing-placeholders-in-jss-apps.html" title="Introducing placeholders in JSS apps">placeholder display name</a> for it so that content editors can see something friendlier than <code class="code">appname-content-leftside-upsidedown-2</code>.</p><p>An explicit placeholder definition is a line in the <code class="code">/sitecore/definitions/placeholders.sitecore.js</code> file. The <code class="code">.sitecore</code> in the name is mandatory.</p><p>For example:</p><pre class="programlisting javascript" data-language="javascript">import { addPlaceholder } from '@sitecore-jss/sitecore-jss-dev-tools';
+
+export default (manifest) =&gt; {
+  addPlaceholder(manifest, 
+    { name: 'appname-main', displayName: 'Main' },
+    { name: 'appname-content', displayName: 'Content' });
+};
+</pre></section><section dir="ltr" class="section" data-origin-id="" data-publication-date="06/30/23" id="idm45599296756080"><div class="titlepage"><div><div class="title"><h3 class="title">Components</h3></div></div></div><p>You must define each front-end component added to a route so that JSS can register the component within Sitecore and provide the appropriate infrastructure to give it the necessary content.</p><p>Component definitions are conventionally stored in <code class="code">/sitecore/definitions/components/&lt;ComponentName&gt;.sitecore.{js|ts}</code>. For example:</p><pre class="programlisting javascript" data-language="javascript">/*
+NOTE: if you use an editor, such as VS Code, that reads typing data from imported libraries, you will receive code completion hints for the manifest definitions.
+*/
+import { addComponent } from '@sitecore-jss/sitecore-jss-dev-tools';
+
+export default (manifest) =&gt; {
+  addComponent(manifest, {
+    // this name must match the name that is used to add the component to routes,
+    // and the name used when the component JS implementation is registered to the componentFactory
+    name: 'ConnectedPage',
+    // you can use a friendly name for the component to be nice to your authors
+    displayName: 'Connected Page',
+    // define the content fields, and their data types, that are needed for the component
+    fields: [
+      { name: 'title', type: manifest.fieldTypes.singleLineText },
+      { name: 'text', type: manifest.fieldTypes.richText },
+      { name: 'logoImage', type: manifest.fieldTypes.image },
+    ],
+  });
+};
+</pre><p>The <code class="code">.sitecore</code> in the name is mandatory.</p><p>When you create components with the CLI command <code class="code">jss scaffold &lt;ComponentName&gt;</code>, the scaffolding script, if available in your sample application, generates the component and the manifest definition for you.</p></section></section></section><div class="footer-content"><div class="glossary-definitions"></div></div><footer></footer></div></article><aside class="section-nav-container"><ul class="section-nav nav"><li><a href="#UUID-169e2405-bc5e-923a-3568-8d999455e19b">Adding Manifest definitions in code-first JSS apps</a></li><li><a href="#UUID-169e2405-bc5e-923a-3568-8d999455e19b_section-idm4570943908651232634005322234">Manifest API instance methods</a><ul class="nav"><li><a href="#idm45599296793568">Manifest objects</a><ul class="nav"></ul></li></ul></li><li><a href="#UUID-169e2405-bc5e-923a-3568-8d999455e19b_section-idm4531453387292832673456963808">Examples of manifest definitions</a><ul class="nav"><li><a href="#idm45599296751984">Placeholders</a></li><li><a href="#idm45599296756080">Components</a></li></ul></li></ul></aside></main><div id="bottom-pager"><ul class="pager"><li class="previous"><a accesskey="p" class="prev pull-left prev visible-lg visible-md" id="header-navigation-prev" href="types-of-jss-manifest-data.html#UUID-4d691396-4099-27f6-1cf2-2f8f1abaddf2_section-idm4635831635702432672407674895">Prev</a></li><li class="next"><a accesskey="n" class="pull-right next visible-lg visible-md" id="header-navigation-next" href="adding-manifest-definitions-in-code-first-jss-apps.html#UUID-169e2405-bc5e-923a-3568-8d999455e19b_section-idm4570943908651232634005322234">Next</a></li></ul></div><footer class="site-footer"><div class="inner"><div class="copyright"> © 2023 Sitecore </div><div class="date-modified"><span class="date-modified-text">Last modified: </span><span class="formatted-date">06/23/2023</span></div><div class="publication-date"><span class="publication-date-text">Publication date</span><span class="pubdate-delimiter">: </span><span class="formatted-date">06/30/23</span></div></div></footer></div></div></div></div><script type="text/javascript" src="//customer.cludo.com/scripts/bundles/search-script.min.js"></script><script>
+			var CludoSearch;
+			(function () {
+			var cludoSettings = {
+			customerId: 2063,
+			engineId: 12826,
+			language: 'en',
+			searchInputs: ["search-form","cludo-search-content-form","cludo-search-mobile-form"],
+			hideSearchFilters: true,
+			type: 'standardOverlay',
+			facets: ["Category", "ProductVer", "Product", "Version"],
+			useStandardSearchTemplate: false,
+			customerTemplate: "OverlayCopy",
+			searchApiUrl: 'https://api-eu1.cludo.com/api/v3'
+			};
+			CludoSearch= new Cludo(cludoSettings);
+			CludoSearch.init();
+			})();
+		</script><!-- www.Cludo.com Search body init script start --></body></html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"></meta><meta name="format-detection" content="telephone=no"></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><meta name="search" content="default"></meta><meta name="use.ic" content="no"></meta><meta name="Audience - do not use" content=""></meta><meta name="clubot" content=""></meta><meta name="data model" content=""></meta><meta name="DxP type - Do Not Use" content=""></meta><meta name="media_icon" content=""></meta><meta name="product" content="XM Cloud"></meta><meta name="Publishing target" content="Production"></meta><meta name="Ready for publishing - do not use" content=""></meta><meta name="role" content="developers"></meta><meta name="topic_tripane" content=""></meta><meta name="version" content=""></meta><meta name="tocstandalone" content="yes"></meta><meta name="theme" content="1"></meta><meta name="search.placeholder" content="Search"></meta><meta name="search.results" content="Search results"></meta><meta name="no.search.results" content="No results found"></meta><script type="text/javascript">
+var theme = '1';
+
+			
+			window.versionsfile = '';
+
+
+			window.indexDict = new Array();
+			window.store = {};
+			window.portalLanguage = 'en';
+			window.enterKey = 'select';
+			
+			
+				var fuse_threshold = 0.3;
+			
+					var local_csh = false;
+				
+					var anchoroption = true;
+				var instantsearch_minlength = 1;
+						
+			var useanchorlinks = false;
+			
+					function addSearch(){
+					//not used with custom or elastic search
+					}
+				</script><title>Update an item, a tree of items or a database</title><link rel="stylesheet" type="text/css" href="../css/docbook.css"></link><link rel="stylesheet" type="text/css" href="../css/font-awesome.css"></link><link rel="stylesheet" type="text/css" href="../css/roboto.font.css"></link><link rel="stylesheet" type="text/css" href="../css/theme1.css?version=20230630"></link><link rel="stylesheet" type="text/css" href="../css/theme1-colors.css?version=20230630"></link><link rel="stylesheet" type="text/css" href="../css/content-theme1.css?version=20230630"></link><link rel="stylesheet" type="text/css" href="../css/sm-core-css.css"></link><link rel="stylesheet" type="text/css" href="../css/sm-simple.css"></link><link rel="stylesheet" type="text/css" href="../css/style-print.css"></link><link rel="stylesheet" type="text/css" href="../css/style-common.css"></link><link rel="stylesheet" type="text/css" href="../css/style-modern-tables.css"></link><link rel="stylesheet" type="text/css" href="../css/graphical-lists.css"></link><link rel="stylesheet" type="text/css" href="/css/sitecore-custom-default-xmc.css?version=20230630"></link><script src="../js/jquery-3/jquery-3.4.1.min.js" type="text/javascript"></script><script src="../js/jquery-migrate-3.0.1.min.js" type="text/javascript"></script><script src="../js/materialize.min.js" type="text/javascript"></script><script src="../js/bootstrap.min.js" type="text/javascript"></script><script src="../js/purl.js" type="text/javascript"></script><script src="../js/jquery.smartmenus.js" type="text/javascript"></script><script src="js/toc.js?version=20230630" type="text/javascript"></script><script src="../js/create-toc.js" type="text/javascript"></script><script src="../js/html5-2-mp-common.js?version=20230630" type="text/javascript"></script><script src="../js/html5-2.js?version=20230630" type="text/javascript"></script><script src="../js/checklist.js" type="text/javascript"></script><script src="../js/clipboard.min.js" type="text/javascript"></script><script src="../js/csh.js" type="text/javascript"></script><script src="/js/layout-custom-script.js" type="text/javascript"></script><meta xmlns:xhtml="http://www.w3.org/1999/xhtml" name="generator" content="Paligo"></meta><link rel="prev" href="serialize-an-item-or-a-tree-of-items-733603.html#UUID-23514533-b3ee-a028-4360-9e8769fae290_section-5c8bb5bd8727d-idm45681584996208" title="Serialize security entities"></link><link rel="next" href="update-an-item,-a-tree-of-items-or-a-database-733604.html#UUID-ecc676a1-726c-a0f2-0c60-2c7d993aaba1_section-5ca3418e48929-idm46265901284032" title="Updating rules"></link><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML" async="async"></script><link rel="icon" href="/favicon.ico" type="image/x-icon"></link><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent/3.1.1/cookieconsent.min.css"></link><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent/3.1.1/cookieconsent.min.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/3.0.1/js.cookie.min.js"></script><script type="text/javascript">var privacypolicy = 'https://www.sitecore.com/trust/privacy-policy';
+var consenttype = 'opt-out';
+</script><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-72664331-1"></script><script type="text/javascript">const measurementId = 'UA-72664331-1';
+
+						$(document).on('cookies.consented', () => {
+							window.dataLayer = window.dataLayer || [];
+							function gtag(){dataLayer.push(arguments)};
+
+							gtag('js', new Date());
+							gtag('config', measurementId);
+						});
+					</script><script type="text/javascript" src="../js/cookie-consent.js"></script><script type="text/javascript">
+				$(document).ready(function () {
+				$(".mediaobject img").addClass('materialboxed');
+				//Exclude images with links
+				$(".mediaobject a img").removeClass('materialboxed');
+				if (!document.documentMode) {
+				$('.materialboxed').materialbox();
+				}});
+			</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/googlecode.min.css"></link><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script><script type="text/javascript">
+			$(document).ready(function() {
+
+				$('pre:not(.embedcode)').each(function() {
+					/**
+					 * @type {string}
+					 */
+					var language = $(this).data('language');
+
+					if (language === 'plaintext' || language === 'text') {
+						$(this).addClass(language).addClass('hljs');
+						return true;
+					}
+					else {
+						var clone = this.cloneNode(true);
+						hljs.highlightBlock(clone);
+						$(this).empty().append($(clone).contents());
+						$(this).attr("class", $(clone).attr("class"));
+					}
+				});
+			});
+			</script><link href="//customer.cludo.com/assets/2063/10039/cludo-search.min.css" type="text/css" rel="stylesheet"></link></head><body class="theme1 colored-top page-toc current-toc-section-focus" data-spy="scroll" data-target=".section-nav-container" data-offset="100" data-link-prefix=""><style type="text/css">
+            div.skipnav {
+            }
+            div.skipnav a {
+                position: fixed;
+                left: -10000px;
+                top: 1.5em;
+                width: 1px;
+                height: 1px;
+                overflow: hidden;
+            }
+            div.skipnav a:focus, div.skipnav a:active, div.skipnav a:hover {
+                background: white;
+                color: black;
+                box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.5);
+                position: fixed;
+                left: 2em;
+                top: 1.5em;
+                width: auto;
+                height: auto;
+                overflow: visible;
+                text-decoration: underline;
+                z-index: 99999; /* has to be higher than the side panel */
+    }
+          </style><div class="skipnav"><a href="#content-wrapper">Skip to main content</a></div><header class="site-header"><nav class="site-header-navbar navbar navbar-fixed-top"><div class="navbar-container"><div class="navbar-header"><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".site-sidebar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><div id="logotype-container" class="pull-left"><a class="navbar-brand" href="https://doc.sitecore.com/xmc/" target="_blank" rel="noopener"><img id="logotype-pageheader" src="../css/image/corporate-logo.png" alt="Corporate logotype" data-role="logotype" class="logo"></img></a></div></div><div class="navbar-collapse collapse" id="navbar"></div></div></nav></header><div class="site-body"><div class="site-body-container"><div class="site-body-row"><aside xmlns:xinfo="http://ns.expertinfo.se/cms/xmlns/1.0" class="site-sidebar"><div class="site-sidebar-header"><a href="https://doc.sitecore.com/xmc/" target="_blank"><img id="logotype-pageheader" src="../css/image/corporate-logo.png" alt="Corporate logotype" data-role="logotype" class="logo"></img></a></div><form id="search-form" class="site-sidebar-search" autocomplete="off"><input type="text" class="form-control search-field" placeholder="Search" id="aa-search-input"></input></form><div id="toc-standalone-placeholder"></div></aside><div class="site-content"><div class="toolbar"><div class="toolbar-tools"><div id="navbar" class="navbar-collapse collapse"></div><div class="tool-print"><i class="fa fa-print" aria-hidden="true">print</i></div><div class="tool-search"><i class="fa fa-search" aria-hidden="true"></i></div><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".site-sidebar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button></div><div class="breadcrumb-container"><ul class="breadcrumb"><li class="breadcrumb-link"><a href="index-en.html">XM Cloud Documentation for Developers</a></li><li class="breadcrumb-link"><a href="xm-cloud-development.html">XM Cloud development</a></li><li class="breadcrumb-link"><a href="serialization-in-sitecore.html">Serialization in Sitecore</a></li><li class="breadcrumb-link"><a href="the-yaml-serialization-format.html">The YAML serialization format</a></li><li class="breadcrumb-node">Update an item, a tree of items or a database</li></ul></div></div><main><div id="top-pager"><ul class="pager"><li class="previous"><a accesskey="p" class="prev pull-left prev visible-lg visible-md" id="header-navigation-prev" href="serialize-an-item-or-a-tree-of-items-733603.html#UUID-23514533-b3ee-a028-4360-9e8769fae290_section-5c8bb5bd8727d-idm45681584996208">Prev</a></li><li class="next"><a accesskey="n" class="pull-right next visible-lg visible-md" id="header-navigation-next" href="update-an-item,-a-tree-of-items-or-a-database-733604.html#UUID-ecc676a1-726c-a0f2-0c60-2c7d993aaba1_section-5ca3418e48929-idm46265901284032">Next</a></li></ul></div><article class="topic content-container" id="content-wrapper"><div id="topic-content" class="topic-content"><section xml:lang="en" lang="en" dir="ltr" class="section" data-origin-id="UUID-2f877e31-5a68-a1e7-7779-97c40e15f4f2" data-permalink="update-an-item,-a-tree-of-items-or-a-database-733604.html" data-topic-level="1" data-relative-prefix="" data-time-modified="05/16/2019" data-publication-date="06/30/23" id="UUID-ecc676a1-726c-a0f2-0c60-2c7d993aaba1"><div class="titlepage"><div><div class="title"><h1 class="title" style="clear: both">Update an item, a tree of items or a database</h1></div></div></div><p>You can update items with the information that is stored in the text files in the file system.</p><section dir="ltr" class="section accordion" data-origin-id="" data-publication-date="06/30/23" id="UUID-ecc676a1-726c-a0f2-0c60-2c7d993aaba1_section-5ca3418e48929-idm46265901284032"><div class="accordion-icon"></div><div class="panel panel-default"><div class="panel-heading"><div class="titlepage"><a data-toggle="collapse" href="#UUID-ecc676a1-726c-a0f2-0c60-2c7d993aaba1_section-5ca3418e48929-idm46265901284032_body" data-parent="#UUID-ecc676a1-726c-a0f2-0c60-2c7d993aaba1_section-5ca3418e48929-idm46265901284032"><div><div class="title"><h2 class="title" style="clear: both">Updating rules</h2></div></div></a></div></div><div class="panel-body collapse" id="UUID-ecc676a1-726c-a0f2-0c60-2c7d993aaba1_section-5ca3418e48929-idm46265901284032_body"><p>When you update items, Sitecore merges the changes from the text files with the current database items according to these rules:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>If an item or an item version exists in the file system, but there is no such item or item version in the database, Sitecore adds it to the database.</p></li><li class="listitem"><p>If an item or an item version exists in the database but there is no such item or item version in the file system, Sitecore does not remove it from the database.</p></li><li class="listitem"><p>Sitecore does not overwrite the following information about the item:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; "><li class="listitem"><p>Item name</p></li><li class="listitem"><p>Template ID</p></li><li class="listitem"><p>Origin ID</p></li><li class="listitem"><p>Parent ID</p></li></ul></div></li><li class="listitem"><p>If an item version that is loaded from the file system contains the same number and language version, Sitecore only overwrites the existing item version if the date in the new item in the Updated field is later in the current one.</p></li></ul></div></div></div></section><section dir="ltr" class="section accordion" data-origin-id="" data-publication-date="06/30/23" id="UUID-ecc676a1-726c-a0f2-0c60-2c7d993aaba1_section-5ca3425eac350-idm45501436233952"><div class="accordion-icon"></div><div class="panel panel-default"><div class="panel-heading"><div class="titlepage"><a data-toggle="collapse" href="#UUID-ecc676a1-726c-a0f2-0c60-2c7d993aaba1_section-5ca3425eac350-idm45501436233952_body" data-parent="#UUID-ecc676a1-726c-a0f2-0c60-2c7d993aaba1_section-5ca3425eac350-idm45501436233952"><div><div class="title"><h2 class="title" style="clear: both">Update items or a database</h2></div></div></a></div></div><div class="panel-body collapse" id="UUID-ecc676a1-726c-a0f2-0c60-2c7d993aaba1_section-5ca3425eac350-idm45501436233952_body"><p>In Sitecore, you can update items or a whole database.</p><p>To update an item from the text file:</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p>In the <span class="guilabel">Content Editor</span>, select the item that you want to update.</p></li><li class="listitem"><p>On the <span class="guilabel">Developer</span> tab, in the <span class="guilabel">Serialize</span> group, click <span class="guilabel">Update Item</span>.</p><div dir="ltr" class="note"><h3 class="title">Note</h3><p>If the item is not configured to be included in a serialization tree, nothing will be updated and you will get an error message.</p></div></li></ol></div><p>To update an item with all its subitems from the file system:</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p>In the <span class="guilabel">Content Editor</span>, select the parent item that you want to update with all its subitems.</p></li><li class="listitem"><p>On the <span class="guilabel">Developer</span> tab, in the <span class="guilabel">Serialize</span> group, click <span class="guilabel">Update Tree</span>.</p><div dir="ltr" class="note"><h3 class="title">Note</h3><p>If the root item of the selected item tree, or any of the descendants, is configured to be included in a serialization tree, then the selected subtree is updated. If not, you will see a dialog with this information. You can choose to update all configured trees in the current database from this dialog.</p></div></li></ol></div><p>To update the whole database:</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p>In the <span class="guilabel">Content Editor</span>, select any item.</p></li><li class="listitem"><p>On the <span class="guilabel">Developer</span> tab, in the <span class="guilabel">Serialize</span> group, click <span class="guilabel">Update Database</span>.</p></li></ol></div></div></div></section></section><div class="footer-content"><div class="glossary-definitions"></div></div><footer></footer></div></article><aside class="section-nav-container"><ul class="section-nav nav"><li><a href="#UUID-ecc676a1-726c-a0f2-0c60-2c7d993aaba1">Update an item, a tree of items or a database</a></li><li><a href="#UUID-ecc676a1-726c-a0f2-0c60-2c7d993aaba1_section-5ca3418e48929-idm46265901284032">Updating rules</a></li><li><a href="#UUID-ecc676a1-726c-a0f2-0c60-2c7d993aaba1_section-5ca3425eac350-idm45501436233952">Update items or a database</a></li></ul></aside></main><div id="bottom-pager"><ul class="pager"><li class="previous"><a accesskey="p" class="prev pull-left prev visible-lg visible-md" id="header-navigation-prev" href="serialize-an-item-or-a-tree-of-items-733603.html#UUID-23514533-b3ee-a028-4360-9e8769fae290_section-5c8bb5bd8727d-idm45681584996208">Prev</a></li><li class="next"><a accesskey="n" class="pull-right next visible-lg visible-md" id="header-navigation-next" href="update-an-item,-a-tree-of-items-or-a-database-733604.html#UUID-ecc676a1-726c-a0f2-0c60-2c7d993aaba1_section-5ca3418e48929-idm46265901284032">Next</a></li></ul></div><footer class="site-footer"><div class="inner"><div class="copyright"> © 2023 Sitecore </div><div class="date-modified"><span class="date-modified-text">Last modified: </span><span class="formatted-date">05/16/2019</span></div><div class="publication-date"><span class="publication-date-text">Publication date</span><span class="pubdate-delimiter">: </span><span class="formatted-date">06/30/23</span></div></div></footer></div></div></div></div><script type="text/javascript" src="//customer.cludo.com/scripts/bundles/search-script.min.js"></script><script>
+			var CludoSearch;
+			(function () {
+			var cludoSettings = {
+			customerId: 2063,
+			engineId: 12826,
+			language: 'en',
+			searchInputs: ["search-form","cludo-search-content-form","cludo-search-mobile-form"],
+			hideSearchFilters: true,
+			type: 'standardOverlay',
+			facets: ["Category", "ProductVer", "Product", "Version"],
+			useStandardSearchTemplate: false,
+			customerTemplate: "OverlayCopy",
+			searchApiUrl: 'https://api-eu1.cludo.com/api/v3'
+			};
+			CludoSearch= new Cludo(cludoSettings);
+			CludoSearch.init();
+			})();
+		</script><!-- www.Cludo.com Search body init script start --></body></html>

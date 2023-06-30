@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"></meta><meta name="format-detection" content="telephone=no"></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><meta name="search" content="default"></meta><meta name="use.ic" content="no"></meta><meta name="Audience - do not use" content=""></meta><meta name="clubot" content=""></meta><meta name="data model" content=""></meta><meta name="DxP type - Do Not Use" content=""></meta><meta name="media_icon" content=""></meta><meta name="product" content="XM Cloud"></meta><meta name="Publishing target" content="Production"></meta><meta name="Ready for publishing - do not use" content=""></meta><meta name="role" content="developers"></meta><meta name="topic_tripane" content=""></meta><meta name="version" content=""></meta><meta name="tocstandalone" content="yes"></meta><meta name="theme" content="1"></meta><meta name="search.placeholder" content="Search"></meta><meta name="search.results" content="Search results"></meta><meta name="no.search.results" content="No results found"></meta><script type="text/javascript">
+var theme = '1';
+
+			
+			window.versionsfile = '';
+
+
+			window.indexDict = new Array();
+			window.store = {};
+			window.portalLanguage = 'en';
+			window.enterKey = 'select';
+			
+			
+				var fuse_threshold = 0.3;
+			
+					var local_csh = false;
+				
+					var anchoroption = true;
+				var instantsearch_minlength = 1;
+						
+			var useanchorlinks = false;
+			
+					function addSearch(){
+					//not used with custom or elastic search
+					}
+				</script><title>Walkthrough: Registering an external React component</title><link rel="stylesheet" type="text/css" href="../css/docbook.css"></link><link rel="stylesheet" type="text/css" href="../css/font-awesome.css"></link><link rel="stylesheet" type="text/css" href="../css/roboto.font.css"></link><link rel="stylesheet" type="text/css" href="../css/theme1.css?version=20230630"></link><link rel="stylesheet" type="text/css" href="../css/theme1-colors.css?version=20230630"></link><link rel="stylesheet" type="text/css" href="../css/content-theme1.css?version=20230630"></link><link rel="stylesheet" type="text/css" href="../css/sm-core-css.css"></link><link rel="stylesheet" type="text/css" href="../css/sm-simple.css"></link><link rel="stylesheet" type="text/css" href="../css/style-print.css"></link><link rel="stylesheet" type="text/css" href="../css/style-common.css"></link><link rel="stylesheet" type="text/css" href="../css/style-modern-tables.css"></link><link rel="stylesheet" type="text/css" href="../css/graphical-lists.css"></link><link rel="stylesheet" type="text/css" href="/css/sitecore-custom-default-xmc.css?version=20230630"></link><script src="../js/jquery-3/jquery-3.4.1.min.js" type="text/javascript"></script><script src="../js/jquery-migrate-3.0.1.min.js" type="text/javascript"></script><script src="../js/materialize.min.js" type="text/javascript"></script><script src="../js/bootstrap.min.js" type="text/javascript"></script><script src="../js/purl.js" type="text/javascript"></script><script src="../js/jquery.smartmenus.js" type="text/javascript"></script><script src="js/toc.js?version=20230630" type="text/javascript"></script><script src="../js/create-toc.js" type="text/javascript"></script><script src="../js/html5-2-mp-common.js?version=20230630" type="text/javascript"></script><script src="../js/html5-2.js?version=20230630" type="text/javascript"></script><script src="../js/checklist.js" type="text/javascript"></script><script src="../js/clipboard.min.js" type="text/javascript"></script><script src="../js/csh.js" type="text/javascript"></script><script src="/js/layout-custom-script.js" type="text/javascript"></script><meta xmlns:xhtml="http://www.w3.org/1999/xhtml" name="generator" content="Paligo"></meta><meta name="description" content="Reference your React code base in Sitecore XM Cloud Components to include a custom component in the component builder."></meta><link rel="prev" href="walkthrough--connecting-the-next-js-application-directly-to-the-experience-edge-endpoint.html#UUID-c90978a4-8b2d-4de2-7644-9b9a573b913d_section-idm4598732409846433288866651353" title="Start the client application and verify the integration"></link><link rel="next" href="walkthrough--registering-an-external-react-component.html#UUID-96b1ce6e-def0-ca78-a5d0-85d94d847f5b_section-idm4553222396153633748630199571" title="Install the NPM package"></link><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML" async="async"></script><link rel="icon" href="/favicon.ico" type="image/x-icon"></link><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent/3.1.1/cookieconsent.min.css"></link><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent/3.1.1/cookieconsent.min.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/3.0.1/js.cookie.min.js"></script><script type="text/javascript">var privacypolicy = 'https://www.sitecore.com/trust/privacy-policy';
+var consenttype = 'opt-out';
+</script><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-72664331-1"></script><script type="text/javascript">const measurementId = 'UA-72664331-1';
+
+						$(document).on('cookies.consented', () => {
+							window.dataLayer = window.dataLayer || [];
+							function gtag(){dataLayer.push(arguments)};
+
+							gtag('js', new Date());
+							gtag('config', measurementId);
+						});
+					</script><script type="text/javascript" src="../js/cookie-consent.js"></script><script type="text/javascript">
+				$(document).ready(function () {
+				$(".mediaobject img").addClass('materialboxed');
+				//Exclude images with links
+				$(".mediaobject a img").removeClass('materialboxed');
+				if (!document.documentMode) {
+				$('.materialboxed').materialbox();
+				}});
+			</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/googlecode.min.css"></link><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script><script type="text/javascript">
+			$(document).ready(function() {
+
+				$('pre:not(.embedcode)').each(function() {
+					/**
+					 * @type {string}
+					 */
+					var language = $(this).data('language');
+
+					if (language === 'plaintext' || language === 'text') {
+						$(this).addClass(language).addClass('hljs');
+						return true;
+					}
+					else {
+						var clone = this.cloneNode(true);
+						hljs.highlightBlock(clone);
+						$(this).empty().append($(clone).contents());
+						$(this).attr("class", $(clone).attr("class"));
+					}
+				});
+			});
+			</script><link href="//customer.cludo.com/assets/2063/10039/cludo-search.min.css" type="text/css" rel="stylesheet"></link></head><body class="theme1 colored-top page-toc current-toc-section-focus" data-spy="scroll" data-target=".section-nav-container" data-offset="100" data-link-prefix=""><style type="text/css">
+            div.skipnav {
+            }
+            div.skipnav a {
+                position: fixed;
+                left: -10000px;
+                top: 1.5em;
+                width: 1px;
+                height: 1px;
+                overflow: hidden;
+            }
+            div.skipnav a:focus, div.skipnav a:active, div.skipnav a:hover {
+                background: white;
+                color: black;
+                box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.5);
+                position: fixed;
+                left: 2em;
+                top: 1.5em;
+                width: auto;
+                height: auto;
+                overflow: visible;
+                text-decoration: underline;
+                z-index: 99999; /* has to be higher than the side panel */
+    }
+          </style><div class="skipnav"><a href="#content-wrapper">Skip to main content</a></div><header class="site-header"><nav class="site-header-navbar navbar navbar-fixed-top"><div class="navbar-container"><div class="navbar-header"><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".site-sidebar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><div id="logotype-container" class="pull-left"><a class="navbar-brand" href="https://doc.sitecore.com/xmc/" target="_blank" rel="noopener"><img id="logotype-pageheader" src="../css/image/corporate-logo.png" alt="Corporate logotype" data-role="logotype" class="logo"></img></a></div></div><div class="navbar-collapse collapse" id="navbar"></div></div></nav></header><div class="site-body"><div class="site-body-container"><div class="site-body-row"><aside xmlns:xinfo="http://ns.expertinfo.se/cms/xmlns/1.0" class="site-sidebar"><div class="site-sidebar-header"><a href="https://doc.sitecore.com/xmc/" target="_blank"><img id="logotype-pageheader" src="../css/image/corporate-logo.png" alt="Corporate logotype" data-role="logotype" class="logo"></img></a></div><form id="search-form" class="site-sidebar-search" autocomplete="off"><input type="text" class="form-control search-field" placeholder="Search" id="aa-search-input"></input></form><div id="toc-standalone-placeholder"></div></aside><div class="site-content"><div class="toolbar"><div class="toolbar-tools"><div id="navbar" class="navbar-collapse collapse"></div><div class="tool-print"><i class="fa fa-print" aria-hidden="true">print</i></div><div class="tool-search"><i class="fa fa-search" aria-hidden="true"></i></div><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".site-sidebar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button></div><div class="breadcrumb-container"><ul class="breadcrumb"><li class="breadcrumb-link"><a href="index-en.html">XM Cloud Documentation for Developers</a></li><li class="breadcrumb-link"><a href="getting-started-with-xm-cloud.html">Getting started with XM Cloud</a></li><li class="breadcrumb-node">Walkthrough: Registering an external React component</li></ul></div></div><main><div id="top-pager"><ul class="pager"><li class="previous"><a accesskey="p" class="prev pull-left prev visible-lg visible-md" id="header-navigation-prev" href="walkthrough--connecting-the-next-js-application-directly-to-the-experience-edge-endpoint.html#UUID-c90978a4-8b2d-4de2-7644-9b9a573b913d_section-idm4598732409846433288866651353">Prev</a></li><li class="next"><a accesskey="n" class="pull-right next visible-lg visible-md" id="header-navigation-next" href="walkthrough--registering-an-external-react-component.html#UUID-96b1ce6e-def0-ca78-a5d0-85d94d847f5b_section-idm4553222396153633748630199571">Next</a></li></ul></div><article class="topic content-container" id="content-wrapper"><div id="topic-content" class="topic-content"><section xml:lang="en" lang="en" dir="ltr" class="section" data-origin-id="UUID-fa0a67f2-2600-ba39-5d21-980e0654a23b" data-permalink="walkthrough--registering-an-external-react-component.html" data-topic-level="1" data-relative-prefix="" data-time-modified="06/29/2023" data-publication-date="06/30/23" id="UUID-96b1ce6e-def0-ca78-a5d0-85d94d847f5b"><div class="titlepage"><div><div class="title"><h1 class="title" style="clear: both">Walkthrough: Registering an external React component</h1></div><div><div class="abstract"><div class="abstract-title">Abstract</div><p>Reference your React code base in Sitecore XM Cloud Components to include a custom component in the component builder.</p></div></div></div></div><p>XM Cloud includes a powerful component builder interface, which designers can use to resize and style components. Components can then be added by content authors to site pages, using the Pages application. Components lets you single-source your site content by building once and reusing, while applying consistent themes throughout.</p><p>There are other options for <a class="link linktype-component" data-olink="true" href="/xmc/en/users/xm-cloud/en/import-a-component.html">including code in a component</a>. This topic describes referencing an external React component, or an entire React component library.</p><p>Components is a low-code/no-code solution, and is mostly used by content authors and designers to create reusable elements for a website. In addition, a developer can reference an external code base that includes components, so that they can be used in the component builder interface. After developers complete the registration flow, React components can be added to the builder. As a result:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>The registered component is part of the components library (scoped to a <a class="glossterm" data-toggle="popover" title="Project" data-popover-content="#UUID-3ceb7d45-3caf-3196-3a9a-f59a9474182a_xmc_project" href="xm-cloud-terminology.html#UUID-3ceb7d45-3caf-3196-3a9a-f59a9474182a_xmc_project">project</a>) and can be used and reused within XM Cloud Pages.</p></li><li class="listitem"><p>The registered component can be previewed in the component builder.</p><div dir="ltr" class="note"><h3 class="title">Note</h3><p>External components are previewed in a separate tab of the builder, and can't be previewed in Pages.</p></div></li><li class="listitem"><p>A content author using the component in Pages can enter values for the defined input parameters.</p></li></ul></div><p>Before you can reference your external components, make sure the code base is hosted on an accessible rendering host URL. You do have the option of working locally and referencing your local rendering host, for testing purposes.</p><div dir="ltr" class="tip"><h3 class="title">Tip</h3><p>To make it easier to follow this topic, in the Components app on the <span class="guilabel">Settings</span> tab, click <span class="guilabel">Rendering host</span> and copy the commands and code from there.</p></div><p>This walkthrough describes how to:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Install the NPM package</p></li><li class="listitem"><p>Load the Components SDK</p></li><li class="listitem"><p>Add registerComponent to your code</p></li><li class="listitem"><p>Register the rendering host</p></li><li class="listitem"><p>Create a preview</p></li></ul></div><section dir="ltr" class="section" data-origin-id="" data-publication-date="06/30/23" id="UUID-96b1ce6e-def0-ca78-a5d0-85d94d847f5b_section-idm4553222396153633748630199571"><div class="titlepage"><div><div class="title"><h2 class="title" style="clear: both">Install the NPM package</h2></div></div></div><p>To install the Components SDK:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Run the following command in your terminal:</p><pre class="programlisting" id="UUID-96b1ce6e-def0-ca78-a5d0-85d94d847f5b_programlisting-idm4517193354192033748636123133">npm install @sitecore-feaas/clientside</pre></li></ul></div></section><section dir="ltr" class="section" data-origin-id="" data-publication-date="06/30/23" id="UUID-96b1ce6e-def0-ca78-a5d0-85d94d847f5b_section-idm4543400934843233747248471843"><div class="titlepage"><div><div class="title"><h2 class="title" style="clear: both">Load the Components SDK</h2></div></div></div><p>To enable registering the React component in the Component builder:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>In the first line of your React code, load the Components SDK</p><pre class="programlisting" id="UUID-96b1ce6e-def0-ca78-a5d0-85d94d847f5b_programlisting-idm465334376095683374725301418">import * as FEAAS from "@sitecore-feaas/clientside/react"</pre></li></ul></div></section><section dir="ltr" class="section" data-origin-id="" data-publication-date="06/30/23" id="UUID-96b1ce6e-def0-ca78-a5d0-85d94d847f5b_section-idm454340027242243374724881286"><div class="titlepage"><div><div class="title"><h2 class="title" style="clear: both">Add registerComponent to your code</h2></div></div></div><p>To register your component and specify its properties:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Use <a class="link linktype-component" href="the-registercomponent-method.html" title="The registerComponent method">the registerComponent method</a>. This call has to run before the builder attempts to render the component.</p></li></ul></div></section><section dir="ltr" class="section" data-origin-id="" data-publication-date="06/30/23" id="UUID-96b1ce6e-def0-ca78-a5d0-85d94d847f5b_section-idm4517188788985633747249120994"><div class="titlepage"><div><div class="title"><h2 class="title" style="clear: both">Register the rendering host</h2></div></div></div><p>After you finish the registration within your React code, enter the details of the rendering host where your code base is saved, into XM Cloud Components. The next section includes some code you can use to get started.</p><p>To register the rendering host:</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p>In Components, on the <span class="guilabel">Settings</span> tab, click <span class="guilabel">Rendering host</span>.</p></li><li class="listitem"><p>In the <span class="guilabel">Set your rendering host</span> field, enter your publicly accessible URL and click <span class="guilabel">Save</span>. This fetches your React code and registers it within the Components app.</p></li></ol></div><p>After a short wait, you can see an updated indication of the number of registered components.</p></section><section dir="ltr" class="section" data-origin-id="" data-publication-date="06/30/23" id="UUID-96b1ce6e-def0-ca78-a5d0-85d94d847f5b_section-idm4539715118728033748644228077"><div class="titlepage"><div><div class="title"><h2 class="title" style="clear: both">Create a preview rendering host</h2></div></div></div><p>To create a preview rendering host:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Create a React application that allows you to preview external components within the component builder interface. You can use the following code as a starting point for the preview rendering host.</p></li></ul></div><pre class="programlisting" id="UUID-96b1ce6e-def0-ca78-a5d0-85d94d847f5b_programlisting-idm4517190431763233748736575923">/* src/App.js */
+ 
+/* Example React app for rendering the component in a /preview route using a React router */
+import { Routes, Route } from "react-router-dom";
+import * as FEAAS from "@sitecore-feaas/clientside/react"
+/* make sure that you import your registered components in the rendering host to be able to render them */
+import MyComponent from "./components/MyComponent"
+ 
+function App() {
+    return (
+        &lt;Routes&gt;
+            &lt;Route path={/* your rendering host path here (eg./preview)*/} element={&lt;FEAAS.External.Preview /&gt;} /&gt;
+        &lt;/Routes&gt;
+    )
+}
+
+export default App;</pre><p>If you choose to create a route path, such as <code class="code">/preview</code>, remember to include this route in the path you reference when registering the rendering host, like this:</p><div class="mediaobject"><img src="image/uuid-c4dace53-3f38-545b-bfc5-0b991d0ef5a4.png" style="" alt="Screenshot of the rendering host configuration in XM Cloud Components."></img></div><p>Some optimizers, such as Next.js, might exclude the import component line, because it isn't used by the rendering host. To ensure the imported components aren't removed during a tree shake, we recommend creating an intermediate index component that will link all your registered React components using the <code class="code">FEAAS.linkComponents()</code> method, as in the following <code class="code">index.tsx</code> example:</p><pre class="programlisting" id="UUID-96b1ce6e-def0-ca78-a5d0-85d94d847f5b_programlisting-idm457934934512003375068936437">'use client' 
+import * as FEAAS from '@sitecore-feaas/clientside/react'
+export default FEAAS.linkComponents( components: [import('./Component1'), import('./Component2')])</pre><p>Then, include the index component in your rendering host, similar to this Next.js example:</p><pre class="programlisting" id="UUID-96b1ce6e-def0-ca78-a5d0-85d94d847f5b_programlisting-idm4517193392768033750690460141">import React from 'react'
+import * as FEAAS from '@sitecore-feaas/clientside/react'
+import LinkedComponents from './components/index'
+
+export default async function ExternalComponents({
+                                                   searchParams
+                                                 }: {
+  searchParams: { feaasSrc: string; data: string }
+}) {
+  const src = searchParams.feaasSrc
+  const data = searchParams.data ? JSON.parse(searchParams.data) : {}
+
+  return (
+      &lt;&gt;
+        &lt;LinkedComponents /&gt;
+        &lt;FEAAS.External.Preview src={src} data={data}&gt;&lt;/FEAAS.External.Preview&gt;
+      &lt;/&gt;
+  )
+}</pre><p>You can find a complete Next.js example application implementing this method <a class="link" href="https://bitbucket.org/stylelabsdev/feaas-nextjs-example" target="_blank" rel="noopener">here</a>.</p></section></section><div class="footer-content"><div class="glossary-definitions"><div id="UUID-3ceb7d45-3caf-3196-3a9a-f59a9474182a_xmc_project" class="hide"><p>A <span class="emphasis"><em>project</em></span> is a logical grouping of XM Cloud environments. Each project can include several environments, such as a development, testing, and production environment. In XM Cloud, you can create a project using the Deploy app, the CLI, or REST APIs.</p><p>When you create a project using the Deploy app, one environment is automatically created, and you can choose whether it’s a production environment (that gets faster support than the non-production environments). The number of projects you can create depends on your subscription.</p></div></div></div><footer></footer></div></article><aside class="section-nav-container"><ul class="section-nav nav"><li><a href="#UUID-96b1ce6e-def0-ca78-a5d0-85d94d847f5b">Walkthrough: Registering an external React component</a></li><li><a href="#UUID-96b1ce6e-def0-ca78-a5d0-85d94d847f5b_section-idm4553222396153633748630199571">Install the NPM package</a></li><li><a href="#UUID-96b1ce6e-def0-ca78-a5d0-85d94d847f5b_section-idm4543400934843233747248471843">Load the Components SDK</a></li><li><a href="#UUID-96b1ce6e-def0-ca78-a5d0-85d94d847f5b_section-idm454340027242243374724881286">Add registerComponent to your code</a></li><li><a href="#UUID-96b1ce6e-def0-ca78-a5d0-85d94d847f5b_section-idm4517188788985633747249120994">Register the rendering host</a></li><li><a href="#UUID-96b1ce6e-def0-ca78-a5d0-85d94d847f5b_section-idm4539715118728033748644228077">Create a preview rendering host</a></li></ul></aside></main><div id="bottom-pager"><ul class="pager"><li class="previous"><a accesskey="p" class="prev pull-left prev visible-lg visible-md" id="header-navigation-prev" href="walkthrough--connecting-the-next-js-application-directly-to-the-experience-edge-endpoint.html#UUID-c90978a4-8b2d-4de2-7644-9b9a573b913d_section-idm4598732409846433288866651353">Prev</a></li><li class="next"><a accesskey="n" class="pull-right next visible-lg visible-md" id="header-navigation-next" href="walkthrough--registering-an-external-react-component.html#UUID-96b1ce6e-def0-ca78-a5d0-85d94d847f5b_section-idm4553222396153633748630199571">Next</a></li></ul></div><footer class="site-footer"><div class="inner"><div class="copyright"> © 2023 Sitecore </div><div class="date-modified"><span class="date-modified-text">Last modified: </span><span class="formatted-date">06/29/2023</span></div><div class="publication-date"><span class="publication-date-text">Publication date</span><span class="pubdate-delimiter">: </span><span class="formatted-date">06/30/23</span></div></div></footer></div></div></div></div><script type="text/javascript" src="//customer.cludo.com/scripts/bundles/search-script.min.js"></script><script>
+			var CludoSearch;
+			(function () {
+			var cludoSettings = {
+			customerId: 2063,
+			engineId: 12826,
+			language: 'en',
+			searchInputs: ["search-form","cludo-search-content-form","cludo-search-mobile-form"],
+			hideSearchFilters: true,
+			type: 'standardOverlay',
+			facets: ["Category", "ProductVer", "Product", "Version"],
+			useStandardSearchTemplate: false,
+			customerTemplate: "OverlayCopy",
+			searchApiUrl: 'https://api-eu1.cludo.com/api/v3'
+			};
+			CludoSearch= new Cludo(cludoSettings);
+			CludoSearch.init();
+			})();
+		</script><!-- www.Cludo.com Search body init script start --></body></html>

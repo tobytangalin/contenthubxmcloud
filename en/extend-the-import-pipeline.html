@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"></meta><meta name="format-detection" content="telephone=no"></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><meta name="search" content="default"></meta><meta name="use.ic" content="no"></meta><meta name="Audience - do not use" content=""></meta><meta name="clubot" content=""></meta><meta name="data model" content=""></meta><meta name="DxP type - Do Not Use" content=""></meta><meta name="media_icon" content=""></meta><meta name="product" content="XM Cloud"></meta><meta name="Publishing target" content="Production"></meta><meta name="Ready for publishing - do not use" content=""></meta><meta name="role" content="developers"></meta><meta name="topic_tripane" content=""></meta><meta name="version" content=""></meta><meta name="tocstandalone" content="yes"></meta><meta name="theme" content="1"></meta><meta name="search.placeholder" content="Search"></meta><meta name="search.results" content="Search results"></meta><meta name="no.search.results" content="No results found"></meta><script type="text/javascript">
+var theme = '1';
+
+			
+			window.versionsfile = '';
+
+
+			window.indexDict = new Array();
+			window.store = {};
+			window.portalLanguage = 'en';
+			window.enterKey = 'select';
+			
+			
+				var fuse_threshold = 0.3;
+			
+					var local_csh = false;
+				
+					var anchoroption = true;
+				var instantsearch_minlength = 1;
+						
+			var useanchorlinks = false;
+			
+					function addSearch(){
+					//not used with custom or elastic search
+					}
+				</script><title>Extend the import pipeline</title><link rel="stylesheet" type="text/css" href="../css/docbook.css"></link><link rel="stylesheet" type="text/css" href="../css/font-awesome.css"></link><link rel="stylesheet" type="text/css" href="../css/roboto.font.css"></link><link rel="stylesheet" type="text/css" href="../css/theme1.css?version=20230630"></link><link rel="stylesheet" type="text/css" href="../css/theme1-colors.css?version=20230630"></link><link rel="stylesheet" type="text/css" href="../css/content-theme1.css?version=20230630"></link><link rel="stylesheet" type="text/css" href="../css/sm-core-css.css"></link><link rel="stylesheet" type="text/css" href="../css/sm-simple.css"></link><link rel="stylesheet" type="text/css" href="../css/style-print.css"></link><link rel="stylesheet" type="text/css" href="../css/style-common.css"></link><link rel="stylesheet" type="text/css" href="../css/style-modern-tables.css"></link><link rel="stylesheet" type="text/css" href="../css/graphical-lists.css"></link><link rel="stylesheet" type="text/css" href="/css/sitecore-custom-default-xmc.css?version=20230630"></link><script src="../js/jquery-3/jquery-3.4.1.min.js" type="text/javascript"></script><script src="../js/jquery-migrate-3.0.1.min.js" type="text/javascript"></script><script src="../js/materialize.min.js" type="text/javascript"></script><script src="../js/bootstrap.min.js" type="text/javascript"></script><script src="../js/purl.js" type="text/javascript"></script><script src="../js/jquery.smartmenus.js" type="text/javascript"></script><script src="js/toc.js?version=20230630" type="text/javascript"></script><script src="../js/create-toc.js" type="text/javascript"></script><script src="../js/html5-2-mp-common.js?version=20230630" type="text/javascript"></script><script src="../js/html5-2.js?version=20230630" type="text/javascript"></script><script src="../js/checklist.js" type="text/javascript"></script><script src="../js/clipboard.min.js" type="text/javascript"></script><script src="../js/csh.js" type="text/javascript"></script><script src="/js/layout-custom-script.js" type="text/javascript"></script><meta xmlns:xhtml="http://www.w3.org/1999/xhtml" name="generator" content="Paligo"></meta><meta name="description" content="Example of how to modify the import pipeline behavior using a custom processor"></meta><link rel="prev" href="pipelines-used-in-the-jss-code-first-import-process.html#idm45599296932256" title="create.renderingInstance"></link><link rel="next" href="jss-manifest-api.html" title="JSS Manifest API"></link><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML" async="async"></script><link rel="icon" href="/favicon.ico" type="image/x-icon"></link><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent/3.1.1/cookieconsent.min.css"></link><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent/3.1.1/cookieconsent.min.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/3.0.1/js.cookie.min.js"></script><script type="text/javascript">var privacypolicy = 'https://www.sitecore.com/trust/privacy-policy';
+var consenttype = 'opt-out';
+</script><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-72664331-1"></script><script type="text/javascript">const measurementId = 'UA-72664331-1';
+
+						$(document).on('cookies.consented', () => {
+							window.dataLayer = window.dataLayer || [];
+							function gtag(){dataLayer.push(arguments)};
+
+							gtag('js', new Date());
+							gtag('config', measurementId);
+						});
+					</script><script type="text/javascript" src="../js/cookie-consent.js"></script><script type="text/javascript">
+				$(document).ready(function () {
+				$(".mediaobject img").addClass('materialboxed');
+				//Exclude images with links
+				$(".mediaobject a img").removeClass('materialboxed');
+				if (!document.documentMode) {
+				$('.materialboxed').materialbox();
+				}});
+			</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/googlecode.min.css"></link><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script><script type="text/javascript">
+			$(document).ready(function() {
+
+				$('pre:not(.embedcode)').each(function() {
+					/**
+					 * @type {string}
+					 */
+					var language = $(this).data('language');
+
+					if (language === 'plaintext' || language === 'text') {
+						$(this).addClass(language).addClass('hljs');
+						return true;
+					}
+					else {
+						var clone = this.cloneNode(true);
+						hljs.highlightBlock(clone);
+						$(this).empty().append($(clone).contents());
+						$(this).attr("class", $(clone).attr("class"));
+					}
+				});
+			});
+			</script><link href="//customer.cludo.com/assets/2063/10039/cludo-search.min.css" type="text/css" rel="stylesheet"></link></head><body class="theme1 colored-top page-toc current-toc-section-focus" data-spy="scroll" data-target=".section-nav-container" data-offset="100" data-link-prefix=""><style type="text/css">
+            div.skipnav {
+            }
+            div.skipnav a {
+                position: fixed;
+                left: -10000px;
+                top: 1.5em;
+                width: 1px;
+                height: 1px;
+                overflow: hidden;
+            }
+            div.skipnav a:focus, div.skipnav a:active, div.skipnav a:hover {
+                background: white;
+                color: black;
+                box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.5);
+                position: fixed;
+                left: 2em;
+                top: 1.5em;
+                width: auto;
+                height: auto;
+                overflow: visible;
+                text-decoration: underline;
+                z-index: 99999; /* has to be higher than the side panel */
+    }
+          </style><div class="skipnav"><a href="#content-wrapper">Skip to main content</a></div><header class="site-header"><nav class="site-header-navbar navbar navbar-fixed-top"><div class="navbar-container"><div class="navbar-header"><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".site-sidebar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><div id="logotype-container" class="pull-left"><a class="navbar-brand" href="https://doc.sitecore.com/xmc/" target="_blank" rel="noopener"><img id="logotype-pageheader" src="../css/image/corporate-logo.png" alt="Corporate logotype" data-role="logotype" class="logo"></img></a></div></div><div class="navbar-collapse collapse" id="navbar"></div></div></nav></header><div class="site-body"><div class="site-body-container"><div class="site-body-row"><aside xmlns:xinfo="http://ns.expertinfo.se/cms/xmlns/1.0" class="site-sidebar"><div class="site-sidebar-header"><a href="https://doc.sitecore.com/xmc/" target="_blank"><img id="logotype-pageheader" src="../css/image/corporate-logo.png" alt="Corporate logotype" data-role="logotype" class="logo"></img></a></div><form id="search-form" class="site-sidebar-search" autocomplete="off"><input type="text" class="form-control search-field" placeholder="Search" id="aa-search-input"></input></form><div id="toc-standalone-placeholder"></div></aside><div class="site-content"><div class="toolbar"><div class="toolbar-tools"><div id="navbar" class="navbar-collapse collapse"></div><div class="tool-print"><i class="fa fa-print" aria-hidden="true">print</i></div><div class="tool-search"><i class="fa fa-search" aria-hidden="true"></i></div><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".site-sidebar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button></div><div class="breadcrumb-container"><ul class="breadcrumb"><li class="breadcrumb-link"><a href="index-en.html">XM Cloud Documentation for Developers</a></li><li class="breadcrumb-link"><a href="sitecore-javascript-rendering-sdks--jss-.html">Sitecore JavaScript Rendering SDKs (JSS)</a></li><li class="breadcrumb-link"><a href="architecture-overview.html">Architecture overview</a></li><li class="breadcrumb-link"><a href="jss-services-and-apis.html">JSS services and APIs</a></li><li class="breadcrumb-link"><a href="jss-app-import-api.html">JSS App Import API</a></li><li class="breadcrumb-node">Extend the import pipeline</li></ul></div></div><main><div id="top-pager"><ul class="pager"><li class="previous"><a accesskey="p" class="prev pull-left prev visible-lg visible-md" id="header-navigation-prev" href="pipelines-used-in-the-jss-code-first-import-process.html#idm45599296932256">Prev</a></li><li class="next"><a accesskey="n" class="pull-right next visible-lg visible-md" id="header-navigation-next" href="jss-manifest-api.html">Next</a></li></ul></div><article class="topic content-container" id="content-wrapper"><div id="topic-content" class="topic-content"><section xml:lang="en" lang="en" dir="ltr" class="section" data-origin-id="UUID-e272b7be-db47-653c-ce2c-f46117922703" data-permalink="extend-the-import-pipeline.html" data-topic-level="1" data-relative-prefix="" data-time-modified="10/14/2022" data-publication-date="06/30/23" id="UUID-895dba33-141e-87ff-599c-1ba0cff94a65"><div class="titlepage"><div><div class="title"><h1 class="title" style="clear: both">Extend the import pipeline<span id="UUID-895dba33-141e-87ff-599c-1ba0cff94a65_UUID-c9c38df5-6015-d36a-a30d-8f5c62e70b8e"></span></h1></div><div><div class="abstract"><div class="abstract-title">Abstract</div><p>Example of how to modify the import pipeline behavior using a custom processor</p></div></div></div></div><p>You can extend the <a class="link linktype-component" href="pipelines-used-in-the-jss-code-first-import-process.html" title="Pipelines used in the JSS code-first import process">import pipeline</a> for the code-first workflow to customize various aspects of your application's data.</p><p>This procedure shows you how to extend the import process to allow customizing the path of templates you create.</p><p>To extend the import pipeline:</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p>Extend your manifest data by <a class="link linktype-component" href="adding-manifest-definitions-in-code-first-jss-apps.html" title="Adding Manifest definitions in code-first JSS apps">adding your component to the JSS Manifest</a>.</p><pre class="programlisting">export default manifest =&gt; {
+  manifest.addComponent({
+    name: "Welcome",
+    // we added this property to our welcome component
+    path: "/sitecore/templates/Welcome",
+    fields: [
+      { name: "title", type: manifest.fieldTypes.singleLineText },
+    ]
+  });
+};</pre></li><li class="listitem"><p>To make the custom path work, you must extend the import pipeline to alter how templates are created by the import process. Specifically, you must target the <code class="code">ProcessTemplates</code> processor in the <code class="code">import</code> pipeline, derive from it, and alter its behavior. For example:</p><pre class="programlisting">using System;
+using Sitecore.Data.Items;
+using Sitecore.Diagnostics;
+using Sitecore.JavaScriptServices.AppServices.Data;
+using Sitecore.JavaScriptServices.AppServices.Extensions;
+using Sitecore.JavaScriptServices.AppServices.Models;
+using Sitecore.JavaScriptServices.Configuration;
+
+namespace Sitecore.JavaScriptServices.AppServices.Pipelines.Import
+{
+    public class ProcessTemplatesWithPath : ProcessTemplates
+    {
+        protected override TemplateItem CreateTemplate(TemplateDef templateDef, Item parent, Item multilistRoot, AppConfiguration app, IdManager idManager)
+        {
+            // the AdditionalData property is a dictionary of any JSON properties that were _not_ mapped to a TemplateDef property
+            // so our path property - and any other custom properties that are added - will show up here. It will be null if no unmapped
+            // properties exist so make sure to check everything for nulls with ?
+            //
+            // All import pipeline model objects have an AdditionalData property like this.
+            var path = templateDef.AdditionalData?["path"]?.ToString();
+
+            // path not set, use default behavior
+            if (path == null) return base.CreateTemplate(templateDef, parent, multilistRoot, app, idManager);
+
+            // resolve the custom path's parent (to keep things simple, we're not creating any parent hierarchy)
+            var parentItemPath = path.Substring(0, path.LastIndexOf("/"));
+            var customParentItem = parent.Database.GetItem(parentItemPath, parent.Language);
+
+            if (customParentItem == null) throw new InvalidOperationException($"Parent item for custom import path item {templateDef.Name} ({path}) did not exist.");
+
+            var templateName = ItemUtil.ProposeValidItemName(templateDef.Name);
+
+            // JSS imports use _consistent IDs_ so that imports across instances use the same Sitecore item GUIDs
+            // This code generates the consistent ID and ensures that it is unique.
+            var templateId = idManager.GetTemplateId(app.Name, templateDef);
+            idManager.AssertIdIsUnused(templateId, $"template {templateDef.Name}");
+
+            // ensure we have permissions to create the item
+            if (!customParentItem.CanImportChild(templateName, templateId, out var templateItem))
+            {
+                return null;
+            }
+
+            if (templateItem == null)
+            {
+                Log.Info($"[JSS] - Creating template - {templateName} (Custom path: {path})", this);
+                templateItem = parent.Database.Templates.CreateTemplate(templateName, customParentItem);
+
+                // make the db see our new template
+                parent.Database.Engines.TemplateEngine.Reset();
+            }
+            else
+            {
+                Log.Debug($"[JSS] - Found existing template - {templateName}", this);
+            }
+
+            // sets the requisite fields on the template item
+            UpdateTemplateItem(templateItem, templateDef, parent, multilistRoot, app, idManager, templateItem.DisplayName);
+
+            return templateItem;
+        }
+    }
+}</pre></li><li class="listitem"><p>You must now tell Sitecore to use the custom processor <code class="code">ProcessTemplatesWithPath</code> instead of the default <code class="code">ProcessTemplates</code> processor. Create a configuration patch, for example <code class="code">App_Config/Include/PickAnyFileName.config</code> and add the following configuration:</p><pre class="programlisting">&lt;configuration xmlns:patch="http://www.sitecore.net/xmlconfig/" xmlns:set="http://www.sitecore.net/xmlconfig/set/" xmlns:role="http://www.sitecore.net/xmlconfig/role/"&gt;
+  &lt;sitecore role:require="ContentManagement or Standalone"&gt;
+    &lt;pipelines&gt;
+      &lt;group groupName="javaScriptServices"&gt;
+        &lt;pipelines&gt;
+          &lt;import&gt;
+            &lt;processor 
+              type="Sitecore.JavaScriptServices.AppServices.Pipelines.Import.ProcessTemplatesWithPath, Sitecore.JavaScriptServices.AppServices"
+              patch:instead="*[contains(@type, 'ProcessTemplates')]" /&gt;
+          &lt;/import&gt;
+        &lt;/pipelines&gt;
+      &lt;/group&gt;
+    &lt;/pipelines&gt;
+  &lt;/sitecore&gt;
+&lt;/configuration&gt;</pre></li><li class="listitem"><p>Deploy your items:</p><pre class="programlisting">jss deploy items</pre><div dir="ltr" class="note"><h3 class="title">Note</h3><p>When you run one of the scripts, JSS <a class="link linktype-component" href="generating-a-jss-app-manifest-file.html" title="Generating a JSS app manifest file">generates the manifest</a> automatically in the file <code class="code">sitecore/manifest/sitecore-import.json</code>.</p></div><p>The script outputs among other things, a message similar to the following:</p><pre class="programlisting">[JSS] - Creating template - Welcome (Custom path: /sitecore/templates/Welcome)</pre></li><li class="listitem"><p>In the Sitecore content tree, verify that the template was created at the path you requested.</p><div dir="ltr" class="note"><h3 class="title">Note</h3><p>If you previously deployed your JSS app and have an existing template item in the default location, remove it and change any usage of it to the new template.</p></div></li></ol></div></section><div class="footer-content"><div class="glossary-definitions"></div></div><footer></footer></div></article></main><div id="bottom-pager"><ul class="pager"><li class="previous"><a accesskey="p" class="prev pull-left prev visible-lg visible-md" id="header-navigation-prev" href="pipelines-used-in-the-jss-code-first-import-process.html#idm45599296932256">Prev</a></li><li class="next"><a accesskey="n" class="pull-right next visible-lg visible-md" id="header-navigation-next" href="jss-manifest-api.html">Next</a></li></ul></div><footer class="site-footer"><div class="inner"><div class="copyright"> © 2023 Sitecore </div><div class="date-modified"><span class="date-modified-text">Last modified: </span><span class="formatted-date">10/14/2022</span></div><div class="publication-date"><span class="publication-date-text">Publication date</span><span class="pubdate-delimiter">: </span><span class="formatted-date">06/30/23</span></div></div></footer></div></div></div></div><script type="text/javascript" src="//customer.cludo.com/scripts/bundles/search-script.min.js"></script><script>
+			var CludoSearch;
+			(function () {
+			var cludoSettings = {
+			customerId: 2063,
+			engineId: 12826,
+			language: 'en',
+			searchInputs: ["search-form","cludo-search-content-form","cludo-search-mobile-form"],
+			hideSearchFilters: true,
+			type: 'standardOverlay',
+			facets: ["Category", "ProductVer", "Product", "Version"],
+			useStandardSearchTemplate: false,
+			customerTemplate: "OverlayCopy",
+			searchApiUrl: 'https://api-eu1.cludo.com/api/v3'
+			};
+			CludoSearch= new Cludo(cludoSettings);
+			CludoSearch.init();
+			})();
+		</script><!-- www.Cludo.com Search body init script start --></body></html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"></meta><meta name="format-detection" content="telephone=no"></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><meta name="search" content="default"></meta><meta name="use.ic" content="no"></meta><meta name="Audience - do not use" content=""></meta><meta name="clubot" content=""></meta><meta name="data model" content=""></meta><meta name="DxP type - Do Not Use" content=""></meta><meta name="media_icon" content=""></meta><meta name="product" content="XM Cloud"></meta><meta name="Publishing target" content="Production"></meta><meta name="Ready for publishing - do not use" content=""></meta><meta name="role" content="developers"></meta><meta name="topic_tripane" content=""></meta><meta name="version" content=""></meta><meta name="tocstandalone" content="yes"></meta><meta name="theme" content="1"></meta><meta name="search.placeholder" content="Search"></meta><meta name="search.results" content="Search results"></meta><meta name="no.search.results" content="No results found"></meta><script type="text/javascript">
+var theme = '1';
+
+			
+			window.versionsfile = '';
+
+
+			window.indexDict = new Array();
+			window.store = {};
+			window.portalLanguage = 'en';
+			window.enterKey = 'select';
+			
+			
+				var fuse_threshold = 0.3;
+			
+					var local_csh = false;
+				
+					var anchoroption = true;
+				var instantsearch_minlength = 1;
+						
+			var useanchorlinks = false;
+			
+					function addSearch(){
+					//not used with custom or elastic search
+					}
+				</script><title>The cloud login command</title><link rel="stylesheet" type="text/css" href="../css/docbook.css"></link><link rel="stylesheet" type="text/css" href="../css/font-awesome.css"></link><link rel="stylesheet" type="text/css" href="../css/roboto.font.css"></link><link rel="stylesheet" type="text/css" href="../css/theme1.css?version=20230630"></link><link rel="stylesheet" type="text/css" href="../css/theme1-colors.css?version=20230630"></link><link rel="stylesheet" type="text/css" href="../css/content-theme1.css?version=20230630"></link><link rel="stylesheet" type="text/css" href="../css/sm-core-css.css"></link><link rel="stylesheet" type="text/css" href="../css/sm-simple.css"></link><link rel="stylesheet" type="text/css" href="../css/style-print.css"></link><link rel="stylesheet" type="text/css" href="../css/style-common.css"></link><link rel="stylesheet" type="text/css" href="../css/style-modern-tables.css"></link><link rel="stylesheet" type="text/css" href="../css/graphical-lists.css"></link><link rel="stylesheet" type="text/css" href="/css/sitecore-custom-default-xmc.css?version=20230630"></link><script src="../js/jquery-3/jquery-3.4.1.min.js" type="text/javascript"></script><script src="../js/jquery-migrate-3.0.1.min.js" type="text/javascript"></script><script src="../js/materialize.min.js" type="text/javascript"></script><script src="../js/bootstrap.min.js" type="text/javascript"></script><script src="../js/purl.js" type="text/javascript"></script><script src="../js/jquery.smartmenus.js" type="text/javascript"></script><script src="js/toc.js?version=20230630" type="text/javascript"></script><script src="../js/create-toc.js" type="text/javascript"></script><script src="../js/html5-2-mp-common.js?version=20230630" type="text/javascript"></script><script src="../js/html5-2.js?version=20230630" type="text/javascript"></script><script src="../js/checklist.js" type="text/javascript"></script><script src="../js/clipboard.min.js" type="text/javascript"></script><script src="../js/csh.js" type="text/javascript"></script><script src="/js/layout-custom-script.js" type="text/javascript"></script><meta xmlns:xhtml="http://www.w3.org/1999/xhtml" name="generator" content="Paligo"></meta><meta name="description" content="Reference for the Sitecore CLI cloud login command authenticating with an XM Cloud Organization."></meta><link rel="prev" href="the-cli-cloud-command.html#UUID-752d1dcd-9c6d-4b36-1661-c26e2a4e613d_section-idm4567206847144032933018796973" title="Subcommands"></link><link rel="next" href="the-cloud-login-command.html#UUID-40f48d8d-90e2-e211-ff03-ddfbfe5cd098_section-idm1403293475664014" title="Usage"></link><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML" async="async"></script><link rel="icon" href="/favicon.ico" type="image/x-icon"></link><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent/3.1.1/cookieconsent.min.css"></link><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent/3.1.1/cookieconsent.min.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/3.0.1/js.cookie.min.js"></script><script type="text/javascript">var privacypolicy = 'https://www.sitecore.com/trust/privacy-policy';
+var consenttype = 'opt-out';
+</script><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-72664331-1"></script><script type="text/javascript">const measurementId = 'UA-72664331-1';
+
+						$(document).on('cookies.consented', () => {
+							window.dataLayer = window.dataLayer || [];
+							function gtag(){dataLayer.push(arguments)};
+
+							gtag('js', new Date());
+							gtag('config', measurementId);
+						});
+					</script><script type="text/javascript" src="../js/cookie-consent.js"></script><script type="text/javascript">
+				$(document).ready(function () {
+				$(".mediaobject img").addClass('materialboxed');
+				//Exclude images with links
+				$(".mediaobject a img").removeClass('materialboxed');
+				if (!document.documentMode) {
+				$('.materialboxed').materialbox();
+				}});
+			</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/googlecode.min.css"></link><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script><script type="text/javascript">
+			$(document).ready(function() {
+
+				$('pre:not(.embedcode)').each(function() {
+					/**
+					 * @type {string}
+					 */
+					var language = $(this).data('language');
+
+					if (language === 'plaintext' || language === 'text') {
+						$(this).addClass(language).addClass('hljs');
+						return true;
+					}
+					else {
+						var clone = this.cloneNode(true);
+						hljs.highlightBlock(clone);
+						$(this).empty().append($(clone).contents());
+						$(this).attr("class", $(clone).attr("class"));
+					}
+				});
+			});
+			</script><link href="//customer.cludo.com/assets/2063/10039/cludo-search.min.css" type="text/css" rel="stylesheet"></link></head><body class="theme1 colored-top page-toc current-toc-section-focus" data-spy="scroll" data-target=".section-nav-container" data-offset="100" data-link-prefix=""><style type="text/css">
+            div.skipnav {
+            }
+            div.skipnav a {
+                position: fixed;
+                left: -10000px;
+                top: 1.5em;
+                width: 1px;
+                height: 1px;
+                overflow: hidden;
+            }
+            div.skipnav a:focus, div.skipnav a:active, div.skipnav a:hover {
+                background: white;
+                color: black;
+                box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.5);
+                position: fixed;
+                left: 2em;
+                top: 1.5em;
+                width: auto;
+                height: auto;
+                overflow: visible;
+                text-decoration: underline;
+                z-index: 99999; /* has to be higher than the side panel */
+    }
+          </style><div class="skipnav"><a href="#content-wrapper">Skip to main content</a></div><header class="site-header"><nav class="site-header-navbar navbar navbar-fixed-top"><div class="navbar-container"><div class="navbar-header"><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".site-sidebar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><div id="logotype-container" class="pull-left"><a class="navbar-brand" href="https://doc.sitecore.com/xmc/" target="_blank" rel="noopener"><img id="logotype-pageheader" src="../css/image/corporate-logo.png" alt="Corporate logotype" data-role="logotype" class="logo"></img></a></div></div><div class="navbar-collapse collapse" id="navbar"></div></div></nav></header><div class="site-body"><div class="site-body-container"><div class="site-body-row"><aside xmlns:xinfo="http://ns.expertinfo.se/cms/xmlns/1.0" class="site-sidebar"><div class="site-sidebar-header"><a href="https://doc.sitecore.com/xmc/" target="_blank"><img id="logotype-pageheader" src="../css/image/corporate-logo.png" alt="Corporate logotype" data-role="logotype" class="logo"></img></a></div><form id="search-form" class="site-sidebar-search" autocomplete="off"><input type="text" class="form-control search-field" placeholder="Search" id="aa-search-input"></input></form><div id="toc-standalone-placeholder"></div></aside><div class="site-content"><div class="toolbar"><div class="toolbar-tools"><div id="navbar" class="navbar-collapse collapse"></div><div class="tool-print"><i class="fa fa-print" aria-hidden="true">print</i></div><div class="tool-search"><i class="fa fa-search" aria-hidden="true"></i></div><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".site-sidebar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button></div><div class="breadcrumb-container"><ul class="breadcrumb"><li class="breadcrumb-link"><a href="index-en.html">XM Cloud Documentation for Developers</a></li><li class="breadcrumb-link"><a href="developer-tools.html">Developer Tools</a></li><li class="breadcrumb-link"><a href="sitecore-command-line-interface.html">Sitecore Command Line Interface</a></li><li class="breadcrumb-link"><a href="sitecore-command-line-interface-reference.html">Sitecore Command Line Interface reference</a></li><li class="breadcrumb-link"><a href="the-cli-cloud-command.html">The CLI cloud command</a></li><li class="breadcrumb-node">The cloud login command</li></ul></div></div><main><div id="top-pager"><ul class="pager"><li class="previous"><a accesskey="p" class="prev pull-left prev visible-lg visible-md" id="header-navigation-prev" href="the-cli-cloud-command.html#UUID-752d1dcd-9c6d-4b36-1661-c26e2a4e613d_section-idm4567206847144032933018796973">Prev</a></li><li class="next"><a accesskey="n" class="pull-right next visible-lg visible-md" id="header-navigation-next" href="the-cloud-login-command.html#UUID-40f48d8d-90e2-e211-ff03-ddfbfe5cd098_section-idm1403293475664014">Next</a></li></ul></div><article class="topic content-container" id="content-wrapper"><div id="topic-content" class="topic-content"><section xml:lang="en" lang="en" dir="ltr" class="section" data-origin-id="UUID-b91238a1-2cee-77a1-f407-74e42e1f9bf4" data-permalink="the-cloud-login-command.html" data-topic-level="1" data-relative-prefix="" data-time-modified="01/25/2023" data-publication-date="06/30/23" id="UUID-40f48d8d-90e2-e211-ff03-ddfbfe5cd098"><div class="titlepage"><div><div class="title"><h1 class="title" style="clear: both">The cloud login command</h1></div><div><div class="abstract"><div class="abstract-title">Abstract</div><p>Reference for the Sitecore CLI cloud login command authenticating with an XM Cloud Organization.</p></div></div></div></div><p>The Sitecore XM Cloud plugin provides the <code class="code">cloud login</code> command. The command authenticates a person through the Sitecore CLI with an XM Cloud Organization, granting them access tokens and claims based on authorization.</p><p>Initial credentials and endpoints are stored in the <code class="code">Sitecore.DevEx.Extensibility.XMCloud&lt;version&gt;\plugin\plugin.json</code> file. After logging in, you can find them in the <code class="code">.sitecore\user.json</code> file.</p><section dir="ltr" class="section accordion" data-origin-id="" data-publication-date="06/30/23" id="UUID-40f48d8d-90e2-e211-ff03-ddfbfe5cd098_section-idm1403293475664014"><div class="accordion-icon"></div><div class="panel panel-default"><div class="panel-heading"><div class="titlepage"><a data-toggle="collapse" href="#UUID-40f48d8d-90e2-e211-ff03-ddfbfe5cd098_section-idm1403293475664014_body" data-parent="#UUID-40f48d8d-90e2-e211-ff03-ddfbfe5cd098_section-idm1403293475664014"><div><div class="title"><h2 class="title" style="clear: both">Usage</h2></div></div></a></div></div><div class="panel-body collapse" id="UUID-40f48d8d-90e2-e211-ff03-ddfbfe5cd098_section-idm1403293475664014_body"><p>You can use the <code class="code">cloud login</code> command as follows:</p><pre class="programlisting" id="UUID-40f48d8d-90e2-e211-ff03-ddfbfe5cd098_programlisting-idm1401646737832009">dotnet sitecore cloud login [options] </pre><p>You can run the command without any options.</p><p>To log in to a Sitecore XM Cloud Organization, the Sitecore CLI XM Cloud plugin allows two flows of authentication and authorization:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>An interactive user login using a device code flow.</p></li><li class="listitem"><p>A non-interactive client login using a client credentials flow. This is used by clients such as Continuous Integration (CI) servers.</p></li></ul></div><p>For interactive user login using a device code authentication flow, use the command:</p><pre class="programlisting" id="UUID-40f48d8d-90e2-e211-ff03-ddfbfe5cd098_programlisting-idm1403293475664016">dotnet sitecore cloud login</pre><p>For non-interactive client logins using client credential flows, use the command:</p><pre class="programlisting" id="UUID-40f48d8d-90e2-e211-ff03-ddfbfe5cd098_programlisting-idm4592332741108832964040697015">dotnet sitecore cloud login --client-credentials --client-id &lt;clientId&gt; --client-secret &lt;clientSecret&gt;</pre></div></div></section><section dir="ltr" class="section accordion" data-origin-id="" data-publication-date="06/30/23" id="UUID-40f48d8d-90e2-e211-ff03-ddfbfe5cd098_section-idm4567206788824032934761476964"><div class="accordion-icon"></div><div class="panel panel-default"><div class="panel-heading"><div class="titlepage"><a data-toggle="collapse" href="#UUID-40f48d8d-90e2-e211-ff03-ddfbfe5cd098_section-idm4567206788824032934761476964_body" data-parent="#UUID-40f48d8d-90e2-e211-ff03-ddfbfe5cd098_section-idm4567206788824032934761476964"><div><div class="title"><h2 class="title" style="clear: both">Options</h2></div></div></a></div></div><div class="panel-body collapse" id="UUID-40f48d8d-90e2-e211-ff03-ddfbfe5cd098_section-idm4567206788824032934761476964_body"><p id="UUID-40f48d8d-90e2-e211-ff03-ddfbfe5cd098_para-idm1403293476601796">The <code class="code">cloud login</code> command has the following options:</p><div class="informaltable table-responsive" id="UUID-40f48d8d-90e2-e211-ff03-ddfbfe5cd098_informaltable-idm1403293476567128"><table class="informaltable frame-void rules-rows"><thead><tr><th class="th"><p>Option</p></th><th class="th"><p>Description</p></th></tr></thead><tbody><tr><td class="td"><p><code class="code">--authority</code>, <code class="code">--auth</code></p></td><td class="td"><p>Specifies the Identity Server used to authenticate to the Sitecore Cloud system and Organization.</p><p>Default: the value set with the XM Cloud SaaS Identity auth URL.</p></td></tr><tr><td class="td"><p><code class="code">--audience</code></p></td><td class="td"><p>Specifies the audience for authentication to the Sitecore Cloud system and Organization. In production, provide one of the following audiences:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>To access the XM Cloud environment, <code class="code">https://api.sitecorecloud.io</code>.</p></li><li class="listitem"><p>To access the Sitecore deployment using the XM Cloud DevEx plugin, <code class="code">https://xmcloud-cm.sitecorecloud.io</code>.</p></li></ul></div></td></tr><tr><td class="td"><p><code class="code">--client-id</code></p></td><td class="td"><p>Specifies the client ID used for the Sitecore Cloud system and Organization authentication.</p></td></tr><tr><td class="td"><p><code class="code">--client-secret</code></p></td><td class="td"><p>Specifies the client secret used for authentication to the Sitecore Cloud system and Organization.</p></td></tr><tr><td class="td"><p><code class="code">--client-credentials</code></p></td><td class="td"><p>A Boolean parameter specifying whether to use the client credentials flow. Use it for authentication flows with continuous integration and automation tools.</p></td></tr><tr><td class="td"><p><code class="code">--xmcloudhost</code></p></td><td class="td"><p>Specifies the XM Cloud hosting URL.</p></td></tr><tr><td class="td"><p><code class="code">--config</code></p></td><td class="td"><p>Path to the <code class="code">sitecore.json</code> file. Default: the root directory of the Sitecore project solution.</p></td></tr><tr><td class="td"><p><code class="code">--verbose</code>, <code class="code">-v</code></p></td><td class="td"><p>Write additional information about the command.</p></td></tr><tr><td class="td"><p><code class="code">--trace</code>, <code class="code">-t</code></p></td><td class="td"><p>Write diagnostics and detailed information about the command.</p></td></tr><tr><td class="td"><p><code class="code">-?</code>, <code class="code">-h</code>, <code class="code">--help</code></p></td><td class="td"><p>Display developer help and usage information about the command.</p></td></tr></tbody></table></div></div></div></section></section><div class="footer-content"><div class="glossary-definitions"></div></div><footer></footer></div></article><aside class="section-nav-container"><ul class="section-nav nav"><li><a href="#UUID-40f48d8d-90e2-e211-ff03-ddfbfe5cd098">The cloud login command</a></li><li><a href="#UUID-40f48d8d-90e2-e211-ff03-ddfbfe5cd098_section-idm1403293475664014">Usage</a></li><li><a href="#UUID-40f48d8d-90e2-e211-ff03-ddfbfe5cd098_section-idm4567206788824032934761476964">Options</a></li></ul></aside></main><div id="bottom-pager"><ul class="pager"><li class="previous"><a accesskey="p" class="prev pull-left prev visible-lg visible-md" id="header-navigation-prev" href="the-cli-cloud-command.html#UUID-752d1dcd-9c6d-4b36-1661-c26e2a4e613d_section-idm4567206847144032933018796973">Prev</a></li><li class="next"><a accesskey="n" class="pull-right next visible-lg visible-md" id="header-navigation-next" href="the-cloud-login-command.html#UUID-40f48d8d-90e2-e211-ff03-ddfbfe5cd098_section-idm1403293475664014">Next</a></li></ul></div><footer class="site-footer"><div class="inner"><div class="copyright"> © 2023 Sitecore </div><div class="date-modified"><span class="date-modified-text">Last modified: </span><span class="formatted-date">01/25/2023</span></div><div class="publication-date"><span class="publication-date-text">Publication date</span><span class="pubdate-delimiter">: </span><span class="formatted-date">06/30/23</span></div></div></footer></div></div></div></div><script type="text/javascript" src="//customer.cludo.com/scripts/bundles/search-script.min.js"></script><script>
+			var CludoSearch;
+			(function () {
+			var cludoSettings = {
+			customerId: 2063,
+			engineId: 12826,
+			language: 'en',
+			searchInputs: ["search-form","cludo-search-content-form","cludo-search-mobile-form"],
+			hideSearchFilters: true,
+			type: 'standardOverlay',
+			facets: ["Category", "ProductVer", "Product", "Version"],
+			useStandardSearchTemplate: false,
+			customerTemplate: "OverlayCopy",
+			searchApiUrl: 'https://api-eu1.cludo.com/api/v3'
+			};
+			CludoSearch= new Cludo(cludoSettings);
+			CludoSearch.init();
+			})();
+		</script><!-- www.Cludo.com Search body init script start --></body></html>
