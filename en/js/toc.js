@@ -40,6 +40,16 @@ var toc = [{
 "url": "create-a-sitecore-content-hub-action.html",
 "text": "Create a Sitecore Content Hub action",
 "class": "topic-link section"
+},
+{
+"url": "walkthrough--configuring-items-for-content-import.html",
+"text": "Walkthrough: Configuring items for content import",
+"class": "topic-link section"
+},
+{
+"url": "create-a-trigger.html",
+"text": "Create a trigger",
+"class": "topic-link section"
 }]
 },
 {
