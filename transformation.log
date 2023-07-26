@@ -1,120 +1,120 @@
-[21/Jul/2023 14:32:26 Europe/Dublin] [Info] ############################################################
-[21/Jul/2023 14:32:26 Europe/Dublin] [Info] # Output Factory initiated (html5)
-[21/Jul/2023 14:32:26 Europe/Dublin] [Info] # Building output for: Enabling SCCH in XM Cloud
-[21/Jul/2023 14:32:26 Europe/Dublin] [Info] # URL /document/edit/1155354
-[21/Jul/2023 14:32:26 Europe/Dublin] [Info] # User: Toby Tangalin
-[21/Jul/2023 14:32:26 Europe/Dublin] [Info] # Time: Fri, 21 Jul 2023 14:32:26 +0100
-[21/Jul/2023 14:32:26 Europe/Dublin] [Info] # Server: amsterdam
-[21/Jul/2023 14:32:26 Europe/Dublin] [Info] ############################################################
-[21/Jul/2023 14:32:26 Europe/Dublin] [Info] Group: custom
-[21/Jul/2023 14:32:26 Europe/Dublin] [Info] Type: html5
-[21/Jul/2023 14:32:26 Europe/Dublin] [Info] Transformation: $user_dir/xsl/custom/layout-838679.xsl
-[21/Jul/2023 14:32:26 Europe/Dublin] [Info] File found: $user_dir/xsl/custom/layout-838679.xsl
-[21/Jul/2023 14:32:26 Europe/Dublin] [Info] ############################################################
-[21/Jul/2023 14:32:26 Europe/Dublin] [Info] Building output for: html5
-[21/Jul/2023 14:32:26 Europe/Dublin] [Info] Using stylesheet: $user_dir/xsl/custom/layout-838679.xsl
-[21/Jul/2023 14:32:26 Europe/Dublin] [Info] Parameters for this build: []
-[21/Jul/2023 14:32:26 Europe/Dublin] [Info] Environment variables for this build: Array
+[26/Jul/2023 13:41:15 Europe/Dublin] [Info] ############################################################
+[26/Jul/2023 13:41:15 Europe/Dublin] [Info] # Output Factory initiated (html5)
+[26/Jul/2023 13:41:15 Europe/Dublin] [Info] # Building output for: Enabling SCCH in XM Cloud
+[26/Jul/2023 13:41:15 Europe/Dublin] [Info] # URL /document/edit/1155354
+[26/Jul/2023 13:41:15 Europe/Dublin] [Info] # User: Toby Tangalin
+[26/Jul/2023 13:41:15 Europe/Dublin] [Info] # Time: Wed, 26 Jul 2023 13:41:15 +0100
+[26/Jul/2023 13:41:15 Europe/Dublin] [Info] # Server: cambridge
+[26/Jul/2023 13:41:15 Europe/Dublin] [Info] ############################################################
+[26/Jul/2023 13:41:15 Europe/Dublin] [Info] Group: custom
+[26/Jul/2023 13:41:15 Europe/Dublin] [Info] Type: html5
+[26/Jul/2023 13:41:15 Europe/Dublin] [Info] Transformation: $user_dir/xsl/custom/layout-838679.xsl
+[26/Jul/2023 13:41:15 Europe/Dublin] [Info] File found: $user_dir/xsl/custom/layout-838679.xsl
+[26/Jul/2023 13:41:15 Europe/Dublin] [Info] ############################################################
+[26/Jul/2023 13:41:15 Europe/Dublin] [Info] Building output for: html5
+[26/Jul/2023 13:41:15 Europe/Dublin] [Info] Using stylesheet: $user_dir/xsl/custom/layout-838679.xsl
+[26/Jul/2023 13:41:15 Europe/Dublin] [Info] Parameters for this build: []
+[26/Jul/2023 13:41:15 Europe/Dublin] [Info] Environment variables for this build: Array
 (
     [reused.publication.as.topic] => 0
 )
 
-[21/Jul/2023 14:32:26 Europe/Dublin] [Info] Building output for languages: Array
+[26/Jul/2023 13:41:15 Europe/Dublin] [Info] Building output for languages: Array
 (
     [0] => en
 )
 
-[21/Jul/2023 14:32:26 Europe/Dublin] [Info] Building multilang: no
-[21/Jul/2023 14:32:26 Europe/Dublin] [Info] Building preview: no
-[21/Jul/2023 14:32:26 Europe/Dublin] [Info] ############################################################
-[21/Jul/2023 14:32:27 Europe/Dublin] [Info] Using build directory: $local_tmp/production-64ba88e91e7ed7.78488477/1155354-Enabling_SCCH_in_XM_Cloud-html5
-[21/Jul/2023 14:32:27 Europe/Dublin] [Info] -- Generating source files
-[21/Jul/2023 14:32:27 Europe/Dublin] [Info] -- Propagating taxonomies: false
-[21/Jul/2023 14:32:27 Europe/Dublin] [Info] -- Source files have been generated
-[21/Jul/2023 14:32:27 Europe/Dublin] [Info] -- Publication has no unresolved dependencies.
-[21/Jul/2023 14:32:27 Europe/Dublin] [Info] -- Generating source files complete.
-[21/Jul/2023 14:32:28 Europe/Dublin] [Info] Localizing: publication-1155354.xml
-[21/Jul/2023 14:32:28 Europe/Dublin] [Info] Language: en
-[21/Jul/2023 14:32:29 Europe/Dublin] [Warning] Resolving some links failed
-[21/Jul/2023 14:32:29 Europe/Dublin] [Info] [/*/*[2]/*[4]/*] An outgoing link in <a href="/document/edit/1152963">Enabling Sitecore CMP and DAM in XM Cloud</a> could not be resolved. The link points to <a href="/document/edit/790232">Walkthrough: Setting up your full-stack XM Cloud local development environment</a> which is not part of this publication.
-[21/Jul/2023 14:32:29 Europe/Dublin] [Info] [/*/*[2]/*[8]/*[4]/*[3]/*[1]/*/*] An outgoing link in <a href="/document/edit/1149458">Enabling the CMP connector in an XM Cloud environment deployed to XM Cloud</a> could not be resolved. The link points to <a href="/document/edit/805390">XM Cloud Deploy app</a> which is not part of this publication.
-[21/Jul/2023 14:32:29 Europe/Dublin] [Info] [/*/*[2]/*[8]/*[5]/*[3]/*[7]/*[1]/*] An outgoing link in <a href="/document/edit/1149458">Enabling the CMP connector in an XM Cloud environment deployed to XM Cloud</a> could not be resolved. The link points to <a href="/document/edit/802118">Manage an environment</a> which is not part of this publication.
-[21/Jul/2023 14:32:29 Europe/Dublin] [Info] [/*/*[2]/*[9]/*[6]/*[3]/*[1]/*/*] An outgoing link in <a href="/document/edit/1149486">Walkthrough: Enabling the DAM connector in an XM Cloud environment deployed to XM Cloud</a> could not be resolved. The link points to <a href="/document/edit/805390">XM Cloud Deploy app</a> which is not part of this publication.
-[21/Jul/2023 14:32:29 Europe/Dublin] [Info] [/*/*[2]/*[9]/*[8]/*[3]/*[8]/*/*] An outgoing link in <a href="/document/edit/1149486">Walkthrough: Enabling the DAM connector in an XM Cloud environment deployed to XM Cloud</a> could not be resolved. The link points to <a href="/document/edit/802118">Manage an environment</a> which is not part of this publication.
-[21/Jul/2023 14:32:29 Europe/Dublin] [Info] [/*/*[2]/*[9]/*[9]/*[4]/*[4]/*[1]/*[5]] An outgoing link in <a href="/document/edit/1149486">Walkthrough: Enabling the DAM connector in an XM Cloud environment deployed to XM Cloud</a> could not be resolved. The link points to <a href="/document/edit/802118">Manage an environment</a> which is not part of this publication.
-[21/Jul/2023 14:32:29 Europe/Dublin] [Info] [/*/*[2]/*[10]/*[5]/*[3]/*[4]/*[3]/*/*] An outgoing link in <a href="/document/edit/1153019">Enabling the CMP connector in a local XM Cloud development environment</a> could not be resolved. The link points to <a href="/document/edit/790232">Walkthrough: Setting up your full-stack XM Cloud local development environment</a> which is not part of this publication.
-[21/Jul/2023 14:32:29 Europe/Dublin] [Info] [/*/*[2]/*[11]/*[8]/*[4]/*[5]/*[3]/*/*] An outgoing link in <a href="/document/edit/1152984">Walkthrough: Enabling the DAM connector in a local XM Cloud development environment</a> could not be resolved. The link points to <a href="/document/edit/790232">Walkthrough: Setting up your full-stack XM Cloud local development environment</a> which is not part of this publication.
-[21/Jul/2023 14:32:29 Europe/Dublin] [Info] [/*/*[3]/*[7]/*[6]/*[3]/*[4]/*[2]/*[4]] An outgoing link in <a href="/document/edit/1155057">Create a Sitecore Content Hub action</a> could not be resolved. The link points to <a href="/document/edit/790232">Walkthrough: Setting up your full-stack XM Cloud local development environment</a> which is not part of this publication.
-[21/Jul/2023 14:32:29 Europe/Dublin] [Info] [/*/*[3]/*[8]/*[12]/*[2]/*[2]] An outgoing link in <a href="/document/edit/791622">Walkthrough: Configuring items for content import</a> could not be resolved. The link points to <a href="/document/edit/803777">Changing mapping delimiters</a> which is not part of this publication.
-[21/Jul/2023 14:32:29 Europe/Dublin] [Info] [/*/*[3]/*[8]/*[13]/*[2]/*[2]] An outgoing link in <a href="/document/edit/791622">Walkthrough: Configuring items for content import</a> could not be resolved. The link points to <a href="/document/edit/803777">Changing mapping delimiters</a> which is not part of this publication.
-[21/Jul/2023 14:32:29 Europe/Dublin] [Info] Variable sets found: 0
-[21/Jul/2023 14:32:30 Europe/Dublin] [Info] Inserting image links.
-[21/Jul/2023 14:32:30 Europe/Dublin] [Info] Found 16 image(s).
-[21/Jul/2023 14:32:30 Europe/Dublin] [Info] Found image 'manage-gear-icon.png'
-[21/Jul/2023 14:32:30 Europe/Dublin] [Info] Found image 'Insert Bucket'
-[21/Jul/2023 14:32:30 Europe/Dublin] [Info] Found image 'Builder tab'
-[21/Jul/2023 14:32:30 Europe/Dublin] [Info] Found image 'Content tab'
-[21/Jul/2023 14:32:30 Europe/Dublin] [Info] Found image 'Content_tab_for_Article_entity_mapping_element.png'
-[21/Jul/2023 14:32:30 Europe/Dublin] [Info] Found image 'CMP config blog title'
-[21/Jul/2023 14:32:30 Europe/Dublin] [Info] Found image 'ContentTypeToContent'
-[21/Jul/2023 14:32:30 Europe/Dublin] [Info] Found image 'M.ContentType.Blog identifier'
-[21/Jul/2023 14:32:30 Europe/Dublin] [Info] Found image 'CMP_relation_example.png'
-[21/Jul/2023 14:32:31 Europe/Dublin] [Info] Found image 'CMP_tag_field_mapping_example.png'
-[21/Jul/2023 14:32:31 Europe/Dublin] [Info] Found image 'CMP_related_entity_mapping.png'
-[21/Jul/2023 14:32:31 Europe/Dublin] [Info] Found image 'Conditions tab'
-[21/Jul/2023 14:32:31 Europe/Dublin] [Info] Found image 'Sitecore DAM icon'
-[21/Jul/2023 14:32:31 Europe/Dublin] [Info] Found image 'insert from Sitecore DAM dialogue'
-[21/Jul/2023 14:32:31 Europe/Dublin] [Info] Found image 'assets in progress'
-[21/Jul/2023 14:32:31 Europe/Dublin] [Info] Found image 'approved assets page'
-[21/Jul/2023 14:32:32 Europe/Dublin] [Info] Profiling parameters: []
-[21/Jul/2023 14:32:32 Europe/Dublin] [Info] Profiling customisation: $user_dir/xsl/profile.xsl (not found)
-[21/Jul/2023 14:32:32 Europe/Dublin] [Info] Transformation: publication-1155354--en.org.xml -> publication-1155354--en.xml [profile.xsl]
-[21/Jul/2023 14:32:32 Europe/Dublin] [Info] Transformation: publication-1155354--en.xml -> publication-1155354--en.xml [internal-xref.xsl]
-[21/Jul/2023 14:32:32 Europe/Dublin] [Info] Transformation: A-filelist.xml -> B-sorted.xml [IO.document.sortlang.xsl]
-[21/Jul/2023 14:32:32 Europe/Dublin] [Info] Transformation: B-sorted.xml -> C-concatenated.xml [IO.document.concat.xsl]
-[21/Jul/2023 14:32:32 Europe/Dublin] [Info] Transformation: B-sorted.xml -> index-en.xml [IO.document.head.xsl]
-[21/Jul/2023 14:32:32 Europe/Dublin] [Info] Created copy: $user_dir/xsl/custom/layout-838679.xsl -> $user_dir/xsl/custom/64ba88f0dce29.xsl
-[21/Jul/2023 14:32:33 Europe/Dublin] [Info] Created symlink: $apppath/lib/docbook/xsl/html5/html5-2.page.xsl -> $user_dir/xsl/custom/64ba88f0dce29.page.xsl
-[21/Jul/2023 14:32:33 Europe/Dublin] [Info] Created symlink: $apppath/lib/docbook/xsl/html5/html5-2.index.xsl -> $user_dir/xsl/custom/64ba88f0dce29.index.xsl
-[21/Jul/2023 14:32:33 Europe/Dublin] [Info] Created symlink: $apppath/lib/docbook/xsl/html5/html5.toc.xsl -> $user_dir/xsl/custom/64ba88f0dce29.toc.xsl
-[21/Jul/2023 14:32:33 Europe/Dublin] [Info] Created symlink: $apppath/lib/docbook/xsl/html5/html5.page.xsl -> $user_dir/xsl/custom/64ba88f0dce29.page.xsl
-[21/Jul/2023 14:32:33 Europe/Dublin] [Info] Created symlink: $apppath/lib/docbook/xsl/html5/html5.index.xsl -> $user_dir/xsl/custom/64ba88f0dce29.index.xsl
-[21/Jul/2023 14:32:33 Europe/Dublin] [Info] Image copied: en/image/uuid-67d31cdb-cce3-b665-8808-efeba0a29f72.png
-[21/Jul/2023 14:32:33 Europe/Dublin] [Info] Image copied: en/image/uuid-a752f0db-2ca8-4b65-551f-2a5583d839c4.png
-[21/Jul/2023 14:32:33 Europe/Dublin] [Info] Image copied: en/image/uuid-92e3abb1-7f65-d405-3d8a-50920b9be8de.png
-[21/Jul/2023 14:32:33 Europe/Dublin] [Info] Image copied: en/image/uuid-a3d9eb8b-2b87-f6a1-2b64-66427ecf4362.png
-[21/Jul/2023 14:32:33 Europe/Dublin] [Info] Image copied: en/image/uuid-6cb411b3-a92c-f12f-3708-d01839a079ac.png
-[21/Jul/2023 14:32:33 Europe/Dublin] [Info] Image copied: en/image/uuid-c2cce4cc-dabe-d549-de99-701f6e9f3cbd.png
-[21/Jul/2023 14:32:33 Europe/Dublin] [Info] Image copied: en/image/uuid-74cbd319-adc9-37e9-65d3-0a66f5dc479f.png
-[21/Jul/2023 14:32:33 Europe/Dublin] [Info] Image copied: en/image/uuid-6b096778-b9f2-a067-08c6-3529a782df01.png
-[21/Jul/2023 14:32:33 Europe/Dublin] [Info] Image copied: en/image/uuid-653a5787-6d45-9b75-89e7-a6fdee7f5351.png
-[21/Jul/2023 14:32:33 Europe/Dublin] [Info] Image copied: en/image/uuid-cff8f00a-ceea-09bc-f1f0-dabb96b7a80f.png
-[21/Jul/2023 14:32:33 Europe/Dublin] [Info] Image copied: en/image/uuid-07516514-4db7-d01c-50f7-ae9be04b5ca7.png
-[21/Jul/2023 14:32:33 Europe/Dublin] [Info] Image copied: en/image/uuid-f4e7ae3e-24d0-86bb-bdd5-94f910a2542d.png
-[21/Jul/2023 14:32:33 Europe/Dublin] [Info] Image copied: en/image/uuid-5621b4e0-c614-6f1f-72f1-58f14a875337.png
-[21/Jul/2023 14:32:33 Europe/Dublin] [Info] Image copied: en/image/uuid-b15aadd3-c3b1-0033-5f19-e46a54fd2ac5.jpg
-[21/Jul/2023 14:32:33 Europe/Dublin] [Info] Image copied: en/image/uuid-de728064-07fd-6783-1299-a587adaf8d72.jpg
-[21/Jul/2023 14:32:33 Europe/Dublin] [Info] Image copied: en/image/uuid-8337ce73-819d-d351-3d64-99d1122e6a14.jpg
-[21-Jul-2023 14:32:34 Europe/Dublin] Parsing manifest file: css/*, css/image/*, css/image/callouts/*, js/*, js/jquery-3/*, fonts/*
-[21-Jul-2023 14:32:34 Europe/Dublin] Parsing manifest file: css/*, css/image/*, css/image/callouts/*, js/*, fonts/*
-[21-Jul-2023 14:32:34 Europe/Dublin] Copy file '$apppath/lib/docbook/xsl/html5/css/image/corporate-logo-white.svg' to '$local_tmp/production-64ba88e91e7ed7.78488477/1155354-Enabling_SCCH_in_XM_Cloud-html5/out/css/image/corporate-logo.svg'
-[21-Jul-2023 14:32:34 Europe/Dublin] Copy file '$apppath/lib/docbook/xsl/html5/css/image/corporate-logo-white.svg' to '$local_tmp/production-64ba88e91e7ed7.78488477/1155354-Enabling_SCCH_in_XM_Cloud-html5/out/css/image/portal-logo.svg'
-[21-Jul-2023 14:32:34 Europe/Dublin] Copy file '$user_dir/xsl/custom/assets/layout-838679/62ea68f6d5743.js' to '$local_tmp/production-64ba88e91e7ed7.78488477/1155354-Enabling_SCCH_in_XM_Cloud-html5/out/js/layout-custom-script.js'
-[21-Jul-2023 14:32:34 Europe/Dublin] Post build HTML5
-[21/Jul/2023 14:32:35 Europe/Dublin] [Info] Transformation: index-en.html -> toc-en.html [64ba88f0dce29.toc.xsl]
-[21/Jul/2023 14:32:35 Europe/Dublin] [Info] Transformation: enabling-the-cmp-connector-in-an-xm-cloud-environment-deployed-to-xm-cloud.html -> enabling-the-cmp-connector-in-an-xm-cloud-environment-deployed-to-xm-cloud.html [64ba88f0dce29.page.xsl]
-[21/Jul/2023 14:32:35 Europe/Dublin] [Info] Transformation: walkthrough--enabling-the-dam-connector-in-an-xm-cloud-environment-deployed-to-xm-cloud.html -> walkthrough--enabling-the-dam-connector-in-an-xm-cloud-environment-deployed-to-xm-cloud.html [64ba88f0dce29.page.xsl]
-[21/Jul/2023 14:32:35 Europe/Dublin] [Info] Transformation: enabling-the-cmp-connector-in-a-local-xm-cloud-development-environment.html -> enabling-the-cmp-connector-in-a-local-xm-cloud-development-environment.html [64ba88f0dce29.page.xsl]
-[21/Jul/2023 14:32:35 Europe/Dublin] [Info] Transformation: walkthrough--enabling-the-dam-connector-in-a-local-xm-cloud-development-environment.html -> walkthrough--enabling-the-dam-connector-in-a-local-xm-cloud-development-environment.html [64ba88f0dce29.page.xsl]
-[21/Jul/2023 14:32:35 Europe/Dublin] [Info] Transformation: create-a-user-in-sitecore-content-hub-for-scch.html -> create-a-user-in-sitecore-content-hub-for-scch.html [64ba88f0dce29.page.xsl]
-[21/Jul/2023 14:32:35 Europe/Dublin] [Info] Transformation: enabling-sitecore-cmp-and-dam-in-xm-cloud.html -> enabling-sitecore-cmp-and-dam-in-xm-cloud.html [64ba88f0dce29.page.xsl]
-[21/Jul/2023 14:32:35 Europe/Dublin] [Info] Transformation: create-a-sitecore-content-hub-action.html -> create-a-sitecore-content-hub-action.html [64ba88f0dce29.page.xsl]
-[21/Jul/2023 14:32:35 Europe/Dublin] [Info] Transformation: walkthrough--configuring-items-for-content-import.html -> walkthrough--configuring-items-for-content-import.html [64ba88f0dce29.page.xsl]
-[21/Jul/2023 14:32:35 Europe/Dublin] [Info] Transformation: create-a-trigger.html -> create-a-trigger.html [64ba88f0dce29.page.xsl]
-[21/Jul/2023 14:32:35 Europe/Dublin] [Info] Transformation: configuring-sitecore-connect-for-content-hub.html -> configuring-sitecore-connect-for-content-hub.html [64ba88f0dce29.page.xsl]
-[21/Jul/2023 14:32:35 Europe/Dublin] [Info] Transformation: display-assets.html -> display-assets.html [64ba88f0dce29.page.xsl]
-[21/Jul/2023 14:32:35 Europe/Dublin] [Info] Transformation: using-sitecore-connect-for-content-hub.html -> using-sitecore-connect-for-content-hub.html [64ba88f0dce29.page.xsl]
-[21/Jul/2023 14:32:35 Europe/Dublin] [Info] Transformation: index-en.html -> index-en.html [64ba88f0dce29.page.xsl]
-[21/Jul/2023 14:32:36 Europe/Dublin] [Info] Generating index page.
-[21/Jul/2023 14:32:36 Europe/Dublin] [Info] Transformation: index.manifest -> index.html [64ba88f0dce29.index.xsl]
-[21/Jul/2023 14:32:36 Europe/Dublin] [Info] # Took 10.170728 seconds to render.
+[26/Jul/2023 13:41:15 Europe/Dublin] [Info] Building multilang: no
+[26/Jul/2023 13:41:15 Europe/Dublin] [Info] Building preview: no
+[26/Jul/2023 13:41:15 Europe/Dublin] [Info] ############################################################
+[26/Jul/2023 13:41:15 Europe/Dublin] [Info] Using build directory: $local_tmp/production-64c11469eafc35.61726453/1155354-Enabling_SCCH_in_XM_Cloud-html5
+[26/Jul/2023 13:41:16 Europe/Dublin] [Info] -- Generating source files
+[26/Jul/2023 13:41:16 Europe/Dublin] [Info] -- Propagating taxonomies: false
+[26/Jul/2023 13:41:16 Europe/Dublin] [Info] -- Source files have been generated
+[26/Jul/2023 13:41:16 Europe/Dublin] [Info] -- Publication has no unresolved dependencies.
+[26/Jul/2023 13:41:16 Europe/Dublin] [Info] -- Generating source files complete.
+[26/Jul/2023 13:41:18 Europe/Dublin] [Info] Localizing: publication-1155354.xml
+[26/Jul/2023 13:41:18 Europe/Dublin] [Info] Language: en
+[26/Jul/2023 13:41:18 Europe/Dublin] [Warning] Resolving some links failed
+[26/Jul/2023 13:41:18 Europe/Dublin] [Info] [/*/*[2]/*[4]/*] An outgoing link in <a href="/document/edit/1152963">Enabling Sitecore CMP and DAM in XM Cloud</a> could not be resolved. The link points to <a href="/document/edit/790232">Walkthrough: Setting up your full-stack XM Cloud local development environment</a> which is not part of this publication.
+[26/Jul/2023 13:41:18 Europe/Dublin] [Info] [/*/*[2]/*[8]/*[4]/*[3]/*[1]/*/*] An outgoing link in <a href="/document/edit/1149458">Enabling the CMP connector in an XM Cloud environment deployed to XM Cloud</a> could not be resolved. The link points to <a href="/document/edit/805390">XM Cloud Deploy app</a> which is not part of this publication.
+[26/Jul/2023 13:41:18 Europe/Dublin] [Info] [/*/*[2]/*[8]/*[5]/*[3]/*[7]/*[1]/*] An outgoing link in <a href="/document/edit/1149458">Enabling the CMP connector in an XM Cloud environment deployed to XM Cloud</a> could not be resolved. The link points to <a href="/document/edit/802118">Manage an environment</a> which is not part of this publication.
+[26/Jul/2023 13:41:18 Europe/Dublin] [Info] [/*/*[2]/*[9]/*[6]/*[3]/*[1]/*/*] An outgoing link in <a href="/document/edit/1149486">Walkthrough: Enabling the DAM connector in an XM Cloud environment deployed to XM Cloud</a> could not be resolved. The link points to <a href="/document/edit/805390">XM Cloud Deploy app</a> which is not part of this publication.
+[26/Jul/2023 13:41:18 Europe/Dublin] [Info] [/*/*[2]/*[9]/*[8]/*[3]/*[8]/*/*] An outgoing link in <a href="/document/edit/1149486">Walkthrough: Enabling the DAM connector in an XM Cloud environment deployed to XM Cloud</a> could not be resolved. The link points to <a href="/document/edit/802118">Manage an environment</a> which is not part of this publication.
+[26/Jul/2023 13:41:18 Europe/Dublin] [Info] [/*/*[2]/*[9]/*[9]/*[4]/*[4]/*[1]/*[5]] An outgoing link in <a href="/document/edit/1149486">Walkthrough: Enabling the DAM connector in an XM Cloud environment deployed to XM Cloud</a> could not be resolved. The link points to <a href="/document/edit/802118">Manage an environment</a> which is not part of this publication.
+[26/Jul/2023 13:41:18 Europe/Dublin] [Info] [/*/*[2]/*[10]/*[5]/*[3]/*[4]/*[3]/*/*] An outgoing link in <a href="/document/edit/1153019">Enabling the CMP connector in a local XM Cloud development environment</a> could not be resolved. The link points to <a href="/document/edit/790232">Walkthrough: Setting up your full-stack XM Cloud local development environment</a> which is not part of this publication.
+[26/Jul/2023 13:41:18 Europe/Dublin] [Info] [/*/*[2]/*[11]/*[8]/*[4]/*[4]/*[3]/*/*] An outgoing link in <a href="/document/edit/1152984">Walkthrough: Enabling the DAM connector in a local XM Cloud development environment</a> could not be resolved. The link points to <a href="/document/edit/790232">Walkthrough: Setting up your full-stack XM Cloud local development environment</a> which is not part of this publication.
+[26/Jul/2023 13:41:18 Europe/Dublin] [Info] [/*/*[3]/*[7]/*[6]/*[3]/*[4]/*[2]/*[4]] An outgoing link in <a href="/document/edit/1155057">Create a Sitecore Content Hub action</a> could not be resolved. The link points to <a href="/document/edit/790232">Walkthrough: Setting up your full-stack XM Cloud local development environment</a> which is not part of this publication.
+[26/Jul/2023 13:41:18 Europe/Dublin] [Info] [/*/*[3]/*[8]/*[12]/*[2]/*[2]] An outgoing link in <a href="/document/edit/791622">Walkthrough: Configuring items for content import</a> could not be resolved. The link points to <a href="/document/edit/803777">Changing mapping delimiters</a> which is not part of this publication.
+[26/Jul/2023 13:41:18 Europe/Dublin] [Info] [/*/*[3]/*[8]/*[13]/*[2]/*[2]] An outgoing link in <a href="/document/edit/791622">Walkthrough: Configuring items for content import</a> could not be resolved. The link points to <a href="/document/edit/803777">Changing mapping delimiters</a> which is not part of this publication.
+[26/Jul/2023 13:41:18 Europe/Dublin] [Info] Variable sets found: 0
+[26/Jul/2023 13:41:19 Europe/Dublin] [Info] Inserting image links.
+[26/Jul/2023 13:41:19 Europe/Dublin] [Info] Found 16 image(s).
+[26/Jul/2023 13:41:20 Europe/Dublin] [Info] Found image 'manage-gear-icon.png'
+[26/Jul/2023 13:41:20 Europe/Dublin] [Info] Found image 'Insert Bucket'
+[26/Jul/2023 13:41:20 Europe/Dublin] [Info] Found image 'Builder tab'
+[26/Jul/2023 13:41:20 Europe/Dublin] [Info] Found image 'Content tab'
+[26/Jul/2023 13:41:20 Europe/Dublin] [Info] Found image 'Content_tab_for_Article_entity_mapping_element.png'
+[26/Jul/2023 13:41:20 Europe/Dublin] [Info] Found image 'CMP config blog title'
+[26/Jul/2023 13:41:20 Europe/Dublin] [Info] Found image 'ContentTypeToContent'
+[26/Jul/2023 13:41:20 Europe/Dublin] [Info] Found image 'M.ContentType.Blog identifier'
+[26/Jul/2023 13:41:20 Europe/Dublin] [Info] Found image 'CMP_relation_example.png'
+[26/Jul/2023 13:41:20 Europe/Dublin] [Info] Found image 'CMP_tag_field_mapping_example.png'
+[26/Jul/2023 13:41:20 Europe/Dublin] [Info] Found image 'CMP_related_entity_mapping.png'
+[26/Jul/2023 13:41:20 Europe/Dublin] [Info] Found image 'Conditions tab'
+[26/Jul/2023 13:41:20 Europe/Dublin] [Info] Found image 'Sitecore DAM icon'
+[26/Jul/2023 13:41:20 Europe/Dublin] [Info] Found image 'insert from Sitecore DAM dialogue'
+[26/Jul/2023 13:41:20 Europe/Dublin] [Info] Found image 'assets in progress'
+[26/Jul/2023 13:41:20 Europe/Dublin] [Info] Found image 'approved assets page'
+[26/Jul/2023 13:41:21 Europe/Dublin] [Info] Profiling parameters: []
+[26/Jul/2023 13:41:21 Europe/Dublin] [Info] Profiling customisation: $user_dir/xsl/profile.xsl (not found)
+[26/Jul/2023 13:41:21 Europe/Dublin] [Info] Transformation: publication-1155354--en.org.xml -> publication-1155354--en.xml [profile.xsl]
+[26/Jul/2023 13:41:21 Europe/Dublin] [Info] Transformation: publication-1155354--en.xml -> publication-1155354--en.xml [internal-xref.xsl]
+[26/Jul/2023 13:41:21 Europe/Dublin] [Info] Transformation: A-filelist.xml -> B-sorted.xml [IO.document.sortlang.xsl]
+[26/Jul/2023 13:41:21 Europe/Dublin] [Info] Transformation: B-sorted.xml -> C-concatenated.xml [IO.document.concat.xsl]
+[26/Jul/2023 13:41:21 Europe/Dublin] [Info] Transformation: B-sorted.xml -> index-en.xml [IO.document.head.xsl]
+[26/Jul/2023 13:41:22 Europe/Dublin] [Info] Created copy: $user_dir/xsl/custom/layout-838679.xsl -> $user_dir/xsl/custom/64c114720daaf.xsl
+[26/Jul/2023 13:41:22 Europe/Dublin] [Info] Created symlink: $apppath/lib/docbook/xsl/html5/html5-2.page.xsl -> $user_dir/xsl/custom/64c114720daaf.page.xsl
+[26/Jul/2023 13:41:22 Europe/Dublin] [Info] Created symlink: $apppath/lib/docbook/xsl/html5/html5-2.index.xsl -> $user_dir/xsl/custom/64c114720daaf.index.xsl
+[26/Jul/2023 13:41:22 Europe/Dublin] [Info] Created symlink: $apppath/lib/docbook/xsl/html5/html5.toc.xsl -> $user_dir/xsl/custom/64c114720daaf.toc.xsl
+[26/Jul/2023 13:41:22 Europe/Dublin] [Info] Created symlink: $apppath/lib/docbook/xsl/html5/html5.page.xsl -> $user_dir/xsl/custom/64c114720daaf.page.xsl
+[26/Jul/2023 13:41:22 Europe/Dublin] [Info] Created symlink: $apppath/lib/docbook/xsl/html5/html5.index.xsl -> $user_dir/xsl/custom/64c114720daaf.index.xsl
+[26/Jul/2023 13:41:22 Europe/Dublin] [Info] Image copied: en/image/uuid-67d31cdb-cce3-b665-8808-efeba0a29f72.png
+[26/Jul/2023 13:41:22 Europe/Dublin] [Info] Image copied: en/image/uuid-a752f0db-2ca8-4b65-551f-2a5583d839c4.png
+[26/Jul/2023 13:41:22 Europe/Dublin] [Info] Image copied: en/image/uuid-92e3abb1-7f65-d405-3d8a-50920b9be8de.png
+[26/Jul/2023 13:41:22 Europe/Dublin] [Info] Image copied: en/image/uuid-a3d9eb8b-2b87-f6a1-2b64-66427ecf4362.png
+[26/Jul/2023 13:41:22 Europe/Dublin] [Info] Image copied: en/image/uuid-6cb411b3-a92c-f12f-3708-d01839a079ac.png
+[26/Jul/2023 13:41:22 Europe/Dublin] [Info] Image copied: en/image/uuid-c2cce4cc-dabe-d549-de99-701f6e9f3cbd.png
+[26/Jul/2023 13:41:22 Europe/Dublin] [Info] Image copied: en/image/uuid-74cbd319-adc9-37e9-65d3-0a66f5dc479f.png
+[26/Jul/2023 13:41:22 Europe/Dublin] [Info] Image copied: en/image/uuid-6b096778-b9f2-a067-08c6-3529a782df01.png
+[26/Jul/2023 13:41:22 Europe/Dublin] [Info] Image copied: en/image/uuid-653a5787-6d45-9b75-89e7-a6fdee7f5351.png
+[26/Jul/2023 13:41:22 Europe/Dublin] [Info] Image copied: en/image/uuid-cff8f00a-ceea-09bc-f1f0-dabb96b7a80f.png
+[26/Jul/2023 13:41:22 Europe/Dublin] [Info] Image copied: en/image/uuid-07516514-4db7-d01c-50f7-ae9be04b5ca7.png
+[26/Jul/2023 13:41:22 Europe/Dublin] [Info] Image copied: en/image/uuid-f4e7ae3e-24d0-86bb-bdd5-94f910a2542d.png
+[26/Jul/2023 13:41:22 Europe/Dublin] [Info] Image copied: en/image/uuid-5621b4e0-c614-6f1f-72f1-58f14a875337.png
+[26/Jul/2023 13:41:22 Europe/Dublin] [Info] Image copied: en/image/uuid-b15aadd3-c3b1-0033-5f19-e46a54fd2ac5.jpg
+[26/Jul/2023 13:41:22 Europe/Dublin] [Info] Image copied: en/image/uuid-de728064-07fd-6783-1299-a587adaf8d72.jpg
+[26/Jul/2023 13:41:22 Europe/Dublin] [Info] Image copied: en/image/uuid-8337ce73-819d-d351-3d64-99d1122e6a14.jpg
+[26-Jul-2023 13:41:23 Europe/Dublin] Parsing manifest file: css/*, css/image/*, css/image/callouts/*, js/*, js/jquery-3/*, fonts/*
+[26-Jul-2023 13:41:23 Europe/Dublin] Parsing manifest file: css/*, css/image/*, css/image/callouts/*, js/*, fonts/*
+[26-Jul-2023 13:41:23 Europe/Dublin] Copy file '$apppath/lib/docbook/xsl/html5/css/image/corporate-logo-white.svg' to '$local_tmp/production-64c11469eafc35.61726453/1155354-Enabling_SCCH_in_XM_Cloud-html5/out/css/image/corporate-logo.svg'
+[26-Jul-2023 13:41:23 Europe/Dublin] Copy file '$apppath/lib/docbook/xsl/html5/css/image/corporate-logo-white.svg' to '$local_tmp/production-64c11469eafc35.61726453/1155354-Enabling_SCCH_in_XM_Cloud-html5/out/css/image/portal-logo.svg'
+[26-Jul-2023 13:41:23 Europe/Dublin] Copy file '$user_dir/xsl/custom/assets/layout-838679/62ea68f6d5743.js' to '$local_tmp/production-64c11469eafc35.61726453/1155354-Enabling_SCCH_in_XM_Cloud-html5/out/js/layout-custom-script.js'
+[26-Jul-2023 13:41:24 Europe/Dublin] Post build HTML5
+[26/Jul/2023 13:41:24 Europe/Dublin] [Info] Transformation: index-en.html -> toc-en.html [64c114720daaf.toc.xsl]
+[26/Jul/2023 13:41:24 Europe/Dublin] [Info] Transformation: enabling-the-cmp-connector-in-an-xm-cloud-environment-deployed-to-xm-cloud.html -> enabling-the-cmp-connector-in-an-xm-cloud-environment-deployed-to-xm-cloud.html [64c114720daaf.page.xsl]
+[26/Jul/2023 13:41:24 Europe/Dublin] [Info] Transformation: walkthrough--enabling-the-dam-connector-in-an-xm-cloud-environment-deployed-to-xm-cloud.html -> walkthrough--enabling-the-dam-connector-in-an-xm-cloud-environment-deployed-to-xm-cloud.html [64c114720daaf.page.xsl]
+[26/Jul/2023 13:41:24 Europe/Dublin] [Info] Transformation: enabling-the-cmp-connector-in-a-local-xm-cloud-development-environment.html -> enabling-the-cmp-connector-in-a-local-xm-cloud-development-environment.html [64c114720daaf.page.xsl]
+[26/Jul/2023 13:41:24 Europe/Dublin] [Info] Transformation: walkthrough--enabling-the-dam-connector-in-a-local-xm-cloud-development-environment.html -> walkthrough--enabling-the-dam-connector-in-a-local-xm-cloud-development-environment.html [64c114720daaf.page.xsl]
+[26/Jul/2023 13:41:24 Europe/Dublin] [Info] Transformation: create-a-user-in-sitecore-content-hub-for-scch.html -> create-a-user-in-sitecore-content-hub-for-scch.html [64c114720daaf.page.xsl]
+[26/Jul/2023 13:41:24 Europe/Dublin] [Info] Transformation: enabling-sitecore-cmp-and-dam-in-xm-cloud.html -> enabling-sitecore-cmp-and-dam-in-xm-cloud.html [64c114720daaf.page.xsl]
+[26/Jul/2023 13:41:24 Europe/Dublin] [Info] Transformation: create-a-sitecore-content-hub-action.html -> create-a-sitecore-content-hub-action.html [64c114720daaf.page.xsl]
+[26/Jul/2023 13:41:24 Europe/Dublin] [Info] Transformation: walkthrough--configuring-items-for-content-import.html -> walkthrough--configuring-items-for-content-import.html [64c114720daaf.page.xsl]
+[26/Jul/2023 13:41:24 Europe/Dublin] [Info] Transformation: create-a-trigger.html -> create-a-trigger.html [64c114720daaf.page.xsl]
+[26/Jul/2023 13:41:24 Europe/Dublin] [Info] Transformation: configuring-sitecore-connect-for-content-hub.html -> configuring-sitecore-connect-for-content-hub.html [64c114720daaf.page.xsl]
+[26/Jul/2023 13:41:25 Europe/Dublin] [Info] Transformation: display-assets.html -> display-assets.html [64c114720daaf.page.xsl]
+[26/Jul/2023 13:41:25 Europe/Dublin] [Info] Transformation: using-sitecore-connect-for-content-hub.html -> using-sitecore-connect-for-content-hub.html [64c114720daaf.page.xsl]
+[26/Jul/2023 13:41:25 Europe/Dublin] [Info] Transformation: index-en.html -> index-en.html [64c114720daaf.page.xsl]
+[26/Jul/2023 13:41:25 Europe/Dublin] [Info] Generating index page.
+[26/Jul/2023 13:41:25 Europe/Dublin] [Info] Transformation: index.manifest -> index.html [64c114720daaf.index.xsl]
+[26/Jul/2023 13:41:26 Europe/Dublin] [Info] # Took 10.754829 seconds to render.
